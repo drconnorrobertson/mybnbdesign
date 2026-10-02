@@ -1,301 +1,1401 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyBnBDesign -- Premium Short-Term Rental Interior Design</title>
-  <meta name="description" content="Premium interior design for Airbnb and short-term rental properties. We create spaces that earn 5-star reviews and command top-tier nightly rates.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBnBDesign | Professional Short-Term Rental Interior Design</title>
+    <meta name="description" content="Transform your short-term rental into a revenue-generating masterpiece. Professional STR interior design, furnishing, styling, and photography staging services.">
+    <link rel="canonical" href="https://mybnbdesign.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "MyBnBDesign",
+        "url": "https://mybnbdesign.com",
+        "description": "Professional short-term rental interior design services including design packages, furnishing, styling, and photography staging.",
+        "sameAs": []
+    }
+    </script>
+
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2C3E50;
+            --primary-light: #34495E;
+            --accent: #E67E22;
+            --accent-hover: #D35400;
+            --light: #ECF0F1;
+            --white: #FFFFFF;
+            --text: #2C3E50;
+            --text-light: #7F8C8D;
+            --shadow-sm: 0 2px 8px rgba(44, 62, 80, 0.08);
+            --shadow-md: 0 4px 20px rgba(44, 62, 80, 0.12);
+            --shadow-lg: 0 8px 40px rgba(44, 62, 80, 0.16);
+            --radius: 12px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(230, 126, 34, 0.4); }
+            50% { box-shadow: 0 0 0 12px rgba(230, 126, 34, 0); }
+        }
+
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all var(--transition);
+        }
+
+        .nav.scrolled {
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(12px);
+            padding: 12px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--white);
+            transition: color var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav.scrolled .nav-logo {
+            color: var(--primary);
+        }
+
+        .nav-logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--accent);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav.scrolled .nav-links a {
+            color: var(--text);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links .btn-nav {
+            background: var(--accent);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background var(--transition), transform var(--transition);
+        }
+
+        .nav-links .btn-nav::after {
+            display: none;
+        }
+
+        .nav-links .btn-nav:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+            background: none;
+            border: none;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 26px;
+            height: 2.5px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: all var(--transition);
+        }
+
+        .nav.scrolled .hamburger span {
+            background: var(--primary);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a2a3a 0%, #2C3E50 30%, #34495E 60%, #2C3E50 100%);
+            background-size: 200% 200%;
+            animation: gradient-shift 12s ease infinite;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(230, 126, 34, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(230, 126, 34, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.04;
+            background-image:
+                linear-gradient(30deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff),
+                linear-gradient(150deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff),
+                linear-gradient(30deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff),
+                linear-gradient(150deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff),
+                linear-gradient(60deg, #ffffff77 25%, transparent 25.5%, transparent 75%, #ffffff77 75%, #ffffff77),
+                linear-gradient(60deg, #ffffff77 25%, transparent 25.5%, transparent 75%, #ffffff77 75%, #ffffff77);
+            background-size: 80px 140px;
+            background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(230, 126, 34, 0.15);
+            border: 1px solid rgba(230, 126, 34, 0.3);
+            color: var(--accent);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5.5vw, 4rem);
+            color: var(--white);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero h1 .highlight {
+            color: var(--accent);
+            position: relative;
+        }
+
+        .hero p {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 36px;
+            max-width: 560px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all var(--transition);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 16px rgba(230, 126, 34, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(230, 126, 34, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--white);
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .hero-decorative {
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            opacity: 0.08;
+        }
+
+        .hero-decorative svg {
+            width: 500px;
+            height: 500px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 52px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-stat {
+            text-align: left;
+        }
+
+        .hero-stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .hero-stat-label {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 2px;
+        }
+
+        /* ===== SECTION STYLES ===== */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 60px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            background: var(--light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 36px 28px;
+            text-align: center;
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transition: transform var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(230, 126, 34, 0.1);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, rgba(230, 126, 34, 0.1), rgba(230, 126, 34, 0.05));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            transition: all var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            transform: scale(1.05);
+        }
+
+        .service-card:hover .service-icon svg {
+            stroke: var(--white);
+        }
+
+        .service-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--accent);
+            stroke-width: 2;
+            fill: none;
+            transition: stroke var(--transition);
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ===== TOOLS ===== */
+        .tools {
+            background: var(--white);
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .tool-card {
+            position: relative;
+            background: var(--white);
+            border: 1px solid rgba(44, 62, 80, 0.08);
+            border-radius: var(--radius);
+            padding: 32px 28px;
+            transition: all var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(230, 126, 34, 0.2);
+        }
+
+        .tool-card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            font-size: 1.4rem;
+        }
+
+        .tool-card-icon.green { background: rgba(39, 174, 96, 0.1); }
+        .tool-card-icon.blue { background: rgba(52, 152, 219, 0.1); }
+        .tool-card-icon.orange { background: rgba(230, 126, 34, 0.1); }
+        .tool-card-icon.purple { background: rgba(142, 68, 173, 0.1); }
+        .tool-card-icon.teal { background: rgba(22, 160, 133, 0.1); }
+
+        .tool-card h3 {
+            font-size: 1.15rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .tool-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .tool-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 16px;
+            transition: gap var(--transition);
+        }
+
+        .tool-link:hover {
+            gap: 10px;
+        }
+
+        .tool-badge-soon {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: var(--primary);
+            color: var(--white);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 50px;
+        }
+
+        .tool-card.coming-soon {
+            opacity: 0.7;
+        }
+
+        .tool-card.coming-soon:hover {
+            transform: none;
+            box-shadow: none;
+            cursor: default;
+        }
+
+        /* ===== RESOURCES ===== */
+        .resources {
+            background: var(--light);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .resource-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: all var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(230, 126, 34, 0.1);
+        }
+
+        .resource-thumb {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resource-thumb.grad-1 {
+            background: linear-gradient(135deg, #2C3E50, #3498DB);
+        }
+        .resource-thumb.grad-2 {
+            background: linear-gradient(135deg, #E67E22, #F39C12);
+        }
+        .resource-thumb.grad-3 {
+            background: linear-gradient(135deg, #16A085, #1ABC9C);
+        }
+
+        .resource-thumb-label {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            color: var(--white);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 50px;
+        }
+
+        .resource-body {
+            padding: 24px;
+        }
+
+        .resource-body h3 {
+            font-size: 1.15rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .resource-body p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+
+        .resource-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.88rem;
+            transition: gap var(--transition);
+        }
+
+        .resource-link:hover {
+            gap: 10px;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, #2C3E50 0%, #1a2a3a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(230, 126, 34, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(230, 126, 34, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .cta-content p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+
+        .cta-content .btn-primary {
+            animation: pulse-glow 2.5s infinite;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #1a2028;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 60px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-brand h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--white);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 320px;
+        }
+
+        .footer-col h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 18px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            transition: color var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.5);
+            transition: color var(--transition);
+        }
+
+        .footer-bottom a:hover {
+            color: var(--accent);
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-decorative {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 72px 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                justify-content: center;
+                gap: 24px;
+                padding: 40px;
+                box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+                transition: right var(--transition);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                color: var(--text) !important;
+                font-size: 1.1rem;
+            }
+
+            .nav-links .btn-nav {
+                text-align: center;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .mobile-overlay {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.4);
+                z-index: 999;
+            }
+
+            .mobile-overlay.active {
+                display: block;
+            }
+
+            .hero-stats {
+                gap: 24px;
+            }
+
+            .hero-stat-number {
+                font-size: 1.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <div class="container nav__inner">
-      <a href="index.html" class="nav__logo">MyBnB<span>Design</span></a>
-      <ul class="nav__links" id="navLinks">
-        <li><a href="index.html" class="nav__link is-active">Home</a></li>
-        <li><a href="services.html" class="nav__link">Services</a></li>
-        <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
-        <li><a href="about.html" class="nav__link">About</a></li>
-        <li class="nav__cta"><a href="contact.html" class="btn btn--outline btn--nav">Get Started</a></li>
-      </ul>
-      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-      </button>
-    </div>
-  </nav>
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero__bg">
-      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&h=1080&fit=crop&q=85" alt="Luxury interior design by MyBnBDesign" class="img-reveal">
-    </div>
-    <div class="hero__overlay"></div>
-    <div class="hero__content">
-      <h1 class="hero__title">Design That<br>Transforms Revenue</h1>
-      <p class="hero__subtitle">Premium interiors for short-term rentals that earn five-star reviews and command top-tier nightly rates.</p>
-      <div class="hero__cta">
-        <a href="contact.html" class="btn btn--primary">Book a Consultation</a>
-        <a href="portfolio.html" class="btn btn--outline">View Our Work</a>
-      </div>
-    </div>
-    <div class="hero__scroll">
-      <span>Scroll</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M12 5v14M5 12l7 7 7-7"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- Editorial Statement -->
-  <section class="editorial">
-    <div class="container--narrow">
-      <p class="editorial__text reveal">We believe every short-term rental deserves interiors that are as <em>intentional</em> as they are beautiful -- spaces that photograph like a magazine spread and perform like a business asset.</p>
-      <hr class="editorial__rule reveal reveal-delay-1">
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="services" id="services">
-
-    <div class="service-block">
-      <div class="service-block__image">
-        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=960&h=1200&fit=crop&q=80" alt="Full interior design for luxury rental" class="img-reveal" loading="lazy">
-      </div>
-      <div class="service-block__content">
-        <span class="service-block__number reveal">01</span>
-        <h3 class="service-block__title reveal">Full Interior<br>Design</h3>
-        <p class="service-block__desc reveal reveal-delay-1">Complete room-by-room design from concept to installation. Every piece of furniture, every textile, every detail curated for guest delight and five-star reviews.</p>
-        <a href="services.html" class="service-block__link reveal reveal-delay-2">
-          Learn More
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="service-block">
-      <div class="service-block__image">
-        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=960&h=1200&fit=crop&q=80" alt="Strategic space planning for rental properties" class="img-reveal" loading="lazy">
-      </div>
-      <div class="service-block__content">
-        <span class="service-block__number reveal">02</span>
-        <h3 class="service-block__title reveal">Space<br>Planning</h3>
-        <p class="service-block__desc reveal reveal-delay-1">Maximize your property's earning potential with layouts optimized for guest flow, comfort, and listing photos that convert browsers into bookings.</p>
-        <a href="services.html" class="service-block__link reveal reveal-delay-2">
-          Learn More
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="service-block">
-      <div class="service-block__image">
-        <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=960&h=1200&fit=crop&q=80" alt="Turnkey rental design packages" class="img-reveal" loading="lazy">
-      </div>
-      <div class="service-block__content">
-        <span class="service-block__number reveal">03</span>
-        <h3 class="service-block__title reveal">Turnkey<br>Packages</h3>
-        <p class="service-block__desc reveal reveal-delay-1">Move-in ready solutions. We handle everything -- design, procurement, delivery, installation, styling. You hand over the keys and start hosting.</p>
-        <a href="services.html" class="service-block__link reveal reveal-delay-2">
-          Learn More
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="service-block">
-      <div class="service-block__image">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=960&h=1200&fit=crop&q=80" alt="Listing optimization and photography direction" class="img-reveal" loading="lazy">
-      </div>
-      <div class="service-block__content">
-        <span class="service-block__number reveal">04</span>
-        <h3 class="service-block__title reveal">Listing<br>Optimization</h3>
-        <p class="service-block__desc reveal reveal-delay-1">Professional photography direction, listing copy guidance, and strategic staging that converts browsers into bookings at premium nightly rates.</p>
-        <a href="services.html" class="service-block__link reveal reveal-delay-2">
-          Learn More
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- Portfolio -->
-  <section class="portfolio" id="portfolio">
-    <div class="container">
-      <div class="portfolio__header">
-        <span class="eyebrow reveal">Selected Work</span>
-        <h2 class="reveal reveal-delay-1">Featured Projects</h2>
-      </div>
-      <div class="portfolio__grid">
-        <div class="portfolio__item reveal">
-          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=1000&fit=crop&q=80" alt="Modern Mountain Retreat" loading="lazy" class="img-reveal">
-          <div class="portfolio__overlay">
-            <span class="portfolio__name">Modern Mountain Retreat</span>
-            <span class="portfolio__location">Aspen, Colorado</span>
-          </div>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo">
+                <span class="nav-logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                </span>
+                MyBnBDesign
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact" class="btn-nav">Contact Us</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="portfolio__item reveal reveal-delay-1">
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop&q=80" alt="Urban Loft Redesign" loading="lazy" class="img-reveal">
-          <div class="portfolio__overlay">
-            <span class="portfolio__name">Urban Loft Redesign</span>
-            <span class="portfolio__location">Nashville, Tennessee</span>
-          </div>
-        </div>
-        <div class="portfolio__item reveal reveal-delay-2">
-          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&h=400&fit=crop&q=80" alt="Coastal Luxury Villa" loading="lazy" class="img-reveal">
-          <div class="portfolio__overlay">
-            <span class="portfolio__name">Coastal Luxury Villa</span>
-            <span class="portfolio__location">Charleston, South Carolina</span>
-          </div>
-        </div>
-        <div class="portfolio__item reveal">
-          <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&h=400&fit=crop&q=80" alt="Desert Contemporary" loading="lazy" class="img-reveal">
-          <div class="portfolio__overlay">
-            <span class="portfolio__name">Desert Contemporary</span>
-            <span class="portfolio__location">Scottsdale, Arizona</span>
-          </div>
-        </div>
-        <div class="portfolio__item reveal reveal-delay-1">
-          <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&h=400&fit=crop&q=80" alt="Lakeside Retreat" loading="lazy" class="img-reveal">
-          <div class="portfolio__overlay">
-            <span class="portfolio__name">Lakeside Retreat</span>
-            <span class="portfolio__location">Lake Tahoe, California</span>
-          </div>
-        </div>
-        <div class="portfolio__item reveal reveal-delay-2">
-          <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=600&h=400&fit=crop&q=80" alt="Midcentury Modern" loading="lazy" class="img-reveal">
-          <div class="portfolio__overlay">
-            <span class="portfolio__name">Midcentury Modern</span>
-            <span class="portfolio__location">Palm Springs, California</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Stats -->
-  <section class="stats">
-    <div class="container">
-      <div class="stats__grid">
-        <div class="stats__item reveal">
-          <div class="stats__number">200+</div>
-          <div class="stats__label">Properties Designed</div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-pattern"></div>
+        <div class="hero-decorative">
+            <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="50" y="100" width="200" height="280" rx="8" stroke="white" stroke-width="2"/>
+                <rect x="80" y="140" width="60" height="60" rx="4" stroke="white" stroke-width="1.5"/>
+                <rect x="160" y="140" width="60" height="60" rx="4" stroke="white" stroke-width="1.5"/>
+                <rect x="80" y="220" width="140" height="20" rx="4" stroke="white" stroke-width="1"/>
+                <rect x="80" y="260" width="100" height="20" rx="4" stroke="white" stroke-width="1"/>
+                <rect x="280" y="150" width="160" height="200" rx="8" stroke="white" stroke-width="2"/>
+                <circle cx="360" cy="220" r="30" stroke="white" stroke-width="1.5"/>
+                <rect x="310" y="270" width="100" height="10" rx="4" stroke="white" stroke-width="1"/>
+                <rect x="330" y="290" width="60" height="10" rx="4" stroke="white" stroke-width="1"/>
+                <line x1="250" y1="220" x2="280" y2="220" stroke="white" stroke-width="1" stroke-dasharray="4"/>
+            </svg>
         </div>
-        <div class="stats__item reveal reveal-delay-1">
-          <div class="stats__number">40%</div>
-          <div class="stats__label">Avg Revenue Increase</div>
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="hero-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    Professional STR Design
+                </div>
+                <h1>Design That Drives <span class="highlight">5-Star Reviews</span></h1>
+                <p>We transform short-term rentals into stunning, guest-ready spaces that maximize bookings, elevate ratings, and deliver exceptional returns on your investment.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        Get Started
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="#services" class="btn btn-outline">View Services</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">500+</div>
+                        <div class="hero-stat-label">Properties Designed</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">4.9</div>
+                        <div class="hero-stat-label">Average Guest Rating</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">35%</div>
+                        <div class="hero-stat-label">Revenue Increase</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="stats__item reveal reveal-delay-2">
-          <div class="stats__number">4.9</div>
-          <div class="stats__label">Average Guest Rating</div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">What We Do</span>
+                <h2 class="section-title">Comprehensive STR Design Services</h2>
+                <p class="section-subtitle">From concept to completion, we handle every detail so your rental stands out in a crowded market.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>Design Packages</h3>
+                    <p>Full-service interior design tailored to your property type, target guests, and local market. Custom mood boards, floor plans, and procurement lists included.</p>
+                </div>
+                <div class="service-card fade-in" style="transition-delay: 0.1s;">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 7h-7L10 3H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                            <line x1="12" y1="11" x2="12" y2="17"/>
+                            <line x1="9" y1="14" x2="15" y2="14"/>
+                        </svg>
+                    </div>
+                    <h3>Furnishing</h3>
+                    <p>Curated furniture and decor sourced for durability, style, and guest comfort. We manage ordering, delivery, and full installation at your property.</p>
+                </div>
+                <div class="service-card fade-in" style="transition-delay: 0.2s;">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <h3>Styling</h3>
+                    <p>Thoughtful finishing touches that create an inviting atmosphere. From art selection to linen coordination, every detail contributes to a memorable stay.</p>
+                </div>
+                <div class="service-card fade-in" style="transition-delay: 0.3s;">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                            <circle cx="12" cy="13" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>Photography Staging</h3>
+                    <p>Professional staging optimized for listing photography. We prepare your space to capture the images that drive clicks, bookings, and higher nightly rates.</p>
+                </div>
+            </div>
         </div>
-        <div class="stats__item reveal reveal-delay-3">
-          <div class="stats__number">12</div>
-          <div class="stats__label">Markets Served</div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools" id="tools">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Free Tools</span>
+                <h2 class="section-title">Interactive STR Tools</h2>
+                <p class="section-subtitle">Plan smarter with our free calculators and checklists built for short-term rental owners and investors.</p>
+            </div>
+            <div class="tools-grid">
+                <a href="tools/design-budget-calculator/" class="tool-card fade-in">
+                    <div class="tool-card-icon green">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3>Design Budget Calculator</h3>
+                    <p>Estimate your total design and furnishing costs based on property size, style tier, and room count.</p>
+                    <span class="tool-link">Try it free <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </a>
+                <a href="tools/roi-calculator/" class="tool-card fade-in" style="transition-delay: 0.1s;">
+                    <div class="tool-card-icon blue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3498DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h3>ROI Calculator</h3>
+                    <p>Project your return on investment for design upgrades by comparing nightly rate increases to project costs.</p>
+                    <span class="tool-link">Try it free <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </a>
+                <a href="tools/amenity-checklist/" class="tool-card fade-in" style="transition-delay: 0.2s;">
+                    <div class="tool-card-icon orange">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E67E22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                        </svg>
+                    </div>
+                    <h3>Amenity Checklist</h3>
+                    <p>An interactive checklist covering essential, recommended, and premium amenities for top-rated listings.</p>
+                    <span class="tool-link">Try it free <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </a>
+                <div class="tool-card coming-soon fade-in" style="transition-delay: 0.3s;">
+                    <span class="tool-badge-soon">Coming Soon</span>
+                    <div class="tool-card-icon purple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8E44AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="17" r="2"/><circle cx="6" cy="18" r="3"/>
+                            <path d="M15.5 8.5l2 5.5"/><path d="M11 8.5L8.5 15"/>
+                        </svg>
+                    </div>
+                    <h3>Color Palette Generator</h3>
+                    <p>Generate cohesive, guest-friendly color palettes tailored to your property style and regional market trends.</p>
+                </div>
+                <div class="tool-card coming-soon fade-in" style="transition-delay: 0.4s;">
+                    <span class="tool-badge-soon">Coming Soon</span>
+                    <div class="tool-card-icon teal">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="3" x2="9" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>Room Layout Planner</h3>
+                    <p>Drag and drop furniture into your floor plan to visualize layouts before making any purchases.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Testimonial -->
-  <section class="testimonial">
-    <div class="container--narrow">
-      <div class="testimonial__inner">
-        <hr class="testimonial__rule reveal">
-        <blockquote class="testimonial__quote reveal reveal-delay-1">"MyBnBDesign completely transformed our property. Within two months of the redesign, our nightly rate went from $189 to $329 -- and we're booked solid. The ROI was unbelievable."</blockquote>
-        <cite class="testimonial__cite reveal reveal-delay-2"><strong>Sarah &amp; David M.</strong> -- Airbnb Superhost, Scottsdale, AZ</cite>
-      </div>
-    </div>
-  </section>
+    <!-- Resources Section -->
+    <section class="resources" id="resources">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Learn</span>
+                <h2 class="section-title">STR Design Resources</h2>
+                <p class="section-subtitle">Guides, tips, and insights to help you design and operate a high-performing short-term rental.</p>
+            </div>
+            <div class="resources-grid">
+                <a href="#" class="resource-card fade-in">
+                    <div class="resource-thumb grad-1">
+                        <span class="resource-thumb-label">Guide</span>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <div class="resource-body">
+                        <h3>The Complete STR Design Playbook</h3>
+                        <p>Everything you need to know about designing a short-term rental that earns 5-star reviews and top search rankings.</p>
+                        <span class="resource-link">Read the guide <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    </div>
+                </a>
+                <a href="#" class="resource-card fade-in" style="transition-delay: 0.1s;">
+                    <div class="resource-thumb grad-2">
+                        <span class="resource-thumb-label">Checklist</span>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                        </svg>
+                    </div>
+                    <div class="resource-body">
+                        <h3>Pre-Launch Property Checklist</h3>
+                        <p>A step-by-step checklist covering everything from furniture placement to photography prep before your first guest arrives.</p>
+                        <span class="resource-link">Download checklist <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    </div>
+                </a>
+                <a href="#" class="resource-card fade-in" style="transition-delay: 0.2s;">
+                    <div class="resource-thumb grad-3">
+                        <span class="resource-thumb-label">Tips</span>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+                        </svg>
+                    </div>
+                    <div class="resource-body">
+                        <h3>Budget-Friendly Design Tips</h3>
+                        <p>How to achieve a high-end look without overspending. Smart sourcing strategies, DIY upgrades, and cost-saving techniques.</p>
+                        <span class="resource-link">Read tips <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="cta-section__bg">
-      <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1920&h=800&fit=crop&q=80" alt="Luxury interior" loading="lazy" class="img-reveal">
-    </div>
-    <div class="cta-section__overlay"></div>
-    <div class="cta-section__content">
-      <span class="eyebrow reveal" style="color: var(--gold);">Start Your Project</span>
-      <h2 class="cta-section__title reveal reveal-delay-1">Ready to Elevate<br>Your Rental?</h2>
-      <p class="cta-section__text reveal reveal-delay-2">Book a complimentary 30-minute design consultation. We will review your property, discuss your goals, and outline a strategy to maximize your revenue.</p>
-      <a href="contact.html" class="btn btn--primary btn--lg reveal reveal-delay-3">Schedule Your Consultation</a>
-    </div>
-  </section>
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <span class="section-label" style="color: var(--accent);">Ready to Transform Your Rental?</span>
+                <h2>Let's Design a Space Your Guests Will Love</h2>
+                <p>Whether you are launching a new listing or refreshing an existing property, our team is ready to help you stand out and earn more.</p>
+                <a href="mailto:hello@mybnbdesign.com" class="btn btn-primary">
+                    Get a Free Consultation
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <a href="index.html" class="footer__logo">MyBnB<span>Design</span></a>
-        <p class="footer__tagline">A <a href="https://www.bnbaccelerator.com" target="_blank" rel="noopener">BnB Accelerator</a> Company</p>
-        <p class="footer__copy">&copy; 2026 MyBnBDesign. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>
+                        <span class="nav-logo-icon" style="width:30px;height:30px;font-size:0.9rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                        </span>
+                        MyBnBDesign
+                    </h3>
+                    <p>Professional interior design for short-term rentals. We help hosts and investors create spaces that drive bookings, earn 5-star reviews, and maximize revenue.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Design Packages</a></li>
+                        <li><a href="#services">Furnishing</a></li>
+                        <li><a href="#services">Styling</a></li>
+                        <li><a href="#services">Photography Staging</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="tools/design-budget-calculator/">Budget Calculator</a></li>
+                        <li><a href="tools/roi-calculator/">ROI Calculator</a></li>
+                        <li><a href="tools/amenity-checklist/">Amenity Checklist</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 MyBnBDesign. All rights reserved.</span>
+                <span>Designed by the <a href="#">MyBnBDesign Team</a></span>
+            </div>
+        </div>
+    </footer>
 
-  <script>
-    /* ── Sticky Nav ── */
-    const nav = document.getElementById('nav');
-    const handleScroll = () => {
-      nav.classList.toggle('is-scrolled', window.scrollY > 80);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
+    <script>
+        // ===== NAVBAR SCROLL =====
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
 
-    /* ── Mobile Menu ── */
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('is-open');
-      document.body.style.overflow = navLinks.classList.contains('is-open') ? 'hidden' : '';
-    });
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        });
 
-    /* ── Scroll Reveal ── */
-    document.body.classList.add('js-reveal-ready');
+        // ===== HAMBURGER MENU =====
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const mobileOverlay = document.getElementById('mobileOverlay');
 
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
         }
-      });
-    }, {
-      threshold: 0.05,
-      rootMargin: '0px 0px -20px 0px'
-    });
 
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        hamburger.addEventListener('click', toggleMenu);
+        mobileOverlay.addEventListener('click', toggleMenu);
 
-    /* ── Image Fade-in on Load ── */
-    document.querySelectorAll('.img-reveal').forEach(img => {
-      if (img.complete) {
-        img.classList.add('is-loaded');
-      } else {
-        img.addEventListener('load', () => img.classList.add('is-loaded'));
-      }
-    });
+        // Close menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        });
 
-    /* ── Parallax Hero ── */
-    const heroBg = document.querySelector('.hero__bg img');
-    if (heroBg && window.innerWidth > 768) {
-      window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
-        if (scrolled < window.innerHeight) {
-          heroBg.style.transform = 'translateY(' + (scrolled * 0.3) + 'px) scale(1.1)';
-        }
-      }, { passive: true });
-      heroBg.style.transform = 'scale(1.1)';
-    }
-  </script>
+        // ===== FADE-IN ON SCROLL =====
+        const fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
 
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(el => observer.observe(el));
+
+        // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const navHeight = navbar.offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
