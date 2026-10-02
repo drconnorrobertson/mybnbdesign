@@ -793,13 +793,18 @@ h1 em, h2 em {
 }
 
 /* ── Scroll Animations ──────────────────── */
+/* Elements start visible. JS adds .js-reveal-ready to body,
+   which hides them until IntersectionObserver fires. */
 .reveal {
-  opacity: 0;
-  transform: translateY(30px);
   transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
 }
 
-.reveal.is-visible {
+.js-reveal-ready .reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.js-reveal-ready .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -811,12 +816,7 @@ h1 em, h2 em {
 
 /* Image reveal (fade in on load) */
 .img-reveal {
-  opacity: 0;
   transition: opacity 0.6s var(--ease);
-}
-
-.img-reveal.is-loaded {
-  opacity: 1;
 }
 
 /* ── Page Headers (inner pages) ─────────── */
