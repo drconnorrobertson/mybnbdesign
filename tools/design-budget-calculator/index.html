@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Budget Calculator | MyBnBDesign</title>
+    <meta name="description" content="Estimate your short-term rental interior design budget. Get a detailed breakdown by category with our free STR design budget calculator.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mybnbdesign.com/tools/design-budget-calculator/">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Design Budget Calculator",
+        "description": "Estimate your short-term rental interior design budget with a detailed breakdown by category, market type, and design style.",
+        "url": "https://mybnbdesign.com/tools/design-budget-calculator/",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "MyBnBDesign",
+            "url": "https://mybnbdesign.com"
+        }
+    }
+    </script>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary: #2C3E50;
+            --accent: #E67E22;
+            --light: #ECF0F1;
+            --white: #FFFFFF;
+            --accent-hover: #CF6D17;
+            --text-dark: #2C3E50;
+            --text-muted: #7F8C8D;
+            --border: #DDE1E3;
+            --success: #27AE60;
+            --shadow-sm: 0 2px 8px rgba(44, 62, 80, 0.08);
+            --shadow-md: 0 4px 20px rgba(44, 62, 80, 0.12);
+            --shadow-lg: 0 8px 40px rgba(44, 62, 80, 0.16);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            background: var(--light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+
+        .nav-logo-icon {
+            width: 38px;
+            height: 38px;
+            background: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-logo-icon svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .nav-logo-text {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-logo-text span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links .btn-nav {
+            background: var(--accent);
+            color: var(--white);
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .nav-links .btn-nav:hover {
+            background: var(--accent-hover);
+            color: var(--white);
+            transform: translateY(-1px);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--primary);
+            margin: 5px 0;
+            transition: all 0.3s;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a252f 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 24px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(230, 126, 34, 0.08) 0%, transparent 50%);
+            animation: heroGlow 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroGlow {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(5%, 5%); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(230, 126, 34, 0.15);
+            border: 1px solid rgba(230, 126, 34, 0.3);
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            opacity: 0.85;
+            line-height: 1.7;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        /* Calculator Section */
+        .calculator-section {
+            max-width: 1100px;
+            margin: -30px auto 60px;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .calculator-card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+
+        .calc-header {
+            background: var(--white);
+            padding: 36px 40px 28px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .calc-header h2 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .calc-header p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .calc-form {
+            padding: 32px 40px 40px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .info-icon {
+            width: 16px;
+            height: 16px;
+            background: var(--border);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            cursor: help;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .info-icon:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .tooltip {
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%) translateY(4px);
+            background: var(--primary);
+            color: var(--white);
+            font-size: 0.78rem;
+            font-weight: 400;
+            padding: 10px 14px;
+            border-radius: 8px;
+            white-space: normal;
+            width: 220px;
+            line-height: 1.5;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.25s ease;
+            z-index: 50;
+            box-shadow: var(--shadow-md);
+            pointer-events: none;
+        }
+
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            background: var(--white);
+            transition: border-color 0.2s, box-shadow 0.2s;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.12);
+        }
+
+        .form-group select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237F8C8D' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+            cursor: pointer;
+        }
+
+        .input-hint {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+
+        .btn-calculate {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 18px 32px;
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+        }
+
+        .btn-calculate:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+        }
+
+        .btn-calculate:active {
+            transform: translateY(0);
+        }
+
+        .btn-calculate svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Results */
+        .results-wrapper {
+            display: none;
+            padding: 0 40px 40px;
+        }
+
+        .results-wrapper.visible {
+            display: block;
+            animation: fadeSlideIn 0.5s ease-out;
+        }
+
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .results-divider {
+            height: 1px;
+            background: var(--border);
+            margin-bottom: 36px;
+        }
+
+        .results-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .results-header h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+
+        .results-header p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .estimate-summary {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .estimate-pill {
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .estimate-pill.low {
+            background: #EBF5FB;
+            color: #2980B9;
+        }
+
+        .estimate-pill.mid {
+            background: #E8F8F5;
+            color: #27AE60;
+            border: 2px solid #27AE60;
+        }
+
+        .estimate-pill.high {
+            background: #FDEBD0;
+            color: #E67E22;
+        }
+
+        .results-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Category Breakdown */
+        .category-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .category-item {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .category-item.animate {
+            animation: slideIn 0.4s ease-out forwards;
+        }
+
+        @keyframes slideIn {
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .category-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .category-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .category-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .category-name {
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: var(--text-dark);
+        }
+
+        .category-amount {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--primary);
+        }
+
+        .category-bar-bg {
+            height: 10px;
+            background: var(--light);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .category-bar-fill {
+            height: 100%;
+            border-radius: 5px;
+            width: 0%;
+            transition: width 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .category-percent {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Pie Chart */
+        .chart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .pie-chart-wrapper {
+            position: relative;
+            width: 260px;
+            height: 260px;
+        }
+
+        .pie-chart {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transform: rotate(-90deg);
+        }
+
+        .pie-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 140px;
+            height: 140px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .pie-center-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        .pie-center-amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+
+        .chart-legend {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 20px;
+            width: 100%;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            color: var(--text-dark);
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a252f 100%);
+            padding: 80px 24px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .cta-content p {
+            font-size: 1.05rem;
+            opacity: 0.85;
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent);
+            color: var(--white);
+            text-decoration: none;
+            padding: 16px 36px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: background 0.2s, transform 0.15s;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+        }
+
+        .btn-cta:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 48px 24px 32px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-logo-icon {
+            width: 34px;
+            height: 34px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-logo-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer-brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .footer-brand-name span {
+            color: var(--accent);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 32px auto 0;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px 24px;
+                gap: 16px;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow-md);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: 60px 24px 50px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .calc-header,
+            .calc-form,
+            .results-wrapper {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            .results-layout {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .results-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .pie-chart-wrapper {
+                width: 220px;
+                height: 220px;
+            }
+
+            .pie-center {
+                width: 120px;
+                height: 120px;
+            }
+
+            .pie-center-amount {
+                font-size: 1.25rem;
+            }
+
+            .cta-content h2 {
+                font-size: 1.6rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+            }
+
+            .tooltip {
+                width: 180px;
+                left: auto;
+                right: -10px;
+                transform: translateY(4px);
+            }
+
+            .tooltip::after {
+                left: auto;
+                right: 16px;
+                transform: none;
+            }
+
+            .info-icon:hover .tooltip {
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .estimate-summary {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .estimate-pill {
+                text-align: center;
+            }
+
+            .chart-legend {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../../" class="nav-logo">
+                <div class="nav-logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9.5L12 3L21 9.5V20C21 20.55 20.55 21 20 21H4C3.45 21 3 20.55 3 20V9.5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 21V12H15V21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="nav-logo-text">MyBnB<span>Design</span></div>
+            </a>
+            <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../../#tools">Tools</a></li>
+                <li><a href="../../#services">Services</a></li>
+                <li><a href="../../#portfolio">Portfolio</a></li>
+                <li><a href="../../#contact" class="btn-nav">Get a Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Free Tool</div>
+            <h1>Design Budget Calculator</h1>
+            <p>Plan your short-term rental design investment with confidence. Enter your property details below and get a realistic budget breakdown across every major category.</p>
+        </div>
+    </section>
+
+    <!-- Calculator -->
+    <section class="calculator-section">
+        <div class="calculator-card">
+            <div class="calc-header">
+                <h2>Property Details</h2>
+                <p>Tell us about your rental property and we will estimate your design budget.</p>
+            </div>
+            <div class="calc-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="sqft">
+                            Property Size (sq ft)
+                            <span class="info-icon">?
+                                <span class="tooltip">Enter the total livable square footage of your rental. This includes bedrooms, living areas, kitchen, and bathrooms.</span>
+                            </span>
+                        </label>
+                        <input type="number" id="sqft" min="200" max="10000" placeholder="e.g. 1500" value="">
+                        <div class="input-hint">Range: 200 to 10,000 sq ft</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="market">
+                            Market Type
+                            <span class="info-icon">?
+                                <span class="tooltip">Your property's location affects pricing. Urban markets tend to have higher material and labor costs, while rural areas are typically more affordable.</span>
+                            </span>
+                        </label>
+                        <select id="market">
+                            <option value="" disabled selected>Select market type</option>
+                            <option value="urban">Urban</option>
+                            <option value="suburban">Suburban</option>
+                            <option value="beach">Beach</option>
+                            <option value="mountain">Mountain</option>
+                            <option value="rural">Rural</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="style">
+                            Design Style
+                            <span class="info-icon">?
+                                <span class="tooltip">Each style has different cost characteristics. Luxury and Mid-Century pieces cost more, while Bohemian and Farmhouse styles tend to be budget-friendly.</span>
+                            </span>
+                        </label>
+                        <select id="style">
+                            <option value="" disabled selected>Select design style</option>
+                            <option value="modern">Modern</option>
+                            <option value="farmhouse">Farmhouse</option>
+                            <option value="coastal">Coastal</option>
+                            <option value="industrial">Industrial</option>
+                            <option value="bohemian">Bohemian</option>
+                            <option value="luxury">Luxury</option>
+                            <option value="midcentury">Mid-Century</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn-calculate" onclick="calculateBudget()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/><line x1="14" y1="18" x2="16" y2="18"/></svg>
+                    Calculate My Budget
+                </button>
+            </div>
+
+            <!-- Results -->
+            <div class="results-wrapper" id="resultsWrapper">
+                <div class="results-divider"></div>
+                <div class="results-header">
+                    <div>
+                        <h3>Your Estimated Budget</h3>
+                        <p id="resultsSummary"></p>
+                    </div>
+                    <div class="estimate-summary" id="estimatePills"></div>
+                </div>
+                <div class="results-layout">
+                    <div class="category-list" id="categoryList"></div>
+                    <div class="chart-container">
+                        <div class="pie-chart-wrapper">
+                            <svg class="pie-chart" id="pieChart" viewBox="0 0 260 260"></svg>
+                            <div class="pie-center">
+                                <div class="pie-center-label">Total Budget</div>
+                                <div class="pie-center-amount" id="pieCenterAmount">$0</div>
+                            </div>
+                        </div>
+                        <div class="chart-legend" id="chartLegend"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Bring Your Design Vision to Life?</h2>
+            <p>This calculator provides estimates based on industry averages. Every property is unique. Contact MyBnBDesign for a custom quote tailored to your specific space, goals, and timeline.</p>
+            <a href="../../#contact" class="btn-cta">
+                Get a Custom Quote
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9.5L12 3L21 9.5V20C21 20.55 20.55 21 20 21H4C3.45 21 3 20.55 3 20V9.5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 21V12H15V21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="footer-brand-name">MyBnB<span>Design</span></div>
+            </div>
+            <ul class="footer-links">
+                <li><a href="../../">Home</a></li>
+                <li><a href="../../#tools">Tools</a></li>
+                <li><a href="../../#services">Services</a></li>
+                <li><a href="../../#portfolio">Portfolio</a></li>
+                <li><a href="../../#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 MyBnBDesign. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Navigation toggle
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('open');
+        }
+
+        // Market rate ranges (low, mid, high per sqft)
+        const marketRates = {
+            urban:    { low: 25, mid: 35, high: 45 },
+            suburban: { low: 20, mid: 27.5, high: 35 },
+            beach:    { low: 22, mid: 31, high: 40 },
+            mountain: { low: 20, mid: 29, high: 38 },
+            rural:    { low: 18, mid: 24, high: 30 }
+        };
+
+        // Style multipliers
+        const styleMultipliers = {
+            modern:     1.0,
+            farmhouse:  0.9,
+            coastal:    1.05,
+            industrial: 0.95,
+            bohemian:   0.85,
+            luxury:     1.4,
+            midcentury: 1.1
+        };
+
+        // Category definitions with color, percentage range, and description
+        const categories = [
+            { key: 'furniture',  name: 'Furniture',     color: '#2C3E50', pctLow: 0.40, pctHigh: 0.50, desc: 'Sofas, beds, dining sets, dressers, desks, shelving' },
+            { key: 'decor',      name: 'Decor & Art',   color: '#E67E22', pctLow: 0.10, pctHigh: 0.15, desc: 'Wall art, mirrors, vases, decorative objects, plants' },
+            { key: 'lighting',   name: 'Lighting',      color: '#2980B9', pctLow: 0.08, pctHigh: 0.12, desc: 'Lamps, pendants, sconces, dimmers, smart lighting' },
+            { key: 'textiles',   name: 'Textiles',      color: '#27AE60', pctLow: 0.08, pctHigh: 0.12, desc: 'Bedding, towels, curtains, rugs, throw pillows' },
+            { key: 'kitchen',    name: 'Kitchen',       color: '#8E44AD', pctLow: 0.08, pctHigh: 0.10, desc: 'Cookware, dishes, appliances, utensils, storage' },
+            { key: 'bathroom',   name: 'Bathroom',      color: '#E74C3C', pctLow: 0.05, pctHigh: 0.08, desc: 'Toiletries, organizers, accessories, shower upgrades' },
+            { key: 'outdoor',    name: 'Outdoor',       color: '#16A085', pctLow: 0.05, pctHigh: 0.10, desc: 'Patio furniture, planters, grill, string lights, welcome mat' }
+        ];
+
+        function formatCurrency(val) {
+            if (val >= 1000) {
+                return '$' + val.toLocaleString('en-US', { maximumFractionDigits: 0 });
+            }
+            return '$' + val.toFixed(0);
+        }
+
+        function calculateBudget() {
+            const sqft = parseFloat(document.getElementById('sqft').value);
+            const market = document.getElementById('market').value;
+            const style = document.getElementById('style').value;
+
+            // Validation
+            if (!sqft || sqft < 200 || sqft > 10000) {
+                alert('Please enter a property size between 200 and 10,000 square feet.');
+                return;
+            }
+            if (!market) {
+                alert('Please select a market type.');
+                return;
+            }
+            if (!style) {
+                alert('Please select a design style.');
+                return;
+            }
+
+            const rates = marketRates[market];
+            const multiplier = styleMultipliers[style];
+
+            const totalLow = sqft * rates.low * multiplier;
+            const totalMid = sqft * rates.mid * multiplier;
+            const totalHigh = sqft * rates.high * multiplier;
+
+            // Use mid estimate for breakdown
+            const totalBudget = totalMid;
+
+            // Compute category amounts using the midpoint of each range
+            let categoryData = categories.map(cat => {
+                const pctMid = (cat.pctLow + cat.pctHigh) / 2;
+                const amount = totalBudget * pctMid;
+                return { ...cat, pct: pctMid, amount: amount };
+            });
+
+            // Normalize percentages to sum to 100%
+            const pctSum = categoryData.reduce((s, c) => s + c.pct, 0);
+            categoryData = categoryData.map(c => ({
+                ...c,
+                pct: c.pct / pctSum,
+                amount: totalBudget * (c.pct / pctSum)
+            }));
+
+            // Show results
+            const wrapper = document.getElementById('resultsWrapper');
+            wrapper.classList.add('visible');
+
+            // Summary text
+            const marketLabel = market.charAt(0).toUpperCase() + market.slice(1);
+            const styleLabel = style === 'midcentury' ? 'Mid-Century' : style.charAt(0).toUpperCase() + style.slice(1);
+            document.getElementById('resultsSummary').textContent =
+                sqft.toLocaleString() + ' sq ft ' + marketLabel + ' property, ' + styleLabel + ' style';
+
+            // Estimate pills
+            document.getElementById('estimatePills').innerHTML =
+                '<div class="estimate-pill low">Low: ' + formatCurrency(totalLow) + '</div>' +
+                '<div class="estimate-pill mid">Mid: ' + formatCurrency(totalMid) + '</div>' +
+                '<div class="estimate-pill high">High: ' + formatCurrency(totalHigh) + '</div>';
+
+            // Pie center
+            document.getElementById('pieCenterAmount').textContent = formatCurrency(totalMid);
+
+            // Build category bars
+            const catList = document.getElementById('categoryList');
+            catList.innerHTML = '';
+
+            categoryData.forEach((cat, i) => {
+                const pctDisplay = (cat.pct * 100).toFixed(0);
+                const item = document.createElement('div');
+                item.className = 'category-item';
+                item.innerHTML =
+                    '<div class="category-top">' +
+                        '<div class="category-label">' +
+                            '<div class="category-dot" style="background:' + cat.color + '"></div>' +
+                            '<span class="category-name">' + cat.name + '</span>' +
+                        '</div>' +
+                        '<span class="category-amount">' + formatCurrency(cat.amount) + '</span>' +
+                    '</div>' +
+                    '<div class="category-bar-bg">' +
+                        '<div class="category-bar-fill" style="background:' + cat.color + '" data-width="' + pctDisplay + '"></div>' +
+                    '</div>' +
+                    '<div class="category-percent">' + pctDisplay + '% of budget · ' + cat.desc + '</div>';
+                catList.appendChild(item);
+
+                // Stagger animation
+                setTimeout(function() {
+                    item.classList.add('animate');
+                    var fill = item.querySelector('.category-bar-fill');
+                    fill.style.width = pctDisplay + '%';
+                }, i * 100);
+            });
+
+            // Build pie chart
+            buildPieChart(categoryData);
+
+            // Build legend
+            const legend = document.getElementById('chartLegend');
+            legend.innerHTML = '';
+            categoryData.forEach(function(cat) {
+                legend.innerHTML +=
+                    '<div class="legend-item">' +
+                        '<div class="legend-dot" style="background:' + cat.color + '"></div>' +
+                        '<span>' + cat.name + ' (' + (cat.pct * 100).toFixed(0) + '%)</span>' +
+                    '</div>';
+            });
+
+            // Scroll to results
+            setTimeout(function() {
+                wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 200);
+        }
+
+        function buildPieChart(data) {
+            var svg = document.getElementById('pieChart');
+            svg.innerHTML = '';
+
+            var cx = 130, cy = 130, r = 120;
+            var circumference = 2 * Math.PI * r;
+            var offset = 0;
+
+            data.forEach(function(cat, i) {
+                var segmentLength = cat.pct * circumference;
+                var circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                circle.setAttribute('cx', cx);
+                circle.setAttribute('cy', cy);
+                circle.setAttribute('r', r);
+                circle.setAttribute('fill', 'none');
+                circle.setAttribute('stroke', cat.color);
+                circle.setAttribute('stroke-width', '28');
+                circle.setAttribute('stroke-dasharray', segmentLength + ' ' + (circumference - segmentLength));
+                circle.setAttribute('stroke-dashoffset', -offset);
+                circle.style.transition = 'stroke-dasharray 0.8s ease ' + (i * 0.1) + 's';
+
+                // Start with 0 and animate
+                circle.setAttribute('stroke-dasharray', '0 ' + circumference);
+                svg.appendChild(circle);
+
+                // Animate after a frame
+                setTimeout(function() {
+                    circle.setAttribute('stroke-dasharray', segmentLength + ' ' + (circumference - segmentLength));
+                }, 50);
+
+                offset += segmentLength;
+            });
+        }
+    </script>
+
+</body>
+</html>
