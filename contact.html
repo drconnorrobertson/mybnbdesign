@@ -3,60 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — MyBnBDesign</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Contact -- MyBnBDesign</title>
+  <meta name="description" content="Get in touch with MyBnBDesign. Book a free consultation for your short-term rental interior design project.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="navbar scrolled" id="navbar"><div class="container nav-container"><a href="index.html" class="logo">MyBnB<span>Design</span></a><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" class="btn btn-nav active" style="border-color:var(--gold);color:var(--gold);">Get Started</a></li></ul><button class="mobile-toggle" id="mobileToggle" aria-label="Menu" style="color:var(--charcoal);">&#9776;</button></div></nav>
 
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">MyBnB<span>Design</span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li class="nav__cta"><a href="contact.html" class="btn btn--outline btn--nav">Get Started</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
   <section class="page-header">
     <div class="container">
-      <p style="color:var(--gold);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:12px;">Let's Talk</p>
-      <h1>Get in Touch</h1>
-      <p>Book a free consultation or ask us anything</p>
+      <span class="eyebrow">Get in Touch</span>
+      <h1>Contact Us</h1>
+      <p>Book your complimentary design consultation</p>
     </div>
   </section>
 
+  <!-- Contact Form -->
   <section class="section">
     <div class="container">
       <div class="contact-grid">
-        <div class="contact-form fade-in">
-          <h3 style="margin-bottom:8px;">Book Your Free Consultation</h3>
-          <p style="color:var(--text-light);margin-bottom:8px;">Tell us about your property and we'll reach out within 24 hours.</p>
-          <form action="#" method="POST">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required>
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
-            <label for="property">Property Type</label>
-            <select id="property" name="property">
-              <option value="">Select property type...</option>
-              <option>Single Family Home</option>
-              <option>Condo / Apartment</option>
-              <option>Cabin / A-Frame</option>
-              <option>Townhouse</option>
-              <option>Multi-Unit</option>
-              <option>Other</option>
-            </select>
-            <label for="service">Service Interested In</label>
-            <select id="service" name="service">
-              <option value="">Select a service...</option>
-              <option>Full Interior Design</option>
-              <option>Turnkey Package</option>
-              <option>Space Planning</option>
-              <option>Listing Optimization</option>
-              <option>Not sure yet</option>
-            </select>
-            <label for="message">Tell Us About Your Property</label>
-            <textarea id="message" name="message" placeholder="Location, number of bedrooms, current state, your goals..."></textarea>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-        </div>
-        <div class="contact-info fade-in">
+        <form class="contact-form reveal" onsubmit="event.preventDefault(); alert('Thank you for your inquiry. We will be in touch within 24 hours.');">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+
+          <label for="property">Property Type</label>
+          <select id="property" name="property">
+            <option value="">Select property type</option>
+            <option value="single">Single Family Home</option>
+            <option value="condo">Condo / Apartment</option>
+            <option value="cabin">Cabin / Mountain Home</option>
+            <option value="beach">Beach / Coastal Property</option>
+            <option value="multi">Multi-Unit</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="message">Tell Us About Your Project</label>
+          <textarea id="message" name="message" placeholder="Property location, number of bedrooms, goals, timeline..."></textarea>
+
+          <button type="submit" class="btn btn--primary">Send Inquiry</button>
+        </form>
+
+        <div class="contact-info reveal reveal-delay-1">
           <div class="contact-info-block">
             <h4>Email</h4>
             <p>hello@mybnbdesign.com</p>
@@ -67,35 +82,41 @@
           </div>
           <div class="contact-info-block">
             <h4>Based In</h4>
-            <p>Pittsburgh, PA<br>Serving clients nationwide</p>
+            <p>Pittsburgh, PA</p>
+            <p style="color: var(--text-light); font-size: 0.875rem;">Serving clients nationwide</p>
           </div>
-          <div class="contact-info-block">
-            <h4>Response Time</h4>
-            <p>We respond to all inquiries within 24 hours during business days.</p>
-          </div>
-          <div class="accelerator-banner">
-            <h4>Acquire + Design</h4>
-            <p>Looking to buy an STR property and get it designed in one seamless process?</p>
-            <a href="https://bnbaccelerator.com" target="_blank" class="btn btn-primary" style="padding:10px 24px;">Visit BnB Accelerator →</a>
+          <div class="contact-info-block" style="margin-top: var(--space-xl); padding-top: var(--space-xl); border-top: 1px solid var(--border);">
+            <h4>Looking to Acquire a Property?</h4>
+            <p>Our parent company <a href="https://www.bnbaccelerator.com" target="_blank" rel="noopener" style="color:var(--gold);">BnB Accelerator</a> helps investors find, acquire, and launch short-term rental properties from start to finish.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-brand"><a href="index.html" class="logo" style="color:var(--white);">MyBnB<span>Design</span></a><p>Premium interior design for short-term rental properties.</p></div>
-      <div class="footer-links"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-links"><h4>Services</h4><ul><li><a href="services.html">Full Interior Design</a></li><li><a href="services.html">Space Planning</a></li><li><a href="services.html">Turnkey Packages</a></li><li><a href="services.html">Listing Optimization</a></li></ul></div>
-      <div class="footer-contact"><h4>Get in Touch</h4><p>hello@mybnbdesign.com</p><p>(412) 555-0192</p><div style="margin-top:20px;"><a href="https://bnbaccelerator.com" target="_blank" style="color:var(--gold);font-size:0.85rem;">A BnB Accelerator Company ↗</a></div></div>
+    <div class="container">
+      <div class="footer__inner">
+        <a href="index.html" class="footer__logo">MyBnB<span>Design</span></a>
+        <p class="footer__tagline">A <a href="https://www.bnbaccelerator.com" target="_blank" rel="noopener">BnB Accelerator</a> Company</p>
+        <p class="footer__copy">&copy; 2026 MyBnBDesign. All rights reserved.</p>
+      </div>
     </div>
-    <div class="container footer-bottom"><p>&copy; 2026 MyBnBDesign. All rights reserved.</p><p class="footer-accelerator">Powered by <a href="https://bnbaccelerator.com" target="_blank">BnB Accelerator</a></p></div>
   </footer>
+
   <script>
-    document.getElementById('mobileToggle').addEventListener('click', () => { document.getElementById('navLinks').classList.toggle('open'); });
-    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('is-scrolled', window.scrollY > 80), { passive: true });
+    nav.classList.add('is-scrolled');
+    document.getElementById('navToggle').addEventListener('click', () => {
+      const links = document.getElementById('navLinks');
+      links.classList.toggle('is-open');
+      document.body.style.overflow = links.classList.contains('is-open') ? 'hidden' : '';
+    });
+    const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); }), { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   </script>
+
 </body>
 </html>

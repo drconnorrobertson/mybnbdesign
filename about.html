@@ -3,74 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — MyBnBDesign</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>About -- MyBnBDesign</title>
+  <meta name="description" content="Learn about MyBnBDesign -- premium interior design for short-term rental properties across the country.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="navbar scrolled" id="navbar"><div class="container nav-container"><a href="index.html" class="logo">MyBnB<span>Design</span></a><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="about.html" class="active">About</a></li><li><a href="contact.html" class="btn btn-nav" style="border-color:var(--gold);color:var(--gold);">Get Started</a></li></ul><button class="mobile-toggle" id="mobileToggle" aria-label="Menu" style="color:var(--charcoal);">&#9776;</button></div></nav>
 
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">MyBnB<span>Design</span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+        <li><a href="about.html" class="nav__link is-active">About</a></li>
+        <li class="nav__cta"><a href="contact.html" class="btn btn--outline btn--nav">Get Started</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
   <section class="page-header">
     <div class="container">
-      <p style="color:var(--gold);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:12px;">Our Story</p>
-      <h1>About MyBnBDesign</h1>
-      <p>Where design expertise meets rental revenue intelligence</p>
+      <span class="eyebrow">Who We Are</span>
+      <h1>About Us</h1>
+      <p>Design-driven, revenue-focused, guest-obsessed</p>
     </div>
   </section>
 
+  <!-- About Content -->
   <section class="section">
     <div class="container">
-      <div class="about-grid fade-in">
+      <div class="about-grid reveal">
         <div class="about-text">
-          <h2>Design That <em>Performs</em></h2>
-          <p>MyBnBDesign was founded on a simple observation: the best-performing short-term rentals aren't just clean and comfortable — they're thoughtfully designed spaces that create an emotional connection with guests from the very first listing photo.</p>
-          <p>We combine traditional interior design expertise with deep knowledge of the short-term rental market. Every material we select, every layout we plan, and every detail we curate is chosen to maximize both guest satisfaction and owner revenue.</p>
-          <p>As a BnB Accelerator company, we sit at the intersection of property acquisition and property performance — giving our clients a unique advantage in the competitive STR market.</p>
+          <span class="eyebrow">Our Story</span>
+          <h2>Where Design Meets<br>Revenue Strategy</h2>
+          <p>MyBnBDesign was founded on a simple observation: the best-performing short-term rentals are not just well-located -- they are well-designed. Guests choose properties that feel intentional, curated, and photogenic.</p>
+          <p>We bring the same design rigor that goes into boutique hotels and editorial spaces to the world of short-term rentals. Every project starts with understanding the market, the guest, and the revenue goals -- then we design accordingly.</p>
+          <p>As a <a href="https://www.bnbaccelerator.com" target="_blank" rel="noopener" style="color:var(--gold);">BnB Accelerator</a> company, we sit at the intersection of real estate investment and design excellence, helping property owners maximize both guest experience and financial returns.</p>
         </div>
         <div class="about-img">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=500&fit=crop&q=80" alt="Luxury interior" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=1000&fit=crop&q=80" alt="MyBnBDesign studio" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background:var(--off-white);">
+  <!-- Stats -->
+  <section class="stats">
     <div class="container">
-      <h2 class="section-title fade-in">What Sets Us Apart</h2>
-      <p class="section-sub fade-in">We're not just designers — we're rental revenue strategists</p>
-      <div class="values-grid">
-        <div class="value fade-in"><div class="value-icon">◆</div><h3>Revenue-First Design</h3><p>Every design decision is informed by rental data — what guests search for, what earns five stars, and what commands premium nightly rates in your market.</p></div>
-        <div class="value fade-in"><div class="value-icon">◆</div><h3>Turnkey Execution</h3><p>We don't hand you a Pinterest board and wish you luck. We source, deliver, install, and style everything. You get a guest-ready property.</p></div>
-        <div class="value fade-in"><div class="value-icon">◆</div><h3>Market Intelligence</h3><p>We study your competitive set, local booking trends, and guest demographics to design spaces that outperform the market average.</p></div>
+      <div class="stats__grid">
+        <div class="stats__item reveal">
+          <div class="stats__number">200+</div>
+          <div class="stats__label">Properties Designed</div>
+        </div>
+        <div class="stats__item reveal reveal-delay-1">
+          <div class="stats__number">40%</div>
+          <div class="stats__label">Avg Revenue Increase</div>
+        </div>
+        <div class="stats__item reveal reveal-delay-2">
+          <div class="stats__number">4.9</div>
+          <div class="stats__label">Average Guest Rating</div>
+        </div>
+        <div class="stats__item reveal reveal-delay-3">
+          <div class="stats__number">12</div>
+          <div class="stats__label">Markets Served</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="testimonial-section">
-    <div class="container"><div class="testimonial fade-in">
-      <blockquote>"They don't just make things pretty — they understand what makes rentals succeed. Our redesigned cabin books 340 nights a year now."</blockquote>
-      <cite>— Marcus T., STR Investor · Blue Ridge, GA</cite>
-    </div></div>
-  </section>
-
-  <section class="section cta-section">
-    <div class="container fade-in"><h2>Ready to Work Together?</h2><p>Let's talk about your property and how we can maximize its potential.</p><a href="contact.html" class="btn btn-primary btn-lg">Get in Touch</a></div>
-  </section>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-brand"><a href="index.html" class="logo" style="color:var(--white);">MyBnB<span>Design</span></a><p>Premium interior design for short-term rental properties.</p></div>
-      <div class="footer-links"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-links"><h4>Services</h4><ul><li><a href="services.html">Full Interior Design</a></li><li><a href="services.html">Space Planning</a></li><li><a href="services.html">Turnkey Packages</a></li><li><a href="services.html">Listing Optimization</a></li></ul></div>
-      <div class="footer-contact"><h4>Get in Touch</h4><p>hello@mybnbdesign.com</p><p>(412) 555-0192</p><div style="margin-top:20px;"><a href="https://bnbaccelerator.com" target="_blank" style="color:var(--gold);font-size:0.85rem;">A BnB Accelerator Company ↗</a></div></div>
+  <!-- Testimonial -->
+  <section class="testimonial">
+    <div class="container--narrow">
+      <div class="testimonial__inner">
+        <hr class="testimonial__rule reveal">
+        <blockquote class="testimonial__quote reveal reveal-delay-1">"The team at MyBnBDesign does not just design beautiful spaces -- they understand the business of short-term rentals. That combination is rare and incredibly valuable."</blockquote>
+        <cite class="testimonial__cite reveal reveal-delay-2"><strong>James L.</strong> -- STR Investor, Pittsburgh, PA</cite>
+      </div>
     </div>
-    <div class="container footer-bottom"><p>&copy; 2026 MyBnBDesign. All rights reserved.</p><p class="footer-accelerator">Powered by <a href="https://bnbaccelerator.com" target="_blank">BnB Accelerator</a></p></div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-section__bg">
+      <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1920&h=800&fit=crop&q=80" alt="Luxury interior" loading="lazy">
+    </div>
+    <div class="cta-section__overlay"></div>
+    <div class="cta-section__content">
+      <span class="eyebrow reveal" style="color: var(--gold);">Work With Us</span>
+      <h2 class="cta-section__title reveal reveal-delay-1">Let Us Design<br>Your Next Property</h2>
+      <p class="cta-section__text reveal reveal-delay-2">We would love to hear about your project and show you what is possible.</p>
+      <a href="contact.html" class="btn btn--primary btn--lg reveal reveal-delay-3">Schedule Your Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="index.html" class="footer__logo">MyBnB<span>Design</span></a>
+        <p class="footer__tagline">A <a href="https://www.bnbaccelerator.com" target="_blank" rel="noopener">BnB Accelerator</a> Company</p>
+        <p class="footer__copy">&copy; 2026 MyBnBDesign. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+
   <script>
-    document.getElementById('mobileToggle').addEventListener('click', () => { document.getElementById('navLinks').classList.toggle('open'); });
-    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('is-scrolled', window.scrollY > 80), { passive: true });
+    nav.classList.add('is-scrolled');
+    document.getElementById('navToggle').addEventListener('click', () => {
+      const links = document.getElementById('navLinks');
+      links.classList.toggle('is-open');
+      document.body.style.overflow = links.classList.contains('is-open') ? 'hidden' : '';
+    });
+    const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); }), { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   </script>
+
 </body>
 </html>

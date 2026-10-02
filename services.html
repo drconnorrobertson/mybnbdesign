@@ -3,144 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services — MyBnBDesign</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Services -- MyBnBDesign</title>
+  <meta name="description" content="Full-service interior design for short-term rentals. From concept to keys-in-hand, we create spaces that perform.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="navbar scrolled" id="navbar">
-    <div class="container nav-container">
-      <a href="index.html" class="logo">MyBnB<span>Design</span></a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="btn btn-nav" style="border-color:var(--gold);color:var(--gold);">Get Started</a></li>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">MyBnB<span>Design</span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="services.html" class="nav__link is-active">Services</a></li>
+        <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li class="nav__cta"><a href="contact.html" class="btn btn--outline btn--nav">Get Started</a></li>
       </ul>
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu" style="color:var(--charcoal);">&#9776;</button>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
     </div>
   </nav>
 
+  <!-- Page Header -->
   <section class="page-header">
     <div class="container">
-      <p style="color:var(--gold);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:12px;">What We Offer</p>
+      <span class="eyebrow">What We Do</span>
       <h1>Our Services</h1>
-      <p>Design solutions built for rental revenue, not just aesthetics</p>
+      <p>End-to-end design solutions engineered for short-term rental success</p>
     </div>
   </section>
 
+  <!-- Services Detail -->
   <section class="section">
     <div class="container">
-      <div class="service-detail fade-in">
+
+      <div class="service-detail reveal">
         <div class="service-detail-text">
+          <span class="eyebrow">01</span>
           <h3>Full Interior Design</h3>
-          <p>Our signature service. We handle every detail of your rental's interior — from the floor plan and furniture selection to the art on the walls and the throw pillows on the couch.</p>
-          <p>Every design decision is made with two goals in mind: guest delight and revenue optimization.</p>
+          <p>Complete room-by-room design from concept to installation. Every piece of furniture, textile, and detail is curated for guest delight and five-star reviews.</p>
           <ul>
             <li>Custom mood boards and design concepts</li>
-            <li>3D renderings before we source a single piece</li>
-            <li>Full furniture, fixture, and décor procurement</li>
+            <li>3D renderings and floor plans</li>
+            <li>Full furniture and decor specification</li>
+            <li>Professional procurement at designer pricing</li>
             <li>White-glove installation and styling</li>
-            <li>Professional photography direction</li>
           </ul>
-          <div class="pricing-note">Starting at $5,000 per room</div>
         </div>
         <div class="service-detail-img">
-          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=400&fit=crop&q=80" alt="Interior design project" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop&q=80" alt="Full interior design service" loading="lazy">
         </div>
       </div>
 
-      <div class="service-detail fade-in">
+      <div class="service-detail reveal">
         <div class="service-detail-text">
-          <h3>Turnkey Packages</h3>
-          <p>Don't have time to manage a design project? Our turnkey packages handle everything from concept to keys-in-hand. We design, source, deliver, install, and photograph your property — you just start accepting bookings.</p>
+          <span class="eyebrow">02</span>
+          <h3>Space Planning</h3>
+          <p>Maximize your property's earning potential with layouts optimized for guest flow, comfort, and listing photos that convert browsers into bookings.</p>
           <ul>
-            <li>Everything in Full Interior Design, plus:</li>
-            <li>Complete kitchen and bathroom outfitting</li>
-            <li>Linen and towel programs</li>
-            <li>Welcome kit and guest amenities setup</li>
-            <li>Listing creation assistance</li>
-          </ul>
-          <div class="pricing-note">Starting at $15,000 per property</div>
-        </div>
-        <div class="service-detail-img">
-          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=400&fit=crop&q=80" alt="Turnkey rental interior" loading="lazy">
-        </div>
-      </div>
-
-      <div class="service-detail fade-in">
-        <div class="service-detail-text">
-          <h3>Space Planning &amp; Optimization</h3>
-          <p>Already have furniture but your layout isn't working? We'll optimize your space for guest flow, comfort, and those listing photos that make people stop scrolling.</p>
-          <ul>
+            <li>Guest flow and circulation analysis</li>
             <li>Furniture layout optimization</li>
-            <li>Traffic flow analysis</li>
-            <li>Storage solutions for hosting essentials</li>
-            <li>Photography-optimized arrangements</li>
+            <li>Storage and functionality planning</li>
+            <li>Photography-ready staging strategy</li>
           </ul>
-          <div class="pricing-note">Starting at $1,500 per property</div>
         </div>
         <div class="service-detail-img">
-          <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=600&h=400&fit=crop&q=80" alt="Space planning" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop&q=80" alt="Space planning service" loading="lazy">
         </div>
       </div>
 
-      <div class="service-detail fade-in">
+      <div class="service-detail reveal">
         <div class="service-detail-text">
-          <h3>Listing Optimization</h3>
-          <p>Your listing is your storefront. We help you present your property in the best possible light with professional photography direction, strategic staging, and listing copy guidance.</p>
+          <span class="eyebrow">03</span>
+          <h3>Turnkey Packages</h3>
+          <p>Move-in ready solutions. We handle everything -- design, procurement, delivery, installation, styling. You hand over the keys and start hosting.</p>
           <ul>
-            <li>Pre-photo styling and staging</li>
+            <li>Complete design through installation</li>
+            <li>All furniture, linens, and kitchenware</li>
+            <li>Art, decor, and finishing touches</li>
+            <li>Professional photography coordination</li>
+            <li>Guest-ready in as few as 4 weeks</li>
+          </ul>
+        </div>
+        <div class="service-detail-img">
+          <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800&h=600&fit=crop&q=80" alt="Turnkey package service" loading="lazy">
+        </div>
+      </div>
+
+      <div class="service-detail reveal">
+        <div class="service-detail-text">
+          <span class="eyebrow">04</span>
+          <h3>Listing Optimization</h3>
+          <p>Professional photography direction, listing copy guidance, and strategic staging that converts browsers into bookings at premium nightly rates.</p>
+          <ul>
             <li>Photography art direction</li>
             <li>Listing title and description guidance</li>
-            <li>Amenity audit and improvement plan</li>
+            <li>Competitive market positioning</li>
+            <li>Amenity and experience recommendations</li>
           </ul>
-          <div class="pricing-note">Starting at $750 per listing</div>
         </div>
         <div class="service-detail-img">
-          <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7c5a38?w=600&h=400&fit=crop&q=80" alt="Listing optimization" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop&q=80" alt="Listing optimization service" loading="lazy">
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- BnB Accelerator Cross-Promo -->
-  <section class="section" style="background:var(--off-white);">
-    <div class="container" style="max-width:800px;">
-      <div class="accelerator-banner fade-in">
-        <h4>Need a Property First?</h4>
-        <p>Our partners at BnB Accelerator offer a done-for-you STR acquisition service — find, finance, and close on your next rental property with expert guidance.</p>
-        <a href="https://bnbaccelerator.com" target="_blank" class="btn btn-primary">Learn About BnB Accelerator →</a>
-      </div>
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-section__bg">
+      <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1920&h=800&fit=crop&q=80" alt="Luxury interior" loading="lazy">
+    </div>
+    <div class="cta-section__overlay"></div>
+    <div class="cta-section__content">
+      <span class="eyebrow reveal" style="color: var(--gold);">Start Your Project</span>
+      <h2 class="cta-section__title reveal reveal-delay-1">Ready to Get Started?</h2>
+      <p class="cta-section__text reveal reveal-delay-2">Book a complimentary consultation and let us show you what's possible.</p>
+      <a href="contact.html" class="btn btn--primary btn--lg reveal reveal-delay-3">Schedule Your Consultation</a>
     </div>
   </section>
 
-  <section class="section cta-section">
-    <div class="container fade-in">
-      <h2>Let's Design Your Next Success Story</h2>
-      <p>Every property is unique. Book a free consultation and we'll build a custom design plan around your property, market, and revenue goals.</p>
-      <a href="contact.html" class="btn btn-primary btn-lg">Book Your Free Consultation</a>
-    </div>
-  </section>
-
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="logo" style="color:var(--white);">MyBnB<span>Design</span></a>
-        <p>Premium interior design for short-term rental properties. We design spaces that earn more.</p>
+    <div class="container">
+      <div class="footer__inner">
+        <a href="index.html" class="footer__logo">MyBnB<span>Design</span></a>
+        <p class="footer__tagline">A <a href="https://www.bnbaccelerator.com" target="_blank" rel="noopener">BnB Accelerator</a> Company</p>
+        <p class="footer__copy">&copy; 2026 MyBnBDesign. All rights reserved.</p>
       </div>
-      <div class="footer-links"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-links"><h4>Services</h4><ul><li><a href="services.html">Full Interior Design</a></li><li><a href="services.html">Space Planning</a></li><li><a href="services.html">Turnkey Packages</a></li><li><a href="services.html">Listing Optimization</a></li></ul></div>
-      <div class="footer-contact"><h4>Get in Touch</h4><p>hello@mybnbdesign.com</p><p>(412) 555-0192</p><div style="margin-top:20px;"><a href="https://bnbaccelerator.com" target="_blank" style="color:var(--gold);font-size:0.85rem;">A BnB Accelerator Company ↗</a></div></div>
     </div>
-    <div class="container footer-bottom"><p>&copy; 2026 MyBnBDesign. All rights reserved.</p><p class="footer-accelerator">Powered by <a href="https://bnbaccelerator.com" target="_blank">BnB Accelerator</a></p></div>
   </footer>
+
   <script>
-    document.getElementById('mobileToggle').addEventListener('click', () => { document.getElementById('navLinks').classList.toggle('open'); });
-    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('is-scrolled', window.scrollY > 80), { passive: true });
+    nav.classList.add('is-scrolled');
+    document.getElementById('navToggle').addEventListener('click', () => {
+      const links = document.getElementById('navLinks');
+      links.classList.toggle('is-open');
+      document.body.style.overflow = links.classList.contains('is-open') ? 'hidden' : '';
+    });
+    const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); }), { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   </script>
+
 </body>
 </html>
