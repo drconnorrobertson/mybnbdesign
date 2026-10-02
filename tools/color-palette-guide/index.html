@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Palette Recommendation Tool | MyBnBDesign</title>
+<meta name="description" content="Discover the perfect color palette for your short-term rental property. Get expert color recommendations based on your property type and desired market vibe.">
+<meta name="author" content="MyBnBDesign Team">
+<link rel="canonical" href="https://mybnbdesign.com/tools/color-palette-guide">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Color Palette Recommendation Tool",
+  "description": "Discover the perfect color palette for your short-term rental property based on property type and desired market vibe.",
+  "url": "https://mybnbdesign.com/tools/color-palette-guide",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "author": {
+    "@type": "Organization",
+    "name": "MyBnBDesign",
+    "url": "https://mybnbdesign.com"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #2C3E50;
+  --accent: #E67E22;
+  --light: #ECF0F1;
+  --white: #FFFFFF;
+  --dark: #1a252f;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --shadow-sm: 0 2px 8px rgba(44,62,80,0.08);
+  --shadow-md: 0 4px 20px rgba(44,62,80,0.12);
+  --shadow-lg: 0 8px 40px rgba(44,62,80,0.16);
+  --shadow-xl: 0 12px 60px rgba(44,62,80,0.2);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--primary);
+  background: var(--gray-100);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, #1a252f 50%, var(--primary) 100%);
+  color: var(--white);
+  padding: 80px 0 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(230,126,34,0.15) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(230,126,34,0.1) 0%, transparent 50%);
+}
+
+.hero-content { position: relative; z-index: 1; }
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero h1 span { color: var(--accent); }
+
+.hero p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  opacity: 0.9;
+  max-width: 640px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(230,126,34,0.2);
+  border: 1px solid rgba(230,126,34,0.4);
+  color: var(--accent);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Sections */
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--gray-600);
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.step-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+/* Selector Cards */
+.selector-grid {
+  display: grid;
+  gap: 16px;
+  justify-content: center;
+}
+
+.property-grid {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.vibe-grid {
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.selector-card {
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.selector-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.selector-card.active {
+  border-color: var(--accent);
+  background: linear-gradient(135deg, rgba(230,126,34,0.05), rgba(230,126,34,0.1));
+  box-shadow: 0 0 0 3px rgba(230,126,34,0.2);
+}
+
+.selector-card.active::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background: var(--accent);
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.selector-icon {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.selector-card h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.selector-card p {
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  margin-top: 4px;
+}
+
+/* Selection Summary */
+.selection-summary {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin: 30px auto;
+  max-width: 600px;
+  border-left: 4px solid var(--accent);
+}
+
+.selection-summary.visible { display: block; animation: fadeSlideUp 0.4s ease; }
+
+.selection-summary p {
+  font-size: 1rem;
+  color: var(--gray-700);
+}
+
+.selection-summary strong { color: var(--accent); }
+
+/* Reset Button */
+.reset-btn {
+  display: none;
+  margin: 20px auto;
+  padding: 10px 24px;
+  background: transparent;
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  color: var(--gray-600);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.reset-btn.visible { display: block; }
+.reset-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Palette Results */
+.results-section {
+  display: none;
+  padding: 40px 0 60px;
+}
+
+.results-section.visible { display: block; animation: fadeSlideUp 0.5s ease; }
+
+.results-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.results-header h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 8px;
+}
+
+.results-header p {
+  color: var(--gray-600);
+  font-size: 1rem;
+}
+
+/* Palette Cards */
+.palette-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.palette-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all var(--transition);
+  animation: fadeSlideUp 0.5s ease backwards;
+}
+
+.palette-card:nth-child(2) { animation-delay: 0.1s; }
+.palette-card:nth-child(3) { animation-delay: 0.2s; }
+.palette-card:nth-child(4) { animation-delay: 0.3s; }
+.palette-card:nth-child(5) { animation-delay: 0.4s; }
+
+.palette-card:hover { box-shadow: var(--shadow-lg); }
+
+.palette-card-header {
+  padding: 28px 32px 20px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.palette-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.palette-card-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+@media (max-width: 768px) {
+  .palette-card-body { grid-template-columns: 1fr; }
+}
+
+/* Room Preview */
+.room-preview {
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-100);
+  min-height: 320px;
+}
+
+.room-mockup {
+  width: 100%;
+  max-width: 360px;
+  position: relative;
+}
+
+.room-mockup svg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
+}
+
+/* Color Swatches */
+.swatches-panel {
+  padding: 28px 32px;
+}
+
+.swatch-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray-100);
+  cursor: pointer;
+  transition: background var(--transition);
+  border-radius: var(--radius-sm);
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 0 -8px;
+}
+
+.swatch-row:last-child { border-bottom: none; }
+
+.swatch-row:hover {
+  background: var(--gray-100);
+}
+
+.swatch-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 3px solid var(--white);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: transform var(--transition);
+}
+
+.swatch-row:hover .swatch-circle { transform: scale(1.1); }
+
+.swatch-info { flex: 1; }
+
+.swatch-label {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.swatch-hex {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.copy-hint {
+  font-size: 0.7rem;
+  color: var(--gray-400);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.swatch-row:hover .copy-hint { opacity: 1; }
+
+/* Proportion Bar */
+.proportion-bar {
+  display: flex;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 16px 32px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.proportion-segment {
+  transition: flex var(--transition);
+}
+
+/* Palette Footer */
+.palette-footer {
+  padding: 20px 32px 28px;
+  border-top: 1px solid var(--gray-200);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.palette-meta { flex: 1; min-width: 200px; }
+
+.meta-label {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.room-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.room-tag {
+  background: var(--light);
+  color: var(--primary);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.psych-tip {
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.save-btn {
+  padding: 10px 20px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+  align-self: flex-start;
+  margin-top: 18px;
+}
+
+.save-btn:hover {
+  background: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--primary);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(230,126,34,0.15), transparent 60%);
+}
+
+.cta-content { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+
+.cta-content h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 16px;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 32px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  padding: 16px 40px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: all var(--transition);
+  box-shadow: 0 4px 20px rgba(230,126,34,0.4);
+}
+
+.cta-button:hover {
+  background: #d35400;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(230,126,34,0.5);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--dark);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.85rem;
+}
+
+.site-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero { padding: 50px 0 40px; }
+  .property-grid { grid-template-columns: repeat(2, 1fr); }
+  .vibe-grid { grid-template-columns: repeat(2, 1fr); }
+  .selector-card { padding: 16px 12px; }
+  .selector-icon { font-size: 1.8rem; }
+  .palette-footer { flex-direction: column; }
+  .swatches-panel, .palette-card-header, .palette-footer { padding-left: 20px; padding-right: 20px; }
+  .proportion-bar { margin-left: 20px; margin-right: 20px; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container hero-content">
+    <div class="badge">Free Design Tool</div>
+    <h1>Color Palette <span>Recommendation Tool</span></h1>
+    <p>Find the perfect color scheme for your short-term rental. Select your property type and desired vibe to discover professionally curated palettes.</p>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="step1-section">
+    <div class="container">
+      <div class="step-header">
+        <span class="step-indicator">1</span>
+        <h2 class="section-title">Select Your Property Type</h2>
+      </div>
+      <p class="section-subtitle">What kind of property are you designing?</p>
+      <div class="selector-grid property-grid" id="property-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="step2-section">
+    <div class="container">
+      <div class="step-header">
+        <span class="step-indicator">2</span>
+        <h2 class="section-title">Choose Your Market Vibe</h2>
+      </div>
+      <p class="section-subtitle">What atmosphere do you want your guests to experience?</p>
+      <div class="selector-grid vibe-grid" id="vibe-grid"></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="selection-summary" id="selection-summary">
+      <p>Showing palettes for: <strong id="summary-text"></strong></p>
+    </div>
+    <button class="reset-btn" id="reset-btn" onclick="resetSelections()">Reset Selections</button>
+  </div>
+
+  <section class="results-section container" id="results-section">
+    <div class="results-header">
+      <h2>Your Recommended Palettes</h2>
+      <p>Click any color swatch to copy its hex code</p>
+    </div>
+    <div class="palette-grid" id="palette-grid"></div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2>Love a Palette?</h2>
+      <p>Not sure how to bring it to life? MyBnBDesign brings your vision to life with expert color consultation and professional styling for short-term rental properties.</p>
+      <a href="https://mybnbdesign.com/contact" class="cta-button">Book a Consultation</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Created by the MyBnBDesign Team | <a href="https://mybnbdesign.com">mybnbdesign.com</a></p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ---------- DATA ---------- */
+
+  const propertyTypes = [
+    { id: 'beach', name: 'Beach House', icon: '<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 4L4 18h4v16h24V18h4L20 4z" fill="#E67E22" opacity="0.2" stroke="#2C3E50" stroke-width="1.5"/><path d="M8 34h24M14 34v-8h5v8M21 22h6v4h-6z" stroke="#2C3E50" stroke-width="1.5"/><path d="M2 36c4-2 6 0 10-2s6 0 10-2 6 0 10-2" stroke="#5DADE2" stroke-width="1.5" opacity="0.5"/></svg>', desc: 'Coastal, airy feel' },
+    { id: 'mountain', name: 'Mountain Cabin', icon: '<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 6L4 30h32L20 6z" fill="#27AE60" opacity="0.2" stroke="#2C3E50" stroke-width="1.5"/><path d="M28 16l8 14" stroke="#2C3E50" stroke-width="1.5"/><path d="M16 30v-6h8v6" stroke="#2C3E50" stroke-width="1.5"/><circle cx="30" cy="8" r="3" fill="#F39C12" opacity="0.4"/></svg>', desc: 'Warm, nature-inspired' },
+    { id: 'urban', name: 'Urban Loft', icon: '<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="6" y="10" width="12" height="24" rx="1" fill="#2C3E50" opacity="0.15" stroke="#2C3E50" stroke-width="1.5"/><rect x="22" y="6" width="12" height="28" rx="1" fill="#2C3E50" opacity="0.1" stroke="#2C3E50" stroke-width="1.5"/><rect x="9" y="14" width="3" height="3" fill="#E67E22" opacity="0.6"/><rect x="9" y="20" width="3" height="3" fill="#E67E22" opacity="0.6"/><rect x="25" y="10" width="3" height="3" fill="#E67E22" opacity="0.6"/><rect x="25" y="16" width="3" height="3" fill="#E67E22" opacity="0.6"/><rect x="25" y="22" width="3" height="3" fill="#E67E22" opacity="0.6"/></svg>', desc: 'Sleek, metropolitan' },
+    { id: 'suburban', name: 'Suburban Home', icon: '<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 8L6 20v14h28V20L20 8z" fill="#E67E22" opacity="0.15" stroke="#2C3E50" stroke-width="1.5"/><rect x="16" y="24" width="8" height="10" stroke="#2C3E50" stroke-width="1.5"/><rect x="10" y="22" width="4" height="4" stroke="#2C3E50" stroke-width="1.5"/><rect x="26" y="22" width="4" height="4" stroke="#2C3E50" stroke-width="1.5"/><path d="M2 34h36" stroke="#27AE60" stroke-width="1.5" opacity="0.4"/></svg>', desc: 'Family-friendly, inviting' },
+    { id: 'desert', name: 'Desert Retreat', icon: '<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="32" cy="10" r="5" fill="#F39C12" opacity="0.3"/><path d="M4 34c2-8 6-12 10-12s4 6 6 6 4-10 8-10 4 4 6 4" stroke="#27AE60" stroke-width="2" opacity="0.5"/><path d="M12 34v-10M12 24c-3-2-3-6 0-8M12 24c3-2 3-6 0-8" stroke="#2C3E50" stroke-width="1.5"/></svg>', desc: 'Earthy, warm tones' },
+    { id: 'lake', name: 'Lakefront', icon: '<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 6L8 20h4v12h16V20h4L20 6z" fill="#5DADE2" opacity="0.15" stroke="#2C3E50" stroke-width="1.5"/><path d="M4 34c3-1 5 1 8 0s5 1 8 0 5 1 8 0 5 1 8 0" stroke="#5DADE2" stroke-width="1.5" opacity="0.5"/><path d="M4 37c3-1 5 1 8 0s5 1 8 0 5 1 8 0 5 1 8 0" stroke="#5DADE2" stroke-width="1" opacity="0.3"/></svg>', desc: 'Serene, natural palette' },
+    { id: 'tropical', name: 'Tropical Villa', icon: '<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M8 34V18l12-10 12 10v16H8z" fill="#27AE60" opacity="0.15" stroke="#2C3E50" stroke-width="1.5"/><path d="M16 34v-8h8v8" stroke="#2C3E50" stroke-width="1.5"/><path d="M20 4c-4 2-6 6-4 10M20 4c4 2 6 6 4 10M20 4v10" stroke="#27AE60" stroke-width="1.5" opacity="0.6"/></svg>', desc: 'Lush, vibrant atmosphere' }
+  ];
+
+  const vibeTypes = [
+    { id: 'luxury', name: 'Luxury', desc: 'Refined, premium materials' },
+    { id: 'cozy', name: 'Cozy/Rustic', desc: 'Warm, textured, homey' },
+    { id: 'modern', name: 'Modern Minimal', desc: 'Clean lines, open space' },
+    { id: 'eclectic', name: 'Eclectic/Bohemian', desc: 'Bold, layered, creative' },
+    { id: 'classic', name: 'Classic/Traditional', desc: 'Timeless, elegant' }
+  ];
+
+  const vibeIcons = {
+    luxury: '<svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M18 4l4 8h8l-6 5 2 9-8-5-8 5 2-9-6-5h8l4-8z" fill="#E67E22" opacity="0.3" stroke="#2C3E50" stroke-width="1.2"/></svg>',
+    cozy: '<svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M10 28c0-6 3-10 8-10s8 4 8 10" stroke="#2C3E50" stroke-width="1.5" fill="#E67E22" opacity="0.2"/><path d="M14 18c0-3 2-6 4-6s4 3 4 6" stroke="#E67E22" stroke-width="1.2"/><path d="M6 28h24" stroke="#2C3E50" stroke-width="1.5"/></svg>',
+    modern: '<svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="6" y="6" width="24" height="24" rx="2" stroke="#2C3E50" stroke-width="1.5" fill="none"/><line x1="6" y1="18" x2="30" y2="18" stroke="#E67E22" stroke-width="1.2" opacity="0.6"/><line x1="18" y1="6" x2="18" y2="30" stroke="#2C3E50" stroke-width="1" opacity="0.3"/></svg>',
+    eclectic: '<svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="14" cy="14" r="6" fill="#E67E22" opacity="0.2" stroke="#2C3E50" stroke-width="1.2"/><circle cx="24" cy="18" r="5" fill="#27AE60" opacity="0.2" stroke="#2C3E50" stroke-width="1.2"/><circle cx="16" cy="24" r="4" fill="#5DADE2" opacity="0.2" stroke="#2C3E50" stroke-width="1.2"/></svg>',
+    classic: '<svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="8" y="12" width="20" height="18" stroke="#2C3E50" stroke-width="1.5" fill="none"/><path d="M8 12l10-6 10 6" stroke="#2C3E50" stroke-width="1.5" fill="#E67E22" opacity="0.15"/><line x1="14" y1="30" x2="14" y2="22" stroke="#2C3E50" stroke-width="1.2"/><line x1="22" y1="30" x2="22" y2="22" stroke="#2C3E50" stroke-width="1.2"/></svg>'
+  };
+
+  /* ---------- PALETTE DATA ENGINE ---------- */
+
+  /* Base palettes per property type. Each has arrays of palette sets. */
+  const basePalettes = {
+    beach: [
+      { name: 'Coastal Breeze', wall: '#F0EDE5', accent: '#6BA3BE', trim: '#FFFFFF', furniture: '#C4A882', textile: '#3D7EA6', rooms: ['Living Room','Master Bedroom','Sunroom'], psych: 'Soft blues and sandy neutrals evoke the calming rhythm of ocean waves, promoting relaxation and a sense of openness.' },
+      { name: 'Driftwood Morning', wall: '#EDE8DC', accent: '#8FADB5', trim: '#FAFAFA', furniture: '#A69279', textile: '#D4A959', rooms: ['Guest Bedroom','Dining Area','Patio'], psych: 'Warm wood tones grounded by cool water hues create a balanced space where guests feel both energized and at ease.' },
+      { name: 'Sea Glass Collection', wall: '#E8EDE9', accent: '#7DBAA5', trim: '#F5F5F0', furniture: '#BFA98A', textile: '#4A8B7F', rooms: ['Bathroom','Kitchen','Reading Nook'], psych: 'Green-blues inspired by sea glass bring nature indoors, fostering creativity and a refreshing sense of renewal.' },
+      { name: 'Sunset Shore', wall: '#F2EEEA', accent: '#D4956B', trim: '#FEFEFE', furniture: '#8B7355', textile: '#5B8FA8', rooms: ['Open Plan Living','Deck','Loft'], psych: 'Warm sunset tones paired with ocean blues create a welcoming contrast that feels adventurous yet grounding.' },
+      { name: 'Pearl Harbor', wall: '#F5F1EC', accent: '#9DB4C0', trim: '#FFFFFF', furniture: '#C9B99A', textile: '#546A76', rooms: ['Entryway','Master Suite','Lounge'], psych: 'Pearly neutrals and muted navy tones suggest understated elegance, helping guests feel pampered and comfortable.' }
+    ],
+    mountain: [
+      { name: 'Pine Lodge', wall: '#EDE7DC', accent: '#5C7A4B', trim: '#FAF8F5', furniture: '#7A5C3E', textile: '#3B5E3B', rooms: ['Great Room','Den','Master Bedroom'], psych: 'Forest greens and warm wood tones connect guests to the surrounding landscape, promoting deep relaxation and restoration.' },
+      { name: 'Alpine Ember', wall: '#F0E8DD', accent: '#8B5E3C', trim: '#F8F4EE', furniture: '#5A4231', textile: '#B8452A', rooms: ['Living Room','Dining Room','Mudroom'], psych: 'Rich amber and ember tones evoke the warmth of a crackling fire, making even the coldest evenings feel inviting.' },
+      { name: 'Misty Summit', wall: '#E8E4DE', accent: '#7A8B7A', trim: '#F5F3EF', furniture: '#695A4A', textile: '#4E6151', rooms: ['Guest Suite','Study','Kitchen'], psych: 'Muted sage and stone tones mirror morning mountain mist, creating a contemplative atmosphere of quiet luxury.' },
+      { name: 'Timber Ridge', wall: '#EAE0D4', accent: '#6B4F3A', trim: '#FAF6F0', furniture: '#8E6B4A', textile: '#9B7E5C', rooms: ['Loft','Bunk Room','Hallway'], psych: 'Layered wood tones from light birch to dark walnut create visual warmth and a sense of craftsmanship.' },
+      { name: 'Snowcap Retreat', wall: '#F2EFEA', accent: '#4A6670', trim: '#FFFFFF', furniture: '#A08B72', textile: '#2D4A5A', rooms: ['Bathroom','Spa Room','Reading Corner'], psych: 'Cool slate blues against warm neutrals mirror a snow-capped peak at golden hour, both invigorating and calming.' }
+    ],
+    urban: [
+      { name: 'Concrete Canvas', wall: '#ECEAE6', accent: '#3D3D3D', trim: '#F8F8F8', furniture: '#6B6B6B', textile: '#C4793D', rooms: ['Open Plan Living','Home Office','Bedroom'], psych: 'Sophisticated grays with warm copper accents create an atmosphere of creative energy and urban refinement.' },
+      { name: 'Metro Pulse', wall: '#F0EDED', accent: '#2C4A5A', trim: '#FAFAFA', furniture: '#4A4A4A', textile: '#D4713B', rooms: ['Kitchen','Bar Area','Entryway'], psych: 'Deep navy grounds the space while burnt orange adds a bold pulse of life, perfect for social gatherings.' },
+      { name: 'Steel and Stone', wall: '#E8E5E0', accent: '#5A5A5A', trim: '#F5F3F0', furniture: '#8A7E70', textile: '#3A6B5A', rooms: ['Living Room','Dining Nook','Guest Room'], psych: 'Industrial neutrals softened by unexpected green accents bring a sense of calm to the vibrant city experience.' },
+      { name: 'Penthouse Noir', wall: '#EDEBE8', accent: '#1E1E1E', trim: '#FFFFFF', furniture: '#3A3A3A', textile: '#8B6B3E', rooms: ['Master Suite','Lounge','Powder Room'], psych: 'High-contrast black and white with warm brass tones signals sophistication and timeless metropolitan style.' },
+      { name: 'Gallery White', wall: '#F5F4F2', accent: '#B0A090', trim: '#FFFFFF', furniture: '#5C5C5C', textile: '#9A7B5B', rooms: ['Studio Space','Corridor','Bathroom'], psych: 'Clean whites allow architectural details to shine, giving guests the feeling of living inside an art gallery.' }
+    ],
+    suburban: [
+      { name: 'Garden Gate', wall: '#F0EDE5', accent: '#6B8F71', trim: '#FFFFFF', furniture: '#A08968', textile: '#4A7A5C', rooms: ['Family Room','Kitchen','Dining Room'], psych: 'Gentle greens and natural wood tones create a garden-fresh ambiance that feels healthy, clean, and rejuvenating.' },
+      { name: 'Maple Drive', wall: '#F2EDE4', accent: '#B07A4A', trim: '#FAF8F4', furniture: '#7A6248', textile: '#5B7A8A', rooms: ['Living Room','Guest Bedroom','Playroom'], psych: 'Warm maple hues and denim blues create a classic, approachable atmosphere where families instantly feel at home.' },
+      { name: 'Morning Light', wall: '#FAF6EE', accent: '#D4B68A', trim: '#FFFFFF', furniture: '#8B7A60', textile: '#6A8A7A', rooms: ['Master Bedroom','Breakfast Nook','Sunroom'], psych: 'Buttery yellows and soft sage capture the feeling of warm morning light, encouraging optimism and gentle energy.' },
+      { name: 'Heritage Hearth', wall: '#ECE6DC', accent: '#7A5A44', trim: '#F8F5F0', furniture: '#5A4A3A', textile: '#8B6A4A', rooms: ['Den','Home Office','Hallway'], psych: 'Deep, grounding earth tones create a sense of permanence and tradition, ideal for memorable gatherings.' },
+      { name: 'Cottage Bloom', wall: '#F5F0EA', accent: '#9A7B8A', trim: '#FEFEFE', furniture: '#B09A80', textile: '#7A6A7A', rooms: ['Bathroom','Reading Room','Porch'], psych: 'Soft mauve and warm linen tones add a touch of romantic charm that feels personal without being overwhelming.' }
+    ],
+    desert: [
+      { name: 'Terracotta Dawn', wall: '#F0E6D8', accent: '#C4724A', trim: '#FAF5EE', furniture: '#8B6A4A', textile: '#A05A3A', rooms: ['Great Room','Courtyard','Master Suite'], psych: 'Rich terracotta tones capture the warmth of desert sunrise, creating spaces that feel alive with natural energy.' },
+      { name: 'Saguaro Sunset', wall: '#EDE3D4', accent: '#8A6A4A', trim: '#F8F2EA', furniture: '#6A5240', textile: '#C48A5A', rooms: ['Living Room','Outdoor Lounge','Kitchen'], psych: 'Golden desert hues layered with deep sienna create a sense of timeless beauty and grounded warmth.' },
+      { name: 'Adobe Dreams', wall: '#F2E8DA', accent: '#B4785A', trim: '#FEFAF4', furniture: '#9A7A5A', textile: '#5A7A6A', rooms: ['Guest Room','Dining Area','Spa Bathroom'], psych: 'Warm adobe walls paired with unexpected sage accents mirror the desert landscape where green meets gold.' },
+      { name: 'Sandstone Mesa', wall: '#EAE0D0', accent: '#9A7A5C', trim: '#F5F0E8', furniture: '#6A5A44', textile: '#BA8A5A', rooms: ['Bedroom','Hallway','Patio'], psych: 'Layered sandstone tones from pale cream to deep ochre create visual depth that is calming and organic.' },
+      { name: 'Copper Canyon', wall: '#ECE0D2', accent: '#7A4A3A', trim: '#FAF4EC', furniture: '#5A3A2A', textile: '#C47A4A', rooms: ['Lounge','Fire Pit Area','Loft'], psych: 'Deep copper and chocolate tones against light stucco walls create dramatic contrast that feels bold yet intimate.' }
+    ],
+    lake: [
+      { name: 'Still Waters', wall: '#EBE8E2', accent: '#5A7A8A', trim: '#F8F6F2', furniture: '#8A7A64', textile: '#3A5A6A', rooms: ['Living Room','Screened Porch','Master Bedroom'], psych: 'Deep lake blues and soft driftwood grays evoke the stillness of calm water, promoting peace and contemplation.' },
+      { name: 'Birch and Blue', wall: '#F0ECE4', accent: '#7A9AAA', trim: '#FFFFFF', furniture: '#C4A880', textile: '#4A6A7A', rooms: ['Kitchen','Dining Room','Deck'], psych: 'Light birch wood tones paired with clear water blues feel crisp and refreshing, like a perfect lakeside morning.' },
+      { name: 'Fog and Fern', wall: '#E6E4DE', accent: '#6A8A6A', trim: '#F5F3EE', furniture: '#7A6A54', textile: '#4A6A4A', rooms: ['Guest Suite','Study','Bathroom'], psych: 'Misty gray-greens and fern tones create an atmosphere of quiet enchantment and natural serenity.' },
+      { name: 'Canoe Landing', wall: '#EDEAE2', accent: '#8A5A3A', trim: '#FAF7F2', furniture: '#6A5040', textile: '#5A8090', rooms: ['Bunk Room','Mudroom','Game Room'], psych: 'Classic cabin warmth meets waterfront freshness in a palette that invites adventure and togetherness.' },
+      { name: 'Moonlit Dock', wall: '#E8E5DF', accent: '#3A4A5A', trim: '#F2F0EC', furniture: '#9A8A74', textile: '#5A6A7A', rooms: ['Master Suite','Reading Nook','Loft'], psych: 'Soft moonlit blues and weathered silver tones create an evening atmosphere of elegance and quiet romance.' }
+    ],
+    tropical: [
+      { name: 'Island Canopy', wall: '#EDE8DC', accent: '#3A7A5A', trim: '#FAF8F2', furniture: '#8A6A44', textile: '#2A6A4A', rooms: ['Great Room','Lanai','Master Suite'], psych: 'Lush jungle greens and golden wood tones immerse guests in tropical abundance and vibrant natural beauty.' },
+      { name: 'Coral Reef', wall: '#F2EBE2', accent: '#D47A5A', trim: '#FEFCF8', furniture: '#7A5A40', textile: '#4A8A8A', rooms: ['Living Room','Pool Deck','Bedroom'], psych: 'Warm coral accents against sandy neutrals capture the energy of tropical reefs, feeling both playful and refined.' },
+      { name: 'Palm Breeze', wall: '#F0EDE4', accent: '#5A9A7A', trim: '#FFFFFF', furniture: '#B0946A', textile: '#3A7A6A', rooms: ['Kitchen','Dining Pavilion','Guest Room'], psych: 'Fresh palm greens and bamboo golds create an open, airy feel that celebrates the joy of tropical living.' },
+      { name: 'Mango Sunrise', wall: '#F5EDE0', accent: '#DA8A3A', trim: '#FFF8F0', furniture: '#6A5A3A', textile: '#4A7A5A', rooms: ['Breakfast Room','Patio','Sunroom'], psych: 'Vibrant mango and papaya tones energize morning spaces and stimulate appetite, perfect for social areas.' },
+      { name: 'Lagoon Mist', wall: '#E8EBE4', accent: '#4A8A7A', trim: '#F5F5F0', furniture: '#9A8060', textile: '#2A6A6A', rooms: ['Spa Bathroom','Lounge','Balcony'], psych: 'Cool lagoon teals and warm driftwood create a spa-like escape where guests feel instantly transported.' }
+    ]
+  };
+
+  /* Vibe modifiers. Each returns a modified palette. */
+  function adjustColor(hex, options) {
+    let r = parseInt(hex.slice(1,3), 16);
+    let g = parseInt(hex.slice(3,5), 16);
+    let b = parseInt(hex.slice(5,7), 16);
+
+    if (options.darken) {
+      const d = options.darken;
+      r = Math.max(0, Math.round(r * (1 - d)));
+      g = Math.max(0, Math.round(g * (1 - d)));
+      b = Math.max(0, Math.round(b * (1 - d)));
+    }
+    if (options.lighten) {
+      const l = options.lighten;
+      r = Math.min(255, Math.round(r + (255 - r) * l));
+      g = Math.min(255, Math.round(g + (255 - g) * l));
+      b = Math.min(255, Math.round(b + (255 - b) * l));
+    }
+    if (options.saturate) {
+      const avg = (r + g + b) / 3;
+      const s = options.saturate;
+      r = Math.min(255, Math.max(0, Math.round(r + (r - avg) * s)));
+      g = Math.min(255, Math.max(0, Math.round(g + (g - avg) * s)));
+      b = Math.min(255, Math.max(0, Math.round(b + (b - avg) * s)));
+    }
+    if (options.desaturate) {
+      const avg = (r + g + b) / 3;
+      const d = options.desaturate;
+      r = Math.round(r + (avg - r) * d);
+      g = Math.round(g + (avg - g) * d);
+      b = Math.round(b + (avg - b) * d);
+    }
+    if (options.warmShift) {
+      r = Math.min(255, r + options.warmShift);
+      b = Math.max(0, b - Math.round(options.warmShift * 0.5));
+    }
+
+    return '#' + [r,g,b].map(c => c.toString(16).padStart(2,'0')).join('');
+  }
+
+  const vibeTransforms = {
+    luxury: {
+      namePrefix: ['Grand ', 'Royal ', 'Opulent ', 'Refined ', 'Majestic '],
+      transform(p, i) {
+        return {
+          name: this.namePrefix[i % this.namePrefix.length] + p.name,
+          wall: adjustColor(p.wall, { darken: 0.03 }),
+          accent: adjustColor(p.accent, { darken: 0.15, saturate: 0.3 }),
+          trim: p.trim,
+          furniture: adjustColor(p.furniture, { darken: 0.15 }),
+          textile: adjustColor(p.textile, { darken: 0.1, saturate: 0.2 }),
+          rooms: p.rooms,
+          psych: p.psych + ' The deeper, richer tones elevate the space with a premium feel that discerning guests notice immediately.'
+        };
+      }
+    },
+    cozy: {
+      namePrefix: ['Warm ', 'Snug ', 'Hearthside ', 'Toasty ', 'Nestled '],
+      transform(p, i) {
+        return {
+          name: this.namePrefix[i % this.namePrefix.length] + p.name,
+          wall: adjustColor(p.wall, { warmShift: 5, darken: 0.02 }),
+          accent: adjustColor(p.accent, { warmShift: 8, saturate: 0.15 }),
+          trim: adjustColor(p.trim, { warmShift: 3 }),
+          furniture: adjustColor(p.furniture, { warmShift: 6, darken: 0.05 }),
+          textile: adjustColor(p.textile, { warmShift: 5, saturate: 0.1 }),
+          rooms: p.rooms,
+          psych: p.psych + ' Warmed and softened, these tones wrap guests in comfort, creating the sensation of being held by the space.'
+        };
+      }
+    },
+    modern: {
+      namePrefix: ['Minimal ', 'Curated ', 'Streamlined ', 'Pure ', 'Essential '],
+      transform(p, i) {
+        return {
+          name: this.namePrefix[i % this.namePrefix.length] + p.name,
+          wall: adjustColor(p.wall, { lighten: 0.3, desaturate: 0.4 }),
+          accent: adjustColor(p.accent, { desaturate: 0.25, lighten: 0.1 }),
+          trim: '#FFFFFF',
+          furniture: adjustColor(p.furniture, { desaturate: 0.3 }),
+          textile: adjustColor(p.textile, { desaturate: 0.2, lighten: 0.1 }),
+          rooms: p.rooms,
+          psych: p.psych + ' Stripped to their essence, these tones let architecture and negative space speak, creating a calm, uncluttered experience.'
+        };
+      }
+    },
+    eclectic: {
+      namePrefix: ['Bohemian ', 'Free Spirit ', 'Bazaar ', 'Wanderlust ', 'Artisan '],
+      transform(p, i) {
+        return {
+          name: this.namePrefix[i % this.namePrefix.length] + p.name,
+          wall: adjustColor(p.wall, { warmShift: 3 }),
+          accent: adjustColor(p.accent, { saturate: 0.5, warmShift: 5 }),
+          trim: adjustColor(p.trim, { warmShift: 4, darken: 0.01 }),
+          furniture: adjustColor(p.furniture, { saturate: 0.2, warmShift: 3 }),
+          textile: adjustColor(p.textile, { saturate: 0.6, warmShift: 4 }),
+          rooms: p.rooms,
+          psych: p.psych + ' Intensified and layered, these saturated tones invite self-expression and give the space a collected, worldly character.'
+        };
+      }
+    },
+    classic: {
+      namePrefix: ['Heritage ', 'Timeless ', 'Estate ', 'Traditional ', 'Heirloom '],
+      transform(p, i) {
+        return {
+          name: this.namePrefix[i % this.namePrefix.length] + p.name,
+          wall: adjustColor(p.wall, { desaturate: 0.15, darken: 0.03 }),
+          accent: adjustColor(p.accent, { darken: 0.08, desaturate: 0.1 }),
+          trim: adjustColor('#FFFFF0', {}),
+          furniture: adjustColor(p.furniture, { darken: 0.1, desaturate: 0.1 }),
+          textile: adjustColor(p.textile, { darken: 0.05, desaturate: 0.15 }),
+          rooms: p.rooms,
+          psych: p.psych + ' Slightly muted and time-honored, these classic tones communicate stability, quality, and enduring good taste.'
+        };
+      }
+    }
+  };
+
+  function generatePalettes(propertyId, vibeId) {
+    const base = basePalettes[propertyId];
+    if (!base) return [];
+    const vibe = vibeTransforms[vibeId];
+    if (!vibe) return base;
+    return base.map((p, i) => vibe.transform(p, i));
+  }
+
+  /* ---------- STATE ---------- */
+  let selectedProperty = null;
+  let selectedVibe = null;
+
+  /* ---------- UI BUILDERS ---------- */
+
+  function renderPropertyCards() {
+    const grid = document.getElementById('property-grid');
+    grid.innerHTML = propertyTypes.map(pt => `
+      <div class="selector-card" data-id="${pt.id}" onclick="selectProperty('${pt.id}')">
+        <span class="selector-icon">${pt.icon}</span>
+        <h4>${pt.name}</h4>
+        <p>${pt.desc}</p>
+      </div>
+    `).join('');
+  }
+
+  function renderVibeCards() {
+    const grid = document.getElementById('vibe-grid');
+    grid.innerHTML = vibeTypes.map(v => `
+      <div class="selector-card" data-id="${v.id}" onclick="selectVibe('${v.id}')">
+        <span class="selector-icon">${vibeIcons[v.id]}</span>
+        <h4>${v.name}</h4>
+        <p>${v.desc}</p>
+      </div>
+    `).join('');
+  }
+
+  function createRoomMockupSVG(palette) {
+    return `<svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
+      <!-- Back wall -->
+      <rect x="30" y="20" width="240" height="140" fill="${palette.wall}" rx="2"/>
+      <!-- Accent wall section -->
+      <rect x="30" y="20" width="90" height="140" fill="${palette.accent}" rx="2"/>
+      <!-- Ceiling/trim line -->
+      <rect x="28" y="16" width="244" height="8" fill="${palette.trim}" rx="1"/>
+      <!-- Floor -->
+      <rect x="10" y="160" width="280" height="50" fill="${adjustColor(palette.furniture, {lighten: 0.3})}" rx="2"/>
+      <!-- Baseboard trim -->
+      <rect x="28" y="156" width="244" height="8" fill="${palette.trim}" rx="1"/>
+      <!-- Sofa / furniture -->
+      <rect x="140" y="110" width="110" height="50" rx="8" fill="${palette.furniture}"/>
+      <rect x="135" y="105" width="10" height="55" rx="4" fill="${adjustColor(palette.furniture, {darken: 0.1})}"/>
+      <rect x="245" y="105" width="10" height="55" rx="4" fill="${adjustColor(palette.furniture, {darken: 0.1})}"/>
+      <!-- Pillows / textiles -->
+      <rect x="155" y="115" width="25" height="20" rx="4" fill="${palette.textile}" opacity="0.9"/>
+      <rect x="215" y="115" width="25" height="20" rx="4" fill="${adjustColor(palette.textile, {lighten: 0.2})}" opacity="0.9"/>
+      <!-- Side table -->
+      <rect x="50" y="120" width="35" height="40" rx="3" fill="${adjustColor(palette.furniture, {darken: 0.15})}"/>
+      <!-- Vase accent -->
+      <ellipse cx="67" cy="115" rx="8" ry="12" fill="${palette.textile}"/>
+      <!-- Hanging art frame -->
+      <rect x="170" y="38" width="60" height="45" rx="2" fill="${palette.trim}" stroke="${adjustColor(palette.furniture, {darken:0.1})}" stroke-width="2"/>
+      <rect x="176" y="44" width="48" height="33" rx="1" fill="${adjustColor(palette.accent, {lighten: 0.15})}"/>
+      <!-- Accent wall art / window -->
+      <rect x="50" y="42" width="42" height="55" rx="2" fill="${palette.trim}" stroke="${adjustColor(palette.accent, {darken: 0.1})}" stroke-width="1.5"/>
+      <rect x="54" y="46" width="34" height="47" fill="${adjustColor(palette.wall, {lighten: 0.15})}"/>
+      <line x1="71" y1="46" x2="71" y2="93" stroke="${palette.trim}" stroke-width="1.5"/>
+      <line x1="54" y1="69" x2="88" y2="69" stroke="${palette.trim}" stroke-width="1.5"/>
+      <!-- Rug / textile on floor -->
+      <ellipse cx="190" cy="185" rx="65" ry="18" fill="${adjustColor(palette.textile, {lighten: 0.25})}" opacity="0.6"/>
+      <!-- Plant accent -->
+      <circle cx="265" cy="140" r="3" fill="${palette.furniture}" opacity="0.8"/>
+      <path d="M262 138c-4-8-1-14 3-16M265 137c0-10 4-14 7-14M268 139c3-7 6-10 9-9" stroke="#5A8A5A" stroke-width="1.5" fill="none" opacity="0.6"/>
+    </svg>`;
+  }
+
+  function renderPalettes(palettes) {
+    const grid = document.getElementById('palette-grid');
+    grid.innerHTML = palettes.map((p, idx) => {
+      const colors = [
+        { label: 'Primary Wall', hex: p.wall, proportion: 35 },
+        { label: 'Accent Wall', hex: p.accent, proportion: 20 },
+        { label: 'Trim / Ceiling', hex: p.trim, proportion: 15 },
+        { label: 'Furniture Tones', hex: p.furniture, proportion: 18 },
+        { label: 'Textile / Accessory', hex: p.textile, proportion: 12 }
+      ];
+
+      const swatchesHTML = colors.map(c => `
+        <div class="swatch-row" onclick="copyHex('${c.hex}')" title="Click to copy ${c.hex}">
+          <div class="swatch-circle" style="background:${c.hex}"></div>
+          <div class="swatch-info">
+            <div class="swatch-label">${c.label}</div>
+            <div class="swatch-hex">${c.hex.toUpperCase()}</div>
+          </div>
+          <div class="copy-hint">Click to copy</div>
+        </div>
+      `).join('');
+
+      const proportionHTML = colors.map(c =>
+        `<div class="proportion-segment" style="flex:${c.proportion};background:${c.hex}"></div>`
+      ).join('');
+
+      const roomTagsHTML = p.rooms.map(r => `<span class="room-tag">${r}</span>`).join('');
+
+      return `
+        <div class="palette-card" style="animation-delay:${idx * 0.1}s">
+          <div class="palette-card-header">
+            <h3 class="palette-name">${p.name}</h3>
+          </div>
+          <div class="proportion-bar">${proportionHTML}</div>
+          <div class="palette-card-body">
+            <div class="room-preview">${createRoomMockupSVG(p)}</div>
+            <div class="swatches-panel">${swatchesHTML}</div>
+          </div>
+          <div class="palette-footer">
+            <div class="palette-meta">
+              <div class="meta-label">Best Rooms</div>
+              <div class="room-tags">${roomTagsHTML}</div>
+              <div class="meta-label">Color Psychology</div>
+              <p class="psych-tip">${p.psych}</p>
+            </div>
+            <button class="save-btn" onclick="savePalette(${idx})">Save Palette</button>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function updateResults() {
+    const summary = document.getElementById('selection-summary');
+    const resetBtn = document.getElementById('reset-btn');
+    const results = document.getElementById('results-section');
+
+    if (selectedProperty && selectedVibe) {
+      const propName = propertyTypes.find(p => p.id === selectedProperty).name;
+      const vibeName = vibeTypes.find(v => v.id === selectedVibe).name;
+      document.getElementById('summary-text').textContent = propName + ' + ' + vibeName;
+      summary.classList.add('visible');
+      resetBtn.classList.add('visible');
+
+      const palettes = generatePalettes(selectedProperty, selectedVibe);
+      renderPalettes(palettes);
+      results.classList.add('visible');
+
+      setTimeout(() => {
+        results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 200);
+    } else if (selectedProperty || selectedVibe) {
+      summary.classList.remove('visible');
+      resetBtn.classList.add('visible');
+      results.classList.remove('visible');
+    } else {
+      summary.classList.remove('visible');
+      resetBtn.classList.remove('visible');
+      results.classList.remove('visible');
+    }
+  }
+
+  /* ---------- GLOBAL ACTIONS ---------- */
+
+  window.selectProperty = function(id) {
+    selectedProperty = id;
+    document.querySelectorAll('#property-grid .selector-card').forEach(card => {
+      card.classList.toggle('active', card.dataset.id === id);
+    });
+    updateResults();
+  };
+
+  window.selectVibe = function(id) {
+    selectedVibe = id;
+    document.querySelectorAll('#vibe-grid .selector-card').forEach(card => {
+      card.classList.toggle('active', card.dataset.id === id);
+    });
+    updateResults();
+  };
+
+  window.resetSelections = function() {
+    selectedProperty = null;
+    selectedVibe = null;
+    document.querySelectorAll('.selector-card').forEach(c => c.classList.remove('active'));
+    updateResults();
+    document.getElementById('step1-section').scrollIntoView({ behavior: 'smooth' });
+  };
+
+  window.copyHex = function(hex) {
+    navigator.clipboard.writeText(hex.toUpperCase()).then(() => {
+      showToast('Copied ' + hex.toUpperCase() + ' to clipboard');
+    }).catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = hex.toUpperCase();
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      showToast('Copied ' + hex.toUpperCase() + ' to clipboard');
+    });
+  };
+
+  window.savePalette = function(idx) {
+    const palettes = generatePalettes(selectedProperty, selectedVibe);
+    const p = palettes[idx];
+    if (!p) return;
+    const propName = propertyTypes.find(pt => pt.id === selectedProperty).name;
+    const vibeName = vibeTypes.find(v => v.id === selectedVibe).name;
+    const text = [
+      'MyBnBDesign Color Palette',
+      '========================',
+      '',
+      'Palette: ' + p.name,
+      'Property Type: ' + propName,
+      'Vibe: ' + vibeName,
+      '',
+      'Colors:',
+      '  Primary Wall:      ' + p.wall.toUpperCase(),
+      '  Accent Wall:       ' + p.accent.toUpperCase(),
+      '  Trim / Ceiling:    ' + p.trim.toUpperCase(),
+      '  Furniture Tones:   ' + p.furniture.toUpperCase(),
+      '  Textile/Accessory: ' + p.textile.toUpperCase(),
+      '',
+      'Best Rooms: ' + p.rooms.join(', '),
+      '',
+      'Color Psychology: ' + p.psych,
+      '',
+      'Need help executing this palette?',
+      'Book a consultation at mybnbdesign.com/contact'
+    ].join('\n');
+
+    navigator.clipboard.writeText(text).then(() => {
+      showToast('Full palette details copied to clipboard');
+    }).catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      showToast('Full palette details copied to clipboard');
+    });
+  };
+
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toast._timeout);
+    toast._timeout = setTimeout(() => toast.classList.remove('show'), 2500);
+  }
+
+  /* ---------- INIT ---------- */
+  renderPropertyCards();
+  renderVibeCards();
+
+})();
+</script>
+</body>
+</html>
