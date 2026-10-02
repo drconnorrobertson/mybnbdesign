@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — MyBnBDesign</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar scrolled" id="navbar"><div class="container nav-container"><a href="index.html" class="logo">MyBnB<span>Design</span></a><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" class="btn btn-nav active" style="border-color:var(--gold);color:var(--gold);">Get Started</a></li></ul><button class="mobile-toggle" id="mobileToggle" aria-label="Menu" style="color:var(--charcoal);">&#9776;</button></div></nav>
+
+  <section class="page-header">
+    <div class="container">
+      <p style="color:var(--gold);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:12px;">Let's Talk</p>
+      <h1>Get in Touch</h1>
+      <p>Book a free consultation or ask us anything</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-form fade-in">
+          <h3 style="margin-bottom:8px;">Book Your Free Consultation</h3>
+          <p style="color:var(--text-light);margin-bottom:8px;">Tell us about your property and we'll reach out within 24 hours.</p>
+          <form action="#" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+            <label for="property">Property Type</label>
+            <select id="property" name="property">
+              <option value="">Select property type...</option>
+              <option>Single Family Home</option>
+              <option>Condo / Apartment</option>
+              <option>Cabin / A-Frame</option>
+              <option>Townhouse</option>
+              <option>Multi-Unit</option>
+              <option>Other</option>
+            </select>
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option>Full Interior Design</option>
+              <option>Turnkey Package</option>
+              <option>Space Planning</option>
+              <option>Listing Optimization</option>
+              <option>Not sure yet</option>
+            </select>
+            <label for="message">Tell Us About Your Property</label>
+            <textarea id="message" name="message" placeholder="Location, number of bedrooms, current state, your goals..."></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-info fade-in">
+          <div class="contact-info-block">
+            <h4>Email</h4>
+            <p>hello@mybnbdesign.com</p>
+          </div>
+          <div class="contact-info-block">
+            <h4>Phone</h4>
+            <p>(412) 555-0192</p>
+          </div>
+          <div class="contact-info-block">
+            <h4>Based In</h4>
+            <p>Pittsburgh, PA<br>Serving clients nationwide</p>
+          </div>
+          <div class="contact-info-block">
+            <h4>Response Time</h4>
+            <p>We respond to all inquiries within 24 hours during business days.</p>
+          </div>
+          <div class="accelerator-banner">
+            <h4>Acquire + Design</h4>
+            <p>Looking to buy an STR property and get it designed in one seamless process?</p>
+            <a href="https://bnbaccelerator.com" target="_blank" class="btn btn-primary" style="padding:10px 24px;">Visit BnB Accelerator →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><a href="index.html" class="logo" style="color:var(--white);">MyBnB<span>Design</span></a><p>Premium interior design for short-term rental properties.</p></div>
+      <div class="footer-links"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-links"><h4>Services</h4><ul><li><a href="services.html">Full Interior Design</a></li><li><a href="services.html">Space Planning</a></li><li><a href="services.html">Turnkey Packages</a></li><li><a href="services.html">Listing Optimization</a></li></ul></div>
+      <div class="footer-contact"><h4>Get in Touch</h4><p>hello@mybnbdesign.com</p><p>(412) 555-0192</p><div style="margin-top:20px;"><a href="https://bnbaccelerator.com" target="_blank" style="color:var(--gold);font-size:0.85rem;">A BnB Accelerator Company ↗</a></div></div>
+    </div>
+    <div class="container footer-bottom"><p>&copy; 2026 MyBnBDesign. All rights reserved.</p><p class="footer-accelerator">Powered by <a href="https://bnbaccelerator.com" target="_blank">BnB Accelerator</a></p></div>
+  </footer>
+  <script>
+    document.getElementById('mobileToggle').addEventListener('click', () => { document.getElementById('navLinks').classList.toggle('open'); });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
