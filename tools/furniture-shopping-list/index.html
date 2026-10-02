@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Furniture Shopping List | MyBnBDesign</title>
+<meta name="description" content="Interactive room-by-room furniture shopping list for short-term rental properties. Plan your STR furnishing budget across Budget, Mid, and Premium tiers.">
+<meta name="author" content="MyBnBDesign Team">
+<link rel="canonical" href="https://mybnbdesign.com/tools/furniture-shopping-list">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "STR Furniture Shopping List",
+  "description": "Interactive room-by-room furniture shopping list tool for short-term rental properties. Plan and budget your furnishing across Budget, Mid, and Premium tiers.",
+  "url": "https://mybnbdesign.com/tools/furniture-shopping-list",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MyBnBDesign",
+    "url": "https://mybnbdesign.com"
+  }
+}
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #2C3E50;
+  --primary-light: #34495E;
+  --accent: #E67E22;
+  --accent-hover: #D35400;
+  --light: #ECF0F1;
+  --white: #FFFFFF;
+  --gray-50: #F8F9FA;
+  --gray-100: #F1F3F5;
+  --gray-200: #E9ECEF;
+  --gray-300: #DEE2E6;
+  --gray-400: #CED4DA;
+  --gray-500: #ADB5BD;
+  --gray-600: #868E96;
+  --gray-700: #495057;
+  --gray-800: #343A40;
+  --green: #27AE60;
+  --green-light: #E8F8F0;
+  --red: #E74C3C;
+  --blue: #3498DB;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+  --radius: 10px;
+  --radius-sm: 6px;
+  --transition: 0.25s ease;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--gray-800);
+  background: var(--gray-50);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
+
+/* STICKY HEADER */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--primary);
+  color: var(--white);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-lg);
+}
+.sticky-header.visible { transform: translateY(0); }
+.sticky-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.sticky-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.sticky-stats {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.sticky-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+.sticky-stat-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.sticky-progress-bar {
+  width: 120px;
+  height: 6px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.sticky-progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: var(--white);
+  padding: 80px 24px 60px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+.hero p {
+  font-size: 1.15rem;
+  max-width: 640px;
+  margin: 0 auto 32px;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+/* GLOBAL CONTROLS */
+.controls-bar {
+  max-width: 1100px;
+  margin: -28px auto 0;
+  padding: 0 24px;
+  position: relative;
+  z-index: 10;
+}
+.controls-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.control-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+}
+.tier-select, .btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+}
+.tier-select {
+  padding: 8px 14px;
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  color: var(--gray-800);
+  cursor: pointer;
+  font-weight: 500;
+  transition: border-color var(--transition);
+}
+.tier-select:focus { border-color: var(--accent); outline: none; }
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-accent {
+  background: var(--accent);
+  color: var(--white);
+}
+.btn-accent:hover { background: var(--accent-hover); transform: translateY(-1px); }
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--gray-300);
+}
+.btn-outline:hover { border-color: var(--primary); background: var(--gray-50); }
+.btn-sm { padding: 6px 14px; font-size: 0.82rem; }
+
+/* SUMMARY CARDS */
+.summary-section {
+  max-width: 1100px;
+  margin: 32px auto 0;
+  padding: 0 24px;
+}
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.summary-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--gray-300);
+  transition: all var(--transition);
+}
+.summary-card.budget { border-left-color: var(--green); }
+.summary-card.mid { border-left-color: var(--blue); }
+.summary-card.premium { border-left-color: var(--accent); }
+.summary-card.total { border-left-color: var(--primary); background: var(--primary); color: var(--white); }
+.summary-card-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+.summary-card-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.summary-card-range {
+  font-size: 0.82rem;
+  opacity: 0.65;
+  margin-top: 2px;
+}
+
+/* PROGRESS */
+.progress-section {
+  max-width: 1100px;
+  margin: 24px auto 0;
+  padding: 0 24px;
+}
+.progress-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px 28px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.progress-text {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--gray-700);
+  white-space: nowrap;
+}
+.progress-text span { color: var(--accent); }
+.progress-bar-container {
+  flex: 1;
+  min-width: 200px;
+  height: 10px;
+  background: var(--gray-200);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #F39C12);
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}
+
+/* ROOM SECTIONS */
+.rooms-container {
+  max-width: 1100px;
+  margin: 32px auto 0;
+  padding: 0 24px 60px;
+}
+.room-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: box-shadow var(--transition);
+}
+.room-card:hover { box-shadow: var(--shadow-md); }
+.room-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  cursor: pointer;
+  user-select: none;
+  transition: background var(--transition);
+  gap: 12px;
+}
+.room-header:hover { background: var(--gray-50); }
+.room-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+.room-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--white);
+  flex-shrink: 0;
+}
+.room-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+.room-meta {
+  font-size: 0.82rem;
+  color: var(--gray-600);
+  margin-top: 2px;
+}
+.room-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+.room-total {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.chevron {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+  color: var(--gray-500);
+}
+.room-card.open .chevron { transform: rotate(180deg); }
+
+.room-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.room-body-inner {
+  padding: 0 24px 24px;
+}
+
+/* ITEM TABLE */
+.items-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.items-table thead th {
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gray-600);
+  padding: 10px 12px;
+  border-bottom: 2px solid var(--gray-200);
+  white-space: nowrap;
+}
+.items-table thead th:first-child { padding-left: 0; }
+.items-table tbody tr {
+  transition: background var(--transition);
+}
+.items-table tbody tr:hover { background: var(--gray-50); }
+.items-table tbody tr.checked { background: var(--green-light); }
+.items-table td {
+  padding: 12px 12px;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+.items-table td:first-child { padding-left: 0; }
+.item-check-cell {
+  width: 40px;
+}
+.item-checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.item-name {
+  font-weight: 500;
+  color: var(--gray-800);
+}
+.item-tier-select {
+  padding: 5px 10px;
+  border: 1.5px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  cursor: pointer;
+  min-width: 100px;
+}
+.item-tier-select:focus { border-color: var(--accent); outline: none; }
+.item-cost {
+  font-weight: 600;
+  color: var(--primary);
+  white-space: nowrap;
+}
+.cost-range {
+  font-size: 0.78rem;
+  color: var(--gray-500);
+  font-weight: 400;
+}
+
+.room-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--gray-100);
+  flex-wrap: wrap;
+}
+
+/* CTA */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  padding: 80px 24px;
+  text-align: center;
+  color: var(--white);
+}
+.cta-section h2 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  margin-bottom: 20px;
+}
+.cta-section p {
+  font-size: 1.1rem;
+  max-width: 620px;
+  margin: 0 auto 32px;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 36px;
+  background: var(--accent);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition);
+  box-shadow: 0 4px 15px rgba(230,126,34,0.4);
+}
+.btn-cta:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(230,126,34,0.5);
+}
+
+/* FOOTER */
+.footer {
+  background: var(--gray-800);
+  color: var(--gray-400);
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 0.85rem;
+}
+.footer a { color: var(--accent); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: var(--gray-800);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  opacity: 0;
+  z-index: 2000;
+  pointer-events: none;
+}
+.toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .controls-card { flex-direction: column; align-items: stretch; }
+  .control-group { justify-content: space-between; }
+  .sticky-header-inner { padding: 10px 16px; }
+  .sticky-stats { gap: 14px; }
+  .room-header { padding: 16px; }
+  .room-body-inner { padding: 0 16px 16px; }
+  .items-table thead { display: none; }
+  .items-table, .items-table tbody, .items-table tr, .items-table td {
+    display: block;
+  }
+  .items-table tr {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gray-100);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  .items-table td { border-bottom: none; padding: 2px 4px; }
+  .item-check-cell { width: auto; }
+  .td-name { flex: 1; min-width: 120px; }
+  .td-tier { flex-basis: 100%; }
+  .td-cost { margin-left: auto; }
+  .summary-grid { grid-template-columns: 1fr 1fr; }
+  .room-header-right { flex-direction: column; align-items: flex-end; gap: 4px; }
+}
+
+@media (max-width: 480px) {
+  .summary-grid { grid-template-columns: 1fr; }
+  .hero { padding: 60px 16px 50px; }
+  .sticky-brand { font-size: 0.95rem; }
+}
+
+/* PRINT */
+@media print {
+  .sticky-header, .controls-bar, .room-actions, .cta-section, .btn, .toast { display: none !important; }
+  body { background: white; font-size: 11pt; }
+  .hero { background: none !important; color: black; padding: 20px 0; }
+  .hero h1 { font-size: 22pt; }
+  .room-card { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; margin-bottom: 12px; }
+  .room-body { max-height: none !important; }
+  .room-body-inner { padding: 0 12px 12px; }
+  .items-table thead { display: table-header-group !important; }
+  .items-table, .items-table tbody, .items-table tr, .items-table td { display: revert; }
+  .summary-card { border: 1px solid #ccc; box-shadow: none; }
+  .footer { background: none; color: #666; }
+}
+</style>
+</head>
+<body>
+
+<!-- STICKY HEADER -->
+<div class="sticky-header" id="stickyHeader">
+  <div class="sticky-header-inner">
+    <div class="sticky-brand">MyBnBDesign</div>
+    <div class="sticky-stats">
+      <div class="sticky-stat">
+        <span class="sticky-stat-value" id="stickyTotal">$0</span>
+        <span>Est. Total</span>
+      </div>
+      <div class="sticky-stat">
+        <span class="sticky-stat-value" id="stickyItems">0/0</span>
+        <span>Items</span>
+      </div>
+      <div class="sticky-progress-bar">
+        <div class="sticky-progress-fill" id="stickyProgressFill" style="width:0%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="heroSection">
+  <h1>STR Furniture Shopping List</h1>
+  <p>Plan every room of your short-term rental with realistic pricing across three budget tiers. Check off items, track your total, and export your list when you are ready to buy.</p>
+</header>
+
+<!-- GLOBAL CONTROLS -->
+<div class="controls-bar">
+  <div class="controls-card">
+    <div class="control-group">
+      <label for="globalTier">Global Tier:</label>
+      <select class="tier-select" id="globalTier">
+        <option value="">Per Item</option>
+        <option value="budget">Budget</option>
+        <option value="mid">Mid-Range</option>
+        <option value="premium">Premium</option>
+      </select>
+    </div>
+    <div class="control-group">
+      <button class="btn btn-outline btn-sm" onclick="toggleAllRooms(true)">Expand All</button>
+      <button class="btn btn-outline btn-sm" onclick="toggleAllRooms(false)">Collapse All</button>
+      <button class="btn btn-outline btn-sm" onclick="selectAll()">Select All</button>
+      <button class="btn btn-outline btn-sm" onclick="deselectAll()">Clear All</button>
+    </div>
+    <div class="control-group">
+      <button class="btn btn-outline btn-sm" onclick="copySummary()">Copy Summary</button>
+      <button class="btn btn-accent btn-sm" onclick="window.print()">Print List</button>
+    </div>
+  </div>
+</div>
+
+<!-- SUMMARY CARDS -->
+<div class="summary-section">
+  <div class="summary-grid">
+    <div class="summary-card budget">
+      <div class="summary-card-label">Budget Tier</div>
+      <div class="summary-card-value" id="budgetTotal">$0</div>
+      <div class="summary-card-range" id="budgetRange">Low end estimate</div>
+    </div>
+    <div class="summary-card mid">
+      <div class="summary-card-label">Mid-Range Tier</div>
+      <div class="summary-card-value" id="midTotal">$0</div>
+      <div class="summary-card-range" id="midRange">Balanced quality</div>
+    </div>
+    <div class="summary-card premium">
+      <div class="summary-card-label">Premium Tier</div>
+      <div class="summary-card-value" id="premiumTotal">$0</div>
+      <div class="summary-card-range" id="premiumRange">Top-tier finishes</div>
+    </div>
+    <div class="summary-card total">
+      <div class="summary-card-label">Selected Total</div>
+      <div class="summary-card-value" id="selectedTotal">$0</div>
+      <div class="summary-card-range" id="selectedRange">Based on chosen tiers</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRESS -->
+<div class="progress-section">
+  <div class="progress-card">
+    <div class="progress-text"><span id="progressCount">0</span> of <span id="progressTotal">0</span> items selected</div>
+    <div class="progress-bar-container">
+      <div class="progress-fill" id="progressFill" style="width:0%"></div>
+    </div>
+    <div class="progress-text"><span id="progressPct">0</span>%</div>
+  </div>
+</div>
+
+<!-- ROOMS -->
+<div class="rooms-container" id="roomsContainer"></div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Let Us Handle the Heavy Lifting</h2>
+  <p>Need help sourcing? MyBnBDesign handles procurement for you. From vendor relationships to bulk discounts, we make furnishing your rental effortless.</p>
+  <a href="https://mybnbdesign.com/contact" class="btn-cta">
+    Get a Quote
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2026 <a href="https://mybnbdesign.com">MyBnBDesign</a>. All rights reserved. Built by the MyBnBDesign Team.</p>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================
+   DATA: rooms and items
+   ============================ */
+const roomsData = [
+  {
+    name: "Living Room",
+    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0Z"/><path d="M4 18v2"/><path d="M20 18v2"/></svg>',
+    items: [
+      { name: "Sofa", budget: [400,600], mid: [800,1400], premium: [2000,3500] },
+      { name: "Accent Chairs (pair)", budget: [200,400], mid: [500,900], premium: [1200,2400] },
+      { name: "Coffee Table", budget: [80,150], mid: [200,450], premium: [600,1200] },
+      { name: "Side Tables (pair)", budget: [60,120], mid: [150,350], premium: [400,900] },
+      { name: "TV Stand / Console", budget: [100,200], mid: [250,500], premium: [600,1400] },
+      { name: "Area Rug (8x10)", budget: [80,160], mid: [200,500], premium: [600,1500] },
+      { name: "Floor Lamp", budget: [30,60], mid: [80,180], premium: [200,500] },
+      { name: "Table Lamps (pair)", budget: [40,80], mid: [100,220], premium: [250,600] },
+      { name: "Throw Pillows (set of 4)", budget: [30,60], mid: [60,120], premium: [140,300] },
+      { name: "Wall Art (set)", budget: [40,80], mid: [100,300], premium: [350,900] },
+      { name: "Curtains / Drapes", budget: [40,80], mid: [100,250], premium: [300,700] },
+      { name: "Bookshelf", budget: [60,120], mid: [150,350], premium: [400,1000] }
+    ]
+  },
+  {
+    name: "Primary Bedroom",
+    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>',
+    items: [
+      { name: "King Bed Frame", budget: [200,400], mid: [600,1200], premium: [1500,3000] },
+      { name: "King Mattress", budget: [300,500], mid: [700,1300], premium: [1500,3000] },
+      { name: "Nightstands (pair)", budget: [80,160], mid: [200,450], premium: [500,1200] },
+      { name: "Dresser", budget: [150,300], mid: [400,800], premium: [900,2000] },
+      { name: "Table Lamps (pair)", budget: [40,80], mid: [100,220], premium: [250,600] },
+      { name: "Area Rug (6x9)", budget: [60,120], mid: [150,400], premium: [500,1200] },
+      { name: "Bedding Set (king)", budget: [60,100], mid: [120,250], premium: [300,700] },
+      { name: "Throw Pillows (set of 4)", budget: [30,50], mid: [60,120], premium: [140,300] },
+      { name: "Curtains", budget: [40,70], mid: [80,200], premium: [250,600] },
+      { name: "Wall Art", budget: [25,60], mid: [80,200], premium: [250,700] },
+      { name: "Full-Length Mirror", budget: [30,60], mid: [80,200], premium: [250,600] }
+    ]
+  },
+  {
+    name: "Guest Bedroom 1",
+    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>',
+    items: [
+      { name: "Queen Bed Frame", budget: [150,300], mid: [400,900], premium: [1000,2200] },
+      { name: "Queen Mattress", budget: [250,400], mid: [500,1000], premium: [1200,2500] },
+      { name: "Nightstands (pair)", budget: [60,120], mid: [150,350], premium: [400,1000] },
+      { name: "Dresser", budget: [120,250], mid: [300,650], premium: [700,1600] },
+      { name: "Table Lamp", budget: [20,40], mid: [50,110], premium: [130,300] },
+      { name: "Area Rug (5x8)", budget: [40,80], mid: [100,280], premium: [350,800] },
+      { name: "Bedding Set (queen)", budget: [50,80], mid: [100,200], premium: [250,550] },
+      { name: "Curtains", budget: [30,60], mid: [70,160], premium: [200,500] },
+      { name: "Wall Art", budget: [20,50], mid: [60,160], premium: [200,550] }
+    ]
+  },
+  {
+    name: "Guest Bedroom 2",
+    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>',
+    items: [
+      { name: "Queen Bed Frame", budget: [150,300], mid: [400,900], premium: [1000,2200] },
+      { name: "Queen Mattress", budget: [250,400], mid: [500,1000], premium: [1200,2500] },
+      { name: "Nightstands (pair)", budget: [60,120], mid: [150,350], premium: [400,1000] },
+      { name: "Dresser", budget: [120,250], mid: [300,650], premium: [700,1600] },
+      { name: "Table Lamp", budget: [20,40], mid: [50,110], premium: [130,300] },
+      { name: "Area Rug (5x8)", budget: [40,80], mid: [100,280], premium: [350,800] },
+      { name: "Bedding Set (queen)", budget: [50,80], mid: [100,200], premium: [250,550] },
+      { name: "Curtains", budget: [30,60], mid: [70,160], premium: [200,500] },
+      { name: "Wall Art", budget: [20,50], mid: [60,160], premium: [200,550] }
+    ]
+  },
+  {
+    name: "Kitchen",
+    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>',
+    items: [
+      { name: "Bar Stools (set of 3)", budget: [90,180], mid: [200,450], premium: [500,1200] },
+      { name: "Coffee Maker", budget: [25,50], mid: [60,150], premium: [200,400] },
+      { name: "Toaster", budget: [20,35], mid: [40,80], premium: [100,250] },
+      { name: "Blender", budget: [20,40], mid: [50,120], premium: [150,350] },
+      { name: "Knife Set", budget: [20,40], mid: [50,120], premium: [150,350] },
+      { name: "Cookware Set", budget: [50,100], mid: [120,300], premium: [350,800] },
+      { name: "Dinnerware Set (service for 8)", budget: [40,80], mid: [100,250], premium: [300,700] },
+      { name: "Glassware Set", budget: [20,40], mid: [50,120], premium: [150,350] },
+      { name: "Utensil Set", budget: [15,30], mid: [35,80], premium: [100,250] },
+      { name: "Dish Towels (set of 6)", budget: [10,20], mid: [20,40], premium: [40,80] },
+      { name: "Cutting Boards (set of 3)", budget: [15,30], mid: [30,70], premium: [80,200] }
+    ]
+  },
+  {
+    name: "Dining Area",
+    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="3" rx="1"/><path d="M12 10v11"/><path d="M4 10v11"/><path d="M20 10v11"/><path d="M7 3v4"/><path d="M17 3v4"/></svg>',
+    items: [
+      { name: "Dining Table (seats 6)", budget: [200,400], mid: [500,1000], premium: [1200,2800] },
+      { name: "Dining Chairs (6)", budget: [180,360], mid: [420,900], premium: [1000,2400] },
+      { name: "Table Runner", budget: [10,20], mid: [25,50], premium: [60,120] },
+      { name: "Centerpiece", budget: [15,30], mid: [35,80], premium: [100,250] },
+      { name: "Pendant Light", budget: [40,80], mid: [100,300], premium: [350,900] },
+      { name: "Placemats Set (6)", budget: [12,25], mid: [30,60], premium: [70,150] }
+    ]
+  },
+  {
+    name: "Bathroom (Primary)",
+    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><line x1="10" x2="8" y1="5" y2="7"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="7" x2="7" y1="19" y2="21"/><line x1="17" x2="17" y1="19" y2="21"/></svg>',
+    items: [
+      { name: "Bath Towel Set (6 piece)", budget: [25,45], mid: [50,100], premium: [120,250] },
+      { name: "Bath Mat", budget: [10,20], mid: [25,50], premium: [60,120] },
+      { name: "Shower Curtain and Liner", budget: [15,25], mid: [30,60], premium: [70,150] },
+      { name: "Soap Dispenser Set", budget: [10,20], mid: [25,50], premium: [60,120] },
+      { name: "Wastebasket", budget: [8,15], mid: [18,35], premium: [40,80] },
+      { name: "Wall Mirror", budget: [20,40], mid: [50,120], premium: [150,350] },
+      { name: "Storage Basket", budget: [10,20], mid: [25,50], premium: [55,120] }
+    ]
+  },
+  {
+    name: "Bathroom (Guest)",
+    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><line x1="10" x2="8" y1="5" y2="7"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="7" x2="7" y1="19" y2="21"/><line x1="17" x2="17" y1="19" y2="21"/></svg>',
+    items: [
+      { name: "Bath Towel Set (6 piece)", budget: [25,45], mid: [50,100], premium: [120,250] },
+      { name: "Bath Mat", budget: [10,20], mid: [25,50], premium: [60,120] },
+      { name: "Shower Curtain and Liner", budget: [15,25], mid: [30,60], premium: [70,150] },
+      { name: "Soap Dispenser Set", budget: [10,20], mid: [25,50], premium: [60,120] },
+      { name: "Wastebasket", budget: [8,15], mid: [18,35], premium: [40,80] },
+      { name: "Storage Basket", budget: [10,20], mid: [25,50], premium: [55,120] }
+    ]
+  },
+  {
+    name: "Outdoor / Patio",
+    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="m8 6 4-4 4 4"/><path d="M16 18a4 4 0 0 0-8 0"/></svg>',
+    items: [
+      { name: "Patio Dining Set (table + 4 chairs)", budget: [250,450], mid: [600,1200], premium: [1500,3500] },
+      { name: "Lounge Chairs (pair)", budget: [120,250], mid: [300,700], premium: [800,2000] },
+      { name: "Outdoor Side Table", budget: [30,60], mid: [70,160], premium: [200,450] },
+      { name: "Outdoor Rug (5x7)", budget: [30,60], mid: [70,180], premium: [200,500] },
+      { name: "String Lights", budget: [15,30], mid: [35,80], premium: [90,200] },
+      { name: "Planters (set of 3)", budget: [25,50], mid: [60,140], premium: [160,400] },
+      { name: "Outdoor Pillows (set of 4)", budget: [30,50], mid: [60,120], premium: [140,300] }
+    ]
+  },
+  {
+    name: "Entryway",
+    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"/><path d="M2 20h20"/><path d="M14 12v.01"/></svg>',
+    items: [
+      { name: "Console Table", budget: [60,120], mid: [150,350], premium: [400,900] },
+      { name: "Mirror", budget: [25,50], mid: [60,150], premium: [200,500] },
+      { name: "Coat Hooks / Rack", budget: [15,30], mid: [35,80], premium: [100,250] },
+      { name: "Shoe Storage", budget: [25,50], mid: [60,140], premium: [160,400] },
+      { name: "Welcome Mat", budget: [10,20], mid: [25,50], premium: [60,120] },
+      { name: "Table Lamp", budget: [20,40], mid: [50,110], premium: [130,300] },
+      { name: "Decorative Tray", budget: [10,20], mid: [25,50], premium: [60,120] }
+    ]
+  },
+  {
+    name: "Laundry",
+    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="12" cy="13" r="5"/><path d="M12 8v1"/><circle cx="12" cy="13" r="2"/></svg>',
+    items: [
+      { name: "Shelving Unit", budget: [30,60], mid: [70,160], premium: [200,450] },
+      { name: "Laundry Baskets (set of 2)", budget: [15,30], mid: [35,70], premium: [80,180] },
+      { name: "Iron and Board", budget: [25,50], mid: [50,100], premium: [120,250] },
+      { name: "Drying Rack", budget: [15,30], mid: [30,60], premium: [70,150] },
+      { name: "Detergent Dispenser", budget: [8,15], mid: [18,35], premium: [40,80] }
+    ]
+  }
+];
+
+/* ============================
+   STATE
+   ============================ */
+let itemStates = {};
+
+function initState() {
+  roomsData.forEach((room, ri) => {
+    room.items.forEach((item, ii) => {
+      const key = ri + '-' + ii;
+      itemStates[key] = { checked: false, tier: 'mid' };
+    });
+  });
+}
+
+/* ============================
+   RENDERING
+   ============================ */
+function renderRooms() {
+  const container = document.getElementById('roomsContainer');
+  let html = '';
+  roomsData.forEach((room, ri) => {
+    html += `<div class="room-card" id="room-${ri}">
+      <div class="room-header" onclick="toggleRoom(${ri})">
+        <div class="room-header-left">
+          <div class="room-icon">${room.icon}</div>
+          <div>
+            <div class="room-title">${room.name}</div>
+            <div class="room-meta" id="room-meta-${ri}">${room.items.length} items</div>
+          </div>
+        </div>
+        <div class="room-header-right">
+          <div class="room-total" id="room-total-${ri}">$0</div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="room-body" id="room-body-${ri}">
+        <div class="room-body-inner">
+          <table class="items-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Item</th>
+                <th>Tier</th>
+                <th>Est. Cost</th>
+              </tr>
+            </thead>
+            <tbody>`;
+    room.items.forEach((item, ii) => {
+      const key = ri + '-' + ii;
+      html += `<tr id="row-${key}">
+        <td class="item-check-cell"><input type="checkbox" class="item-checkbox" data-key="${key}" onchange="onCheck(this)"></td>
+        <td class="td-name"><span class="item-name">${item.name}</span></td>
+        <td class="td-tier">
+          <select class="item-tier-select" data-key="${key}" onchange="onTierChange(this)">
+            <option value="budget">Budget</option>
+            <option value="mid" selected>Mid-Range</option>
+            <option value="premium">Premium</option>
+          </select>
+        </td>
+        <td class="td-cost">
+          <span class="item-cost" id="cost-${key}">$${avg(item.mid)}</span>
+          <span class="cost-range" id="range-${key}">($${item.mid[0]} to $${item.mid[1]})</span>
+        </td>
+      </tr>`;
+    });
+    html += `</tbody></table>
+          <div class="room-actions">
+            <button class="btn btn-outline btn-sm" onclick="selectRoom(${ri})">Select All in Room</button>
+            <button class="btn btn-outline btn-sm" onclick="deselectRoom(${ri})">Deselect Room</button>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  });
+  container.innerHTML = html;
+}
+
+function avg(range) { return Math.round((range[0] + range[1]) / 2); }
+
+function formatMoney(n) {
+  return '$' + n.toLocaleString('en-US');
+}
+
+/* ============================
+   INTERACTIONS
+   ============================ */
+function onCheck(el) {
+  const key = el.dataset.key;
+  itemStates[key].checked = el.checked;
+  const row = document.getElementById('row-' + key);
+  if (el.checked) row.classList.add('checked');
+  else row.classList.remove('checked');
+  recalc();
+}
+
+function onTierChange(el) {
+  const key = el.dataset.key;
+  itemStates[key].tier = el.value;
+  updateItemCost(key);
+  recalc();
+}
+
+function updateItemCost(key) {
+  const [ri, ii] = key.split('-').map(Number);
+  const item = roomsData[ri].items[ii];
+  const tier = itemStates[key].tier;
+  const range = item[tier];
+  document.getElementById('cost-' + key).textContent = formatMoney(avg(range));
+  document.getElementById('range-' + key).textContent = `($${range[0].toLocaleString()} to $${range[1].toLocaleString()})`;
+}
+
+function toggleRoom(ri) {
+  const card = document.getElementById('room-' + ri);
+  const body = document.getElementById('room-body-' + ri);
+  if (card.classList.contains('open')) {
+    card.classList.remove('open');
+    body.style.maxHeight = '0';
+  } else {
+    card.classList.add('open');
+    body.style.maxHeight = body.scrollHeight + 'px';
+  }
+}
+
+function toggleAllRooms(open) {
+  roomsData.forEach((_, ri) => {
+    const card = document.getElementById('room-' + ri);
+    const body = document.getElementById('room-body-' + ri);
+    if (open) {
+      card.classList.add('open');
+      body.style.maxHeight = body.scrollHeight + 'px';
+    } else {
+      card.classList.remove('open');
+      body.style.maxHeight = '0';
+    }
+  });
+}
+
+function selectAll() {
+  document.querySelectorAll('.item-checkbox').forEach(cb => {
+    cb.checked = true;
+    itemStates[cb.dataset.key].checked = true;
+    document.getElementById('row-' + cb.dataset.key).classList.add('checked');
+  });
+  recalc();
+}
+
+function deselectAll() {
+  document.querySelectorAll('.item-checkbox').forEach(cb => {
+    cb.checked = false;
+    itemStates[cb.dataset.key].checked = false;
+    document.getElementById('row-' + cb.dataset.key).classList.remove('checked');
+  });
+  recalc();
+}
+
+function selectRoom(ri) {
+  roomsData[ri].items.forEach((_, ii) => {
+    const key = ri + '-' + ii;
+    itemStates[key].checked = true;
+    const cb = document.querySelector(`.item-checkbox[data-key="${key}"]`);
+    if (cb) cb.checked = true;
+    document.getElementById('row-' + key).classList.add('checked');
+  });
+  recalc();
+}
+
+function deselectRoom(ri) {
+  roomsData[ri].items.forEach((_, ii) => {
+    const key = ri + '-' + ii;
+    itemStates[key].checked = false;
+    const cb = document.querySelector(`.item-checkbox[data-key="${key}"]`);
+    if (cb) cb.checked = false;
+    document.getElementById('row-' + key).classList.remove('checked');
+  });
+  recalc();
+}
+
+/* GLOBAL TIER */
+document.getElementById('globalTier').addEventListener('change', function() {
+  if (!this.value) return;
+  document.querySelectorAll('.item-tier-select').forEach(sel => {
+    sel.value = this.value;
+    itemStates[sel.dataset.key].tier = this.value;
+    updateItemCost(sel.dataset.key);
+  });
+  recalc();
+});
+
+/* ============================
+   CALCULATIONS
+   ============================ */
+function recalc() {
+  let budgetLow = 0, budgetHigh = 0;
+  let midLow = 0, midHigh = 0;
+  let premLow = 0, premHigh = 0;
+  let selectedLow = 0, selectedHigh = 0;
+  let totalItems = 0, checkedItems = 0;
+
+  roomsData.forEach((room, ri) => {
+    let roomLow = 0, roomHigh = 0;
+    let roomChecked = 0;
+    room.items.forEach((item, ii) => {
+      const key = ri + '-' + ii;
+      const state = itemStates[key];
+      totalItems++;
+      if (state.checked) {
+        checkedItems++;
+        roomChecked++;
+        const tier = state.tier;
+        const range = item[tier];
+        roomLow += range[0];
+        roomHigh += range[1];
+
+        budgetLow += item.budget[0];
+        budgetHigh += item.budget[1];
+        midLow += item.mid[0];
+        midHigh += item.mid[1];
+        premLow += item.premium[0];
+        premHigh += item.premium[1];
+        selectedLow += range[0];
+        selectedHigh += range[1];
+      }
+    });
+    const roomAvg = Math.round((roomLow + roomHigh) / 2);
+    document.getElementById('room-total-' + ri).textContent = formatMoney(roomAvg);
+    document.getElementById('room-meta-' + ri).textContent = `${roomChecked} of ${room.items.length} selected`;
+  });
+
+  const bAvg = Math.round((budgetLow + budgetHigh) / 2);
+  const mAvg = Math.round((midLow + midHigh) / 2);
+  const pAvg = Math.round((premLow + premHigh) / 2);
+  const sAvg = Math.round((selectedLow + selectedHigh) / 2);
+
+  document.getElementById('budgetTotal').textContent = formatMoney(bAvg);
+  document.getElementById('budgetRange').textContent = checkedItems ? `${formatMoney(budgetLow)} to ${formatMoney(budgetHigh)}` : 'Low end estimate';
+  document.getElementById('midTotal').textContent = formatMoney(mAvg);
+  document.getElementById('midRange').textContent = checkedItems ? `${formatMoney(midLow)} to ${formatMoney(midHigh)}` : 'Balanced quality';
+  document.getElementById('premiumTotal').textContent = formatMoney(pAvg);
+  document.getElementById('premiumRange').textContent = checkedItems ? `${formatMoney(premLow)} to ${formatMoney(premHigh)}` : 'Top-tier finishes';
+  document.getElementById('selectedTotal').textContent = formatMoney(sAvg);
+  document.getElementById('selectedRange').textContent = checkedItems ? `${formatMoney(selectedLow)} to ${formatMoney(selectedHigh)}` : 'Based on chosen tiers';
+
+  const pct = totalItems ? Math.round((checkedItems / totalItems) * 100) : 0;
+  document.getElementById('progressCount').textContent = checkedItems;
+  document.getElementById('progressTotal').textContent = totalItems;
+  document.getElementById('progressPct').textContent = pct;
+  document.getElementById('progressFill').style.width = pct + '%';
+
+  // Sticky header
+  document.getElementById('stickyTotal').textContent = formatMoney(sAvg);
+  document.getElementById('stickyItems').textContent = checkedItems + '/' + totalItems;
+  document.getElementById('stickyProgressFill').style.width = pct + '%';
+}
+
+/* ============================
+   STICKY HEADER SCROLL
+   ============================ */
+const stickyHeader = document.getElementById('stickyHeader');
+const heroSection = document.getElementById('heroSection');
+let lastScroll = 0;
+
+window.addEventListener('scroll', function() {
+  const heroBottom = heroSection.getBoundingClientRect().bottom;
+  if (heroBottom < 0) {
+    stickyHeader.classList.add('visible');
+  } else {
+    stickyHeader.classList.remove('visible');
+  }
+}, { passive: true });
+
+/* ============================
+   COPY SUMMARY
+   ============================ */
+function copySummary() {
+  let lines = [];
+  lines.push('STR Furniture Shopping List');
+  lines.push('Generated by MyBnBDesign');
+  lines.push('Date: ' + new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }));
+  lines.push('');
+
+  let grandLow = 0, grandHigh = 0;
+
+  roomsData.forEach((room, ri) => {
+    let roomItems = [];
+    let roomLow = 0, roomHigh = 0;
+    room.items.forEach((item, ii) => {
+      const key = ri + '-' + ii;
+      const state = itemStates[key];
+      if (state.checked) {
+        const range = item[state.tier];
+        roomItems.push(`  [x] ${item.name} (${capitalize(state.tier)}): $${range[0].toLocaleString()} to $${range[1].toLocaleString()}`);
+        roomLow += range[0];
+        roomHigh += range[1];
+      }
+    });
+    if (roomItems.length > 0) {
+      lines.push(room.name);
+      lines.push(...roomItems);
+      lines.push(`  Room Subtotal: $${roomLow.toLocaleString()} to $${roomHigh.toLocaleString()}`);
+      lines.push('');
+      grandLow += roomLow;
+      grandHigh += roomHigh;
+    }
+  });
+
+  lines.push('GRAND TOTAL: $' + grandLow.toLocaleString() + ' to $' + grandHigh.toLocaleString());
+  lines.push('Estimated Average: $' + Math.round((grandLow + grandHigh) / 2).toLocaleString());
+  lines.push('');
+  lines.push('Need help sourcing? Visit mybnbdesign.com/contact');
+
+  navigator.clipboard.writeText(lines.join('\n')).then(() => {
+    showToast('Summary copied to clipboard');
+  }).catch(() => {
+    showToast('Unable to copy. Try using Print instead.');
+  });
+}
+
+function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+
+/* ============================
+   TOAST
+   ============================ */
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+/* ============================
+   INIT
+   ============================ */
+initState();
+renderRooms();
+recalc();
+</script>
+</body>
+</html>
