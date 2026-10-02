@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROI Calculator | MyBnBDesign - Short-Term Rental Design Investment Returns</title>
+    <meta name="description" content="Calculate the return on investment for professional short-term rental interior design. See how design upgrades can boost your ADR, occupancy, and monthly revenue.">
+    <meta name="keywords" content="STR ROI calculator, short-term rental design ROI, Airbnb design investment, vacation rental design returns, ADR increase calculator">
+    <link rel="canonical" href="https://mybnbdesign.com/tools/roi-calculator/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "MyBnBDesign ROI Calculator",
+        "description": "Calculate the return on investment for professional short-term rental interior design. Estimate ADR increases, payback periods, and projected revenue growth.",
+        "url": "https://mybnbdesign.com/tools/roi-calculator/",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "MyBnBDesign",
+            "url": "https://mybnbdesign.com"
+        },
+        "browserRequirements": "Requires JavaScript"
+    }
+    </script>
+
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2C3E50;
+            --accent: #E67E22;
+            --light: #ECF0F1;
+            --white: #FFFFFF;
+            --green: #27AE60;
+            --green-light: #E8F8F0;
+            --accent-light: #FDF2E9;
+            --text: #2C3E50;
+            --text-muted: #7F8C8D;
+            --border: #D5DBDB;
+            --shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+            --shadow-lg: 0 8px 40px rgba(44, 62, 80, 0.12);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.3;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 0 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(44, 62, 80, 0.06);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+
+        .nav-logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-logo-icon svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .nav-logo-text {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-logo-text span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links .active {
+            color: var(--accent);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a252f 100%);
+            color: var(--white);
+            padding: 72px 24px 56px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.85;
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Calculator */
+        .calculator-section {
+            max-width: 1200px;
+            margin: -40px auto 0;
+            padding: 0 24px 80px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 40px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .card-subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        /* Form */
+        .form-group {
+            margin-bottom: 28px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .form-label-hint {
+            font-weight: 400;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .input-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: var(--white);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(230, 126, 34, 0.1);
+        }
+
+        .form-input-prefix {
+            position: relative;
+        }
+
+        .form-input-prefix::before {
+            content: '$';
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: var(--text-muted);
+            font-weight: 500;
+            z-index: 2;
+        }
+
+        .form-input-prefix .form-input {
+            padding-left: 32px;
+        }
+
+        .form-input-suffix {
+            position: relative;
+        }
+
+        .form-input-suffix::after {
+            content: '%';
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .form-input-suffix .form-input {
+            padding-right: 36px;
+        }
+
+        .range-slider {
+            width: 100%;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 6px;
+            border-radius: 3px;
+            background: var(--light);
+            outline: none;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+
+        .range-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--accent);
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(230, 126, 34, 0.3);
+            transition: transform 0.15s;
+        }
+
+        .range-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+        }
+
+        .range-slider::-moz-range-thumb {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--accent);
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 8px rgba(230, 126, 34, 0.3);
+        }
+
+        .range-value {
+            min-width: 80px;
+            text-align: right;
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--primary);
+        }
+
+        .calculate-btn {
+            width: 100%;
+            padding: 18px 32px;
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+            box-shadow: 0 4px 16px rgba(230, 126, 34, 0.25);
+            margin-top: 8px;
+        }
+
+        .calculate-btn:hover {
+            background: #CF6D17;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 24px rgba(230, 126, 34, 0.35);
+        }
+
+        .calculate-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Results */
+        .results-card {
+            opacity: 1;
+            transition: opacity 0.4s ease;
+        }
+
+        .results-card.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .results-placeholder {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+
+        .results-placeholder svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 16px;
+            opacity: 0.3;
+        }
+
+        .results-placeholder p {
+            font-size: 15px;
+        }
+
+        .results-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .results-header h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .results-header p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Key Metrics */
+        .key-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .metric-card {
+            text-align: center;
+            padding: 20px 12px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .metric-card.highlight {
+            background: var(--green-light);
+            border: 1px solid rgba(39, 174, 96, 0.15);
+        }
+
+        .metric-card.accent-bg {
+            background: var(--accent-light);
+            border: 1px solid rgba(230, 126, 34, 0.15);
+        }
+
+        .metric-card.primary-bg {
+            background: #EBF0F5;
+            border: 1px solid rgba(44, 62, 80, 0.1);
+        }
+
+        .metric-value {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 4px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .metric-value.green {
+            color: var(--green);
+        }
+
+        .metric-value.accent {
+            color: var(--accent);
+        }
+
+        .metric-value.primary {
+            color: var(--primary);
+        }
+
+        .metric-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Before/After */
+        .comparison {
+            margin-bottom: 32px;
+        }
+
+        .comparison-title {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+
+        .comparison-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .comparison-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            min-width: 100px;
+            font-weight: 500;
+        }
+
+        .comparison-bar-wrap {
+            flex: 1;
+            position: relative;
+        }
+
+        .comparison-bar {
+            height: 28px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            transition: width 1s ease;
+            min-width: 60px;
+        }
+
+        .comparison-bar.before {
+            background: var(--primary);
+        }
+
+        .comparison-bar.after {
+            background: var(--green);
+        }
+
+        .comparison-increase {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--green);
+            min-width: 60px;
+            text-align: right;
+        }
+
+        /* ROI Progress */
+        .roi-timeline {
+            margin-bottom: 32px;
+        }
+
+        .roi-timeline-title {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .roi-bar-wrap {
+            background: var(--light);
+            border-radius: 10px;
+            height: 24px;
+            overflow: hidden;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .roi-bar {
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(90deg, var(--accent), var(--green));
+            transition: width 1.5s ease;
+            position: relative;
+        }
+
+        .roi-bar-label {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .roi-bar-markers {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .roi-bar-markers span.payback-marker {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* Projection Table */
+        .projection-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .projection-table thead th {
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .projection-table thead th:first-child {
+            border-radius: 8px 0 0 0;
+        }
+
+        .projection-table thead th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        .projection-table tbody td {
+            padding: 9px 12px;
+            border-bottom: 1px solid var(--light);
+        }
+
+        .projection-table tbody tr:nth-child(even) {
+            background: #F9FAFB;
+        }
+
+        .projection-table tbody tr:last-child td:first-child {
+            border-radius: 0 0 0 8px;
+        }
+
+        .projection-table tbody tr:last-child td:last-child {
+            border-radius: 0 0 8px 0;
+        }
+
+        .projection-table .positive {
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        .projection-table .payback-row {
+            background: var(--green-light) !important;
+        }
+
+        .projection-table .payback-row td {
+            font-weight: 700;
+        }
+
+        .table-scroll {
+            max-height: 300px;
+            overflow-y: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            margin-bottom: 24px;
+        }
+
+        .table-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .table-scroll::-webkit-scrollbar-track {
+            background: var(--light);
+        }
+
+        .table-scroll::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 3px;
+        }
+
+        .projection-label {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a252f 100%);
+            padding: 72px 24px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .cta-section h2 {
+            font-size: 34px;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 18px 40px;
+            background: var(--accent);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 17px;
+            transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+            box-shadow: 0 4px 16px rgba(230, 126, 34, 0.3);
+        }
+
+        .cta-btn:hover {
+            background: #CF6D17;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(230, 126, 34, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 48px 24px 32px;
+            text-align: center;
+        }
+
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .footer-logo span {
+            color: var(--accent);
+        }
+
+        .footer p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .footer-copy {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 13px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes countUp {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .animate-delay-1 { animation-delay: 0.1s; }
+        .animate-delay-2 { animation-delay: 0.2s; }
+        .animate-delay-3 { animation-delay: 0.3s; }
+        .animate-delay-4 { animation-delay: 0.4s; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .key-metrics {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .metric-card {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-align: left;
+                padding: 16px 20px;
+            }
+
+            .metric-value {
+                font-size: 26px;
+                margin-bottom: 0;
+            }
+
+            .card {
+                padding: 28px 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 26px;
+            }
+
+            .cta-section p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-inner {
+                height: 60px;
+            }
+
+            .nav-logo-text {
+                font-size: 18px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 48px 20px 40px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .calculator-section {
+                padding: 0 16px 60px;
+                margin-top: -28px;
+            }
+
+            .comparison-row {
+                flex-wrap: wrap;
+            }
+
+            .comparison-label {
+                min-width: unset;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../../" class="nav-logo">
+                <div class="nav-logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9.5L12 4L21 9.5V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V9.5Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M9 21V13H15V21" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="nav-logo-text">MyBnB<span>Design</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../">Home</a></li>
+                <li><a href="../" class="active">Tools</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Design Investment ROI Calculator</h1>
+        <p>See exactly how professional interior design can boost your short-term rental revenue. Enter your property details below to calculate your projected returns.</p>
+    </section>
+
+    <!-- Calculator -->
+    <section class="calculator-section">
+        <div class="calculator-grid">
+
+            <!-- Input Card -->
+            <div class="card">
+                <h2 class="card-title">Your Property Details</h2>
+                <p class="card-subtitle">Enter your current numbers to see your potential returns</p>
+
+                <div class="form-group">
+                    <label class="form-label" for="investment">
+                        Design Investment
+                        <span class="form-label-hint">Total budget for design upgrades</span>
+                    </label>
+                    <div class="input-row">
+                        <div class="form-input-prefix" style="flex:1">
+                            <input type="number" id="investment" class="form-input" min="1000" max="100000" value="15000" step="500">
+                        </div>
+                        <span class="range-value" id="investmentDisplay">$15,000</span>
+                    </div>
+                    <input type="range" id="investmentSlider" class="range-slider" min="1000" max="100000" value="15000" step="500">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="adr">
+                        Current Average Daily Rate (ADR)
+                        <span class="form-label-hint">Your current nightly rate</span>
+                    </label>
+                    <div class="input-row">
+                        <div class="form-input-prefix" style="flex:1">
+                            <input type="number" id="adr" class="form-input" min="50" max="1000" value="175" step="5">
+                        </div>
+                        <span class="range-value" id="adrDisplay">$175</span>
+                    </div>
+                    <input type="range" id="adrSlider" class="range-slider" min="50" max="1000" value="175" step="5">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="occupancy">
+                        Current Occupancy Rate
+                        <span class="form-label-hint">Percentage of nights booked per month</span>
+                    </label>
+                    <div class="input-row">
+                        <div class="form-input-suffix" style="flex:1">
+                            <input type="number" id="occupancy" class="form-input" min="0" max="100" value="65" step="1">
+                        </div>
+                        <span class="range-value" id="occupancyDisplay">65%</span>
+                    </div>
+                    <input type="range" id="occupancySlider" class="range-slider" min="0" max="100" value="65" step="1">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="bookings">
+                        Current Monthly Bookings
+                        <span class="form-label-hint">Average number of bookings per month</span>
+                    </label>
+                    <div class="input-row">
+                        <div style="flex:1">
+                            <input type="number" id="bookings" class="form-input" min="1" max="31" value="12" step="1">
+                        </div>
+                        <span class="range-value" id="bookingsDisplay">12</span>
+                    </div>
+                    <input type="range" id="bookingsSlider" class="range-slider" min="1" max="31" value="12" step="1">
+                </div>
+
+                <button class="calculate-btn" id="calculateBtn" onclick="calculateROI()">Calculate My ROI</button>
+            </div>
+
+            <!-- Results Card -->
+            <div class="card results-card" id="resultsCard">
+                <div id="placeholder" class="results-placeholder">
+                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="28" width="12" height="28" rx="2" fill="#2C3E50"/>
+                        <rect x="26" y="16" width="12" height="40" rx="2" fill="#E67E22"/>
+                        <rect x="44" y="8" width="12" height="48" rx="2" fill="#27AE60"/>
+                    </svg>
+                    <p>Enter your property details and click<br><strong>Calculate My ROI</strong> to see your projected returns.</p>
+                </div>
+
+                <div id="results" style="display:none">
+                    <div class="results-header animate-in">
+                        <h3>Your Projected Returns</h3>
+                        <p>Based on professional design investment</p>
+                    </div>
+
+                    <!-- Key Metrics -->
+                    <div class="key-metrics">
+                        <div class="metric-card accent-bg animate-in animate-delay-1">
+                            <div>
+                                <div class="metric-value accent" id="metricNewADR">$0</div>
+                                <div class="metric-label">New ADR</div>
+                            </div>
+                        </div>
+                        <div class="metric-card highlight animate-in animate-delay-2">
+                            <div>
+                                <div class="metric-value green" id="metricROI">0%</div>
+                                <div class="metric-label">12-Month ROI</div>
+                            </div>
+                        </div>
+                        <div class="metric-card primary-bg animate-in animate-delay-3">
+                            <div>
+                                <div class="metric-value primary" id="metricPayback">0</div>
+                                <div class="metric-label">Payback (Months)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Before / After Comparison -->
+                    <div class="comparison animate-in animate-delay-2">
+                        <div class="comparison-title">Before vs. After Design</div>
+
+                        <div class="comparison-row">
+                            <span class="comparison-label">ADR</span>
+                            <div class="comparison-bar-wrap">
+                                <div class="comparison-bar before" id="barADRBefore" style="width:0%">$0</div>
+                            </div>
+                            <span class="comparison-increase" id="adrIncrease">+0%</span>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-label"></span>
+                            <div class="comparison-bar-wrap">
+                                <div class="comparison-bar after" id="barADRAfter" style="width:0%">$0</div>
+                            </div>
+                            <span class="comparison-increase"></span>
+                        </div>
+
+                        <div class="comparison-row" style="margin-top:8px">
+                            <span class="comparison-label">Monthly Rev</span>
+                            <div class="comparison-bar-wrap">
+                                <div class="comparison-bar before" id="barRevBefore" style="width:0%">$0</div>
+                            </div>
+                            <span class="comparison-increase" id="revIncrease">+0%</span>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-label"></span>
+                            <div class="comparison-bar-wrap">
+                                <div class="comparison-bar after" id="barRevAfter" style="width:0%">$0</div>
+                            </div>
+                            <span class="comparison-increase"></span>
+                        </div>
+                    </div>
+
+                    <!-- ROI Progress Bar -->
+                    <div class="roi-timeline animate-in animate-delay-3">
+                        <div class="roi-timeline-title">ROI Progress Over 24 Months</div>
+                        <div class="roi-bar-wrap">
+                            <div class="roi-bar" id="roiBar" style="width:0%">
+                                <span class="roi-bar-label" id="roiBarLabel">0%</span>
+                            </div>
+                        </div>
+                        <div class="roi-bar-markers">
+                            <span>Month 0</span>
+                            <span class="payback-marker" id="paybackMarker">Payback: Month 0</span>
+                            <span>Month 24</span>
+                        </div>
+                    </div>
+
+                    <!-- Projection Table -->
+                    <div class="animate-in animate-delay-4">
+                        <div class="projection-label">Monthly Revenue Projection</div>
+                        <div class="table-scroll">
+                            <table class="projection-table">
+                                <thead>
+                                    <tr>
+                                        <th>Month</th>
+                                        <th>Old Revenue</th>
+                                        <th>New Revenue</th>
+                                        <th>Gain</th>
+                                        <th>Cumulative Gain</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="projectionBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 24-Month Additional Revenue -->
+                    <div class="metric-card highlight animate-in animate-delay-4" style="margin-top:8px;">
+                        <div style="display:flex;align-items:center;justify-content:space-between;width:100%">
+                            <div class="metric-label" style="margin-bottom:0">24-Month Additional Revenue</div>
+                            <div class="metric-value green" id="metric24Month" style="margin-bottom:0;font-size:28px">$0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Ready to Maximize Your Returns?</h2>
+        <p>See what professional design can do for your rental. Get started with MyBnBDesign today.</p>
+        <a href="../../" class="cta-btn">Get Started with MyBnBDesign</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">MyBnB<span>Design</span></div>
+            <p>Professional interior design for short-term rentals. We help hosts boost their revenue through design that guests love.</p>
+            <div class="footer-copy">
+                &copy; 2026 MyBnBDesign. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sync sliders and inputs
+        function syncInputs(inputId, sliderId, displayId, prefix, suffix) {
+            var input = document.getElementById(inputId);
+            var slider = document.getElementById(sliderId);
+            var display = document.getElementById(displayId);
+
+            function formatVal(v) {
+                var val = parseFloat(v);
+                if (prefix === '$') {
+                    return '$' + val.toLocaleString('en-US');
+                }
+                if (suffix === '%') {
+                    return val + '%';
+                }
+                return val.toString();
+            }
+
+            input.addEventListener('input', function() {
+                slider.value = input.value;
+                display.textContent = formatVal(input.value);
+            });
+
+            slider.addEventListener('input', function() {
+                input.value = slider.value;
+                display.textContent = formatVal(slider.value);
+            });
+        }
+
+        syncInputs('investment', 'investmentSlider', 'investmentDisplay', '$', '');
+        syncInputs('adr', 'adrSlider', 'adrDisplay', '$', '');
+        syncInputs('occupancy', 'occupancySlider', 'occupancyDisplay', '', '%');
+        syncInputs('bookings', 'bookingsSlider', 'bookingsDisplay', '', '');
+
+        function animateCount(el, target, prefix, suffix, duration) {
+            prefix = prefix || '';
+            suffix = suffix || '';
+            duration = duration || 800;
+            var start = 0;
+            var startTime = null;
+
+            function step(ts) {
+                if (!startTime) startTime = ts;
+                var progress = Math.min((ts - startTime) / duration, 1);
+                var eased = 1 - Math.pow(1 - progress, 3);
+                var current = Math.round(start + (target - start) * eased);
+                if (prefix === '$') {
+                    el.textContent = '$' + current.toLocaleString('en-US');
+                } else {
+                    el.textContent = prefix + current.toLocaleString('en-US') + suffix;
+                }
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                }
+            }
+            requestAnimationFrame(step);
+        }
+
+        function calculateROI() {
+            var investment = parseFloat(document.getElementById('investment').value) || 0;
+            var currentADR = parseFloat(document.getElementById('adr').value) || 0;
+            var occupancy = parseFloat(document.getElementById('occupancy').value) || 0;
+            var bookings = parseFloat(document.getElementById('bookings').value) || 0;
+
+            if (investment < 1000 || currentADR < 50 || occupancy <= 0 || bookings < 1) {
+                return;
+            }
+
+            // Calculate nights booked per month (based on occupancy)
+            var nightsPerMonth = Math.round(30 * (occupancy / 100));
+
+            // Current monthly revenue
+            var currentMonthlyRev = currentADR * nightsPerMonth;
+
+            // Determine ADR increase percentage based on investment relative to annual revenue
+            var annualRevenue = currentMonthlyRev * 12;
+            var investmentRatio = investment / (annualRevenue || 1);
+
+            var adrIncreasePercent;
+            if (investmentRatio < 0.05) {
+                adrIncreasePercent = 15;
+            } else if (investmentRatio < 0.10) {
+                adrIncreasePercent = 20;
+            } else if (investmentRatio < 0.20) {
+                adrIncreasePercent = 25;
+            } else if (investmentRatio < 0.35) {
+                adrIncreasePercent = 30;
+            } else if (investmentRatio < 0.50) {
+                adrIncreasePercent = 35;
+            } else {
+                adrIncreasePercent = 40;
+            }
+
+            var newADR = Math.round(currentADR * (1 + adrIncreasePercent / 100));
+            var newMonthlyRev = newADR * nightsPerMonth;
+            var monthlyGain = newMonthlyRev - currentMonthlyRev;
+            var paybackMonths = monthlyGain > 0 ? Math.ceil(investment / monthlyGain) : 999;
+            var roi12 = monthlyGain > 0 ? Math.round(((monthlyGain * 12 - investment) / investment) * 100) : 0;
+            var additional24 = monthlyGain * 24;
+
+            // Show results
+            document.getElementById('placeholder').style.display = 'none';
+            document.getElementById('results').style.display = 'block';
+
+            // Animate key metrics
+            animateCount(document.getElementById('metricNewADR'), newADR, '$', '', 900);
+            animateCount(document.getElementById('metricROI'), roi12, '', '%', 900);
+            animateCount(document.getElementById('metricPayback'), Math.min(paybackMonths, 99), '', '', 600);
+
+            // Before / After bars
+            var maxADR = Math.max(currentADR, newADR);
+            setTimeout(function() {
+                var barBefore = document.getElementById('barADRBefore');
+                var barAfter = document.getElementById('barADRAfter');
+                barBefore.style.width = (currentADR / maxADR * 100) + '%';
+                barBefore.textContent = '$' + currentADR.toLocaleString('en-US');
+                barAfter.style.width = (newADR / maxADR * 100) + '%';
+                barAfter.textContent = '$' + newADR.toLocaleString('en-US');
+            }, 200);
+
+            document.getElementById('adrIncrease').textContent = '+' + adrIncreasePercent + '%';
+
+            var maxRev = Math.max(currentMonthlyRev, newMonthlyRev);
+            setTimeout(function() {
+                var barRevB = document.getElementById('barRevBefore');
+                var barRevA = document.getElementById('barRevAfter');
+                barRevB.style.width = (currentMonthlyRev / maxRev * 100) + '%';
+                barRevB.textContent = '$' + Math.round(currentMonthlyRev).toLocaleString('en-US');
+                barRevA.style.width = (newMonthlyRev / maxRev * 100) + '%';
+                barRevA.textContent = '$' + Math.round(newMonthlyRev).toLocaleString('en-US');
+            }, 400);
+
+            var revIncPct = currentMonthlyRev > 0 ? Math.round(((newMonthlyRev - currentMonthlyRev) / currentMonthlyRev) * 100) : 0;
+            document.getElementById('revIncrease').textContent = '+' + revIncPct + '%';
+
+            // ROI progress bar (show 24 month ROI as percentage, capped at 100% visual width)
+            var roi24 = monthlyGain > 0 ? Math.round(((monthlyGain * 24 - investment) / investment) * 100) : 0;
+            var barWidth = Math.min(roi24 / (roi24 > 500 ? roi24 : 500) * 100, 95);
+            if (barWidth < 10) barWidth = 10;
+            setTimeout(function() {
+                var roiBar = document.getElementById('roiBar');
+                roiBar.style.width = barWidth + '%';
+                document.getElementById('roiBarLabel').textContent = roi24 + '% ROI';
+            }, 600);
+
+            document.getElementById('paybackMarker').textContent = 'Payback: Month ' + Math.min(paybackMonths, 24);
+
+            // Projection table
+            var tbody = document.getElementById('projectionBody');
+            tbody.innerHTML = '';
+            var cumGain = 0;
+            for (var m = 1; m <= 12; m++) {
+                cumGain += monthlyGain;
+                var tr = document.createElement('tr');
+                if (m === paybackMonths) {
+                    tr.className = 'payback-row';
+                }
+                tr.innerHTML =
+                    '<td>Month ' + m + '</td>' +
+                    '<td>$' + Math.round(currentMonthlyRev).toLocaleString('en-US') + '</td>' +
+                    '<td>$' + Math.round(newMonthlyRev).toLocaleString('en-US') + '</td>' +
+                    '<td class="positive">+$' + Math.round(monthlyGain).toLocaleString('en-US') + '</td>' +
+                    '<td class="' + (cumGain >= investment ? 'positive' : '') + '">$' + Math.round(cumGain).toLocaleString('en-US') + '</td>';
+                tbody.appendChild(tr);
+            }
+
+            // 24 month total
+            animateCount(document.getElementById('metric24Month'), Math.round(additional24), '$', '', 1000);
+
+            // Scroll to results on mobile
+            if (window.innerWidth <= 900) {
+                setTimeout(function() {
+                    document.getElementById('resultsCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 300);
+            }
+        }
+    </script>
+
+</body>
+</html>
