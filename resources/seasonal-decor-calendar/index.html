@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasonal Decor Calendar for Short-Term Rentals | MyBnBDesign</title>
+    <meta name="description" content="A complete month-by-month seasonal decor calendar for short-term rental hosts. Learn when to swap decor, what to display each season, and how to keep your STR listing fresh year-round.">
+    <link rel="canonical" href="https://mybnbdesign.com/resources/seasonal-decor-calendar/">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Seasonal Decor Calendar for Short-Term Rentals",
+        "author": {
+            "@type": "Organization",
+            "name": "MyBnBDesign Team"
+        },
+        "datePublished": "2026-10-02",
+        "publisher": {
+            "@type": "Organization",
+            "name": "MyBnBDesign",
+            "url": "https://mybnbdesign.com"
+        },
+        "description": "A complete month-by-month seasonal decor calendar for short-term rental hosts. Learn when to swap decor, what to display each season, and how to keep your STR listing fresh year-round.",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://mybnbdesign.com/resources/seasonal-decor-calendar/"
+        }
+    }
+    </script>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            background-color: #FFFFFF;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: #2C3E50;
+            line-height: 1.3;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: #2C3E50;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #E67E22;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .main-nav a {
+            color: #ECF0F1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            transition: color 0.2s;
+        }
+
+        .main-nav a:hover {
+            color: #E67E22;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            max-width: 900px;
+            margin: 24px auto 0;
+            padding: 0 24px;
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        .breadcrumbs a {
+            color: #E67E22;
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumbs span {
+            margin: 0 6px;
+        }
+
+        /* Article */
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 32px 24px 60px;
+        }
+
+        .article-container h1 {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 32px;
+        }
+
+        .article-intro {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 36px;
+            border-left: 4px solid #E67E22;
+            padding-left: 20px;
+        }
+
+        /* TOC */
+        .toc {
+            background-color: #ECF0F1;
+            border-radius: 8px;
+            padding: 24px 28px;
+            margin-bottom: 40px;
+        }
+
+        .toc h2 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .toc ol {
+            padding-left: 20px;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: #2C3E50;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .toc a:hover {
+            color: #E67E22;
+        }
+
+        /* Sections */
+        .article-container h2 {
+            font-size: 1.7rem;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #ECF0F1;
+        }
+
+        .article-container h3 {
+            font-size: 1.25rem;
+            margin-top: 28px;
+            margin-bottom: 10px;
+        }
+
+        .article-container p {
+            margin-bottom: 16px;
+        }
+
+        .article-container ul, .article-container ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        .article-container li {
+            margin-bottom: 6px;
+        }
+
+        /* Month Cards */
+        .month-card {
+            border-radius: 10px;
+            padding: 28px;
+            margin-bottom: 28px;
+            border-left: 5px solid;
+        }
+
+        .month-card h3 {
+            margin-top: 0;
+            font-size: 1.35rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .month-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Season Colors */
+        .winter-card {
+            background: linear-gradient(135deg, #f0f6ff 0%, #e8eff8 100%);
+            border-color: #5b9bd5;
+        }
+
+        .spring-card {
+            background: linear-gradient(135deg, #f0faf0 0%, #e8f5e8 100%);
+            border-color: #6abf69;
+        }
+
+        .summer-card {
+            background: linear-gradient(135deg, #fffbf0 0%, #fff5e0 100%);
+            border-color: #E67E22;
+        }
+
+        .fall-card {
+            background: linear-gradient(135deg, #fdf5ef 0%, #f8ece0 100%);
+            border-color: #c0392b;
+        }
+
+        /* Tip Box */
+        .tip-box {
+            background-color: #fef9f3;
+            border: 1px solid #f0d9b5;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+
+        .tip-box .tip-label {
+            font-weight: 600;
+            color: #E67E22;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .tip-box p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Budget Table */
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        .budget-table th {
+            background-color: #2C3E50;
+            color: #FFFFFF;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .budget-table td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #ECF0F1;
+        }
+
+        .budget-table tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+
+        /* Internal Links */
+        .related-resources {
+            background-color: #ECF0F1;
+            border-radius: 10px;
+            padding: 28px;
+            margin: 40px 0;
+        }
+
+        .related-resources h3 {
+            margin-top: 0;
+        }
+
+        .related-resources ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .related-resources li {
+            margin-bottom: 10px;
+        }
+
+        .related-resources a {
+            color: #E67E22;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .related-resources a:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, #2C3E50 0%, #34495e 100%);
+            color: #FFFFFF;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin: 48px 0;
+        }
+
+        .cta-section h2 {
+            color: #FFFFFF;
+            border-bottom: none;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .cta-section p {
+            color: #ECF0F1;
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #E67E22;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 14px 36px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #d35400;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #2C3E50;
+            color: #ECF0F1;
+            padding: 40px 24px;
+            margin-top: 60px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #ECF0F1;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: #E67E22;
+        }
+
+        .footer-copy {
+            font-size: 0.85rem;
+            color: #95a5a6;
+        }
+
+        .footer-tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .main-nav {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .article-container h1 {
+                font-size: 1.8rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .cta-section {
+                padding: 28px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="logo">My<span>BnB</span>Design</a>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/tools/">Tools</a></li>
+                    <li><a href="/resources/">Resources</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <a href="/">Home</a><span>&rsaquo;</span>
+        <a href="/resources/">Resources</a><span>&rsaquo;</span>
+        Seasonal Decor Calendar for Short-Term Rentals
+    </div>
+
+    <!-- Article -->
+    <article class="article-container">
+        <h1>Seasonal Decor Calendar for Short-Term Rentals</h1>
+        <p class="article-meta">By MyBnBDesign Team &nbsp;|&nbsp; Published October 2, 2026 &nbsp;|&nbsp; 12 min read</p>
+
+        <p class="article-intro">
+            Guests notice the details. A well-timed seasonal decor swap can transform your short-term rental from a generic space into a memorable experience that earns five-star reviews, repeat bookings, and higher nightly rates. This month-by-month calendar gives you a complete system for keeping your STR listing fresh, inviting, and competitive throughout the entire year.
+        </p>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ol>
+                <li><a href="#why-seasonal-decor">Why Seasonal Decor Matters for STR Properties</a></li>
+                <li><a href="#year-round-foundation">The Year-Round Foundation</a></li>
+                <li><a href="#month-by-month">Month-by-Month Decor Guide</a></li>
+                <li><a href="#budget-tips">Budget-Friendly Seasonal Decor Tips</a></li>
+                <li><a href="#storage-solutions">Storage Solutions for Off-Season Decor</a></li>
+                <li><a href="#holiday-tips">Holiday-Specific Tips</a></li>
+                <li><a href="#scent-strategy">Seasonal Scent Strategy</a></li>
+                <li><a href="#photography-updates">Photography Updates</a></li>
+                <li><a href="#swap-system">Creating a Seasonal Swap System</a></li>
+            </ol>
+        </div>
+
+        <!-- Section 1 -->
+        <h2 id="why-seasonal-decor">Why Seasonal Decor Matters for STR Properties</h2>
+        <p>Seasonal decor is not just about aesthetics. It plays a direct role in how guests perceive, review, and recommend your property. Here is why it deserves a place in your hosting strategy.</p>
+
+        <h3>Guest Delight and Emotional Connection</h3>
+        <p>When a guest walks into a property that reflects the time of year, it signals thoughtfulness. A cozy throw and warm-toned pillows in October, or bright citrus accents in June, create an immediate emotional connection. Guests feel like they are arriving at a curated experience rather than a sterile rental unit. This sense of intentional design contributes to the feeling of being "at home," which is the single most powerful driver of positive reviews.</p>
+
+        <h3>Listing Photo Freshness</h3>
+        <p>Platforms like Airbnb and VRBO reward listings that stay active and updated. Refreshing your listing photos to match the current season signals to both the algorithm and potential guests that your property is well-maintained and actively managed. A listing with summer photos in December looks stale; a listing with cozy winter staging in January looks inviting and current.</p>
+
+        <h3>Competitive Edge in Saturated Markets</h3>
+        <p>In popular STR markets, dozens of properties compete for the same bookings. Seasonal decor gives you a visual differentiator. When prospective guests scroll through similar-looking properties, the one with seasonal styling catches the eye. It communicates a level of care that suggests the rest of the experience will be equally well-managed.</p>
+
+        <h3>Review Mentions and Social Sharing</h3>
+        <p>Guests frequently mention seasonal touches in reviews. Phrases like "loved the fall decor" or "the holiday decorations made our trip special" appear consistently in top-rated listings. Beyond reviews, seasonally styled spaces are more likely to be photographed and shared on social media, giving your property organic marketing exposure at no additional cost.</p>
+
+        <!-- Section 2 -->
+        <h2 id="year-round-foundation">The Year-Round Foundation</h2>
+        <p>Before diving into monthly changes, it is essential to establish a strong base layer of decor that remains constant regardless of the season. This foundation serves as a neutral canvas that makes seasonal swaps easy, affordable, and visually cohesive.</p>
+
+        <p>Your base decor should include furniture in neutral tones (whites, grays, warm beiges, or soft taupes), simple white or cream bedding, neutral window treatments, and timeless artwork or mirrors. These permanent elements provide structure so that your seasonal additions, even small ones, create a noticeable impact without requiring a full redesign.</p>
+
+        <div class="tip-box">
+            <p class="tip-label">Pro Tip</p>
+            <p>Invest in high-quality neutral throw pillow inserts and purchase seasonal covers instead of entirely new pillows. This one strategy can cut your seasonal decor budget in half while keeping your space looking completely refreshed. For a full guide to building a flexible neutral foundation, see our <a href="/resources/ultimate-guide-str-design/">Ultimate Guide to STR Design</a>.</p>
+        </div>
+
+        <!-- Section 3 -->
+        <h2 id="month-by-month">Month-by-Month Decor Guide</h2>
+        <p>Below is a detailed guide for every month of the year. Each section includes specific decor ideas, swap timing, and practical tips to keep the process simple and affordable.</p>
+
+        <!-- January -->
+        <div class="month-card winter-card">
+            <h3><span class="month-icon">&#10052;</span> January: Fresh Start</h3>
+            <p>The key to January decor is removing all holiday decorations promptly. Aim to have Christmas and New Year items packed away by January 2 at the latest. Guests arriving in January do not want to see leftover holiday remnants; they want a clean, fresh space.</p>
+            <p>Replace holiday decor with a "winter whites" theme: crisp white candles, faux fur throws, chunky knit blankets, and soft silver or pale blue accents. Lean into the concept of hygge, the Danish approach to cozy comfort. Set up a hot cocoa station with mugs, cocoa mix, marshmallows, and cinnamon sticks on a small tray in the kitchen. This is inexpensive and consistently mentioned in guest reviews as a standout touch.</p>
+            <p>Layer textures generously. Think velvet pillows, wool throws, and sheepskin accents on chairs. The goal is warmth and simplicity.</p>
+        </div>
+
+        <!-- February -->
+        <div class="month-card winter-card">
+            <h3><span class="month-icon">&#10084;</span> February: Valentine's and Winter Warmth</h3>
+            <p>February calls for subtle romantic touches rather than overt Valentine's theming. Avoid cartoonish hearts or overly themed decor, as your property may host families, solo travelers, or groups of friends alongside couples.</p>
+            <p>Instead, add soft red or blush pink accents through throw pillows, a small arrangement of dried or faux roses, and warm-toned candles. Deep burgundy or dusty rose work well as accent colors. Keep the cozy winter textures from January but layer in these warmer hues. Plush throws draped over the sofa and extra blankets at the foot of the bed reinforce the sense of comfort during the coldest part of the year.</p>
+        </div>
+
+        <!-- March -->
+        <div class="month-card spring-card">
+            <h3><span class="month-icon">&#127793;</span> March: Early Spring Transition</h3>
+            <p>March is a transitional month. Begin swapping out the heaviest winter textures for lighter alternatives. Replace faux fur throws with cotton or linen versions. Introduce pastel accents, such as soft greens, lavenders, or pale yellows, through pillow covers and small decorative items.</p>
+            <p>Faux spring branches (cherry blossom, forsythia, or pussy willow) in a simple vase create an instant sense of renewal. These are affordable, reusable year after year, and make a strong visual impact. The mood should shift from "hunker down" to "fresh energy."</p>
+        </div>
+
+        <!-- April -->
+        <div class="month-card spring-card">
+            <h3><span class="month-icon">&#127800;</span> April: Full Spring</h3>
+            <p>April is peak spring, and your decor should fully embrace the season. Swap in floral-patterned pillow covers, place faux floral arrangements on dining tables and nightstands, and consider adding a botanical print or two to your walls (leaning frames against walls is an easy, non-permanent option).</p>
+            <p>This is also the time to swap heavier bedding for lighter options. Replace flannel or fleece blankets with cotton quilts or lightweight coverlets. If your property is in a region where Easter is commonly celebrated, a small bowl of decorative eggs or a spring wreath on the door is a tasteful nod, but keep it minimal and non-religious unless your listing specifically caters to a particular audience.</p>
+            <p>For a detailed checklist of bedding and linen essentials by season, refer to our <a href="/resources/airbnb-furnishing-checklist/">Airbnb Furnishing Checklist</a>.</p>
+        </div>
+
+        <!-- May -->
+        <div class="month-card spring-card">
+            <h3><span class="month-icon">&#127807;</span> May: Late Spring and Pre-Summer</h3>
+            <p>May bridges spring into summer. Introduce brighter, bolder colors: coral, turquoise, sunny yellow, or vivid green. If your property has outdoor space, this is the month to prepare it for guest use. Set up outdoor dining with a tablecloth or placemats, add outdoor cushions to seating, and place a small potted herb garden (basil, rosemary, mint) on the patio or kitchen windowsill. Fresh herbs serve double duty as both decor and a functional amenity guests can use while cooking.</p>
+            <p>Indoor decor should feel lively and energetic. Replace any remaining winter-weight items and ensure the space feels open and airy.</p>
+        </div>
+
+        <!-- June -->
+        <div class="month-card summer-card">
+            <h3><span class="month-icon">&#9728;</span> June: Summer Arrival</h3>
+            <p>Summer decor should feel light, bright, and effortless. Depending on your property's location, you might lean into a coastal theme (blues, whites, sandy neutrals, rope and shell accents) or a vibrant tropical vibe (bold greens, citrus tones, leafy prints).</p>
+            <p>Place citrus in a bowl on the kitchen counter: lemons, limes, or oranges. This simple trick adds color, a subtle scent, and a sense of abundance that guests love. Swap out heavier curtains for sheer or linen panels that let in maximum light. Outdoor cushions should be in place, and any pool or patio accessories should be clean and staged for use.</p>
+            <p>The overall feel should be "vacation mode." Think about what makes a guest feel like they have truly arrived somewhere special.</p>
+        </div>
+
+        <!-- July -->
+        <div class="month-card summer-card">
+            <h3><span class="month-icon">&#127878;</span> July: Peak Summer</h3>
+            <p>July is the height of summer, and your decor should reflect that energy. For the week surrounding July 4th, subtle patriotic touches are appropriate for US-based properties: a small flag arrangement, red, white, and blue pillow covers, or star-shaped candles. Remove these by July 6 or 7. Patriotic decor left up too long feels dated rather than festive.</p>
+            <p>For the rest of the month, focus on vibrant summer colors and outdoor entertaining essentials. Beach towels rolled neatly in a basket, a cooler staged on the patio, and bright outdoor tableware all enhance the summer experience. Keep fresh fruit stocked and visible. Watermelon, peaches, and berries in a bowl look beautiful and signal hospitality.</p>
+        </div>
+
+        <!-- August -->
+        <div class="month-card summer-card">
+            <h3><span class="month-icon">&#127774;</span> August: Late Summer</h3>
+            <p>August begins the slow transition from peak summer toward early fall. Your decor should still feel summery but can start incorporating warmer, golden tones. Think sunflower arrangements, amber glass accents, and warm yellows alongside the remaining bright summer colors.</p>
+            <p>Tropical accents work especially well in August. Monstera leaf prints, rattan accessories, and lush green plants (real or faux) maintain a summery feel while adding depth. This is also a good time to deep-clean outdoor furniture and cushions, replacing anything that has faded or worn during the heavy-use summer months.</p>
+        </div>
+
+        <!-- September -->
+        <div class="month-card fall-card">
+            <h3><span class="month-icon">&#127810;</span> September: Early Fall</h3>
+            <p>After Labor Day, it is time for the fall transition. Swap summer brights for warm earth tones: burnt orange, deep red, olive green, mustard yellow, and rich brown. Textured pillows in cable knit, corduroy, or woven fabrics bring tactile warmth back into the space.</p>
+            <p>Small pumpkins (real or faux) can appear after Labor Day, but keep the look subtle and sophisticated. A cluster of three white pumpkins on the dining table reads as elegant rather than kitschy. Layer in warmer throws and consider swapping lightweight summer bedding for medium-weight options. The transitional palette should feel inviting without jumping too far ahead into full autumn territory.</p>
+        </div>
+
+        <!-- October -->
+        <div class="month-card fall-card">
+            <h3><span class="month-icon">&#127875;</span> October: Full Fall and Halloween</h3>
+            <p>October is the month to go all in on autumn. Pumpkins in various sizes and colors (orange, white, sage green), autumn leaf garlands, warm plaid throws, and cinnamon-scented candles create a quintessential fall atmosphere. Rich jewel tones, such as deep burgundy, forest green, and navy, pair beautifully with the classic orange and gold palette.</p>
+            <p>For Halloween, wait until mid-October (around the 12th to 15th) to add themed touches. Keep decorations tasteful and age-appropriate: think elegant black candlesticks, a small witch hat on a shelf, or a decorative wreath with dark florals. Avoid anything gory, frightening, or potentially offensive. Remove all Halloween decor by November 1. For staging tips that translate to listing photography, check our <a href="/resources/photography-staging-guide/">Photography Staging Guide</a>.</p>
+        </div>
+
+        <!-- November -->
+        <div class="month-card fall-card">
+            <h3><span class="month-icon">&#127808;</span> November: Thanksgiving and Late Fall</h3>
+            <p>November deepens the fall palette with harvest-inspired decor. Cornucopia arrangements, pine cones, dried wheat bundles, and warm metallics (copper, bronze, gold) add richness. A "grateful" or "gather" sign near the dining area resonates with the Thanksgiving spirit without being overly specific to any one tradition.</p>
+            <p>Layer in heavier throws and swap to flannel or higher-thread-count sheets for added warmth. Deep colors like plum, chocolate, and forest green work well. Consider placing a simple card or small sign in the kitchen with a Thanksgiving recipe or a note about local restaurants offering holiday meals. These small gestures make guests feel cared for during a holiday they might be spending away from home.</p>
+        </div>
+
+        <!-- December -->
+        <div class="month-card winter-card">
+            <h3><span class="month-icon">&#127876;</span> December: Holiday Season</h3>
+            <p>Holiday decor should be in place by December 1. A small, pre-lit Christmas tree (4 to 5 feet is sufficient for most STRs) is a strong centerpiece. Add stockings to the mantel or a decorative hook, string warm white lights along a window or shelf, and place a holiday wreath on the front door.</p>
+            <p>Keep the holiday decor festive but inclusive. Focus on winter and general holiday themes (snowflakes, evergreens, metallic ornaments, warm lights) rather than exclusively religious imagery, unless your property is specifically marketed with a particular cultural theme. Red, green, gold, and silver are universally understood as holiday colors and work across cultural contexts.</p>
+            <p>A small welcome basket with holiday treats (cookies, hot chocolate packets, candy canes) is a simple gesture that guests consistently highlight in reviews. Include a handwritten card wishing them a happy holiday season for an extra personal touch. For welcome book ideas that complement your seasonal setup, see our <a href="/resources/welcome-book-template/">Welcome Book Template</a>.</p>
+        </div>
+
+        <!-- Section 4 -->
+        <h2 id="budget-tips">Budget-Friendly Seasonal Decor Tips</h2>
+        <p>Seasonal decor does not have to be expensive. With a smart approach, you can keep your property looking fresh year-round on a modest budget. Here is a realistic breakdown of costs per season and strategies for keeping expenses low.</p>
+
+        <table class="budget-table">
+            <thead>
+                <tr>
+                    <th>Season</th>
+                    <th>Key Swaps</th>
+                    <th>Estimated Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Winter (Dec to Feb)</td>
+                    <td>Holiday tree, lights, cozy throws, pillow covers, hot cocoa station</td>
+                    <td>$150 to $300</td>
+                </tr>
+                <tr>
+                    <td>Spring (Mar to May)</td>
+                    <td>Faux florals, pastel pillow covers, lighter bedding, herb pots</td>
+                    <td>$75 to $200</td>
+                </tr>
+                <tr>
+                    <td>Summer (Jun to Aug)</td>
+                    <td>Bright accents, outdoor cushions, citrus bowls, beach accessories</td>
+                    <td>$100 to $250</td>
+                </tr>
+                <tr>
+                    <td>Fall (Sep to Nov)</td>
+                    <td>Pumpkins, warm throws, textured pillows, candles, pine cones</td>
+                    <td>$100 to $250</td>
+                </tr>
+                <tr>
+                    <td><strong>Annual Total</strong></td>
+                    <td></td>
+                    <td><strong>$425 to $1,000</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>The most effective budget strategy is to invest in reusable items and minimize consumables. Faux florals, quality pillow covers, durable throws, and artificial pumpkins can be reused for three to five years. Consumable items like fresh fruit, cocoa packets, and real pumpkins should be your only recurring seasonal expense.</p>
+
+        <div class="tip-box">
+            <p class="tip-label">Budget Tip</p>
+            <p>Shop post-season sales aggressively. Buy next year's holiday decor on December 26, fall items in November, and summer accessories in late August. You will save 50 to 75 percent on items that will look brand-new when their season comes around again.</p>
+        </div>
+
+        <!-- Section 5 -->
+        <h2 id="storage-solutions">Storage Solutions for Off-Season Decor</h2>
+        <p>A seasonal decor system only works if you can store off-season items efficiently. Disorganized storage leads to damaged decor, forgotten items, and the temptation to skip seasonal swaps entirely.</p>
+
+        <p><strong>Labeled bins by season.</strong> Use four large, clearly labeled storage bins (one per season) in a consistent color or with printed labels. Each bin should contain everything needed for that season's swap: pillow covers, throws, candles, small decor items, and a printed checklist of where each item goes in the property.</p>
+
+        <p><strong>Under-bed and closet storage.</strong> For properties with limited storage space, flat under-bed bins are ideal for pillow covers, table runners, and lightweight textiles. Vacuum-seal bags compress bulky items like throws and comforters to a fraction of their size.</p>
+
+        <p><strong>Ornament and fragile item storage.</strong> Invest in ornament storage boxes with individual compartments for holiday ornaments and other breakable items. These typically cost $10 to $15 and prevent costly replacements from year to year.</p>
+
+        <p><strong>Off-site storage.</strong> If your STR property has truly minimal storage, consider keeping seasonal bins at your home or in a small storage unit. The convenience of a grab-and-go bin system makes the 15-minute seasonal swap possible even when storage is not on-site.</p>
+
+        <!-- Section 6 -->
+        <h2 id="holiday-tips">Holiday-Specific Tips</h2>
+        <p>Not every holiday warrants a full decor change. Here is a practical guide to which holidays deserve attention and how to handle cultural sensitivity.</p>
+
+        <p><strong>Holidays worth decorating for:</strong> Christmas/winter holidays (full decor), Thanksgiving (moderate), Halloween (moderate), Valentine's Day (minimal), Fourth of July (minimal, one week only), Easter/spring (minimal). These cover the broadest range of guest expectations across demographics.</p>
+
+        <p><strong>Cultural sensitivity.</strong> Your property will host guests from many backgrounds. Focus on seasonal and nature-based themes (snowflakes, pumpkins, flowers, warmth) over specifically religious imagery. If your property is in a region with strong cultural traditions, subtle nods to local customs are appropriate and appreciated, but always lean toward inclusivity.</p>
+
+        <p><strong>Regional considerations.</strong> A beachfront property in Florida will have a very different seasonal rhythm than a mountain cabin in Colorado. Adapt your decor calendar to your location. Coastal properties can lean into nautical holiday themes. Mountain properties can emphasize rustic, lodge-style seasonal touches. Urban apartments benefit from sleek, modern interpretations of seasonal decor.</p>
+
+        <!-- Section 7 -->
+        <h2 id="scent-strategy">Seasonal Scent Strategy</h2>
+        <p>Scent is one of the most powerful tools in a host's arsenal, but it must be used with care. The wrong fragrance can trigger headaches, allergies, or negative reviews. Here is a seasonal scent guide that balances ambiance with guest comfort.</p>
+
+        <p><strong>General rules.</strong> Always use unscented candles as your primary candle decor. Reserve scented elements for diffusers or wax warmers placed in common areas (never bedrooms). Choose subtle, natural scents over synthetic, overpowering fragrances. Provide a way for guests to turn off or remove the scent source if they prefer an unscented environment.</p>
+
+        <p><strong>Winter (December to February):</strong> Vanilla, cinnamon, cedar, pine, clove. These warm, familiar scents reinforce the cozy atmosphere of winter decor.</p>
+        <p><strong>Spring (March to May):</strong> Linen, eucalyptus, light floral, green tea. Fresh, clean scents that mirror the renewal theme of the season.</p>
+        <p><strong>Summer (June to August):</strong> Citrus, coconut, sea salt, cucumber. Light, bright scents that feel energizing without being heavy in warm weather.</p>
+        <p><strong>Fall (September to November):</strong> Apple, pumpkin spice (used sparingly), woodsmoke, amber. Warm, grounding scents that complement earth-toned decor.</p>
+
+        <div class="tip-box">
+            <p class="tip-label">Important Note</p>
+            <p>Never use plug-in air fresheners or strong synthetic sprays. These are the most commonly cited scent complaints in STR reviews. A reed diffuser with a natural essential oil blend is a far better option: subtle, adjustable, and perceived as a premium touch rather than a cover-up.</p>
+        </div>
+
+        <!-- Section 8 -->
+        <h2 id="photography-updates">Photography Updates</h2>
+        <p>Seasonal decor is only half the equation. Your listing photos need to reflect the current season to maximize booking conversions. Here is a practical approach to seasonal photography.</p>
+
+        <p><strong>Shoot quarterly.</strong> At minimum, take a fresh set of listing photos four times per year: January (winter), April (spring), July (summer), and October (fall). Focus on the spaces where seasonal decor is most visible: the living room, dining area, front entrance, and any outdoor spaces.</p>
+
+        <p><strong>Which seasonal shots to display.</strong> Use your most recent seasonal photos as the primary listing images. However, keep your best "neutral" shots (those showing the year-round foundation without heavy seasonal theming) as secondary images. This way, if you miss a seasonal photo update, your listing never looks out of date.</p>
+
+        <p><strong>Timing matters.</strong> Guests booking in September for a December stay want to see cozy winter imagery. Update your photos slightly ahead of the season to capture bookings from planners. A good rule of thumb: update photos two to three weeks before the new season begins.</p>
+
+        <p>For comprehensive guidance on staging your property for photographs, including lighting, angles, and composition, visit our <a href="/resources/photography-staging-guide/">Photography Staging Guide</a>.</p>
+
+        <!-- Section 9 -->
+        <h2 id="swap-system">Creating a Seasonal Swap System</h2>
+        <p>The most successful seasonal decor programs run on a system, not on inspiration. Here is how to build a process that makes seasonal swaps fast, consistent, and delegatable to your turnover team.</p>
+
+        <h3>The 15-Minute Swap Kit</h3>
+        <p>Each seasonal bin should be a complete, self-contained swap kit. Inside, include every item needed for that season's look, along with a printed checklist and a set of reference photos showing exactly where each item goes. A well-organized kit allows anyone, including a cleaning team member who has never done a seasonal swap before, to complete the transition in 15 minutes or less.</p>
+
+        <h3>Pre-Packed Bins Per Season</h3>
+        <p>Organize each bin in the reverse order of placement. Items that go out last (like the front door wreath or porch decor) should be on top. Items placed first (like pillow covers and throws) should be at the bottom. This "unpack and place" order eliminates backtracking and confusion.</p>
+
+        <h3>Turnover Team Instructions</h3>
+        <p>Create a simple, laminated instruction card for your cleaning or turnover team. It should include the swap date for each season, the location of seasonal bins, step-by-step placement instructions with photos, and a note about what to pack away (listing the specific items from the outgoing season). Laminated cards stored inside each bin ensure the instructions are always where they are needed.</p>
+
+        <div class="tip-box">
+            <p class="tip-label">System Tip</p>
+            <p>Set calendar reminders for seasonal swaps two weeks before each transition date. This gives you time to order any consumable items (fresh candles, cocoa packets, seasonal fruit) and confirm your turnover team knows the swap is coming. Consistency is the key to making this system sustainable year after year.</p>
+        </div>
+
+        <!-- Related Resources -->
+        <div class="related-resources">
+            <h3>Related Resources</h3>
+            <ul>
+                <li><a href="/resources/ultimate-guide-str-design/">The Ultimate Guide to STR Design</a></li>
+                <li><a href="/resources/airbnb-furnishing-checklist/">Airbnb Furnishing Checklist</a></li>
+                <li><a href="/resources/photography-staging-guide/">Photography Staging Guide for STR Listings</a></li>
+                <li><a href="/resources/welcome-book-template/">Welcome Book Template for Short-Term Rentals</a></li>
+            </ul>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>Want a Custom Seasonal Decor Plan?</h2>
+            <p>Every property is unique. Let our design team build a tailored seasonal decor calendar for your STR, complete with product recommendations, a turnover-ready swap kit guide, and quarterly photo staging plans.</p>
+            <a href="/contact/" class="cta-button">Get Your Custom Plan</a>
+        </div>
+
+    </article>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <a href="/" class="logo">My<span>BnB</span>Design</a>
+                <p class="footer-tagline">Designing spaces guests remember.</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/tools/">Tools</a></li>
+                <li><a href="/resources/">Resources</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+            <p class="footer-copy">&copy; 2026 MyBnBDesign. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
