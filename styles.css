@@ -1278,3 +1278,6 @@ p, blockquote { text-wrap: pretty; }
 .btn, .btn-primary, .btn-secondary, .btn-outline { transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
 
 .hero-text h1 { letter-spacing: -.025em; } .portfolio-card__image { box-shadow: 0 10px 32px rgba(30,30,25,.08); }
+
+/* Honor reduced-motion preferences without repeating shortened animations. */
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-iteration-count: 1 !important; } }
