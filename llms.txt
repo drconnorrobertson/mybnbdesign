@@ -1,0 +1,17 @@
+# MyBnBDesign
+> Premium interior design for short-term rental properties. A BnB Accelerator company.
+
+## About
+MyBnBDesign provides full-service interior design for short-term rental properties (Airbnb, VRBO, vacation rentals). Services include interior design, furnishing and installation, photography staging, and listing optimization. Based in Pittsburgh, PA, serving 40+ markets nationwide.
+
+## Services
+- Interior Design: Room-by-room design tailored to property type, market, and target guests
+- Furnishing & Installation: Complete procurement, delivery, and installation
+- Photography Staging: Staging optimized for listing photography
+- Listing Optimization: Photography art direction and listing copy guidance
+- Turnkey Packages: Move-in ready solutions from design through installation
+
+## Contact
+- Website: https://mybnbdesign.vercel.app
+- Email: hello@mybnbdesign.com
+- Parent Company: BnB Accelerator (https://www.bnbaccelerator.com)
