@@ -1321,3 +1321,6 @@ html { scroll-padding-top: 96px; }
 }
 
 @media (min-width: 1101px) { .nav__links { gap: 24px; } }
+
+.nav:has(.nav__links.is-open) .nav__toggle svg { display: none; }
+.nav:has(.nav__links.is-open) .nav__toggle::before { content: '\00d7'; font: 32px/1 sans-serif; }

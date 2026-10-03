@@ -292,3 +292,6 @@ html { scroll-padding-top: 96px; }
 @media (max-width: 600px) { .section { padding: 40px 0; } .cta-section { padding: 64px 20px; } }
 
 @media (max-width: 1100px) { .hero { padding-top: 84px; } }
+
+.nav:has(.nav__links.is-open) .nav__toggle svg { display: none; }
+.nav:has(.nav__links.is-open) .nav__toggle::before { content: '\00d7'; font: 32px/1 sans-serif; }
