@@ -1,620 +1,847 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog -- STR Design Guides and Resources | MyBnBDesign</title>
-  <meta name="description" content="Expert guides on short-term rental interior design, furnishing, photography, and business strategy. Actionable advice for STR investors and hosts.">
-  <link rel="canonical" href="https://mybnbdesign.com/blog/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
-  <style>
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Short-Term Rental Design Blog | MyBnBDesign</title>
+<meta name="description" content="Browse 100+ guides on Airbnb and VRBO interior design: property types, room guides, design styles, revenue strategy, staging, photography, and furniture budgets.">
+<meta name="author" content="MyBnBDesign Team">
+<link rel="canonical" href="https://www.mybnbdesign.com/blog/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MyBnBDesign">
+<meta property="og:title" content="Short-Term Rental Design Blog | MyBnBDesign">
+<meta property="og:description" content="Browse 100+ guides on Airbnb and VRBO interior design: property types, room guides, design styles, revenue strategy, staging, photography, and furniture budgets.">
+<meta property="og:url" content="https://www.mybnbdesign.com/blog/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&q=70">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Blog",
+   "@id": "https://www.mybnbdesign.com/blog/#blog",
+   "name": "MyBnBDesign Blog",
+   "url": "https://www.mybnbdesign.com/blog/",
+   "description": "Short-term rental interior design guides, revenue strategy, and furnishing advice.",
+   "publisher": {
+    "@type": "Organization",
+    "name": "MyBnBDesign",
+    "url": "https://www.mybnbdesign.com/"
+   },
+   "author": {
+    "@type": "Organization",
+    "name": "MyBnBDesign Team"
+   }
+  },
+  {
+   "@type": "CollectionPage",
+   "name": "MyBnBDesign Blog",
+   "url": "https://www.mybnbdesign.com/blog/",
+   "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 100,
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://www.mybnbdesign.com/blog/beach-house.html",
+      "name": "Beach House Design Guide for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://www.mybnbdesign.com/blog/mountain-cabin.html",
+      "name": "Mountain Cabin Design Guide for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "url": "https://www.mybnbdesign.com/blog/urban-apartment.html",
+      "name": "Urban Apartment Design Guide for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 4,
+      "url": "https://www.mybnbdesign.com/blog/lake-house.html",
+      "name": "Lake House Design Guide for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 5,
+      "url": "https://www.mybnbdesign.com/blog/desert.html",
+      "name": "Desert Rental Design Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 6,
+      "url": "https://www.mybnbdesign.com/blog/cabin.html",
+      "name": "Cabin Interior Design for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 7,
+      "url": "https://www.mybnbdesign.com/blog/a-frame.html",
+      "name": "A-Frame Cabin Design Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 8,
+      "url": "https://www.mybnbdesign.com/blog/farmhouse.html",
+      "name": "Farmhouse Design Guide for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 9,
+      "url": "https://www.mybnbdesign.com/blog/ski-chalet.html",
+      "name": "Ski Chalet Design Guide for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 10,
+      "url": "https://www.mybnbdesign.com/blog/treehouse.html",
+      "name": "Treehouse Design Guide for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 11,
+      "url": "https://www.mybnbdesign.com/blog/tiny-home.html",
+      "name": "Tiny Home Interior Design for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 12,
+      "url": "https://www.mybnbdesign.com/blog/container-home.html",
+      "name": "Container Home Design for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 13,
+      "url": "https://www.mybnbdesign.com/blog/cottage.html",
+      "name": "Cottage Design Guide for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 14,
+      "url": "https://www.mybnbdesign.com/blog/tropical-villa.html",
+      "name": "Tropical Villa Design Guide for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 15,
+      "url": "https://www.mybnbdesign.com/blog/historic-home.html",
+      "name": "Historic Home Design Guide for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 16,
+      "url": "https://www.mybnbdesign.com/blog/vineyard-estate.html",
+      "name": "Vineyard Estate Design Guide for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 17,
+      "url": "https://www.mybnbdesign.com/blog/island-retreat.html",
+      "name": "Island Retreat Design Guide for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 18,
+      "url": "https://www.mybnbdesign.com/blog/ranch.html",
+      "name": "Ranch Property Design Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 19,
+      "url": "https://www.mybnbdesign.com/blog/penthouse.html",
+      "name": "Penthouse Design Guide for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 20,
+      "url": "https://www.mybnbdesign.com/blog/converted-barn.html",
+      "name": "Converted Barn Design Guide for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 21,
+      "url": "https://www.mybnbdesign.com/blog/bedroom-design-guide.html",
+      "name": "Complete Bedroom Design Guide for Airbnb"
+     },
+     {
+      "@type": "ListItem",
+      "position": 22,
+      "url": "https://www.mybnbdesign.com/blog/primary-bedroom.html",
+      "name": "Primary Bedroom Design Ideas for Airbnb Hosts"
+     },
+     {
+      "@type": "ListItem",
+      "position": 23,
+      "url": "https://www.mybnbdesign.com/blog/guest-bedroom.html",
+      "name": "Guest Bedroom Design Ideas for Airbnb Hosts"
+     },
+     {
+      "@type": "ListItem",
+      "position": 24,
+      "url": "https://www.mybnbdesign.com/blog/bunk-room.html",
+      "name": "Bunk Room Design Ideas for Airbnb Hosts"
+     },
+     {
+      "@type": "ListItem",
+      "position": 25,
+      "url": "https://www.mybnbdesign.com/blog/bathroom-design-guide.html",
+      "name": "Complete Bathroom Design Guide for Airbnb"
+     },
+     {
+      "@type": "ListItem",
+      "position": 26,
+      "url": "https://www.mybnbdesign.com/blog/primary-bathroom.html",
+      "name": "Primary Bathroom Design Ideas for Airbnb Hosts"
+     },
+     {
+      "@type": "ListItem",
+      "position": 27,
+      "url": "https://www.mybnbdesign.com/blog/kitchen-design-guide.html",
+      "name": "Complete Kitchen Design Guide for Airbnb"
+     },
+     {
+      "@type": "ListItem",
+      "position": 28,
+      "url": "https://www.mybnbdesign.com/blog/kitchen-essentials-checklist.html",
+      "name": "Kitchen Essentials Checklist for Airbnb Hosts"
+     },
+     {
+      "@type": "ListItem",
+      "position": 29,
+      "url": "https://www.mybnbdesign.com/blog/living-room-design-guide.html",
+      "name": "Complete Living Room Design Guide for Airbnb"
+     },
+     {
+      "@type": "ListItem",
+      "position": 30,
+      "url": "https://www.mybnbdesign.com/blog/dining-room.html",
+      "name": "Dining Room Design Ideas for Airbnb Hosts"
+     },
+     {
+      "@type": "ListItem",
+      "position": 31,
+      "url": "https://www.mybnbdesign.com/blog/outdoor-space.html",
+      "name": "Outdoor Space Design Ideas for Airbnb Hosts"
+     },
+     {
+      "@type": "ListItem",
+      "position": 32,
+      "url": "https://www.mybnbdesign.com/blog/patio-deck.html",
+      "name": "Patio Deck Design Ideas for Airbnb Hosts"
+     },
+     {
+      "@type": "ListItem",
+      "position": 33,
+      "url": "https://www.mybnbdesign.com/blog/game-room.html",
+      "name": "Game Room Design Ideas for Airbnb Hosts"
+     },
+     {
+      "@type": "ListItem",
+      "position": 34,
+      "url": "https://www.mybnbdesign.com/blog/home-theater.html",
+      "name": "Home Theater Design for Vacation Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 35,
+      "url": "https://www.mybnbdesign.com/blog/entryway-mudroom.html",
+      "name": "Entryway and Mudroom Design for Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 36,
+      "url": "https://www.mybnbdesign.com/blog/laundry-room.html",
+      "name": "Laundry Room Design Ideas for Airbnb Hosts"
+     },
+     {
+      "@type": "ListItem",
+      "position": 37,
+      "url": "https://www.mybnbdesign.com/blog/home-office.html",
+      "name": "Home Office Design Ideas for Airbnb Hosts"
+     },
+     {
+      "@type": "ListItem",
+      "position": 38,
+      "url": "https://www.mybnbdesign.com/blog/pool-area.html",
+      "name": "Pool Area Design Ideas for Airbnb Hosts"
+     },
+     {
+      "@type": "ListItem",
+      "position": 39,
+      "url": "https://www.mybnbdesign.com/blog/fire-pit-area.html",
+      "name": "Fire Pit Area Design Ideas for Airbnb Hosts"
+     },
+     {
+      "@type": "ListItem",
+      "position": 40,
+      "url": "https://www.mybnbdesign.com/blog/kids-room.html",
+      "name": "Kids Room Design Ideas for Airbnb Hosts"
+     },
+     {
+      "@type": "ListItem",
+      "position": 41,
+      "url": "https://www.mybnbdesign.com/blog/modern.html",
+      "name": "Modern Interior Design for Airbnb"
+     },
+     {
+      "@type": "ListItem",
+      "position": 42,
+      "url": "https://www.mybnbdesign.com/blog/farmhouse-style.html",
+      "name": "Farmhouse Style Style for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 43,
+      "url": "https://www.mybnbdesign.com/blog/coastal-style.html",
+      "name": "Coastal Style Style for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 44,
+      "url": "https://www.mybnbdesign.com/blog/bohemian.html",
+      "name": "Bohemian Style for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 45,
+      "url": "https://www.mybnbdesign.com/blog/minimalist.html",
+      "name": "Minimalist Style for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 46,
+      "url": "https://www.mybnbdesign.com/blog/mid-century-modern.html",
+      "name": "Mid Century Modern Style for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 47,
+      "url": "https://www.mybnbdesign.com/blog/industrial.html",
+      "name": "Industrial Style for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 48,
+      "url": "https://www.mybnbdesign.com/blog/scandinavian.html",
+      "name": "Scandinavian Style for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 49,
+      "url": "https://www.mybnbdesign.com/blog/art-deco.html",
+      "name": "Art Deco Style for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 50,
+      "url": "https://www.mybnbdesign.com/blog/japandi.html",
+      "name": "Japandi Style for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 51,
+      "url": "https://www.mybnbdesign.com/blog/mediterranean.html",
+      "name": "Mediterranean Style for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 52,
+      "url": "https://www.mybnbdesign.com/blog/transitional.html",
+      "name": "Transitional Style for Airbnb"
+     },
+     {
+      "@type": "ListItem",
+      "position": 53,
+      "url": "https://www.mybnbdesign.com/blog/eclectic.html",
+      "name": "Eclectic Interior Design for Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 54,
+      "url": "https://www.mybnbdesign.com/blog/luxury.html",
+      "name": "Luxury Interior Design for Vacation Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 55,
+      "url": "https://www.mybnbdesign.com/blog/wabi-sabi.html",
+      "name": "Wabi-Sabi Design for Vacation Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 56,
+      "url": "https://www.mybnbdesign.com/blog/how-interior-design-affects-airbnb-adr.html",
+      "name": "How Interior Design Affects Airbnb ADR"
+     },
+     {
+      "@type": "ListItem",
+      "position": 57,
+      "url": "https://www.mybnbdesign.com/blog/design-roi-analysis.html",
+      "name": "Design ROI Analysis for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 58,
+      "url": "https://www.mybnbdesign.com/blog/reviews-design-connection.html",
+      "name": "The Connection Between Design and Guest Reviews"
+     },
+     {
+      "@type": "ListItem",
+      "position": 59,
+      "url": "https://www.mybnbdesign.com/blog/design-elements-that-increase-bookings.html",
+      "name": "Design Elements That Increase Bookings: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 60,
+      "url": "https://www.mybnbdesign.com/blog/first-impression-design.html",
+      "name": "First Impression Design: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 61,
+      "url": "https://www.mybnbdesign.com/blog/seasonal-design-updates.html",
+      "name": "Seasonal Design Updates: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 62,
+      "url": "https://www.mybnbdesign.com/blog/design-mistakes-costing-revenue.html",
+      "name": "Design Mistakes Costing Revenue: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 63,
+      "url": "https://www.mybnbdesign.com/blog/color-psychology.html",
+      "name": "Color Psychology: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 64,
+      "url": "https://www.mybnbdesign.com/blog/design-for-superhost-status.html",
+      "name": "Designing for Superhost Status"
+     },
+     {
+      "@type": "ListItem",
+      "position": 65,
+      "url": "https://www.mybnbdesign.com/blog/design-competitive-analysis.html",
+      "name": "Design Competitive Analysis: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 66,
+      "url": "https://www.mybnbdesign.com/blog/design-trends-2026.html",
+      "name": "Short-Term Rental Design Trends for 2026"
+     },
+     {
+      "@type": "ListItem",
+      "position": 67,
+      "url": "https://www.mybnbdesign.com/blog/design-for-repeat-guests.html",
+      "name": "Design for Repeat Guests: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 68,
+      "url": "https://www.mybnbdesign.com/blog/staging-vs-living-design.html",
+      "name": "Staging vs Living Design for Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 69,
+      "url": "https://www.mybnbdesign.com/blog/design-and-insurance-considerations.html",
+      "name": "Design and Insurance Considerations for Hosts"
+     },
+     {
+      "@type": "ListItem",
+      "position": 70,
+      "url": "https://www.mybnbdesign.com/blog/accessibility-design.html",
+      "name": "Accessibility Design for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 71,
+      "url": "https://www.mybnbdesign.com/blog/photography-guide.html",
+      "name": "Photography Guide for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 72,
+      "url": "https://www.mybnbdesign.com/blog/photo-staging-tips.html",
+      "name": "Photo Staging Tips for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 73,
+      "url": "https://www.mybnbdesign.com/blog/listing-photo-order.html",
+      "name": "Listing Photo Order for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 74,
+      "url": "https://www.mybnbdesign.com/blog/natural-light-photography.html",
+      "name": "Natural Light Photography for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 75,
+      "url": "https://www.mybnbdesign.com/blog/hero-shot-guide.html",
+      "name": "How to Capture the Perfect Hero Shot"
+     },
+     {
+      "@type": "ListItem",
+      "position": 76,
+      "url": "https://www.mybnbdesign.com/blog/listing-title-optimization.html",
+      "name": "Listing Title Optimization for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 77,
+      "url": "https://www.mybnbdesign.com/blog/listing-description-design.html",
+      "name": "Listing Description Design for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 78,
+      "url": "https://www.mybnbdesign.com/blog/smartphone-photography.html",
+      "name": "Smartphone Photography for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 79,
+      "url": "https://www.mybnbdesign.com/blog/before-after-design.html",
+      "name": "Before After Design for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 80,
+      "url": "https://www.mybnbdesign.com/blog/video-tours-design.html",
+      "name": "Video Tours Design for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 81,
+      "url": "https://www.mybnbdesign.com/blog/design-for-instagram.html",
+      "name": "Design for Instagram for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 82,
+      "url": "https://www.mybnbdesign.com/blog/virtual-staging.html",
+      "name": "Virtual Staging for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 83,
+      "url": "https://www.mybnbdesign.com/blog/floor-plan-listing.html",
+      "name": "Floor Plan Listing for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 84,
+      "url": "https://www.mybnbdesign.com/blog/seasonal-photo-updates.html",
+      "name": "Seasonal Photo Updates for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 85,
+      "url": "https://www.mybnbdesign.com/blog/design-portfolio-building.html",
+      "name": "Design Portfolio Building for Short-Term Rentals"
+     },
+     {
+      "@type": "ListItem",
+      "position": 86,
+      "url": "https://www.mybnbdesign.com/blog/furniture-budget-5k.html",
+      "name": "Furnishing an Airbnb on a $5K Budget"
+     },
+     {
+      "@type": "ListItem",
+      "position": 87,
+      "url": "https://www.mybnbdesign.com/blog/furniture-budget-10k.html",
+      "name": "Furnishing an Airbnb on a $10K Budget"
+     },
+     {
+      "@type": "ListItem",
+      "position": 88,
+      "url": "https://www.mybnbdesign.com/blog/furniture-budget-25k.html",
+      "name": "Furnishing an Airbnb on a $25K Budget"
+     },
+     {
+      "@type": "ListItem",
+      "position": 89,
+      "url": "https://www.mybnbdesign.com/blog/furniture-budget-50k.html",
+      "name": "Furnishing an Airbnb on a $50K Budget"
+     },
+     {
+      "@type": "ListItem",
+      "position": 90,
+      "url": "https://www.mybnbdesign.com/blog/furniture-budget-100k.html",
+      "name": "Furnishing a Luxury Rental on a $100K Budget"
+     },
+     {
+      "@type": "ListItem",
+      "position": 91,
+      "url": "https://www.mybnbdesign.com/blog/best-furniture-sources.html",
+      "name": "Best Furniture Sources: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 92,
+      "url": "https://www.mybnbdesign.com/blog/furniture-durability-guide.html",
+      "name": "Furniture Durability Guide: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 93,
+      "url": "https://www.mybnbdesign.com/blog/bedding-guide.html",
+      "name": "Bedding Guide: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 94,
+      "url": "https://www.mybnbdesign.com/blog/art-decor-sourcing.html",
+      "name": "Art Decor Sourcing: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 95,
+      "url": "https://www.mybnbdesign.com/blog/lighting-guide.html",
+      "name": "Lighting Guide: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 96,
+      "url": "https://www.mybnbdesign.com/blog/rug-guide.html",
+      "name": "Rug Guide: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 97,
+      "url": "https://www.mybnbdesign.com/blog/outdoor-furniture-guide.html",
+      "name": "Outdoor Furniture Guide: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 98,
+      "url": "https://www.mybnbdesign.com/blog/appliance-guide.html",
+      "name": "Appliance Guide: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 99,
+      "url": "https://www.mybnbdesign.com/blog/wholesale-furniture.html",
+      "name": "Wholesale Furniture: A Host Guide"
+     },
+     {
+      "@type": "ListItem",
+      "position": 100,
+      "url": "https://www.mybnbdesign.com/blog/furniture-assembly-installation.html",
+      "name": "Furniture Assembly Installation: A Host Guide"
+     }
+    ]
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.mybnbdesign.com/index.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.mybnbdesign.com/blog/"
     }
-    .blog-card {
-      border: 1px solid var(--border);
-      background: var(--white);
-      transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-    .blog-card__body {
-      padding: 28px 24px;
-    }
-    .blog-card__category {
-      font-size: 0.6875rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #999;
-      margin-bottom: 12px;
-      display: block;
-    }
-    .blog-card__title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.125rem;
-      font-weight: 500;
-      line-height: 1.3;
-      color: var(--charcoal);
-      margin-bottom: 12px;
-    }
-    .blog-card__link {
-      font-size: 0.75rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text);
-    }
-    .blog-card__link:hover { color: var(--gold); }
-
-    @media (max-width: 1024px) {
-      .blog-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 768px) {
-      .blog-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+   ]
+  }
+ ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:#1a1a1a;background:#fff;line-height:1.6}
+a{color:#0b5c4a;text-decoration:none}a:hover{text-decoration:underline}
+nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:16px 5%;border-bottom:1px solid #eee;position:sticky;top:0;background:#fff;z-index:50}
+nav>a{font-weight:800;font-size:1.25rem;color:#111;letter-spacing:-.5px}
+nav ul{list-style:none;display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+nav ul a{color:#333;font-size:.95rem}
+nav ul li:last-child a{background:#111;color:#fff;padding:9px 18px;border-radius:6px}
+.hero{padding:64px 5% 40px;text-align:center;background:#faf9f6;border-bottom:1px solid #eee}
+.hero h1{font-size:clamp(2rem,4.5vw,3.2rem);letter-spacing:-1px;line-height:1.15;margin-bottom:14px}
+.hero p{max-width:720px;margin:0 auto;color:#555;font-size:1.1rem}
+.wrap{max-width:1180px;margin:0 auto;padding:40px 5%}
+.byline{color:#777;font-size:.9rem;margin-top:14px}
+.cta{background:#111;color:#fff;text-align:center;padding:56px 5%}
+.cta h2{font-size:1.9rem;margin-bottom:10px}.cta p{color:#ccc;margin-bottom:22px}
+.btn{display:inline-block;background:#fff;color:#111;padding:13px 28px;border-radius:6px;font-weight:700}
+.btn:hover{text-decoration:none;background:#eee}
+footer{text-align:center;padding:40px 5%;border-top:1px solid #eee;color:#666;font-size:.9rem}
+footer>a{font-weight:800;font-size:1.1rem;color:#111;display:block;margin-bottom:8px}
+footer p{margin:4px 0}
+@media(max-width:700px){nav{position:static}nav ul{gap:12px}}
+.filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:12px}
+.filters button{border:1px solid #ccc;background:#fff;padding:9px 18px;border-radius:999px;font-size:.92rem;cursor:pointer;color:#222}
+.filters button.active,.filters button:hover{background:#111;color:#fff;border-color:#111}
+.count{text-align:center;color:#777;font-size:.9rem;margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:26px}
+.card{border:1px solid #eee;border-radius:10px;overflow:hidden;background:#fff;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 8px 24px rgba(0,0,0,.09);transform:translateY(-2px)}
+.card img{width:100%;height:170px;object-fit:cover;background:#e9e6df;display:block}
+.card .b{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:#0b5c4a;font-weight:700}
+.card h2{font-size:1.08rem;line-height:1.3}.card h2 a{color:#111}
+.card p{font-size:.92rem;color:#555;flex:1}
+.more{font-weight:600;font-size:.9rem}
+.links{background:#faf9f6;border-radius:10px;padding:26px;margin-top:44px;text-align:center}
+.links a{margin:0 10px;font-weight:600}
+</style>
 </head>
 <body>
-
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <div class="container nav__inner">
-      <a href="../index.html" class="nav__logo">MyBnB<span>Design</span></a>
-      <ul class="nav__links" id="navLinks">
-        <li><a href="../index.html" class="nav__link">Home</a></li>
-        <li><a href="../services.html" class="nav__link">Services</a></li>
-        <li><a href="../portfolio.html" class="nav__link">Portfolio</a></li>
-        <li><a href="../about.html" class="nav__link">About</a></li>
-        <li><a href="./" class="nav__link is-active">Blog</a></li>
-        <li class="nav__cta"><a href="../contact.html" class="btn btn--outline btn--nav">Get Started</a></li>
-      </ul>
-      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Page Header -->
-  <section class="page-header">
-    <div class="container">
-      <span class="eyebrow">Resources</span>
-      <h1>Blog</h1>
-      <p class="body-lg">Practical guides on short-term rental design, furnishing, photography, and the business decisions that drive bookings.</p>
-    </div>
-  </section>
-
-  <!-- Blog Grid -->
-  <section style="padding: var(--space-3xl) 0;">
-    <div class="container">
-      <div class="blog-grid">
-
-        <!-- Common Mistakes -->
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Common Mistakes</span>
-            <h3 class="blog-card__title">20 Airbnb Design Mistakes That Kill Bookings</h3>
-            <a href="20-airbnb-design-mistakes-that-kill-bookings.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Property Types -->
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Property Types</span>
-            <h3 class="blog-card__title">A-Frame Airbnb Interior Design</h3>
-            <a href="a-frame-airbnb-interior-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Design -->
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Design</span>
-            <h3 class="blog-card__title">Accessible STR Design -- ADA Considerations</h3>
-            <a href="accessible-str-design-ada.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Guest Markets -->
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Guest Markets</span>
-            <h3 class="blog-card__title">Adventure Travel Airbnb Design</h3>
-            <a href="adventure-travel-airbnb-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Design -->
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Design</span>
-            <h3 class="blog-card__title">Airbnb Accessibility Design</h3>
-            <a href="airbnb-accessibility-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Furnishing -->
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Furnishing</span>
-            <h3 class="blog-card__title">Airbnb Appliance Guide</h3>
-            <a href="airbnb-appliance-guide.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Design Styles -->
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Design</span>
-            <h3 class="blog-card__title">Airbnb Art and Decor Sourcing</h3>
-            <a href="airbnb-art-decor-sourcing.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Room Design -->
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Bathroom Design Guide</h3>
-            <a href="airbnb-bathroom-design-guide.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Bathroom Design Ideas</h3>
-            <a href="airbnb-bathroom-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Furnishing -->
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Furnishing</span>
-            <h3 class="blog-card__title">Airbnb Bedding Guide</h3>
-            <a href="airbnb-bedding-guide.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Bedroom Design Guide</h3>
-            <a href="airbnb-bedroom-design-guide.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Design</span>
-            <h3 class="blog-card__title">Airbnb Before and After Design</h3>
-            <a href="airbnb-before-after-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Bunk Room Design</h3>
-            <a href="airbnb-bunk-room-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Business</span>
-            <h3 class="blog-card__title">Airbnb Design and Insurance Considerations</h3>
-            <a href="airbnb-design-and-insurance-considerations.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Business</span>
-            <h3 class="blog-card__title">Airbnb Design Competitive Analysis</h3>
-            <a href="airbnb-design-competitive-analysis.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Photography & Listing</span>
-            <h3 class="blog-card__title">Airbnb Design for Instagram</h3>
-            <a href="airbnb-design-for-instagram.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Design</span>
-            <h3 class="blog-card__title">Airbnb Design for Repeat Guests</h3>
-            <a href="airbnb-design-for-repeat-guests.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Design</span>
-            <h3 class="blog-card__title">Airbnb Design for Superhost Status</h3>
-            <a href="airbnb-design-for-superhost-status.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Business</span>
-            <h3 class="blog-card__title">Airbnb Design Mistakes Costing Revenue</h3>
-            <a href="airbnb-design-mistakes-costing-revenue.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Common Mistakes</span>
-            <h3 class="blog-card__title">Airbnb Design Mistakes That Kill Bookings</h3>
-            <a href="airbnb-design-mistakes-that-kill-bookings.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Business</span>
-            <h3 class="blog-card__title">Airbnb Design Portfolio Building</h3>
-            <a href="airbnb-design-portfolio-building.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Business</span>
-            <h3 class="blog-card__title">Airbnb Design ROI Analysis</h3>
-            <a href="airbnb-design-roi-analysis.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Design</span>
-            <h3 class="blog-card__title">Airbnb Design Trends 2026</h3>
-            <a href="airbnb-design-trends-2026.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Dining Room Design</h3>
-            <a href="airbnb-dining-room-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Entryway Design Ideas</h3>
-            <a href="airbnb-entryway-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Entryway and Mudroom Design</h3>
-            <a href="airbnb-entryway-mudroom-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Fire Pit Area Design</h3>
-            <a href="airbnb-fire-pit-area-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Design</span>
-            <h3 class="blog-card__title">Airbnb First Impression Design</h3>
-            <a href="airbnb-first-impression-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Photography & Listing</span>
-            <h3 class="blog-card__title">Airbnb Floor Plan Listing</h3>
-            <a href="airbnb-floor-plan-listing.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Furnishing</span>
-            <h3 class="blog-card__title">Airbnb Furniture Assembly and Installation</h3>
-            <a href="airbnb-furniture-assembly-installation.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Furnishing</span>
-            <h3 class="blog-card__title">Airbnb Furniture Budget -- $100K</h3>
-            <a href="airbnb-furniture-budget-100k.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Furnishing</span>
-            <h3 class="blog-card__title">Airbnb Furniture Budget -- $10K</h3>
-            <a href="airbnb-furniture-budget-10k.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Furnishing</span>
-            <h3 class="blog-card__title">Airbnb Furniture Budget -- $25K</h3>
-            <a href="airbnb-furniture-budget-25k.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Furnishing</span>
-            <h3 class="blog-card__title">Airbnb Furniture Budget -- $50K</h3>
-            <a href="airbnb-furniture-budget-50k.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Furnishing</span>
-            <h3 class="blog-card__title">Airbnb Furniture Budget -- $5K</h3>
-            <a href="airbnb-furniture-budget-5k.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Furnishing</span>
-            <h3 class="blog-card__title">Airbnb Furniture Durability Guide</h3>
-            <a href="airbnb-furniture-durability-guide.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Game Room Design Ideas</h3>
-            <a href="airbnb-game-room-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Game Room Design</h3>
-            <a href="airbnb-game-room-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Guest Bedroom Design Ideas</h3>
-            <a href="airbnb-guest-bedroom-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Guest Bedroom Design</h3>
-            <a href="airbnb-guest-bedroom-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Photography & Listing</span>
-            <h3 class="blog-card__title">Airbnb Hero Shot Guide</h3>
-            <a href="airbnb-hero-shot-guide.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Home Office Design Ideas</h3>
-            <a href="airbnb-home-office-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Home Office Design</h3>
-            <a href="airbnb-home-office-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Home Theater Design</h3>
-            <a href="airbnb-home-theater-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Kids Room Design</h3>
-            <a href="airbnb-kids-room-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Kitchen Design Guide</h3>
-            <a href="airbnb-kitchen-design-guide.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Kitchen Design Ideas</h3>
-            <a href="airbnb-kitchen-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Furnishing</span>
-            <h3 class="blog-card__title">Airbnb Kitchen Essentials Checklist</h3>
-            <a href="airbnb-kitchen-essentials-checklist.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Laundry Room Design Ideas</h3>
-            <a href="airbnb-laundry-room-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Laundry Room Design</h3>
-            <a href="airbnb-laundry-room-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Design</span>
-            <h3 class="blog-card__title">Airbnb Lighting Guide</h3>
-            <a href="airbnb-lighting-guide.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Photography & Listing</span>
-            <h3 class="blog-card__title">Airbnb Listing Description Design</h3>
-            <a href="airbnb-listing-description-design.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Photography & Listing</span>
-            <h3 class="blog-card__title">Airbnb Listing Photo Order</h3>
-            <a href="airbnb-listing-photo-order.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Photography & Listing</span>
-            <h3 class="blog-card__title">Airbnb Listing Title Optimization</h3>
-            <a href="airbnb-listing-title-optimization.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Living Room Design Guide</h3>
-            <a href="airbnb-living-room-design-guide.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Living Room Design Ideas</h3>
-            <a href="airbnb-living-room-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Master Bedroom Design Ideas</h3>
-            <a href="airbnb-master-bedroom-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Photography & Listing</span>
-            <h3 class="blog-card__title">Airbnb Natural Light Photography</h3>
-            <a href="airbnb-natural-light-photography.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-1">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Furnishing</span>
-            <h3 class="blog-card__title">Airbnb Outdoor Furniture Guide</h3>
-            <a href="airbnb-outdoor-furniture-guide.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal reveal-delay-2">
-          <div class="blog-card__body">
-            <span class="blog-card__category">Room Design</span>
-            <h3 class="blog-card__title">Airbnb Outdoor Patio Design Ideas</h3>
-            <a href="airbnb-outdoor-patio-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <a href="../index.html" class="footer__logo">MyBnB<span>Design</span></a>
-        <p class="footer__tagline">A <a href="https://www.bnbaccelerator.com" target="_blank" rel="noopener">BnB Accelerator</a> Company</p>
-        <p class="footer__copy">&copy; 2026 MyBnBDesign. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => nav.classList.toggle('is-scrolled', window.scrollY > 80), { passive: true });
-    nav.classList.add('is-scrolled');
-    document.getElementById('navToggle').addEventListener('click', () => {
-      const links = document.getElementById('navLinks');
-      links.classList.toggle('is-open');
-      document.body.style.overflow = links.classList.contains('is-open') ? 'hidden' : '';
-    });
-    const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); }), { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    document.body.classList.add("js-reveal-ready");
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-  </script>
-
+<nav>
+  <a href="https://www.mybnbdesign.com/index.html">MyBnBDesign</a>
+  <ul>
+    <li><a href="https://www.mybnbdesign.com/index.html">Home</a></li>
+    <li><a href="https://www.mybnbdesign.com/services.html">Services</a></li>
+    <li><a href="https://www.mybnbdesign.com/portfolio.html">Portfolio</a></li>
+    <li><a href="https://www.mybnbdesign.com/about.html">About</a></li>
+    <li><a href="https://www.mybnbdesign.com/blog/">Blog</a></li>
+    <li><a href="https://www.mybnbdesign.com/contact.html">Get Started</a></li>
+  </ul>
+</nav>
+<header class="hero"><h1>The MyBnBDesign Blog</h1><p>100 guides on designing, furnishing, and photographing short-term rentals that earn more and earn better reviews.</p><div class="byline">By MyBnBDesign Team</div></header>
+<main class="wrap">
+<div class="filters" role="tablist" aria-label="Filter posts by category">
+<button class="active" data-cat="all">All (100)</button>
+<button data-cat="property">Property Types (20)</button>
+<button data-cat="rooms">Room Guides (20)</button>
+<button data-cat="styles">Design Styles (15)</button>
+<button data-cat="revenue">Revenue &amp; Strategy (12)</button>
+<button data-cat="staging">Staging &amp; Photography (18)</button>
+<button data-cat="furniture">Furniture &amp; Budget (15)</button>
+</div>
+<p class="count" id="count"></p>
+<div class="grid" id="grid">
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/beach-house.html"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=70&auto=format&fit=crop" alt="Beach House Design Guide for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/beach-house.html">Beach House Design Guide for Short-Term Rentals</a></h2><p>How to design and furnish a beach house rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/beach-house.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/mountain-cabin.html"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=70&auto=format&fit=crop" alt="Mountain Cabin Design Guide for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/mountain-cabin.html">Mountain Cabin Design Guide for Short-Term Rentals</a></h2><p>How to design and furnish a mountain cabin rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/mountain-cabin.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/urban-apartment.html"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=70&auto=format&fit=crop" alt="Urban Apartment Design Guide for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/urban-apartment.html">Urban Apartment Design Guide for Short-Term Rentals</a></h2><p>How to design and furnish a urban apartment rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/urban-apartment.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/lake-house.html"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=70&auto=format&fit=crop" alt="Lake House Design Guide for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/lake-house.html">Lake House Design Guide for Short-Term Rentals</a></h2><p>How to design and furnish a lake house rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/lake-house.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/desert.html"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=70&auto=format&fit=crop" alt="Desert Rental Design Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/desert.html">Desert Rental Design Guide</a></h2><p>How to design and furnish a desert rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/desert.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/cabin.html"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=70&auto=format&fit=crop" alt="Cabin Interior Design for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/cabin.html">Cabin Interior Design for Short-Term Rentals</a></h2><p>How to design and furnish a cabin rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/cabin.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/a-frame.html"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=70&auto=format&fit=crop" alt="A-Frame Cabin Design Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/a-frame.html">A-Frame Cabin Design Guide</a></h2><p>How to design and furnish a a frame rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/a-frame.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/farmhouse.html"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=70&auto=format&fit=crop" alt="Farmhouse Design Guide for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/farmhouse.html">Farmhouse Design Guide for Short-Term Rentals</a></h2><p>How to design and furnish a farmhouse rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/farmhouse.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/ski-chalet.html"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=70&auto=format&fit=crop" alt="Ski Chalet Design Guide for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/ski-chalet.html">Ski Chalet Design Guide for Short-Term Rentals</a></h2><p>How to design and furnish a ski chalet rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/ski-chalet.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/treehouse.html"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=70&auto=format&fit=crop" alt="Treehouse Design Guide for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/treehouse.html">Treehouse Design Guide for Short-Term Rentals</a></h2><p>How to design and furnish a treehouse rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/treehouse.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/tiny-home.html"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=70&auto=format&fit=crop" alt="Tiny Home Interior Design for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/tiny-home.html">Tiny Home Interior Design for Short-Term Rentals</a></h2><p>How to design and furnish a tiny home rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/tiny-home.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/container-home.html"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=70&auto=format&fit=crop" alt="Container Home Design for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/container-home.html">Container Home Design for Short-Term Rentals</a></h2><p>How to design and furnish a container home rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/container-home.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/cottage.html"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=70&auto=format&fit=crop" alt="Cottage Design Guide for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/cottage.html">Cottage Design Guide for Short-Term Rentals</a></h2><p>How to design and furnish a cottage rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/cottage.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/tropical-villa.html"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=70&auto=format&fit=crop" alt="Tropical Villa Design Guide for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/tropical-villa.html">Tropical Villa Design Guide for Short-Term Rentals</a></h2><p>How to design and furnish a tropical villa rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/tropical-villa.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/historic-home.html"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=70&auto=format&fit=crop" alt="Historic Home Design Guide for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/historic-home.html">Historic Home Design Guide for Short-Term Rentals</a></h2><p>How to design and furnish a historic home rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/historic-home.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/vineyard-estate.html"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=70&auto=format&fit=crop" alt="Vineyard Estate Design Guide for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/vineyard-estate.html">Vineyard Estate Design Guide for Short-Term Rentals</a></h2><p>How to design and furnish a vineyard estate rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/vineyard-estate.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/island-retreat.html"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=70&auto=format&fit=crop" alt="Island Retreat Design Guide for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/island-retreat.html">Island Retreat Design Guide for Short-Term Rentals</a></h2><p>How to design and furnish a island retreat rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/island-retreat.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/ranch.html"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=70&auto=format&fit=crop" alt="Ranch Property Design Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/ranch.html">Ranch Property Design Guide</a></h2><p>How to design and furnish a ranch rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/ranch.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/penthouse.html"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=70&auto=format&fit=crop" alt="Penthouse Design Guide for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/penthouse.html">Penthouse Design Guide for Short-Term Rentals</a></h2><p>How to design and furnish a penthouse rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/penthouse.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="property"><a href="https://www.mybnbdesign.com/blog/converted-barn.html"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=70&auto=format&fit=crop" alt="Converted Barn Design Guide for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Property Types</span><h2><a href="https://www.mybnbdesign.com/blog/converted-barn.html">Converted Barn Design Guide for Short-Term Rentals</a></h2><p>How to design and furnish a converted barn rental so it photographs well, hosts comfortably, and earns premium nightly rates.</p><a class="more" href="https://www.mybnbdesign.com/blog/converted-barn.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/bedroom-design-guide.html"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&q=70&auto=format&fit=crop" alt="Complete Bedroom Design Guide for Airbnb" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/bedroom-design-guide.html">Complete Bedroom Design Guide for Airbnb</a></h2><p>Layouts, furniture picks, and durable finishes for the bedroom that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/bedroom-design-guide.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/primary-bedroom.html"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&q=70&auto=format&fit=crop" alt="Primary Bedroom Design Ideas for Airbnb Hosts" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/primary-bedroom.html">Primary Bedroom Design Ideas for Airbnb Hosts</a></h2><p>Layouts, furniture picks, and durable finishes for the primary bedroom that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/primary-bedroom.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/guest-bedroom.html"><img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=70&auto=format&fit=crop" alt="Guest Bedroom Design Ideas for Airbnb Hosts" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/guest-bedroom.html">Guest Bedroom Design Ideas for Airbnb Hosts</a></h2><p>Layouts, furniture picks, and durable finishes for the guest bedroom that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/guest-bedroom.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/bunk-room.html"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=70&auto=format&fit=crop" alt="Bunk Room Design Ideas for Airbnb Hosts" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/bunk-room.html">Bunk Room Design Ideas for Airbnb Hosts</a></h2><p>Layouts, furniture picks, and durable finishes for the bunk room that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/bunk-room.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/bathroom-design-guide.html"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&q=70&auto=format&fit=crop" alt="Complete Bathroom Design Guide for Airbnb" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/bathroom-design-guide.html">Complete Bathroom Design Guide for Airbnb</a></h2><p>Layouts, furniture picks, and durable finishes for the bathroom that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/bathroom-design-guide.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/primary-bathroom.html"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&q=70&auto=format&fit=crop" alt="Primary Bathroom Design Ideas for Airbnb Hosts" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/primary-bathroom.html">Primary Bathroom Design Ideas for Airbnb Hosts</a></h2><p>Layouts, furniture picks, and durable finishes for the primary bathroom that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/primary-bathroom.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/kitchen-design-guide.html"><img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=70&auto=format&fit=crop" alt="Complete Kitchen Design Guide for Airbnb" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/kitchen-design-guide.html">Complete Kitchen Design Guide for Airbnb</a></h2><p>Layouts, furniture picks, and durable finishes for the kitchen that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/kitchen-design-guide.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/kitchen-essentials-checklist.html"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=70&auto=format&fit=crop" alt="Kitchen Essentials Checklist for Airbnb Hosts" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/kitchen-essentials-checklist.html">Kitchen Essentials Checklist for Airbnb Hosts</a></h2><p>Layouts, furniture picks, and durable finishes for the kitchen essentials checklist that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/kitchen-essentials-checklist.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/living-room-design-guide.html"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&q=70&auto=format&fit=crop" alt="Complete Living Room Design Guide for Airbnb" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/living-room-design-guide.html">Complete Living Room Design Guide for Airbnb</a></h2><p>Layouts, furniture picks, and durable finishes for the living room that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/living-room-design-guide.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/dining-room.html"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&q=70&auto=format&fit=crop" alt="Dining Room Design Ideas for Airbnb Hosts" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/dining-room.html">Dining Room Design Ideas for Airbnb Hosts</a></h2><p>Layouts, furniture picks, and durable finishes for the dining room that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/dining-room.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/outdoor-space.html"><img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=70&auto=format&fit=crop" alt="Outdoor Space Design Ideas for Airbnb Hosts" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/outdoor-space.html">Outdoor Space Design Ideas for Airbnb Hosts</a></h2><p>Layouts, furniture picks, and durable finishes for the outdoor space that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/outdoor-space.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/patio-deck.html"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=70&auto=format&fit=crop" alt="Patio Deck Design Ideas for Airbnb Hosts" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/patio-deck.html">Patio Deck Design Ideas for Airbnb Hosts</a></h2><p>Layouts, furniture picks, and durable finishes for the patio deck that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/patio-deck.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/game-room.html"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&q=70&auto=format&fit=crop" alt="Game Room Design Ideas for Airbnb Hosts" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/game-room.html">Game Room Design Ideas for Airbnb Hosts</a></h2><p>Layouts, furniture picks, and durable finishes for the game room that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/game-room.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/home-theater.html"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&q=70&auto=format&fit=crop" alt="Home Theater Design for Vacation Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/home-theater.html">Home Theater Design for Vacation Rentals</a></h2><p>Layouts, furniture picks, and durable finishes for the home theater that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/home-theater.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/entryway-mudroom.html"><img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=70&auto=format&fit=crop" alt="Entryway and Mudroom Design for Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/entryway-mudroom.html">Entryway and Mudroom Design for Rentals</a></h2><p>Layouts, furniture picks, and durable finishes for the entryway mudroom that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/entryway-mudroom.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/laundry-room.html"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=70&auto=format&fit=crop" alt="Laundry Room Design Ideas for Airbnb Hosts" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/laundry-room.html">Laundry Room Design Ideas for Airbnb Hosts</a></h2><p>Layouts, furniture picks, and durable finishes for the laundry room that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/laundry-room.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/home-office.html"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&q=70&auto=format&fit=crop" alt="Home Office Design Ideas for Airbnb Hosts" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/home-office.html">Home Office Design Ideas for Airbnb Hosts</a></h2><p>Layouts, furniture picks, and durable finishes for the home office that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/home-office.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/pool-area.html"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&q=70&auto=format&fit=crop" alt="Pool Area Design Ideas for Airbnb Hosts" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/pool-area.html">Pool Area Design Ideas for Airbnb Hosts</a></h2><p>Layouts, furniture picks, and durable finishes for the pool area that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/pool-area.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/fire-pit-area.html"><img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=70&auto=format&fit=crop" alt="Fire Pit Area Design Ideas for Airbnb Hosts" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/fire-pit-area.html">Fire Pit Area Design Ideas for Airbnb Hosts</a></h2><p>Layouts, furniture picks, and durable finishes for the fire pit area that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/fire-pit-area.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="rooms"><a href="https://www.mybnbdesign.com/blog/kids-room.html"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=70&auto=format&fit=crop" alt="Kids Room Design Ideas for Airbnb Hosts" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Room Guides</span><h2><a href="https://www.mybnbdesign.com/blog/kids-room.html">Kids Room Design Ideas for Airbnb Hosts</a></h2><p>Layouts, furniture picks, and durable finishes for the kids room that guests notice and reviewers mention.</p><a class="more" href="https://www.mybnbdesign.com/blog/kids-room.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="styles"><a href="https://www.mybnbdesign.com/blog/modern.html"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=70&auto=format&fit=crop" alt="Modern Interior Design for Airbnb" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Design Styles</span><h2><a href="https://www.mybnbdesign.com/blog/modern.html">Modern Interior Design for Airbnb</a></h2><p>What the modern look means for guests, which pieces deliver it, and where hosts overspend or cut corners.</p><a class="more" href="https://www.mybnbdesign.com/blog/modern.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="styles"><a href="https://www.mybnbdesign.com/blog/farmhouse-style.html"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=70&auto=format&fit=crop" alt="Farmhouse Style Style for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Design Styles</span><h2><a href="https://www.mybnbdesign.com/blog/farmhouse-style.html">Farmhouse Style Style for Short-Term Rentals</a></h2><p>What the farmhouse look means for guests, which pieces deliver it, and where hosts overspend or cut corners.</p><a class="more" href="https://www.mybnbdesign.com/blog/farmhouse-style.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="styles"><a href="https://www.mybnbdesign.com/blog/coastal-style.html"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=70&auto=format&fit=crop" alt="Coastal Style Style for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Design Styles</span><h2><a href="https://www.mybnbdesign.com/blog/coastal-style.html">Coastal Style Style for Short-Term Rentals</a></h2><p>What the coastal look means for guests, which pieces deliver it, and where hosts overspend or cut corners.</p><a class="more" href="https://www.mybnbdesign.com/blog/coastal-style.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="styles"><a href="https://www.mybnbdesign.com/blog/bohemian.html"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&q=70&auto=format&fit=crop" alt="Bohemian Style for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Design Styles</span><h2><a href="https://www.mybnbdesign.com/blog/bohemian.html">Bohemian Style for Short-Term Rentals</a></h2><p>What the bohemian look means for guests, which pieces deliver it, and where hosts overspend or cut corners.</p><a class="more" href="https://www.mybnbdesign.com/blog/bohemian.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="styles"><a href="https://www.mybnbdesign.com/blog/minimalist.html"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=70&auto=format&fit=crop" alt="Minimalist Style for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Design Styles</span><h2><a href="https://www.mybnbdesign.com/blog/minimalist.html">Minimalist Style for Short-Term Rentals</a></h2><p>What the minimalist look means for guests, which pieces deliver it, and where hosts overspend or cut corners.</p><a class="more" href="https://www.mybnbdesign.com/blog/minimalist.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="styles"><a href="https://www.mybnbdesign.com/blog/mid-century-modern.html"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=70&auto=format&fit=crop" alt="Mid Century Modern Style for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Design Styles</span><h2><a href="https://www.mybnbdesign.com/blog/mid-century-modern.html">Mid Century Modern Style for Short-Term Rentals</a></h2><p>What the mid century modern look means for guests, which pieces deliver it, and where hosts overspend or cut corners.</p><a class="more" href="https://www.mybnbdesign.com/blog/mid-century-modern.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="styles"><a href="https://www.mybnbdesign.com/blog/industrial.html"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=70&auto=format&fit=crop" alt="Industrial Style for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Design Styles</span><h2><a href="https://www.mybnbdesign.com/blog/industrial.html">Industrial Style for Short-Term Rentals</a></h2><p>What the industrial look means for guests, which pieces deliver it, and where hosts overspend or cut corners.</p><a class="more" href="https://www.mybnbdesign.com/blog/industrial.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="styles"><a href="https://www.mybnbdesign.com/blog/scandinavian.html"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&q=70&auto=format&fit=crop" alt="Scandinavian Style for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Design Styles</span><h2><a href="https://www.mybnbdesign.com/blog/scandinavian.html">Scandinavian Style for Short-Term Rentals</a></h2><p>What the scandinavian look means for guests, which pieces deliver it, and where hosts overspend or cut corners.</p><a class="more" href="https://www.mybnbdesign.com/blog/scandinavian.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="styles"><a href="https://www.mybnbdesign.com/blog/art-deco.html"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=70&auto=format&fit=crop" alt="Art Deco Style for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Design Styles</span><h2><a href="https://www.mybnbdesign.com/blog/art-deco.html">Art Deco Style for Short-Term Rentals</a></h2><p>What the art deco look means for guests, which pieces deliver it, and where hosts overspend or cut corners.</p><a class="more" href="https://www.mybnbdesign.com/blog/art-deco.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="styles"><a href="https://www.mybnbdesign.com/blog/japandi.html"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=70&auto=format&fit=crop" alt="Japandi Style for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Design Styles</span><h2><a href="https://www.mybnbdesign.com/blog/japandi.html">Japandi Style for Short-Term Rentals</a></h2><p>What the japandi look means for guests, which pieces deliver it, and where hosts overspend or cut corners.</p><a class="more" href="https://www.mybnbdesign.com/blog/japandi.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="styles"><a href="https://www.mybnbdesign.com/blog/mediterranean.html"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=70&auto=format&fit=crop" alt="Mediterranean Style for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Design Styles</span><h2><a href="https://www.mybnbdesign.com/blog/mediterranean.html">Mediterranean Style for Short-Term Rentals</a></h2><p>What the mediterranean look means for guests, which pieces deliver it, and where hosts overspend or cut corners.</p><a class="more" href="https://www.mybnbdesign.com/blog/mediterranean.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="styles"><a href="https://www.mybnbdesign.com/blog/transitional.html"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&q=70&auto=format&fit=crop" alt="Transitional Style for Airbnb" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Design Styles</span><h2><a href="https://www.mybnbdesign.com/blog/transitional.html">Transitional Style for Airbnb</a></h2><p>What the transitional look means for guests, which pieces deliver it, and where hosts overspend or cut corners.</p><a class="more" href="https://www.mybnbdesign.com/blog/transitional.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="styles"><a href="https://www.mybnbdesign.com/blog/eclectic.html"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=70&auto=format&fit=crop" alt="Eclectic Interior Design for Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Design Styles</span><h2><a href="https://www.mybnbdesign.com/blog/eclectic.html">Eclectic Interior Design for Rentals</a></h2><p>What the eclectic look means for guests, which pieces deliver it, and where hosts overspend or cut corners.</p><a class="more" href="https://www.mybnbdesign.com/blog/eclectic.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="styles"><a href="https://www.mybnbdesign.com/blog/luxury.html"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=70&auto=format&fit=crop" alt="Luxury Interior Design for Vacation Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Design Styles</span><h2><a href="https://www.mybnbdesign.com/blog/luxury.html">Luxury Interior Design for Vacation Rentals</a></h2><p>What the luxury look means for guests, which pieces deliver it, and where hosts overspend or cut corners.</p><a class="more" href="https://www.mybnbdesign.com/blog/luxury.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="styles"><a href="https://www.mybnbdesign.com/blog/wabi-sabi.html"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=70&auto=format&fit=crop" alt="Wabi-Sabi Design for Vacation Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Design Styles</span><h2><a href="https://www.mybnbdesign.com/blog/wabi-sabi.html">Wabi-Sabi Design for Vacation Rentals</a></h2><p>What the wabi sabi look means for guests, which pieces deliver it, and where hosts overspend or cut corners.</p><a class="more" href="https://www.mybnbdesign.com/blog/wabi-sabi.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="revenue"><a href="https://www.mybnbdesign.com/blog/how-interior-design-affects-airbnb-adr.html"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=70&auto=format&fit=crop" alt="How Interior Design Affects Airbnb ADR" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Revenue &amp; Strategy</span><h2><a href="https://www.mybnbdesign.com/blog/how-interior-design-affects-airbnb-adr.html">How Interior Design Affects Airbnb ADR</a></h2><p>A data-informed look at how interior design affects airbnb adr and how it moves occupancy, nightly rate, and review scores.</p><a class="more" href="https://www.mybnbdesign.com/blog/how-interior-design-affects-airbnb-adr.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="revenue"><a href="https://www.mybnbdesign.com/blog/design-roi-analysis.html"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=70&auto=format&fit=crop" alt="Design ROI Analysis for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Revenue &amp; Strategy</span><h2><a href="https://www.mybnbdesign.com/blog/design-roi-analysis.html">Design ROI Analysis for Short-Term Rentals</a></h2><p>A data-informed look at design roi analysis and how it moves occupancy, nightly rate, and review scores.</p><a class="more" href="https://www.mybnbdesign.com/blog/design-roi-analysis.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="revenue"><a href="https://www.mybnbdesign.com/blog/reviews-design-connection.html"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=70&auto=format&fit=crop" alt="The Connection Between Design and Guest Reviews" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Revenue &amp; Strategy</span><h2><a href="https://www.mybnbdesign.com/blog/reviews-design-connection.html">The Connection Between Design and Guest Reviews</a></h2><p>A data-informed look at reviews design connection and how it moves occupancy, nightly rate, and review scores.</p><a class="more" href="https://www.mybnbdesign.com/blog/reviews-design-connection.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="revenue"><a href="https://www.mybnbdesign.com/blog/design-elements-that-increase-bookings.html"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=70&auto=format&fit=crop" alt="Design Elements That Increase Bookings: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Revenue &amp; Strategy</span><h2><a href="https://www.mybnbdesign.com/blog/design-elements-that-increase-bookings.html">Design Elements That Increase Bookings: A Host Guide</a></h2><p>A data-informed look at design elements that increase bookings and how it moves occupancy, nightly rate, and review scores.</p><a class="more" href="https://www.mybnbdesign.com/blog/design-elements-that-increase-bookings.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="revenue"><a href="https://www.mybnbdesign.com/blog/first-impression-design.html"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=70&auto=format&fit=crop" alt="First Impression Design: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Revenue &amp; Strategy</span><h2><a href="https://www.mybnbdesign.com/blog/first-impression-design.html">First Impression Design: A Host Guide</a></h2><p>A data-informed look at first impression design and how it moves occupancy, nightly rate, and review scores.</p><a class="more" href="https://www.mybnbdesign.com/blog/first-impression-design.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="revenue"><a href="https://www.mybnbdesign.com/blog/seasonal-design-updates.html"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=70&auto=format&fit=crop" alt="Seasonal Design Updates: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Revenue &amp; Strategy</span><h2><a href="https://www.mybnbdesign.com/blog/seasonal-design-updates.html">Seasonal Design Updates: A Host Guide</a></h2><p>A data-informed look at seasonal design updates and how it moves occupancy, nightly rate, and review scores.</p><a class="more" href="https://www.mybnbdesign.com/blog/seasonal-design-updates.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="revenue"><a href="https://www.mybnbdesign.com/blog/design-mistakes-costing-revenue.html"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=70&auto=format&fit=crop" alt="Design Mistakes Costing Revenue: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Revenue &amp; Strategy</span><h2><a href="https://www.mybnbdesign.com/blog/design-mistakes-costing-revenue.html">Design Mistakes Costing Revenue: A Host Guide</a></h2><p>A data-informed look at design mistakes costing revenue and how it moves occupancy, nightly rate, and review scores.</p><a class="more" href="https://www.mybnbdesign.com/blog/design-mistakes-costing-revenue.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="revenue"><a href="https://www.mybnbdesign.com/blog/color-psychology.html"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=70&auto=format&fit=crop" alt="Color Psychology: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Revenue &amp; Strategy</span><h2><a href="https://www.mybnbdesign.com/blog/color-psychology.html">Color Psychology: A Host Guide</a></h2><p>A data-informed look at color psychology and how it moves occupancy, nightly rate, and review scores.</p><a class="more" href="https://www.mybnbdesign.com/blog/color-psychology.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="revenue"><a href="https://www.mybnbdesign.com/blog/design-for-superhost-status.html"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=70&auto=format&fit=crop" alt="Designing for Superhost Status" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Revenue &amp; Strategy</span><h2><a href="https://www.mybnbdesign.com/blog/design-for-superhost-status.html">Designing for Superhost Status</a></h2><p>A data-informed look at design for superhost status and how it moves occupancy, nightly rate, and review scores.</p><a class="more" href="https://www.mybnbdesign.com/blog/design-for-superhost-status.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="revenue"><a href="https://www.mybnbdesign.com/blog/design-competitive-analysis.html"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=70&auto=format&fit=crop" alt="Design Competitive Analysis: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Revenue &amp; Strategy</span><h2><a href="https://www.mybnbdesign.com/blog/design-competitive-analysis.html">Design Competitive Analysis: A Host Guide</a></h2><p>A data-informed look at design competitive analysis and how it moves occupancy, nightly rate, and review scores.</p><a class="more" href="https://www.mybnbdesign.com/blog/design-competitive-analysis.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="revenue"><a href="https://www.mybnbdesign.com/blog/design-trends-2026.html"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=70&auto=format&fit=crop" alt="Short-Term Rental Design Trends for 2026" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Revenue &amp; Strategy</span><h2><a href="https://www.mybnbdesign.com/blog/design-trends-2026.html">Short-Term Rental Design Trends for 2026</a></h2><p>A data-informed look at design trends 2026 and how it moves occupancy, nightly rate, and review scores.</p><a class="more" href="https://www.mybnbdesign.com/blog/design-trends-2026.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="revenue"><a href="https://www.mybnbdesign.com/blog/design-for-repeat-guests.html"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=70&auto=format&fit=crop" alt="Design for Repeat Guests: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Revenue &amp; Strategy</span><h2><a href="https://www.mybnbdesign.com/blog/design-for-repeat-guests.html">Design for Repeat Guests: A Host Guide</a></h2><p>A data-informed look at design for repeat guests and how it moves occupancy, nightly rate, and review scores.</p><a class="more" href="https://www.mybnbdesign.com/blog/design-for-repeat-guests.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/staging-vs-living-design.html"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=70&auto=format&fit=crop" alt="Staging vs Living Design for Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/staging-vs-living-design.html">Staging vs Living Design for Rentals</a></h2><p>Practical, step-by-step advice on staging vs living design to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/staging-vs-living-design.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/design-and-insurance-considerations.html"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=70&auto=format&fit=crop" alt="Design and Insurance Considerations for Hosts" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/design-and-insurance-considerations.html">Design and Insurance Considerations for Hosts</a></h2><p>Practical, step-by-step advice on design and insurance considerations to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/design-and-insurance-considerations.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/accessibility-design.html"><img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=70&auto=format&fit=crop" alt="Accessibility Design for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/accessibility-design.html">Accessibility Design for Short-Term Rentals</a></h2><p>Practical, step-by-step advice on accessibility design to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/accessibility-design.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/photography-guide.html"><img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&q=70&auto=format&fit=crop" alt="Photography Guide for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/photography-guide.html">Photography Guide for Short-Term Rentals</a></h2><p>Practical, step-by-step advice on photography guide to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/photography-guide.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/photo-staging-tips.html"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=70&auto=format&fit=crop" alt="Photo Staging Tips for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/photo-staging-tips.html">Photo Staging Tips for Short-Term Rentals</a></h2><p>Practical, step-by-step advice on photo staging tips to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/photo-staging-tips.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/listing-photo-order.html"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=70&auto=format&fit=crop" alt="Listing Photo Order for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/listing-photo-order.html">Listing Photo Order for Short-Term Rentals</a></h2><p>Practical, step-by-step advice on listing photo order to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/listing-photo-order.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/natural-light-photography.html"><img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=70&auto=format&fit=crop" alt="Natural Light Photography for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/natural-light-photography.html">Natural Light Photography for Short-Term Rentals</a></h2><p>Practical, step-by-step advice on natural light photography to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/natural-light-photography.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/hero-shot-guide.html"><img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&q=70&auto=format&fit=crop" alt="How to Capture the Perfect Hero Shot" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/hero-shot-guide.html">How to Capture the Perfect Hero Shot</a></h2><p>Practical, step-by-step advice on hero shot guide to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/hero-shot-guide.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/listing-title-optimization.html"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=70&auto=format&fit=crop" alt="Listing Title Optimization for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/listing-title-optimization.html">Listing Title Optimization for Short-Term Rentals</a></h2><p>Practical, step-by-step advice on listing title optimization to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/listing-title-optimization.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/listing-description-design.html"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=70&auto=format&fit=crop" alt="Listing Description Design for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/listing-description-design.html">Listing Description Design for Short-Term Rentals</a></h2><p>Practical, step-by-step advice on listing description design to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/listing-description-design.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/smartphone-photography.html"><img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=70&auto=format&fit=crop" alt="Smartphone Photography for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/smartphone-photography.html">Smartphone Photography for Short-Term Rentals</a></h2><p>Practical, step-by-step advice on smartphone photography to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/smartphone-photography.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/before-after-design.html"><img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&q=70&auto=format&fit=crop" alt="Before After Design for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/before-after-design.html">Before After Design for Short-Term Rentals</a></h2><p>Practical, step-by-step advice on before after design to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/before-after-design.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/video-tours-design.html"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=70&auto=format&fit=crop" alt="Video Tours Design for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/video-tours-design.html">Video Tours Design for Short-Term Rentals</a></h2><p>Practical, step-by-step advice on video tours design to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/video-tours-design.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/design-for-instagram.html"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=70&auto=format&fit=crop" alt="Design for Instagram for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/design-for-instagram.html">Design for Instagram for Short-Term Rentals</a></h2><p>Practical, step-by-step advice on design for instagram to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/design-for-instagram.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/virtual-staging.html"><img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=70&auto=format&fit=crop" alt="Virtual Staging for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/virtual-staging.html">Virtual Staging for Short-Term Rentals</a></h2><p>Practical, step-by-step advice on virtual staging to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/virtual-staging.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/floor-plan-listing.html"><img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&q=70&auto=format&fit=crop" alt="Floor Plan Listing for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/floor-plan-listing.html">Floor Plan Listing for Short-Term Rentals</a></h2><p>Practical, step-by-step advice on floor plan listing to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/floor-plan-listing.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/seasonal-photo-updates.html"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=70&auto=format&fit=crop" alt="Seasonal Photo Updates for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/seasonal-photo-updates.html">Seasonal Photo Updates for Short-Term Rentals</a></h2><p>Practical, step-by-step advice on seasonal photo updates to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/seasonal-photo-updates.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="staging"><a href="https://www.mybnbdesign.com/blog/design-portfolio-building.html"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=70&auto=format&fit=crop" alt="Design Portfolio Building for Short-Term Rentals" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Staging &amp; Photography</span><h2><a href="https://www.mybnbdesign.com/blog/design-portfolio-building.html">Design Portfolio Building for Short-Term Rentals</a></h2><p>Practical, step-by-step advice on design portfolio building to lift click-through, conversion, and perceived value.</p><a class="more" href="https://www.mybnbdesign.com/blog/design-portfolio-building.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="furniture"><a href="https://www.mybnbdesign.com/blog/furniture-budget-5k.html"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=70&auto=format&fit=crop" alt="Furnishing an Airbnb on a $5K Budget" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Furniture &amp; Budget</span><h2><a href="https://www.mybnbdesign.com/blog/furniture-budget-5k.html">Furnishing an Airbnb on a $5K Budget</a></h2><p>Real sourcing lists, price ranges, and trade-offs on furniture budget 5k so you spend where it counts.</p><a class="more" href="https://www.mybnbdesign.com/blog/furniture-budget-5k.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="furniture"><a href="https://www.mybnbdesign.com/blog/furniture-budget-10k.html"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=70&auto=format&fit=crop" alt="Furnishing an Airbnb on a $10K Budget" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Furniture &amp; Budget</span><h2><a href="https://www.mybnbdesign.com/blog/furniture-budget-10k.html">Furnishing an Airbnb on a $10K Budget</a></h2><p>Real sourcing lists, price ranges, and trade-offs on furniture budget 10k so you spend where it counts.</p><a class="more" href="https://www.mybnbdesign.com/blog/furniture-budget-10k.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="furniture"><a href="https://www.mybnbdesign.com/blog/furniture-budget-25k.html"><img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=600&q=70&auto=format&fit=crop" alt="Furnishing an Airbnb on a $25K Budget" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Furniture &amp; Budget</span><h2><a href="https://www.mybnbdesign.com/blog/furniture-budget-25k.html">Furnishing an Airbnb on a $25K Budget</a></h2><p>Real sourcing lists, price ranges, and trade-offs on furniture budget 25k so you spend where it counts.</p><a class="more" href="https://www.mybnbdesign.com/blog/furniture-budget-25k.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="furniture"><a href="https://www.mybnbdesign.com/blog/furniture-budget-50k.html"><img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=600&q=70&auto=format&fit=crop" alt="Furnishing an Airbnb on a $50K Budget" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Furniture &amp; Budget</span><h2><a href="https://www.mybnbdesign.com/blog/furniture-budget-50k.html">Furnishing an Airbnb on a $50K Budget</a></h2><p>Real sourcing lists, price ranges, and trade-offs on furniture budget 50k so you spend where it counts.</p><a class="more" href="https://www.mybnbdesign.com/blog/furniture-budget-50k.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="furniture"><a href="https://www.mybnbdesign.com/blog/furniture-budget-100k.html"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=70&auto=format&fit=crop" alt="Furnishing a Luxury Rental on a $100K Budget" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Furniture &amp; Budget</span><h2><a href="https://www.mybnbdesign.com/blog/furniture-budget-100k.html">Furnishing a Luxury Rental on a $100K Budget</a></h2><p>Real sourcing lists, price ranges, and trade-offs on furniture budget 100k so you spend where it counts.</p><a class="more" href="https://www.mybnbdesign.com/blog/furniture-budget-100k.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="furniture"><a href="https://www.mybnbdesign.com/blog/best-furniture-sources.html"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=70&auto=format&fit=crop" alt="Best Furniture Sources: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Furniture &amp; Budget</span><h2><a href="https://www.mybnbdesign.com/blog/best-furniture-sources.html">Best Furniture Sources: A Host Guide</a></h2><p>Real sourcing lists, price ranges, and trade-offs on best furniture sources so you spend where it counts.</p><a class="more" href="https://www.mybnbdesign.com/blog/best-furniture-sources.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="furniture"><a href="https://www.mybnbdesign.com/blog/furniture-durability-guide.html"><img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=600&q=70&auto=format&fit=crop" alt="Furniture Durability Guide: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Furniture &amp; Budget</span><h2><a href="https://www.mybnbdesign.com/blog/furniture-durability-guide.html">Furniture Durability Guide: A Host Guide</a></h2><p>Real sourcing lists, price ranges, and trade-offs on furniture durability guide so you spend where it counts.</p><a class="more" href="https://www.mybnbdesign.com/blog/furniture-durability-guide.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="furniture"><a href="https://www.mybnbdesign.com/blog/bedding-guide.html"><img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=600&q=70&auto=format&fit=crop" alt="Bedding Guide: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Furniture &amp; Budget</span><h2><a href="https://www.mybnbdesign.com/blog/bedding-guide.html">Bedding Guide: A Host Guide</a></h2><p>Real sourcing lists, price ranges, and trade-offs on bedding guide so you spend where it counts.</p><a class="more" href="https://www.mybnbdesign.com/blog/bedding-guide.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="furniture"><a href="https://www.mybnbdesign.com/blog/art-decor-sourcing.html"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=70&auto=format&fit=crop" alt="Art Decor Sourcing: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Furniture &amp; Budget</span><h2><a href="https://www.mybnbdesign.com/blog/art-decor-sourcing.html">Art Decor Sourcing: A Host Guide</a></h2><p>Real sourcing lists, price ranges, and trade-offs on art decor sourcing so you spend where it counts.</p><a class="more" href="https://www.mybnbdesign.com/blog/art-decor-sourcing.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="furniture"><a href="https://www.mybnbdesign.com/blog/lighting-guide.html"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=70&auto=format&fit=crop" alt="Lighting Guide: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Furniture &amp; Budget</span><h2><a href="https://www.mybnbdesign.com/blog/lighting-guide.html">Lighting Guide: A Host Guide</a></h2><p>Real sourcing lists, price ranges, and trade-offs on lighting guide so you spend where it counts.</p><a class="more" href="https://www.mybnbdesign.com/blog/lighting-guide.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="furniture"><a href="https://www.mybnbdesign.com/blog/rug-guide.html"><img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=600&q=70&auto=format&fit=crop" alt="Rug Guide: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Furniture &amp; Budget</span><h2><a href="https://www.mybnbdesign.com/blog/rug-guide.html">Rug Guide: A Host Guide</a></h2><p>Real sourcing lists, price ranges, and trade-offs on rug guide so you spend where it counts.</p><a class="more" href="https://www.mybnbdesign.com/blog/rug-guide.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="furniture"><a href="https://www.mybnbdesign.com/blog/outdoor-furniture-guide.html"><img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=600&q=70&auto=format&fit=crop" alt="Outdoor Furniture Guide: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Furniture &amp; Budget</span><h2><a href="https://www.mybnbdesign.com/blog/outdoor-furniture-guide.html">Outdoor Furniture Guide: A Host Guide</a></h2><p>Real sourcing lists, price ranges, and trade-offs on outdoor furniture guide so you spend where it counts.</p><a class="more" href="https://www.mybnbdesign.com/blog/outdoor-furniture-guide.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="furniture"><a href="https://www.mybnbdesign.com/blog/appliance-guide.html"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=70&auto=format&fit=crop" alt="Appliance Guide: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Furniture &amp; Budget</span><h2><a href="https://www.mybnbdesign.com/blog/appliance-guide.html">Appliance Guide: A Host Guide</a></h2><p>Real sourcing lists, price ranges, and trade-offs on appliance guide so you spend where it counts.</p><a class="more" href="https://www.mybnbdesign.com/blog/appliance-guide.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="furniture"><a href="https://www.mybnbdesign.com/blog/wholesale-furniture.html"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=70&auto=format&fit=crop" alt="Wholesale Furniture: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Furniture &amp; Budget</span><h2><a href="https://www.mybnbdesign.com/blog/wholesale-furniture.html">Wholesale Furniture: A Host Guide</a></h2><p>Real sourcing lists, price ranges, and trade-offs on wholesale furniture so you spend where it counts.</p><a class="more" href="https://www.mybnbdesign.com/blog/wholesale-furniture.html">Read the guide &rarr;</a></div></article>
+<article class="card" data-cat="furniture"><a href="https://www.mybnbdesign.com/blog/furniture-assembly-installation.html"><img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=600&q=70&auto=format&fit=crop" alt="Furniture Assembly Installation: A Host Guide" loading="lazy" width="600" height="170"></a><div class="b"><span class="tag">Furniture &amp; Budget</span><h2><a href="https://www.mybnbdesign.com/blog/furniture-assembly-installation.html">Furniture Assembly Installation: A Host Guide</a></h2><p>Real sourcing lists, price ranges, and trade-offs on furniture assembly installation so you spend where it counts.</p><a class="more" href="https://www.mybnbdesign.com/blog/furniture-assembly-installation.html">Read the guide &rarr;</a></div></article>
+</div>
+<div class="links">Keep exploring: <a href="https://www.mybnbdesign.com/reviews/">Client Reviews</a> <a href="https://www.mybnbdesign.com/faq/">FAQ</a> <a href="https://www.mybnbdesign.com/glossary/">STR Design Glossary</a> <a href="https://www.mybnbdesign.com/services.html">Services</a> <a href="https://www.mybnbdesign.com/portfolio.html">Portfolio</a></div>
+</main>
+<section class="cta"><h2>Ready to design a rental that books itself?</h2><p>Tell us about your property and we will build a design plan around your market and budget.</p><a class="btn" href="https://www.mybnbdesign.com/contact.html">Get Started</a></section>
+<footer>
+  <a href="https://www.mybnbdesign.com/index.html">MyBnBDesign</a>
+  <p>A <a href="https://www.bnbaccelerator.com">BnB Accelerator</a> Company</p>
+  <p>&copy; 2026 MyBnBDesign. All rights reserved.</p>
+</footer>
+<script>
+(function(){var b=document.querySelectorAll('.filters button'),c=document.querySelectorAll('.card'),n=document.getElementById('count');
+function f(k){var v=0;c.forEach(function(x){var s=k==='all'||x.dataset.cat===k;x.style.display=s?'':'none';if(s)v++});n.textContent='Showing '+v+' guides'}
+b.forEach(function(x){x.addEventListener('click',function(){b.forEach(function(y){y.classList.remove('active')});x.classList.add('active');f(x.dataset.cat)})});f('all')})();
+</script>
 </body>
 </html>
