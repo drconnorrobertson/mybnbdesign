@@ -1,605 +1,1059 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mybnbdesign.vercel.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://mybnbdesign.vercel.app/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/beach-house-airbnb-interior-design.html</loc>
-    <lastmod>2026-01-16</lastmod>
+    <loc>https://www.mybnbdesign.com/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/about.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/alternatives/awning-alternative/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/alternatives/bee-setups-alternative/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/alternatives/fulhaus-alternative/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/alternatives/parklin-interiors-alternative/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/alternatives/showplace-alternative/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/alternatives/somerled-alternative/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/alternatives/str-design-lab-alternative/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/alternatives/strcribs-alternative/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/alternatives/surge-alternative/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/alternatives/vacay-rental-design-alternative/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/best-airbnb-design-companies/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/best-vacation-rental-furnishing/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/blog/a-frame-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-accessibility-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-appliance-guide.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/mountain-cabin-airbnb-interior-design.html</loc>
-    <lastmod>2026-01-17</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-art-decor-sourcing.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/urban-apartment-airbnb-interior-design.html</loc>
-    <lastmod>2026-01-21</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-bathroom-design-guide.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/lake-house-airbnb-interior-design.html</loc>
-    <lastmod>2026-01-22</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-bedding-guide.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/desert-airbnb-interior-design.html</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-bedroom-design-guide.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/cabin-airbnb-interior-design.html</loc>
-    <lastmod>2026-01-26</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-before-after-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/a-frame-airbnb-interior-design.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-bunk-room-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/farmhouse-airbnb-interior-design.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-design-and-insurance-considerations.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/ski-chalet-airbnb-interior-design.html</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-design-competitive-analysis.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/treehouse-airbnb-interior-design.html</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-design-for-instagram.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/tiny-home-airbnb-interior-design.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-design-for-repeat-guests.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/container-home-airbnb-interior-design.html</loc>
-    <lastmod>2026-02-07</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-design-for-superhost-status.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/cottage-airbnb-interior-design.html</loc>
-    <lastmod>2026-02-09</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-design-mistakes-costing-revenue.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/tropical-villa-airbnb-interior-design.html</loc>
-    <lastmod>2026-02-11</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-design-portfolio-building.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/historic-home-airbnb-interior-design.html</loc>
-    <lastmod>2026-02-14</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-design-roi-analysis.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/vineyard-estate-airbnb-interior-design.html</loc>
-    <lastmod>2026-02-14</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-design-trends-2026.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/island-retreat-airbnb-interior-design.html</loc>
-    <lastmod>2026-02-17</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-dining-room-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/ranch-airbnb-interior-design.html</loc>
-    <lastmod>2026-02-19</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-entryway-mudroom-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/penthouse-airbnb-interior-design.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-fire-pit-area-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/converted-barn-airbnb-interior-design.html</loc>
-    <lastmod>2026-02-22</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-first-impression-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-bedroom-design-guide.html</loc>
-    <lastmod>2026-02-24</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-floor-plan-listing.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-primary-bedroom-design.html</loc>
-    <lastmod>2026-02-28</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-furniture-assembly-installation.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-guest-bedroom-design.html</loc>
-    <lastmod>2026-02-28</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-furniture-budget-100k.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-bunk-room-design.html</loc>
-    <lastmod>2026-03-03</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-furniture-budget-10k.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-bathroom-design-guide.html</loc>
-    <lastmod>2026-03-04</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-furniture-budget-25k.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-primary-bathroom-design.html</loc>
-    <lastmod>2026-03-06</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-furniture-budget-50k.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-kitchen-design-guide.html</loc>
-    <lastmod>2026-03-08</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-furniture-budget-5k.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-kitchen-essentials-checklist.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-furniture-durability-guide.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-living-room-design-guide.html</loc>
-    <lastmod>2026-03-13</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-game-room-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-dining-room-design.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-guest-bedroom-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-outdoor-space-design.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-hero-shot-guide.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-patio-deck-design.html</loc>
-    <lastmod>2026-03-20</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-home-office-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-game-room-design.html</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-home-theater-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-home-theater-design.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-kids-room-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-entryway-mudroom-design.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-kitchen-design-guide.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-laundry-room-design.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-kitchen-essentials-checklist.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-home-office-design.html</loc>
-    <lastmod>2026-03-29</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-laundry-room-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-pool-area-design.html</loc>
-    <lastmod>2026-03-30</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-lighting-guide.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-fire-pit-area-design.html</loc>
-    <lastmod>2026-04-01</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-listing-description-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-kids-room-design.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-listing-photo-order.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/modern-airbnb-interior-design.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-listing-title-optimization.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/farmhouse-style-airbnb-design.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-living-room-design-guide.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/coastal-style-airbnb-design.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-natural-light-photography.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/bohemian-airbnb-interior-design.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-outdoor-furniture-guide.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/minimalist-airbnb-interior-design.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-outdoor-space-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/mid-century-modern-airbnb-design.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-patio-deck-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/industrial-airbnb-interior-design.html</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-photo-staging-tips.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/scandinavian-airbnb-interior-design.html</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-photography-guide.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/art-deco-airbnb-interior-design.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-pool-area-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/japandi-airbnb-interior-design.html</loc>
-    <lastmod>2026-04-25</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-primary-bathroom-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/mediterranean-airbnb-interior-design.html</loc>
-    <lastmod>2026-04-26</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-primary-bedroom-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/transitional-airbnb-interior-design.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-reviews-design-connection.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/eclectic-airbnb-interior-design.html</loc>
-    <lastmod>2026-04-29</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-rug-guide.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/luxury-airbnb-interior-design.html</loc>
-    <lastmod>2026-05-02</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-seasonal-photo-updates.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/wabi-sabi-airbnb-interior-design.html</loc>
-    <lastmod>2026-05-03</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-staging-vs-living-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/how-interior-design-affects-airbnb-adr.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-video-tours-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-design-roi-analysis.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/airbnb-virtual-staging.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-reviews-design-connection.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/art-deco-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/design-elements-that-increase-bookings.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/beach-house-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-first-impression-design.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/best-airbnb-furniture-sources.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/seasonal-design-updates-airbnb.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/bohemian-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-design-mistakes-costing-revenue.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/cabin-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/color-psychology-airbnb-design.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/coastal-style-airbnb-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-design-for-superhost-status.html</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/color-psychology-airbnb-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-design-competitive-analysis.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/container-home-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-design-trends-2026.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/converted-barn-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-design-for-repeat-guests.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/cottage-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-staging-vs-living-design.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/desert-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-design-and-insurance-considerations.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/design-elements-that-increase-bookings.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-accessibility-design.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/eclectic-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-furniture-budget-5k.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/farmhouse-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-furniture-budget-10k.html</loc>
-    <lastmod>2026-06-06</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/farmhouse-style-airbnb-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-furniture-budget-25k.html</loc>
-    <lastmod>2026-06-09</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/historic-home-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-furniture-budget-50k.html</loc>
-    <lastmod>2026-06-11</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/how-interior-design-affects-airbnb-adr.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-furniture-budget-100k.html</loc>
-    <lastmod>2026-06-14</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/blog/industrial-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/blog/island-retreat-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/blog/japandi-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/blog/lake-house-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/blog/luxury-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/blog/mediterranean-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/blog/mid-century-modern-airbnb-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/blog/minimalist-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/blog/modern-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/best-airbnb-furniture-sources.html</loc>
-    <lastmod>2026-06-15</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/mountain-cabin-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-furniture-durability-guide.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/penthouse-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-bedding-guide.html</loc>
-    <lastmod>2026-06-20</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/ranch-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-art-decor-sourcing.html</loc>
-    <lastmod>2026-06-20</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/scandinavian-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-lighting-guide.html</loc>
-    <lastmod>2026-06-24</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/seasonal-design-updates-airbnb.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-rug-guide.html</loc>
-    <lastmod>2026-06-25</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/ski-chalet-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-outdoor-furniture-guide.html</loc>
-    <lastmod>2026-06-27</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/smartphone-airbnb-photography.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-appliance-guide.html</loc>
-    <lastmod>2026-06-28</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/tiny-home-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/wholesale-furniture-for-airbnb.html</loc>
-    <lastmod>2026-06-30</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/transitional-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-furniture-assembly-installation.html</loc>
-    <lastmod>2026-07-04</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/treehouse-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-photography-guide.html</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/tropical-villa-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-photo-staging-tips.html</loc>
-    <lastmod>2026-07-08</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/urban-apartment-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-listing-photo-order.html</loc>
-    <lastmod>2026-07-08</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/vineyard-estate-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-natural-light-photography.html</loc>
-    <lastmod>2026-07-12</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/wabi-sabi-airbnb-interior-design.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-hero-shot-guide.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <loc>https://www.mybnbdesign.com/blog/wholesale-furniture-for-airbnb.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-listing-title-optimization.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <loc>https://www.mybnbdesign.com/case-studies/charleston-historic-charm.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-listing-description-design.html</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://www.mybnbdesign.com/case-studies/destin-beach-house.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/smartphone-airbnb-photography.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <loc>https://www.mybnbdesign.com/case-studies/gatlinburg-mountain-cabin.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/case-studies/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-before-after-design.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://www.mybnbdesign.com/case-studies/joshua-tree-desert-retreat.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-video-tours-design.html</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.mybnbdesign.com/case-studies/lake-tahoe-lakefront.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-design-for-instagram.html</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.mybnbdesign.com/case-studies/nashville-urban-loft.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-virtual-staging.html</loc>
-    <lastmod>2026-07-28</lastmod>
+    <loc>https://www.mybnbdesign.com/case-studies/park-city-ski-chalet.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-floor-plan-listing.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://www.mybnbdesign.com/case-studies/savannah-southern-cottage.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-seasonal-photo-updates.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://www.mybnbdesign.com/case-studies/scottsdale-desert-modern.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mybnbdesign.vercel.app/blog/airbnb-design-portfolio-building.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://www.mybnbdesign.com/case-studies/sedona-red-rock-villa.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/contact.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/faq/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/glossary/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/asheville-nc.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/austin-tx.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/big-bear-ca.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/branson-mo.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/breckenridge-co.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/charleston-sc.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/denver-co.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/destin-fl.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/gatlinburg-tn.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/gulf-shores-al.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/hilton-head-sc.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/joshua-tree-ca.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/key-west-fl.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/kissimmee-fl.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/lake-tahoe-ca.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/maui-hi.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/miami-fl.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/myrtle-beach-sc.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/nashville-tn.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/new-orleans-la.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/orlando-fl.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/outer-banks-nc.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/panama-city-beach-fl.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/park-city-ut.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/phoenix-az.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/pigeon-forge-tn.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/san-antonio-tx.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/san-diego-ca.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/savannah-ga.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/scottsdale-az.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/sedona-az.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/markets/smoky-mountains-tn.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/portfolio.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/reviews/awning-design-reviews/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/reviews/bee-setups-reviews/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/reviews/fulhaus-reviews/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/reviews/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/reviews/parklin-interiors-reviews/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/reviews/showplace-reviews/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/reviews/somerled-designs-reviews/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/reviews/str-design-lab-reviews/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/reviews/strcribs-reviews/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/reviews/surge-reviews/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/reviews/vacay-rental-design-reviews/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/services.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/top-str-design-services/index.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 </urlset>

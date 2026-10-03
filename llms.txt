@@ -1,17 +1,35 @@
 # MyBnBDesign
-> Premium interior design for short-term rental properties. A BnB Accelerator company.
+
+> MyBnBDesign is a full-service short-term rental interior design company. We design, furnish, and stage Airbnb and vacation rental properties to maximize bookings, nightly rates, and guest reviews.
 
 ## About
-MyBnBDesign provides full-service interior design for short-term rental properties (Airbnb, VRBO, vacation rentals). Services include interior design, furnishing and installation, photography staging, and listing optimization. Based in Pittsburgh, PA, serving 40+ markets nationwide.
+
+MyBnBDesign specializes in turnkey interior design for short-term rental properties. We handle everything from concept through installation, including furniture sourcing, procurement, delivery, assembly, styling, and photography staging. Our revenue-first approach has helped over 200 property owners increase their average nightly rates by 40% on average.
+
+We serve 40+ markets across the United States, working with individual property owners, real estate investors, and portfolio operators.
 
 ## Services
-- Interior Design: Room-by-room design tailored to property type, market, and target guests
-- Furnishing & Installation: Complete procurement, delivery, and installation
-- Photography Staging: Staging optimized for listing photography
-- Listing Optimization: Photography art direction and listing copy guidance
-- Turnkey Packages: Move-in ready solutions from design through installation
+
+- [Interior Design](https://www.mybnbdesign.com/services.html): Room-by-room design tailored to your property, market, and target guest
+- [Furnishing and Installation](https://www.mybnbdesign.com/services.html): Complete procurement, delivery, assembly, and styling
+- [Photography Staging](https://www.mybnbdesign.com/services.html): Listing photo art direction and staging for maximum bookings
+- [Listing Optimization](https://www.mybnbdesign.com/services.html): Title, description, and photo order strategy
+
+## Content
+
+- [Blog](https://www.mybnbdesign.com/blog/): 90+ articles on STR design, furnishing, photography, and revenue optimization
+- [Case Studies](https://www.mybnbdesign.com/case-studies/): 10 detailed before-and-after case studies with revenue data
+- [FAQ](https://www.mybnbdesign.com/faq/): 50+ frequently asked questions about STR design
+- [Glossary](https://www.mybnbdesign.com/glossary/): 100+ STR design terms defined
+- [Reviews](https://www.mybnbdesign.com/reviews/): 200+ client reviews with a 4.9 average rating
+
+## Markets
+
+We serve 30+ markets including Scottsdale, Nashville, Charleston, Sedona, Park City, Savannah, Lake Tahoe, Gatlinburg, Destin, Joshua Tree, Austin, Miami, Denver, San Diego, New Orleans, Asheville, Myrtle Beach, Gulf Shores, Pigeon Forge, Orlando, Phoenix, Kissimmee, Branson, Panama City Beach, Hilton Head, Breckenridge, Maui, Key West, San Antonio, and the Smoky Mountains.
 
 ## Contact
-- Website: https://mybnbdesign.vercel.app
-- Email: hello@mybnbdesign.com
-- Parent Company: BnB Accelerator (https://www.bnbaccelerator.com)
+
+- Website: https://www.mybnbdesign.com
+- Get Started: https://www.mybnbdesign.com/contact.html
+
+MyBnBDesign is a BnB Accelerator company.
