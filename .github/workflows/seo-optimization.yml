@@ -1,0 +1,223 @@
+name: SEO Full Optimization
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install beautifulsoup4
+
+      - name: Run SEO optimizations
+        run: |
+          python3 << 'PYEOF'
+          import os, re, json, random, glob
+          from pathlib import Path
+          from datetime import date
+
+          BASE_URL = "https://mybnbdesign.com"
+
+          def cat_page(fp):
+              fp = str(fp)
+              if fp.startswith("./blog/"): return "blog"
+              elif fp.startswith("./markets/"): return "market"
+              elif fp.startswith("./case-studies/"): return "case_study"
+              elif fp.startswith("./compare/"): return "compare"
+              elif fp.startswith("./alternatives/"): return "alternative"
+              elif fp.startswith("./reviews/"): return "review"
+              elif fp.startswith("./faq"): return "faq"
+              elif fp.startswith("./resources/"): return "resource"
+              elif fp.startswith("./tools/"): return "tool"
+              elif fp == "./index.html": return "home"
+              elif fp == "./services.html": return "service"
+              elif fp == "./about.html": return "about"
+              elif fp == "./contact.html": return "contact"
+              elif fp == "./portfolio.html": return "portfolio"
+              else: return "other"
+
+          def fp_to_url(fp):
+              fp = str(fp).lstrip("./")
+              if fp.endswith("/index.html"): fp = fp.replace("/index.html", "/")
+              return f"{BASE_URL}/{fp}"
+
+          def rel_path(f1, f2):
+              return os.path.relpath(str(f2), os.path.dirname(str(f1)))
+
+          BLOGS = [
+              ("./blog/airbnb-design-trends-2026.html", "Airbnb design trends for 2026"),
+              ("./blog/budget-friendly-airbnb-design-tips.html", "budget-friendly design tips"),
+              ("./blog/color-psychology-airbnb-design.html", "color psychology in design"),
+              ("./blog/airbnb-lighting-guide.html", "Airbnb lighting guide"),
+              ("./blog/airbnb-living-room-design-guide.html", "living room design"),
+              ("./blog/airbnb-kitchen-design-guide.html", "kitchen design guide"),
+              ("./blog/airbnb-bedroom-design-guide.html", "bedroom design guide"),
+              ("./blog/airbnb-bathroom-design-guide.html", "bathroom design guide"),
+              ("./blog/diy-vs-professional-airbnb-design.html", "DIY vs professional design"),
+              ("./blog/how-design-affects-airbnb-revenue.html", "how design affects revenue"),
+              ("./blog/roi-of-professional-str-design.html", "ROI of professional design"),
+              ("./blog/first-time-str-owner-design-guide.html", "first-time owner guide"),
+              ("./blog/airbnb-design-roi-analysis.html", "design ROI analysis"),
+          ]
+          CASES = [
+              ("./case-studies/nashville-urban-loft.html", "Nashville case study"),
+              ("./case-studies/joshua-tree-desert-retreat.html", "Joshua Tree case study"),
+              ("./case-studies/charleston-historic-charm.html", "Charleston case study"),
+              ("./case-studies/scottsdale-desert-modern.html", "Scottsdale case study"),
+              ("./case-studies/gatlinburg-mountain-cabin.html", "Gatlinburg case study"),
+              ("./case-studies/sedona-red-rock-villa.html", "Sedona case study"),
+          ]
+          SVCS = [("./services.html","our design services"),("./portfolio.html","our portfolio"),("./contact.html","get a consultation")]
+
+          def get_links(fp, n=4):
+              cat = cat_page(fp)
+              links = []
+              random.seed(hash(fp))
+              ab = [b for b in BLOGS if b[0] != fp and os.path.exists(b[0])]
+              ac = [c for c in CASES if c[0] != fp and os.path.exists(c[0])]
+              links.extend(random.sample(ab, min(2, len(ab))))
+              if ac: links.append(random.choice(ac))
+              links.append(random.choice(SVCS))
+              return links[:n]
+
+          def get_bc(fp):
+              cat = cat_page(fp)
+              cr = [("Home", f"{BASE_URL}/")]
+              cats = {"blog":("Blog","/blog/"),"market":("Markets","/markets/"),"case_study":("Case Studies","/case-studies/"),"compare":("Comparisons","/compare/"),"alternative":("Alternatives","/alternatives/"),"review":("Reviews","/reviews/"),"faq":("FAQ","/faq/"),"resource":("Resources","/resources/"),"tool":("Tools","/tools/")}
+              if cat in cats:
+                  cr.append((cats[cat][0], BASE_URL + cats[cat][1]))
+                  fn = fp.split("/")[-2] if "index" in fp.split("/")[-1] else os.path.basename(fp).replace(".html","")
+                  if fn != "index":
+                      cr.append((fn.replace("-"," ").title(), fp_to_url(fp)))
+              elif cat in ("service","about","portfolio","contact"):
+                  cr.append((cat.title(), fp_to_url(fp)))
+              return cr
+
+          stats = {k:0 for k in ["canonical","og","twitter","bc","links","lazy","schema","pages"]}
+          skip = ['test-push','test-capture','test-file','test-network','test-create','test2','test3','api-test','intercept-test']
+          pages = [f"./{f}" for f in sorted(Path(".").rglob("*.html")) if not any(t in str(f) for t in skip)]
+
+          for fp in pages:
+              try:
+                  with open(fp,"r",encoding="utf-8",errors="replace") as f: content = f.read()
+                  orig = content
+                  cat = cat_page(fp)
+                  url = fp_to_url(fp)
+                  if len(content) < 100: continue
+                  content = content.replace("https://mybnbdesign.vercel.app", BASE_URL)
+                  if 'rel="canonical"' not in content:
+                      content = content.replace("</head>", f'  <link rel="canonical" href="{url}">\n</head>')
+                      stats["canonical"] += 1
+                  tm = re.search(r'<title>([^<]+)</title>', content)
+                  dm = re.search(r'<meta\s+name="description"\s+content="([^"]*)"', content)
+                  pt = tm.group(1) if tm else "MyBnBDesign"
+                  pd = dm.group(1) if dm else "Professional interior design for short-term rentals."
+                  if 'og:title' not in content:
+                      ot = "article" if cat == "blog" else "website"
+                      content = content.replace("</head>", f'  <meta property="og:title" content="{pt}">\n  <meta property="og:description" content="{pd}">\n  <meta property="og:type" content="{ot}">\n  <meta property="og:url" content="{url}">\n  <meta property="og:image" content="{BASE_URL}/images/mybnbdesign-og-default.jpg">\n  <meta property="og:site_name" content="MyBnBDesign">\n</head>')
+                      stats["og"] += 1
+                  if 'twitter:card' not in content:
+                      content = content.replace("</head>", f'  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="{pt}">\n  <meta name="twitter:description" content="{pd}">\n  <meta name="twitter:image" content="{BASE_URL}/images/mybnbdesign-og-default.jpg">\n</head>')
+                      stats["twitter"] += 1
+                  if cat != "home" and "BreadcrumbList" not in content and 'class="breadcrumbs"' not in content:
+                      cr = get_bc(fp)
+                      if len(cr) > 1:
+                          bi = [{"@type":"ListItem","position":i+1,"name":n,"item":u} for i,(n,u) in enumerate(cr)]
+                          bs = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":bi})
+                          content = content.replace("</head>", f'\n  <script type="application/ld+json">\n  {bs}\n  </script>\n</head>')
+                          ps = []
+                          for i,(nm,u) in enumerate(cr):
+                              if i == len(cr)-1: ps.append(f'<span>{nm}</span>')
+                              else:
+                                  tgt = "./index.html" if u == f"{BASE_URL}/" else u.replace(BASE_URL+"/","./") + ("index.html" if u.endswith("/") else "")
+                                  ps.append(f'<a href="{rel_path(fp,tgt)}">{nm}</a>')
+                          bh = '<nav class="breadcrumbs" aria-label="Breadcrumb" style="padding:12px 20px;font-size:0.85rem;color:#666;max-width:1100px;margin:0 auto;">' + ' <span aria-hidden="true">&rsaquo;</span> '.join(ps) + '</nav>'
+                          if '</nav>' in content: content = content.replace('</nav>', '</nav>\n  ' + bh, 1)
+                          elif '<body>' in content: content = content.replace('<body>', '<body>\n  ' + bh, 1)
+                          stats["bc"] += 1
+                  fi = re.search(r'<img\s[^>]*>', content)
+                  if fi:
+                      rest = content[fi.end():]
+                      def al(m):
+                          t = m.group(0)
+                          if 'loading=' in t: return t
+                          stats["lazy"] += 1
+                          return t.replace('<img ','<img loading="lazy" ')
+                      rest = re.sub(r'<img\s[^>]*>', al, rest)
+                      content = content[:fi.end()] + rest
+                  if cat != "home" and "related-internal-links" not in content:
+                      lks = get_links(fp)
+                      lis = [f'<li><a href="{rel_path(fp,lp)}">{lt.title()}</a></li>' for lp,lt in lks if os.path.exists(lp)]
+                      if lis:
+                          lh = f'\n<!-- related-internal-links -->\n<section style="max-width:800px;margin:40px auto;padding:0 20px;">\n  <h3 style="font-size:1.2rem;margin-bottom:12px;color:#2c3e50;">Keep Reading</h3>\n  <ul style="list-style:none;padding:0;">\n    {"".join(lis)}\n  </ul>\n</section>\n'
+                          fm = re.search(r'<footer', content)
+                          if fm: content = content[:fm.start()] + lh + content[fm.start():]
+                          else: content = content.replace('</body>', lh + '</body>')
+                          stats["links"] += len(lis)
+                  if '<\\/script>' in content:
+                      content = content.replace('<\\/script>', '</script>')
+                      stats["schema"] += 1
+                  if content != orig:
+                      with open(fp,"w",encoding="utf-8") as f: f.write(content)
+                      stats["pages"] += 1
+              except Exception as e: print(f"Err {fp}: {e}")
+
+          # 404 fixes
+          try:
+              with open("404.html","r") as f: c=f.read()
+              for old,new in [('"/gallery"','"/services.html"'),('"/color-palette"','"/portfolio.html"'),('"/room-planner"','"/case-studies/"'),('"/tools"','"/tools/roi-calculator/"')]:
+                  c = c.replace(f'href={old}', f'href={new}')
+              with open("404.html","w") as f: f.write(c)
+          except: pass
+
+          # Minify CSS
+          try:
+              with open("styles.css","r") as f: css=f.read()
+              cm = re.sub(r'/\*[\s\S]*?\*/', '', css)
+              cm = re.sub(r'\s+', ' ', cm)
+              cm = re.sub(r'\s*([{};:,>~+])\s*', r'\1', cm)
+              cm = cm.replace(';}','}').strip()
+              with open("styles.min.css","w") as f: f.write(cm)
+              for fl in glob.glob("**/*.html", recursive=True):
+                  with open(fl,"r",encoding="utf-8",errors="replace") as f: c=f.read()
+                  nc = c.replace('"styles.css"','"styles.min.css"').replace('"../styles.css"','"../styles.min.css"').replace('"../../styles.css"','"../../styles.min.css"')
+                  if nc != c:
+                      with open(fl,"w",encoding="utf-8") as f: f.write(nc)
+          except Exception as e: print(f"CSS: {e}")
+
+          # Sitemap
+          today = date.today().isoformat()
+          urls = []
+          for f in sorted(Path(".").rglob("*.html")):
+              fp = str(f)
+              if any(t in fp for t in skip): continue
+              p = fp.lstrip("./")
+              if p.endswith("/index.html"): p = p.replace("/index.html","/")
+              pri = "1.0" if p in ("index.html","") else "0.8" if any(p.startswith(x) for x in ["markets/","case-studies/"]) else "0.7" if p.startswith("blog/") else "0.6"
+              urls.append(f'  <url>\n    <loc>https://www.mybnbdesign.com/{p}</loc>\n    <lastmod>{today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>{pri}</priority>\n  </url>')
+          with open("sitemap.xml","w") as f:
+              f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + '\n'.join(urls) + '\n</urlset>\n')
+
+          print("=== DONE ===")
+          for k,v in stats.items(): print(f"  {k}: {v}")
+          PYEOF
+
+      - name: Commit and push
+        run: |
+          git config user.name "Connor Robertson"
+          git config user.email "dr.connor.robertson@gmail.com"
+          git add -A
+          git diff --cached --stat
+          git commit -m "SEO: Full site optimization - breadcrumbs, OG/Twitter, canonical, schema, lazy loading, CSS min, internal links, 404, sitemap" || echo "No changes"
+          git push
