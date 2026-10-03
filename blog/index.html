@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog -- STR Design Guides and Resources | MyBnBDesign</title>
+  <meta name="description" content="Expert guides on short-term rental interior design, furnishing, photography, and business strategy. Actionable advice for STR investors and hosts.">
+  <link rel="canonical" href="https://mybnbdesign.com/blog/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .blog-card {
+      border: 1px solid var(--border);
+      background: var(--white);
+      transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .blog-card__body {
+      padding: 28px 24px;
+    }
+    .blog-card__category {
+      font-size: 0.6875rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #999;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .blog-card__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.3;
+      color: var(--charcoal);
+      margin-bottom: 12px;
+    }
+    .blog-card__link {
+      font-size: 0.75rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text);
+    }
+    .blog-card__link:hover { color: var(--gold); }
+
+    @media (max-width: 1024px) {
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">MyBnB<span>Design</span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="../index.html" class="nav__link">Home</a></li>
+        <li><a href="../services.html" class="nav__link">Services</a></li>
+        <li><a href="../portfolio.html" class="nav__link">Portfolio</a></li>
+        <li><a href="../about.html" class="nav__link">About</a></li>
+        <li><a href="./" class="nav__link is-active">Blog</a></li>
+        <li class="nav__cta"><a href="../contact.html" class="btn btn--outline btn--nav">Get Started</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow">Resources</span>
+      <h1>Blog</h1>
+      <p class="body-lg">Practical guides on short-term rental design, furnishing, photography, and the business decisions that drive bookings.</p>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section style="padding: var(--space-3xl) 0;">
+    <div class="container">
+      <div class="blog-grid">
+
+        <!-- Common Mistakes -->
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Common Mistakes</span>
+            <h3 class="blog-card__title">20 Airbnb Design Mistakes That Kill Bookings</h3>
+            <a href="20-airbnb-design-mistakes-that-kill-bookings.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Property Types -->
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Property Types</span>
+            <h3 class="blog-card__title">A-Frame Airbnb Interior Design</h3>
+            <a href="a-frame-airbnb-interior-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Design -->
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Design</span>
+            <h3 class="blog-card__title">Accessible STR Design -- ADA Considerations</h3>
+            <a href="accessible-str-design-ada.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Guest Markets -->
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Guest Markets</span>
+            <h3 class="blog-card__title">Adventure Travel Airbnb Design</h3>
+            <a href="adventure-travel-airbnb-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Design -->
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Design</span>
+            <h3 class="blog-card__title">Airbnb Accessibility Design</h3>
+            <a href="airbnb-accessibility-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Furnishing -->
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Furnishing</span>
+            <h3 class="blog-card__title">Airbnb Appliance Guide</h3>
+            <a href="airbnb-appliance-guide.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Design Styles -->
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Design</span>
+            <h3 class="blog-card__title">Airbnb Art and Decor Sourcing</h3>
+            <a href="airbnb-art-decor-sourcing.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Room Design -->
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Bathroom Design Guide</h3>
+            <a href="airbnb-bathroom-design-guide.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Bathroom Design Ideas</h3>
+            <a href="airbnb-bathroom-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Furnishing -->
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Furnishing</span>
+            <h3 class="blog-card__title">Airbnb Bedding Guide</h3>
+            <a href="airbnb-bedding-guide.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Bedroom Design Guide</h3>
+            <a href="airbnb-bedroom-design-guide.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Design</span>
+            <h3 class="blog-card__title">Airbnb Before and After Design</h3>
+            <a href="airbnb-before-after-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Bunk Room Design</h3>
+            <a href="airbnb-bunk-room-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Business</span>
+            <h3 class="blog-card__title">Airbnb Design and Insurance Considerations</h3>
+            <a href="airbnb-design-and-insurance-considerations.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Business</span>
+            <h3 class="blog-card__title">Airbnb Design Competitive Analysis</h3>
+            <a href="airbnb-design-competitive-analysis.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Photography & Listing</span>
+            <h3 class="blog-card__title">Airbnb Design for Instagram</h3>
+            <a href="airbnb-design-for-instagram.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Design</span>
+            <h3 class="blog-card__title">Airbnb Design for Repeat Guests</h3>
+            <a href="airbnb-design-for-repeat-guests.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Design</span>
+            <h3 class="blog-card__title">Airbnb Design for Superhost Status</h3>
+            <a href="airbnb-design-for-superhost-status.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Business</span>
+            <h3 class="blog-card__title">Airbnb Design Mistakes Costing Revenue</h3>
+            <a href="airbnb-design-mistakes-costing-revenue.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Common Mistakes</span>
+            <h3 class="blog-card__title">Airbnb Design Mistakes That Kill Bookings</h3>
+            <a href="airbnb-design-mistakes-that-kill-bookings.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Business</span>
+            <h3 class="blog-card__title">Airbnb Design Portfolio Building</h3>
+            <a href="airbnb-design-portfolio-building.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Business</span>
+            <h3 class="blog-card__title">Airbnb Design ROI Analysis</h3>
+            <a href="airbnb-design-roi-analysis.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Design</span>
+            <h3 class="blog-card__title">Airbnb Design Trends 2026</h3>
+            <a href="airbnb-design-trends-2026.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Dining Room Design</h3>
+            <a href="airbnb-dining-room-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Entryway Design Ideas</h3>
+            <a href="airbnb-entryway-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Entryway and Mudroom Design</h3>
+            <a href="airbnb-entryway-mudroom-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Fire Pit Area Design</h3>
+            <a href="airbnb-fire-pit-area-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Design</span>
+            <h3 class="blog-card__title">Airbnb First Impression Design</h3>
+            <a href="airbnb-first-impression-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Photography & Listing</span>
+            <h3 class="blog-card__title">Airbnb Floor Plan Listing</h3>
+            <a href="airbnb-floor-plan-listing.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Furnishing</span>
+            <h3 class="blog-card__title">Airbnb Furniture Assembly and Installation</h3>
+            <a href="airbnb-furniture-assembly-installation.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Furnishing</span>
+            <h3 class="blog-card__title">Airbnb Furniture Budget -- $100K</h3>
+            <a href="airbnb-furniture-budget-100k.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Furnishing</span>
+            <h3 class="blog-card__title">Airbnb Furniture Budget -- $10K</h3>
+            <a href="airbnb-furniture-budget-10k.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Furnishing</span>
+            <h3 class="blog-card__title">Airbnb Furniture Budget -- $25K</h3>
+            <a href="airbnb-furniture-budget-25k.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Furnishing</span>
+            <h3 class="blog-card__title">Airbnb Furniture Budget -- $50K</h3>
+            <a href="airbnb-furniture-budget-50k.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Furnishing</span>
+            <h3 class="blog-card__title">Airbnb Furniture Budget -- $5K</h3>
+            <a href="airbnb-furniture-budget-5k.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Furnishing</span>
+            <h3 class="blog-card__title">Airbnb Furniture Durability Guide</h3>
+            <a href="airbnb-furniture-durability-guide.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Game Room Design Ideas</h3>
+            <a href="airbnb-game-room-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Game Room Design</h3>
+            <a href="airbnb-game-room-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Guest Bedroom Design Ideas</h3>
+            <a href="airbnb-guest-bedroom-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Guest Bedroom Design</h3>
+            <a href="airbnb-guest-bedroom-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Photography & Listing</span>
+            <h3 class="blog-card__title">Airbnb Hero Shot Guide</h3>
+            <a href="airbnb-hero-shot-guide.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Home Office Design Ideas</h3>
+            <a href="airbnb-home-office-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Home Office Design</h3>
+            <a href="airbnb-home-office-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Home Theater Design</h3>
+            <a href="airbnb-home-theater-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Kids Room Design</h3>
+            <a href="airbnb-kids-room-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Kitchen Design Guide</h3>
+            <a href="airbnb-kitchen-design-guide.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Kitchen Design Ideas</h3>
+            <a href="airbnb-kitchen-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Furnishing</span>
+            <h3 class="blog-card__title">Airbnb Kitchen Essentials Checklist</h3>
+            <a href="airbnb-kitchen-essentials-checklist.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Laundry Room Design Ideas</h3>
+            <a href="airbnb-laundry-room-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Laundry Room Design</h3>
+            <a href="airbnb-laundry-room-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Design</span>
+            <h3 class="blog-card__title">Airbnb Lighting Guide</h3>
+            <a href="airbnb-lighting-guide.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Photography & Listing</span>
+            <h3 class="blog-card__title">Airbnb Listing Description Design</h3>
+            <a href="airbnb-listing-description-design.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Photography & Listing</span>
+            <h3 class="blog-card__title">Airbnb Listing Photo Order</h3>
+            <a href="airbnb-listing-photo-order.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Photography & Listing</span>
+            <h3 class="blog-card__title">Airbnb Listing Title Optimization</h3>
+            <a href="airbnb-listing-title-optimization.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Living Room Design Guide</h3>
+            <a href="airbnb-living-room-design-guide.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Living Room Design Ideas</h3>
+            <a href="airbnb-living-room-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Master Bedroom Design Ideas</h3>
+            <a href="airbnb-master-bedroom-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Photography & Listing</span>
+            <h3 class="blog-card__title">Airbnb Natural Light Photography</h3>
+            <a href="airbnb-natural-light-photography.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Furnishing</span>
+            <h3 class="blog-card__title">Airbnb Outdoor Furniture Guide</h3>
+            <a href="airbnb-outdoor-furniture-guide.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__body">
+            <span class="blog-card__category">Room Design</span>
+            <h3 class="blog-card__title">Airbnb Outdoor Patio Design Ideas</h3>
+            <a href="airbnb-outdoor-patio-design-ideas.html" class="blog-card__link">Read more &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../index.html" class="footer__logo">MyBnB<span>Design</span></a>
+        <p class="footer__tagline">A <a href="https://www.bnbaccelerator.com" target="_blank" rel="noopener">BnB Accelerator</a> Company</p>
+        <p class="footer__copy">&copy; 2026 MyBnBDesign. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('is-scrolled', window.scrollY > 80), { passive: true });
+    nav.classList.add('is-scrolled');
+    document.getElementById('navToggle').addEventListener('click', () => {
+      const links = document.getElementById('navLinks');
+      links.classList.toggle('is-open');
+      document.body.style.overflow = links.classList.contains('is-open') ? 'hidden' : '';
+    });
+    const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); }), { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.body.classList.add("js-reveal-ready");
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>
