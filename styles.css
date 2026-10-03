@@ -5,15 +5,15 @@
 
 /* ── Custom Properties ──────────────────── */
 :root {
-  --charcoal: #1A1A1A;
+  --charcoal: #222222;
   --cream: #FFFFFF;
   --gold: #9B8B6E;
   --gold-hover: #857760;
   --sage: #8B9E7E;
   --white: #FFFFFF;
   --off-white: #FAFAFA;
-  --text: #1A1A1A;
-  --text-light: #888888;
+  --text: #333333;
+  --text-light: #666666;
   --text-on-dark: #F5F5F5;
   --border: rgba(0, 0, 0, 0.08);
   --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.03);
@@ -42,7 +42,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 17px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -135,7 +135,7 @@ h1 em, h2 em {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--text-light);
+  color: #999999;
   margin-bottom: var(--space-md);
   display: block;
 }
@@ -393,7 +393,7 @@ h1 em, h2 em {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
   max-width: 460px;
   line-height: 1.8;
   margin-bottom: var(--space-xl);
@@ -694,7 +694,7 @@ h1 em, h2 em {
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--text-light);
+  color: #777777;
 }
 
 /* ── Testimonial ────────────────────────── */
@@ -782,7 +782,7 @@ h1 em, h2 em {
 }
 
 .cta-section__text {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;
   line-height: 1.8;
   font-weight: 300;
@@ -815,7 +815,7 @@ h1 em, h2 em {
 
 .footer__tagline {
   font-size: 0.8125rem;
-  color: var(--text-light);
+  color: #888888;
   margin-bottom: var(--space-md);
 }
 
@@ -1261,4 +1261,4 @@ h1 em, h2 em {
   .testimonial__quote {
     font-size: 1.25rem;
   }
-}
+   }
