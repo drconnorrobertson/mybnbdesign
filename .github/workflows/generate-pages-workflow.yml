@@ -20,11 +20,15 @@ jobs:
       - name: Generate pages
         run: python3 scripts/generate_longtail_pages.py
       
+      - name: Repair published internal links
+        run: python3 scripts/repair_links.py
+
       - name: Commit and push
         run: |
           git config user.name "drconnorrobertson"
           git config user.email "dr.connor.robertson@gmail.com"
-          git add blog/
+          git add -A
           git status
           git commit -m "Add 150 long-tail keyword pages for STR design"
           git push
+

@@ -1,0 +1,154 @@
+{
+  "redirects": [
+    {
+      "source": "/markets/index.html",
+      "destination": "/markets/",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/faq-index.html",
+      "destination": "/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/airbnb-photography-tips.html",
+      "destination": "/airbnb-photography-tips.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/furniture-assembly-installation.html",
+      "destination": "/blog/airbnb-furniture-assembly-installation.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/mountain-cabin.html",
+      "destination": "/blog/mountain-cabin-airbnb-interior-design.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/desert.html",
+      "destination": "/blog/desert-airbnb-interior-design.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/urban-apartment.html",
+      "destination": "/blog/urban-apartment-airbnb-interior-design.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/beach-house.html",
+      "destination": "/blog/beach-house-airbnb-interior-design.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ski-chalet.html",
+      "destination": "/blog/ski-chalet-airbnb-interior-design.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/a-frame.html",
+      "destination": "/blog/a-frame-airbnb-interior-design.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/japandi.html",
+      "destination": "/blog/japandi-airbnb-interior-design.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/penthouse.html",
+      "destination": "/blog/penthouse-airbnb-interior-design.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/historic-home.html",
+      "destination": "/blog/historic-home-airbnb-interior-design.html",
+      "permanent": true
+    },
+    {
+      "source": "/pricing/",
+      "destination": "/faq/pricing/",
+      "permanent": true
+    },
+    {
+      "source": "/process/",
+      "destination": "/faq/process/",
+      "permanent": true
+    },
+    {
+      "source": "/furniture/",
+      "destination": "/faq/furniture/",
+      "permanent": true
+    },
+    {
+      "source": "/photography/",
+      "destination": "/faq/photography/",
+      "permanent": true
+    },
+    {
+      "source": "/budget/",
+      "destination": "/faq/budget/",
+      "permanent": true
+    },
+    {
+      "source": "/property-types/",
+      "destination": "/faq/property-types/",
+      "permanent": true
+    },
+    {
+      "source": "/renovation/",
+      "destination": "/faq/renovation/",
+      "permanent": true
+    },
+    {
+      "source": "/maintenance/",
+      "destination": "/faq/maintenance/",
+      "permanent": true
+    },
+    {
+      "source": "/working-remotely/",
+      "destination": "/faq/working-remotely/",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/portfolio.html",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/",
+      "destination": "/portfolio.html",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/about/",
+      "destination": "/about.html",
+      "permanent": true
+    }
+  ]
+}

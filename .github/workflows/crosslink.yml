@@ -18,6 +18,9 @@ jobs:
       - name: Run cross-linking script
         run: python scripts/crosslink.py
       
+      - name: Repair published internal links
+        run: python3 scripts/repair_links.py
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
@@ -25,3 +28,4 @@ jobs:
           git add -A
           git diff --cached --quiet || git commit -m "Add contextual cross-links to all pages"
           git push
+

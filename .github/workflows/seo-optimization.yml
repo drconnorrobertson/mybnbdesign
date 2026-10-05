@@ -213,6 +213,9 @@ jobs:
           for k,v in stats.items(): print(f"  {k}: {v}")
           PYEOF
 
+      - name: Repair published internal links
+        run: python3 scripts/repair_links.py
+
       - name: Commit and push
         run: |
           git config user.name "Connor Robertson"
@@ -221,3 +224,4 @@ jobs:
           git diff --cached --stat
           git commit -m "SEO: Full site optimization - breadcrumbs, OG/Twitter, canonical, schema, lazy loading, CSS min, internal links, 404, sitemap" || echo "No changes"
           git push
+
