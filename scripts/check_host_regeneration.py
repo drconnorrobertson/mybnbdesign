@@ -12,7 +12,7 @@ SOURCE = Path(__file__).resolve().parents[1]
 
 def snapshot(root):
     return {p.relative_to(root).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
-            for pattern in ('*.html', '*.xml') for p in root.rglob(pattern)
+            for pattern in ('*.html', '*.xml', 'worksheet.txt') for p in root.rglob(pattern)
             if not any(part.startswith('.') for part in p.relative_to(root).parts)}
 
 def compare(before, after):
@@ -34,7 +34,7 @@ def run(root):
         second = snapshot(copy)
         result = {'uncommitted_generated_changes': compare(before, first),
                   'nondeterministic_changes': compare(first, second),
-                  'html_xml_files_checked': len(second)}
+                  'generated_files_checked': len(second)}
         print(json.dumps(result, indent=2))
         return result
 

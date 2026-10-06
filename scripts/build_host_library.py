@@ -11,6 +11,7 @@ sys.path.insert(0,str(SOURCE))
 from content.host_guides import GUIDES, CLUSTERS, SOURCES
 import content.materials, content.layouts, content.lighting, content.comfort
 import content.maintenance, content.outdoors, content.launch, content.repairs
+from content.resource_artifacts import ARTIFACTS
 
 ORIGIN='https://www.mybnbdesign.com'
 DATE='2026-10-06'
@@ -63,6 +64,32 @@ def card(g):
 def cta():
     return '<section class="guide-cta"><h2>Plan your rental with a clear brief</h2><p>Bring your room measurements, priorities, and project questions to a conversation about your property.</p><a href="/book/" class="btn">Book a design conversation</a></section>'
 
+def artifact_text(g):
+    """Export the same reviewed inventory and template content as the page."""
+    parts=[g['title'], ORIGIN+route(g), 'Replace bracketed fields with verified property information.']
+    for s in g.get('artifacts', []):
+        parts.extend(['', s['title'], s['text']])
+        if s['headers']:
+            for row in s['rows']:
+                parts.append('\n'.join(f'{label}: {value}' for label,value in zip(s['headers'],row)))
+        if s['template']:parts.append(s['template'])
+        parts.extend('- '+item for item in s['items'])
+    return '\n\n'.join(p for p in parts if p)+'\n'
+
+def render_artifacts(g):
+    sections=g.get('artifacts', [])
+    if not sections:return ''
+    body='<section class="resource-artifacts" aria-labelledby="resource-worksheets"><h2 id="resource-worksheets">Inventories, templates and working records</h2><p>Use the worksheets below with your actual property information. <a href="'+esc(route(g)+'worksheet.txt')+'" download>Download the complete plain-text worksheet</a></p>'
+    body+='<nav aria-label="Worksheet sections"><ul>'+''.join('<li>'+link('#'+s['id'],s['title'])+'</li>' for s in sections)+'</ul></nav>'
+    for s in sections:
+        body+='<section aria-labelledby="'+esc(s['id'])+'"><h3 id="'+esc(s['id'])+'">'+esc(s['title'])+'</h3>'+paragraphs(s['text'])
+        if s['headers']:
+            body+='<div class="artifact-table-wrap" role="region" aria-label="'+esc(s['title'])+' table" tabindex="0"><table class="artifact-table"><caption>'+esc(s['title'])+'</caption><thead><tr>'+''.join('<th scope="col">'+esc(h)+'</th>' for h in s['headers'])+'</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+esc(cell)+'</td>' for cell in row)+'</tr>' for row in s['rows'])+'</tbody></table></div>'
+        if s['template']:body+='<pre class="artifact-template">'+esc(s['template'])+'</pre>'
+        if s['items']:body+='<ul>'+''.join('<li>'+esc(item)+'</li>' for item in s['items'])+'</ul>'
+        body+='</section>'
+    return body+'</section>'
+
 def render_guide(g):
     r=route(g);cluster=CLUSTERS[g['cluster']];hub='/resources/'+g['cluster']+'/'
     crumbs=[('/','Home'),('/resources/','Resources'),(hub,cluster['title']),(r,g['title'])]
@@ -71,7 +98,7 @@ def render_guide(g):
     cross={'planning':'quote-scope-comparison','materials':'furniture-product-care-register','layouts':'test-stay-commissioning-log','lighting':'room-reset-photo-standard','comfort':'laundry-turnover-capacity','maintenance':'furnishing-handover-pack','outdoors':'seasonal-outdoor-handoff','launch':'landed-furnishing-cost'}[g['cluster']]
     chosen=siblings[:2]+[x for x in GUIDES if x['slug']==cross and x is not g]
     content=header(g['title'],g['description'],crumbs)
-    content+='<article class="guide-content">'+paragraphs(g['intro'])+'<h2>Make the decision from the actual setup</h2>'+paragraphs(g['decision'])
+    content+='<article class="guide-content">'+paragraphs(g['intro'])+render_artifacts(g)+'<h2>Make the decision from the actual setup</h2>'+paragraphs(g['decision'])
     content+='<section class="guide-example"><h2>Worked planning example</h2><p><strong>Illustrative scenario:</strong> Examples, prices, quantities, and timing assumptions below are hypothetical; use actual product information and local quotes for your property.</p>'+paragraphs(g['example'])+'</section>'
     content+='<h2>Practical checklist</h2>'+bullets(g['checklist'],True)+'<h2>Carry the decision into the handover</h2>'+paragraphs(g['handoff'])
     content+='<section class="guide-sources"><h2>Sources and product instructions</h2><p>The sources below provide technical background. The planning examples and checklists are original. Use instructions for the exact installed product and obtain qualified review for relevant technical requirements.</p><ul>'+''.join('<li>'+link(SOURCES[k][1],SOURCES[k][0])+'</li>' for k in g['sources'])+'</ul><p>Source links reviewed October 6, 2026.</p></section>'
@@ -118,6 +145,8 @@ def build(root):
             old=re.search(r'"datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})',f.read_text())
             if old and old[1]<=DATE:g['published']=old[1]
         f.parent.mkdir(parents=True,exist_ok=True);f.write_text(render_guide(g))
+        if route(g) in ARTIFACTS:
+            (f.parent/'worksheet.txt').write_text(artifact_text(g))
     for k in CLUSTERS:
         f=target(root,'/resources/'+k+'/');f.parent.mkdir(parents=True,exist_ok=True);f.write_text(render_hub(k))
     target(root,'/resources/').write_text(render_resources())

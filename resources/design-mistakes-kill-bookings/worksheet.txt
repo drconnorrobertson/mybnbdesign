@@ -1,0 +1,108 @@
+Find Functional Design Mistakes Before Guests Arrive
+
+https://www.mybnbdesign.com/resources/design-mistakes-kill-bookings/
+
+Replace bracketed fields with verified property information.
+
+Use a room-by-room problem and evidence checklist
+
+A design audit should explain what a guest cannot do, what the observer actually saw, and what would resolve the issue. It cannot show that a furnishing choice caused lost bookings without separate evidence. Start with the real setup at its intended capacity, including retained furniture, door swings, control locations, and the cleaner’s route. The table preserves the practical room checks without treating a taste preference as a measured commercial result.
+
+Area: Personal clutter and storage
+Common issue to test: Owner items or decorative objects occupy the space guests need
+Practical evidence and response: List the guest activity displaced; remove/relocate approved items and repeat the task
+
+Area: Lighting
+Common issue to test: Controls cannot be found, task light is missing, or reflections interfere with use
+Practical evidence and response: Test arrival, reading, dining and overnight routes in actual nighttime conditions
+
+Area: Furniture scale
+Common issue to test: The table fits only with chairs pushed in; sofa bed blocks another function when open
+Practical evidence and response: Draw and trial furniture in use; test doors, luggage and cleaning access
+
+Area: Color and finishes
+Common issue to test: Samples look different under installed lights or conflict with retained fixed finishes
+Practical evidence and response: Compare physical samples in the room; record product/color/finish identities
+
+Area: Photography styling
+Common issue to test: The photographed setup contains temporary furniture or unavailable amenities
+Practical evidence and response: Compare the image with the room reset and actual inventory; correct the representation
+
+Area: Bedroom
+Common issue to test: Protector/sheets do not fit, personal items lack a surface, or curtains leave unwanted light gaps
+Practical evidence and response: Trial the complete bed system and nighttime controls before adding decoration
+
+Area: Bathroom
+Common issue to test: No usable personal-item landing, towel drying is limited, or accessories are difficult to clean
+Practical evidence and response: Trial a realistic guest use and cleaner reset; confirm mounting/service scope
+
+Area: Kitchen
+Common issue to test: Missing utensils, incompatible cookware, unclear controls or storage conflicts
+Practical evidence and response: Prepare and clear a simple supported meal with the provided inventory
+
+Area: Outdoor/entry
+Common issue to test: Loose items lack a weather handoff or wet gear intrudes on the arrival route
+Practical evidence and response: Trial arrival and storage; document approved exposure limits and reset responsibility
+
+Record each issue as a testable task
+
+One task card per issue keeps a vague “refresh the room” request from becoming an unrelated shopping exercise. A good card names the activity, the conflict, the retained constraints, the smallest sensible trial, and the person who can accept the result. Separate an observation from a possible cause. For example, “the end dining chair hits the door” is an observation; “the table is the wrong shape” is a hypothesis to test.
+
+FUNCTIONAL DESIGN ISSUE CARD
+Room / issue reference / date: [room / reference / date]
+Activity and conditions: [arrival / dining / sleeping / cleaning / other]
+What was observed: [specific conflict or missing function]
+Evidence: [measured sketch / photo / condition test / reset observation]
+What is uncertain: [unconfirmed cause or dimension]
+Retained constraints: [fixed items / doors / budget / product requirements]
+Trial change: [rearrangement / sample / instruction / repair investigation]
+Technical review required: [question / qualified person]
+Actual complete cost or quote needed: [known cost / unknown scope]
+Decision and approval owner: [person]
+Acceptance test: [repeatable activity and observable result]
+Reset, inventory and photo updates: [documents to revise]
+Open items and follow-up: [owner / date]
+
+Run a realistic walkthrough before approving the change
+
+Use the same route a guest will follow, beginning with arrival and continuing through the essential room activities. Open doors and convertible furniture rather than assessing an empty room. Repeat the inspection with lights in their actual operating states. Where a safety or regulated requirement is involved, record the question for the responsible qualified provider; a taped-floor trial cannot establish compliance.
+
+Invite the cleaner to show how linen moves, rugs are handled, and surfaces are reached. A layout can appear generous while requiring furniture to be moved every reset. Test a new arrangement before ordering a replacement. If the smallest trial creates a different conflict, return to the recorded constraints rather than forcing the first idea through.
+
+- Arrival: luggage can be set down while the supplied entrance and controls are used.
+
+- Dining: chairs and table are tested at the actual intended seated capacity.
+
+- Sleeping: all beds, convertible beds, curtains and bedside functions are tested in use.
+
+- Storage: luggage, clothes and supplied amenities have an identifiable reset position.
+
+- Kitchen/bathroom: the intended guest tasks can be completed using actual supplies.
+
+- Cleaning: the cleaner can reach and process the areas and textiles in the installed layout.
+
+- Photographs/instructions: the documented setup matches the accepted arrangement.
+
+Turn observations into an ordered improvement plan
+
+Keep failures and technical questions ahead of optional aesthetic changes. For each approved task, record its owner, complete scope, dependencies and evidence of completion. Group tasks when the same access visit or supplier is required, but do not hide unresolved decisions inside a larger purchase. The final record should show why each change was selected and which activity it improves, without claiming a booking effect.
+
+Sequence: Observe and document
+Required output: Issue cards with measured facts and unresolved questions
+Before moving on: Confirm which functions are actually affected
+
+Sequence: Investigate and trial
+Required output: Relevant provider review or a reversible layout/sample trial
+Before moving on: Record the result and any new conflict
+
+Sequence: Approve scope and cost
+Required output: Exact selection/repair/instruction change and full cost
+Before moving on: Resolve fit, care, installation and approval responsibility
+
+Sequence: Implement and re-test
+Required output: Delivered task plus repeat of the original activity
+Before moving on: Close remaining defects and update the reset
+
+Sequence: Maintain the record
+Required output: Revised inventory, photographs, care and instructions
+Before moving on: Keep the accepted setup reproducible for future changes

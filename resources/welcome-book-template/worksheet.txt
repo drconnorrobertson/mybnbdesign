@@ -1,0 +1,157 @@
+Build a Welcome Guide from Verified Property Instructions
+
+https://www.mybnbdesign.com/resources/welcome-book-template/
+
+Replace bracketed fields with verified property information.
+
+Copy the welcome message and property overview
+
+Replace every bracketed field with verified property information before sharing the guide. Remove any optional sentence that is not true for the rental. Keep a welcoming introduction short enough that guests can quickly find the practical details. The example does not assume a view, amenity, location, or service that the property lacks.
+
+WELCOME TO [PROPERTY NAME]
+Welcome, and thank you for staying with us. We hope you enjoy your time at [property name].
+
+This guide explains the arrival process, supplied equipment, house guidelines and checkout steps for this property. Start with [location/link of the quick-reference page].
+
+You can find [actual supplied feature or essential item] at [verified location]. [Delete this sentence if unnecessary.]
+
+For a question during your stay, use [approved host contact method]. Our normal contact availability is [actual arrangement]. For an urgent or emergency situation, follow the property’s verified emergency information at [location in guide].
+
+Please let us know through [approved contact method] if something in the supplied setup differs from this guide.
+Enjoy your stay,
+[Host or property team name]
+
+Copy the check-in and checkout instruction blocks
+
+Write these instructions after following the route yourself. Separate arrival information that may contain private access details from publicly shareable property description. Share access credentials only through the approved guest process. Include the actual luggage, parking and entrance arrangements, and test whether the instructions can be understood on a phone before arrival.
+
+CHECK-IN QUICK REFERENCE
+Property name and arrival location: [verified guest arrival location]
+Check-in date/time arrangement: [actual confirmed arrangement]
+Parking or arrival instructions: [actual permitted arrangement and relevant limits]
+Entrance and route: [plain description tested on site]
+Access instructions: [provided separately through the approved guest channel]
+Where to place luggage or wet gear: [actual location]
+First-night essentials: [light/climate controls / towels / bedding / guide location]
+If an arrival step does not work: [approved contact process]
+
+CHECKOUT QUICK REFERENCE
+Checkout date/time arrangement: [actual confirmed arrangement]
+Required checkout tasks: [only the actual communicated tasks]
+Used towels/linens: [actual location or instructions]
+Waste/recycling: [verified process, locations and applicable instructions]
+Appliances and climate controls: [manufacturer-aligned property instructions]
+Keys/access and departure: [approved process, with private details shared appropriately]
+Final personal-item check: [suggested places to check]
+Issue or forgotten item: [approved contact process]
+Thank you for staying at [property name].
+
+Copy a property-specific house-rules template
+
+Populate this block from the actual rules and arrangements already established for the property. The template does not create a policy, determine local requirements, or prescribe a universal quiet hour, pet rule or occupancy limit. Check that the guest guide and listing agree, and ask the relevant adviser or property authority when a requirement is uncertain.
+
+HOUSE GUIDELINES FOR [PROPERTY NAME]
+Guest capacity and permitted visitors: [actual established arrangement]
+Quiet/noise expectations: [actual applicable hours and instructions]
+Parking: [actual permitted spaces, access route and restrictions]
+Smoking/vaping: [actual established rule and any applicable locations]
+Pets or animals: [actual established arrangement; do not invent a fee or permission]
+Use of indoor/outdoor amenities: [actual operating limits and instructions]
+Seasonal or weather limitations: [actual features and conditions]
+Care of furnishings: [clear product-appropriate instructions for guest tasks]
+Waste and recycling: [verified local/property process]
+Owner-only areas or supplies: [actual boundaries and clear labels]
+If damage, a fault or a question arises: [approved contact process]
+Other applicable property-specific rules: [verified rules only]
+
+Copy the connectivity and equipment instruction page
+
+Keep network credentials and access codes in the appropriate guest-only version. Public worksheets contain placeholders. For appliances, write directions for the exact installed model and have the responsible person test the steps. Avoid substituting generic operating or safety instructions for the manufacturer’s directions. Identify where the real manual is available and how a guest can ask for help.
+
+CONNECTIVITY AND EQUIPMENT
+Wi-Fi connection: [guest network and credentials supplied through the approved private guide]
+Connection help: [verified basic property instructions / approved contact]
+Supplied television or entertainment setup: [actual setup / guest account process / controls]
+
+EQUIPMENT CARD — repeat for each supplied appliance
+Equipment name / exact model: [actual item]
+Location of controls: [verified location]
+Basic guest task: [task the equipment is supplied to support]
+Tested operating steps: [manufacturer-aligned steps for this exact model]
+Relevant operating limits: [actual product instructions]
+Manual location or approved reference: [document location]
+After-use instructions: [actual property/product process]
+Fault or unclear operation: [approved help/contact process]
+
+Maintain local recommendations and verified emergency information
+
+Use a short list of relevant recommendations that the operator can verify. Record the business name, location, official contact/reference, date checked and any property-specific travel notes actually known. Avoid presenting a venue as always open or inventing a travel time. Distinguish a personal suggestion from an included amenity or guaranteed service.
+
+Maintain the emergency page with the people responsible for the property’s operating process. Use verified local information and applicable instructions; do not copy an emergency number or procedure from another jurisdiction. Keep the guest arrival location, approved urgent contact and relevant equipment/instruction locations accurate. Review this page after a contact or operating change.
+
+LOCAL RECOMMENDATION RECORD
+Name and type: [business/place / activity]
+Official location/contact/reference: [verified details]
+Reason for including it: [relevant factual feature or clearly labelled personal suggestion]
+Hours/reservation or access information: [verified reference, not a guarantee]
+Date checked / person: [date / person]
+
+PROPERTY EMERGENCY QUICK REFERENCE
+Verified property/guest arrival address or location: [actual location]
+Relevant verified local emergency contact information: [information checked for this jurisdiction]
+Approved property urgent contact and process: [actual arrangement]
+Relevant equipment/instruction locations: [actual documented locations]
+Applicable directions reviewed by/date: [responsible person / date]
+Information that must be kept in the controlled guest version: [private details]
+
+Compare printed, digital and combined formats
+
+Choose the format around access, update responsibility and guest use. A digital guide can be convenient before arrival but may depend on a device, connectivity or the chosen service. A printed guide is available at the property but needs version control and replacement when damaged. A combined approach is useful only if both copies remain consistent. Test any QR code and provide a plain fallback route; the code alone is not an accessibility or availability guarantee.
+
+Decision: Arrival access
+Printed guide: Usually read on site; send essential arrival details through the approved process separately
+Digital guide: May be shared before arrival through the approved guest channel
+Combined approach: Send essentials in advance and retain a usable on-site reference
+
+Decision: Connectivity/device
+Printed guide: Readable without a phone connection once the guest finds it
+Digital guide: Check device, account, link and connectivity requirements of the actual service
+Combined approach: Keep a concise printed fallback for essential verified instructions
+
+Decision: Updating
+Printed guide: Replace affected pages and mark the current version/date
+Digital guide: Publish the approved version and test actual links/permissions
+Combined approach: Reconcile both copies from one controlled source
+
+Decision: Privacy
+Printed guide: Place guest-only/private information according to the approved property process
+Digital guide: Check sharing/access settings; avoid publishing credentials openly
+Combined approach: Separate public property description from private guest instructions
+
+Decision: Care/cost
+Printed guide: Record actual printing, format, protection and replacement needs
+Digital guide: Record actual service costs and responsibilities; do not assume it is free
+Combined approach: Budget both update tasks and identify the person who owns them
+
+Decision: Finding information
+Printed guide: Use a short contents page, clear sections and legible text
+Digital guide: Test the guide on a phone and use clear navigation
+Combined approach: Keep section names and essential instructions consistent
+
+Test and maintain the guide through a version log
+
+Run an arrival-to-bed and checkout trial using only the guide. Note each point where the tester has to ask a question or guess. Fix the instruction or the underlying setup before accepting the guide. Keep the content concise, readable and tied to actual controls and supplied items. Do not overwhelm the first page with promotions, long stories or unverified recommendations.
+
+WELCOME GUIDE VERSION AND TEST LOG
+Property / version / approval date: [name / version / date]
+Source document owner: [person]
+Printed copies and digital location: [actual locations / access arrangement]
+Arrival-to-bed test: [person / date / unresolved questions]
+Equipment instruction test: [exact items / person / date / result]
+Checkout instruction test: [person / date / result]
+Local/emergency information checked: [person / date / references]
+Changed furnishing/control/contact/rule: [actual change]
+Affected guide pages and photographs: [sections / files]
+Private/public version check: [who checked / result]
+Printed and digital reconciliation complete: [person / date]
+Next review trigger and owner: [event / person]

@@ -1,9 +1,13 @@
 from content.host_guides import guide, GUIDES
+from content.resource_artifacts import ARTIFACTS
 
 def repair(route, *args):
     guide(*args)
     GUIDES[-1]['route'] = route
     GUIDES[-1]['repair'] = True
+    # Retain the established route's usable inventory/template scope alongside its essay.
+    if route in ARTIFACTS:
+        GUIDES[-1]['artifacts'] = ARTIFACTS[route]
 
 repair('/blog/how-to-choose-a-design-style-for-your-market.html', 'planning', 'market-style-brief', 'Choose a Rental Design Style from the Property and Guest Brief', 'Connect a rental style direction to existing architecture, guest activities, maintenance, samples, and a clear furnishing brief.',
 '''A style name can organize a conversation, but it should not replace a property brief. Start with the building, the activities you want to support, and the operating team’s constraints. Use public listings as visual context without claiming their photographs prove booking performance or guest preferences.''',

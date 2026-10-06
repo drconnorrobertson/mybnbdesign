@@ -1,0 +1,183 @@
+Complete Airbnb Furnishing Checklist by Guest Activity
+
+https://www.mybnbdesign.com/resources/airbnb-furnishing-checklist/
+
+Replace bracketed fields with verified property information.
+
+Use the inventory as a purchasing and reset record
+
+Complete a separate sheet for each room. The lists below are prompts rather than a requirement to buy every item. Record the planned guest use, the quantity actually needed, the retained quantity, the quantity to order, and the place each item belongs. A useful inventory also identifies the exact size or model, its care instructions, its delivery status, and who checks it at handover.
+
+Start with the furnished capacity and the real operating plan. Count dining places with chairs in use, beds with their actual linen sizes, and storage with luggage present. Do not infer permitted occupancy from the number of chairs or beds. Check relevant property requirements separately. Where a supplied appliance or activity requires technical review, keep that approval outside the shopping checklist and record who is responsible.
+
+Before ordering, mark each line as retain, repair, buy, optional, or not applicable. Split sets into their replaceable components: a lost pillowcase does not necessarily require a new sheet set, and a broken mug does not require another full dinner service. Include freight, assembly, receiving, disposal, and spare quantities in the purchasing sheet rather than treating the product price as the whole cost.
+
+ROOM INVENTORY RECORD
+Property / room: [name]
+Prepared by / date: [person / date]
+Planned guest activities: [sleeping / dining / work / storage / other]
+Item: [specific item]
+Size, model, finish: [exact specification]
+Required quantity: [quantity]   Retained and usable: [quantity]
+Order quantity: [quantity]     Optional spare quantity: [quantity]
+Status: [retain / repair / buy / optional / not applicable]
+Unit quote / delivery / assembly / tax: [actual written costs]
+Vendor / lead time / delivery reference: [confirmed information]
+Reset location / care document: [location / document]
+Acceptance check / owner / due date: [check / person / date]
+
+Living room and dining inventory
+
+Trial the full guest group before approving a layout. Include seating with feet on the floor, chairs pulled out, and a sofa bed open if supplied. Leave controls, cleaning access, doors, and usable travel routes in view. The inventory is complete when the items fit and can be reset, not just when the purchase list has been ticked.
+
+Category: Seating
+Items to check: Sofa; armchairs; any supplied sofa bed; protective covers where appropriate
+Specification or reset question: Usable seats, open-bed footprint, upholstery care, replaceable components
+
+Category: Tables
+Items to check: Coffee or side tables; dining table; dining chairs
+Specification or reset question: Stable condition, chair pullout, drink placement, cleaning access
+
+Category: Lighting
+Items to check: Fixed lights; reading/task lamps; compatible bulbs and recorded spares
+Specification or reset question: Controls reachable from actual seats; glare and nighttime route tested
+
+Category: Entertainment
+Items to check: Television where supplied; remote; operating instructions; documented cables
+Specification or reset question: Guest setup accurately described; no owner accounts or private paperwork exposed
+
+Category: Storage
+Items to check: Luggage landing; coat/shoe storage; book or game storage if supplied
+Specification or reset question: Storage does not block movement; contents can be counted and reset
+
+Category: Finishing items
+Items to check: Rug if appropriate; wall art; selected washable throws or cushions
+Specification or reset question: Exact care method, secure installation review, manageable decoration quantity
+
+Category: Dining reset
+Items to check: Placemats or table protection where supplied; serving pieces; spare chair parts if appropriate
+Specification or reset question: Table protection follows finish instructions and is easy to reproduce
+
+Kitchen inventory by the meals you actually support
+
+Write a simple meal trial before choosing quantities: prepare breakfast, assemble a basic cooked meal, and clear up afterward. Check the equipment provided with that trial and the property’s guest capacity. Choose compatible cookware from the exact appliance instructions. Do not add a device just to lengthen the amenity list; each supplied device needs storage, operating instructions, cleaning, and a reset check.
+
+Category: Cookware
+Inventory prompts: Frying pan; saucepan; larger pot; lids; baking tray; oven dish where relevant
+Count or compatibility check: Compatible with supplied cooktop/oven; capacity matches the intended meal
+
+Category: Preparation
+Inventory prompts: Cutting boards; suitable knives; measuring tools; mixing bowl; colander
+Count or compatibility check: Stable, cleanable storage; components counted separately
+
+Category: Utensils
+Inventory prompts: Spatula; stirring spoon; ladle; tongs; whisk; peeler; opener
+Count or compatibility check: Tools fit the actual cookware and supported cooking tasks
+
+Category: Dishware
+Inventory prompts: Dinner plates; side plates; bowls; mugs
+Count or compatibility check: Usable quantity for the guest allocation and laundry/dishwashing process
+
+Category: Glassware and cutlery
+Inventory prompts: Drinking glasses; forks; knives; spoons; teaspoons
+Count or compatibility check: Replaceable model or size recorded; no chipped or unsuitable pieces counted
+
+Category: Serving and storage
+Inventory prompts: Serving bowl; platter where supplied; food-storage containers and lids
+Count or compatibility check: Pair lids with containers; confirm safe intended use from product instructions
+
+Category: Appliances
+Inventory prompts: Refrigerator; cooktop/oven; coffee setup; kettle; toaster; other actual supplied appliances
+Count or compatibility check: Installed and commissioned; manual and guest instructions available
+
+Category: Consumables
+Inventory prompts: Any listed coffee/tea allocation; approved dish-cleaning supplies; bin liners
+Count or compatibility check: Only promise the actual quantity and replenishment standard
+
+Category: Cleaning and linens
+Inventory prompts: Kitchen towels; approved cloths; drying setup; waste/recycling bins
+Count or compatibility check: Drying location, replacement frequency, and reset owner specified
+
+Bedroom and guest-bedroom inventory
+
+Use one record per sleeping position and bed size, including a separate record for a convertible bed. Check the mattress, frame, protector, sheet depth, and cover together before buying multiples. Optional pillow choices need clean storage and care instructions. Furniture marketed for children, bunks, or infant use needs its own exact product and qualified suitability review; a room list is not a safety approval.
+
+Category: Bed system
+Inventory prompts: Bed/frame; mattress; exact fitted protector; fitted/flat sheets as used; pillowcases; cover or blanket
+Functional check: Dimensions and making method tested as one system
+
+Category: Linen stock
+Inventory prompts: Installed sets; sets in laundry; working stock; separately justified spare components
+Functional check: Quantity follows the actual changeover and laundry-return cycle
+
+Category: Pillows
+Inventory prompts: Installed pillows; optional alternatives if supplied; appropriate protectors/cases
+Functional check: Care labels, identifying labels, and clean dry storage documented
+
+Category: Bedside use
+Inventory prompts: Suitable bedside surface; reading light; reachable power; personal-item landing
+Functional check: Test from the actual bed position; avoid obstructing doors or curtains
+
+Category: Storage
+Inventory prompts: Luggage support; clothes storage; usable hangers; any supplied laundry bag
+Functional check: Capacity and placement match the room rather than unused floor area
+
+Category: Window and climate
+Inventory prompts: Window treatment; operating instructions; approved control labels
+Functional check: Light gaps and control access checked in actual nighttime conditions
+
+Category: Guest bedroom
+Inventory prompts: A separately counted complete bed/linen system for every supplied bed
+Functional check: Do not assume a spare room can share stock or instructions with the main bedroom
+
+Bathroom, outdoor, utility and connectivity inventory
+
+Inspect bathroom contents after a realistic guest-use trial, including towel drying and placement of personal toiletries. Outdoors, distinguish permanently installed items from loose pieces that require a weather handoff. For supplies stored in an owner cupboard, separate guest access from the cleaner’s stock and record the approved storage arrangement. Keep property-specific emergency equipment and inspection requirements in a qualified checklist rather than inventing a universal shopping quantity.
+
+Area: Bathroom linens
+Inventory prompts: Bath towels; hand towels; washcloths where supplied; bath mat; working linen stock
+Handover check: Actual allocation, laundry cycle, dry storage, and towel-drying locations
+
+Area: Bathroom accessories
+Inventory prompts: Hooks/rails; mirror; waste bin; toilet-paper holder; cleaner-approved dispensers; personal-item surface
+Handover check: Reach, mounting review, cleanability, and replenishment owner
+
+Area: Bathroom extras
+Inventory prompts: Hair dryer or other listed amenity if supplied; its manual and storage
+Handover check: Exact instructions available; damaged equipment excluded from reset
+
+Area: Outdoor activities
+Inventory prompts: Suitable table/chairs or loungers; approved shade; cushion covers; storage
+Handover check: Exposure suitability, dry storage, weather limits, and loose-item count
+
+Area: Utility and laundry
+Inventory prompts: Washer/dryer if supplied; manuals; iron/board if supplied; baskets; permitted care supplies
+Handover check: Installed process, machine capacity, drying, and access instructions
+
+Area: Cleaning support
+Inventory prompts: Approved cleaning tools; vacuum if supplied; spare bags/parts; waste supplies
+Handover check: Owner and guest responsibilities distinguished; product labels retained
+
+Area: Connectivity
+Inventory prompts: Actual Wi-Fi/network instructions; supplied charging setup; guest-use technology instructions
+Handover check: Test connection and controls; keep private account or access details out of public worksheets
+
+Area: Safety review
+Inventory prompts: Property-specific installed safety equipment, inspection records, and responsible contacts
+Handover check: Confirm relevant requirements and operating instructions with qualified providers
+
+Order, receive and maintain the complete list
+
+A higher product price does not establish longer service life, and a cheaper product may become expensive after assembly or repeated replacement. Compare exact specifications and complete installed costs. Keep a contingency separate from optional decoration, and record any substitution before purchase. At receipt, reconcile counts, dimensions, damage, and missing parts against the approved line rather than relying on a delivery photograph alone.
+
+- Measure retained items and exclude unusable stock before setting order quantities.
+
+- Record actual quotes, stock confirmation, returns terms, delivery scope, and receiving responsibilities.
+
+- Approve substitutions against room fit, care, finish, function, cost, and delivery constraints.
+
+- Photograph received condition, match shipment identifiers, and follow the vendor’s actual discrepancy process.
+
+- Complete the room reset trial, label spare components, and file warranty/care information at handover.
+
+- Reconcile the inventory after loss, repair, or replacement so the next order reflects the current property.
