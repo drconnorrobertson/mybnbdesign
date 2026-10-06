@@ -1,0 +1,133 @@
+Stage Rental Photos to Show the Actual Guest Setup
+
+https://www.mybnbdesign.com/resources/photography-staging-guide/
+
+Replace bracketed fields with verified property information.
+
+Prepare the actual guest setup before the shoot
+
+Use a preparation checklist and a room shot list rather than a collection of styling tricks. The photographs should help a guest understand the space and the amenities actually available. Temporary props, furniture, or views that materially change the represented setup can make the images inaccurate. Record the accepted room reset before photography so the team knows what belongs in the final frame.
+
+Reserve access for the agreed photography scope and resolve readiness issues before arrival. Schedule according to the property’s actual light, access and weather constraints, with the photographer’s advice. Do not assume a universal time of day, two-hour session, or a fixed camera setting will suit every room.
+
+- Confirm the supplied furniture, linens, amenities and controls match the current inventory and listing scope.
+
+- Complete the room reset and remove private paperwork, access credentials and owner items from the photographed areas.
+
+- Check visible condition, glass, mirrors, linens and other surfaces using the appropriate care process.
+
+- Confirm supplied lighting works and identify reflections or mixed-light issues for the photographer to evaluate.
+
+- Open the actual storage, doors and convertible arrangements needed to document guest functions.
+
+- Prepare a list of essential room views, useful detail views and any relevant limits that need clear representation.
+
+- Agree access, readiness, weather contingency, deliverables, usage rights and file handover with the photographer.
+
+- Keep one person responsible for checking the images against the room reset before approval.
+
+Build a room-by-room shot list
+
+A wide view gives context, while a useful detail view explains a guest function. Do not use a lens or edit to imply that a room is larger, an amenity is present, or a view is available when that would misrepresent the actual property. Ask the photographer how to capture the necessary context without losing the information a guest needs.
+
+Area: Arrival/entry
+Context view: Actual entrance and luggage/coat landing where relevant
+Useful detail or second view: Usable storage or control location without exposing access credentials
+Accuracy check: The shown entrance and route are the ones guests use
+
+Area: Living room
+Context view: Relationship between seating, tables, doors and supplied entertainment
+Useful detail or second view: Reading light, personal-item surface or another actual guest function
+Accuracy check: Seating and movement remain representative of the reset
+
+Area: Dining
+Context view: Table and available seating in their usable arrangement
+Useful detail or second view: Connection to the kitchen or outdoor dining where supplied
+Accuracy check: Do not use extra temporary seats or hide a conflicting door
+
+Area: Kitchen
+Context view: Work area, supplied appliances and storage context
+Useful detail or second view: Coffee setup, cookware/dishware storage or a clear functional detail
+Accuracy check: Included equipment and consumables match the actual allocation
+
+Area: Bedrooms
+Context view: Every supplied sleeping room with its complete bed setup
+Useful detail or second view: Luggage/clothes storage, bedside controls or a convertible bed arrangement
+Accuracy check: Show actual bed sizes and available functions accurately
+
+Area: Bathrooms
+Context view: Actual bathroom arrangement and available surfaces
+Useful detail or second view: Towel drying, storage or supplied toiletries where useful
+Accuracy check: Do not stage products or amenities that are unavailable to guests
+
+Area: Work/storage
+Context view: Actual workspace or guest storage in context, if offered
+Useful detail or second view: Power, lighting and usable chair/surface arrangement
+Accuracy check: The photographed setup is available throughout the described stay
+
+Area: Outdoor spaces
+Context view: The guest-accessible seating/dining arrangement and relevant context
+Useful detail or second view: Shade or another actual supplied function
+Accuracy check: Seasonal/weather availability and property limits are represented accurately
+
+Copy the photography brief and deliverables record
+
+Use a written brief to agree the scope, the representation standard, the required files and the approval process. Choose a professional based on relevant examples and a clear proposal rather than an unverified booking-conversion claim. If using a phone or your own camera, the same shot list and acceptance checks still apply.
+
+RENTAL PHOTOGRAPHY BRIEF
+Property / approved room-reset version: [name / version]
+Rooms and guest-accessible areas to cover: [list]
+Essential context/detail views: [shot-list references]
+Convertible, seasonal or conditional arrangements: [what needs accurate explanation]
+Private or excluded areas/details: [areas / credentials / owner items]
+Shoot access and readiness owner: [date/access arrangements / person]
+Light/weather constraints and contingency: [observations / agreed plan]
+Representation standard: [accurate supplied setup; no fabricated features/views]
+Editing scope and exclusions: [agreed corrections / prohibited changes]
+Required master and platform-export files: [formats/specifications confirmed at handover]
+Usage rights and agreement reference: [written agreement]
+Delivery, revision and approval process: [dates / owner / included revisions]
+Current platform requirements checked by/date: [person / date / official reference]
+Final image-to-inventory check: [owner / result / unresolved issues]
+
+Evaluate light, framing and editing against the room
+
+Clean the lens, stabilize the camera appropriately, and take a test image before the main sequence. Review whether bright and shaded areas retain the information the guest needs. Compare straight room edges, surface colors, reflections and relevant views against the actual property. Ask the photographer to choose suitable exposure, equipment and technique for the conditions; do not apply fixed ISO, shutter or ultra-wide settings as a universal recipe.
+
+Correcting an exposure or a color cast can help the image represent the room, but edits should not add or remove material property features. Keep master files and distinguish a platform crop from a change to the represented scene. Review cover crops at the current upload preview so important room information is not accidentally cut off. Generic historical pixel counts or platform-ranking assertions are not current requirements.
+
+- Check that the framing explains the space rather than hiding an essential limitation.
+
+- Compare the edited wall, textile and finish colors with the installed products under the relevant light.
+
+- Keep private access details, account screens and sensitive records out of the image.
+
+- Preserve material features, views and supplied amenities accurately through editing.
+
+- Use current official platform guidance and the actual upload preview for dimensions, supported formats and crops.
+
+- Retain the original/master files, exports, usage agreement and final approval record.
+
+Accept and update the photographs systematically
+
+Review the delivered set room by room against the shot list, current inventory and written brief. Note missing rooms, unclear functions, inaccurate props, unsuitable crops and unresolved editing questions before uploading. After a furnishing or seasonal availability change, identify which images need review. A photo refresh should be driven by an actual change or an identified representation problem, not a promised platform advantage.
+
+Check: Coverage
+Record: Required views delivered, missing views and room identifiers
+Owner action: Resolve missing information with the photographer
+
+Check: Representation
+Record: Image agrees with actual furniture, amenities, views and seasonal limits
+Owner action: Correct the image or actual description before publication
+
+Check: Technical handover
+Record: Masters, exports, agreed rights and revision scope supplied
+Owner action: File the handover documents and confirm current upload requirements
+
+Check: Platform preview
+Record: Important context survives the actual cover/detail crops
+Owner action: Select a suitable export/crop without altering the represented property
+
+Check: Future changes
+Record: Inventory or reset change that affects an image
+Owner action: Assign a review owner and retain the accepted current set

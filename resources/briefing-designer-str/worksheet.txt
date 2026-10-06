@@ -1,0 +1,146 @@
+Brief a Designer for a Short-Term Rental Project
+
+https://www.mybnbdesign.com/resources/briefing-designer-str/
+
+Replace bracketed fields with verified property information.
+
+Copy and complete the design brief
+
+A brief should let another person make a consistent decision without guessing what the owner meant. Fill in the fields below before the first scope meeting. Use measured facts and label estimates or unknowns. Keep private access details, guest records, account credentials, and sensitive owner information out of a general design pack; share only the material the actual project requires through an appropriate channel.
+
+SHORT-TERM RENTAL DESIGN BRIEF
+Project name / version / date: [name / version / date]
+Decision owner and working contact: [person / business contact]
+Property type and rooms in scope: [type / room list]
+Measured floor plan and annotated photo folder: [document references]
+Fixed constraints and uncertain dimensions: [doors / windows / utilities / unknowns]
+Permitted guest capacity and intended activities: [separately confirmed capacity / uses]
+Existing items to retain, repair or remove: [inventory references]
+Design direction and reference images: [links / what you like about each image]
+Colors, finishes or themes to avoid: [specific restrictions]
+Essential guest functions and optional amenities: [priority list]
+Cleaning, laundry, storage and repair requirements: [actual operating process]
+Accessibility or other technical review needs: [questions / qualified reviewer]
+Property/building constraints to confirm: [relevant restrictions / responsible person]
+Total available project allowance: [actual amount / inclusions]
+Delivery, tax, assembly, disposal and contingency: [included / excluded / allowance]
+Service scope required: [design / purchasing / receiving / install / styling / photos]
+Target readiness date and unavailable access dates: [dates]
+Approval milestones and response owner: [milestones / person]
+Delivery route, receiving contact and storage: [survey / person / location]
+Substitution approval process: [who approves / what evidence is required]
+Required handover documents: [inventory / care / warranties / reset photos / issues]
+Success at acceptance: [observable tests, not a promised revenue result]
+Open questions and responsible owners: [question / person / due date]
+
+Assemble the evidence behind the brief
+
+Send a concise document index with the brief so the designer can find the relevant evidence. A reference photograph is useful when you explain whether it represents a color, material, layout, or atmosphere; it is less useful as an instruction to reproduce a room with different dimensions. Include both what you like and what should not be copied. Document existing wear and service constraints before assuming that a retained item is suitable.
+
+Document: Measured survey
+Include: Room dimensions, ceiling constraints, fixed fixtures, doors/windows and unresolved measurements
+Question it resolves: What can actually fit and which dimensions need confirmation?
+
+Document: Annotated photographs
+Include: Wide views plus labels for retained items, control locations and condition issues
+Question it resolves: What is present today, and what cannot be inferred from a plan?
+
+Document: Retained inventory
+Include: Size/model, condition, repair decision and approved reset use
+Question it resolves: Which purchases are unnecessary or need compatibility checks?
+
+Document: Guest-use brief
+Include: Sleeping, dining, luggage, work and activity needs for the planned capacity
+Question it resolves: Which functions take priority over optional styling?
+
+Document: Operating notes
+Include: Cleaner feedback, laundry process, spare storage and repair responsibility
+Question it resolves: Can the installed design be cleaned and maintained?
+
+Document: References and restrictions
+Include: A few labeled reference images plus relevant property/building constraints
+Question it resolves: Which aesthetic choices are intentional and which need qualified review?
+
+Document: Budget sheet
+Include: Actual available funds and full installed-cost categories
+Question it resolves: Is the selection within the same stated scope?
+
+Compare proposals against one scope
+
+Separate service fees from the products and third-party work. Ask who places orders, owns vendor communication, handles receiving discrepancies, approves substitutions, and completes installation. A proposal can appear less expensive because it omits work the owner still has to pay for or perform. Do not infer return on investment from a design quote; define success through delivered scope and tested function.
+
+Scope line: Concept and plans
+Record in every proposal: Rooms, drawings, revision rounds, and approval deliverables
+Owner question: Which layouts and specifications become part of the final pack?
+
+Scope line: Product sourcing
+Record in every proposal: Selection list, procurement responsibility and substitution process
+Owner question: Who confirms current availability and exact product identity?
+
+Scope line: Purchasing and receipts
+Record in every proposal: Payment process, receipts, order tracking and warranty handover
+Owner question: Who owns the vendor relationship and records?
+
+Scope line: Freight and receiving
+Record in every proposal: Delivery type, access limitations, storage and inspection responsibilities
+Owner question: Who resolves missing/damaged items under the vendor’s terms?
+
+Scope line: Installation
+Record in every proposal: Assembly, placement, qualified work, disposal and final cleaning scope
+Owner question: Which tasks or specialist approvals remain outside the designer’s service?
+
+Scope line: Launch and handover
+Record in every proposal: Reset photos, care register, commissioning trial and unresolved issues
+Owner question: What evidence is required before acceptance?
+
+Scope line: Cost changes
+Record in every proposal: Actual fee/product totals, exclusions, contingency and written change approval
+Owner question: What can change the price and who must approve it first?
+
+Build dates from dependencies, not a universal duration
+
+Ask for a schedule based on confirmed access, approval time, procurement information, room readiness, and actual delivery arrangements. Generic promises about an eight-week project or a two-day install are not a substitute for this property’s dependencies. A target date is a planning constraint until its prerequisites have been confirmed.
+
+Gate: Brief approved
+Evidence needed to proceed: Scope, priorities, measured facts and unresolved questions agreed
+Record: Decision owner / date / open questions
+
+Gate: Plan approved
+Evidence needed to proceed: Usable layout, retained items, budget reconciliation and technical review needs identified
+Record: Version / approval / conditions
+
+Gate: Order approved
+Evidence needed to proceed: Exact items, installed costs, stock and delivery scope confirmed
+Record: Quote references / substitution rules
+
+Gate: Ready for delivery
+Evidence needed to proceed: Room readiness, access route, receiving contact and storage confirmed
+Record: Readiness owner / evidence / date
+
+Gate: Install and test
+Evidence needed to proceed: Items reconciled, qualified work handled, full guest-use/reset trial completed
+Record: Defects / owner / completion evidence
+
+Gate: Handover accepted
+Evidence needed to proceed: Care, warranty, inventory, reset photos and unresolved issues delivered
+Record: Acceptance record / follow-up plan
+
+Resolve unclear answers before appointing the team
+
+Keep a written question log rather than treating a polished presentation as evidence of the whole service. Ask for examples of the relevant deliverables and how the team deals with substitutions, missed delivery dates, damaged products, and operational constraints. A response should identify scope, responsibility, and a practical next step; an unsupported promise about bookings does not answer those questions.
+
+- Which comparable scope has the team delivered, and which evidence can be reviewed?
+
+- What rooms, revisions, purchasing tasks, install tasks, and exclusions are in the written proposal?
+
+- Who checks measurements and who is accountable for delivery-route confirmation?
+
+- How are fabric care, laundry capacity, cleaner access, and replacement parts considered?
+
+- What requires qualified technical review, and who obtains it?
+
+- How are changes, substitutions and additional charges documented before approval?
+
+- What communication cadence, decision log and escalation contact will the project use?
+
+- Which final records and tests establish acceptance, and how are open issues handed over?
