@@ -11,6 +11,7 @@ From the repository root:
 
 ```sh
 python3 scripts/build_host_library.py
+python3 scripts/upgrade_tool_discovery.py
 python3 scripts/rebuild_discovery.py
 python3 scripts/validate_host_library.py
 python3 scripts/check_internal_links.py
@@ -35,3 +36,5 @@ dates are retained, and modified/new routes receive the actual editorial date.
 
 Never use the older mass city/room generators to expand this collection. Edits
 should address a new, useful host decision with original actionable content.
+
+The October 7 tools upgrade is reapplied by `build_host_library.py`. The ROI tool uses a user-entered hypothetical ADR change defaulting to zero; it no longer infers a 15–40% revenue increase from the amount spent. Its outputs are gross-revenue scenarios before expenses.

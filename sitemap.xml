@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.mybnbdesign.com/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.mybnbdesign.com/services.html</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -85,10 +85,11 @@
   </url>
   <url>
     <loc>https://www.mybnbdesign.com/resources/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-07</lastmod>
   </url>
   <url>
     <loc>https://www.mybnbdesign.com/tools/</loc>
+    <lastmod>2026-10-07</lastmod>
   </url>
   <url>
     <loc>https://www.mybnbdesign.com/alternatives/</loc>
@@ -1815,5 +1816,25 @@
   <url>
     <loc>https://www.mybnbdesign.com/compare/companies/</loc>
     <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/tools/design-budget-calculator/</loc>
+    <lastmod>2026-10-07</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/tools/furniture-shopping-list/</loc>
+    <lastmod>2026-10-07</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/tools/amenity-checklist/</loc>
+    <lastmod>2026-10-07</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/tools/color-palette-guide/</loc>
+    <lastmod>2026-10-07</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mybnbdesign.com/tools/roi-calculator/</loc>
+    <lastmod>2026-10-07</lastmod>
   </url>
 </urlset>

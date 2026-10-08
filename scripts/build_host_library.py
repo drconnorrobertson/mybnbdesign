@@ -234,6 +234,8 @@ def build(root):
         if lm is None:lm=E.SubElement(row,ns+'lastmod')
         lm.text=DATE
     E.indent(tree);tree.write(root/'sitemap.xml',encoding='utf-8',xml_declaration=True)
+    from upgrade_tool_discovery import build as upgrade_tools
+    upgrade_tools(root)
     print(json.dumps({'new_guides':60,'new_topic_hubs':8,'legacy_guides_repaired':16,'main_sitemap_urls':len(rows),'rendered_root':str(root)}))
 
 if __name__=='__main__':
