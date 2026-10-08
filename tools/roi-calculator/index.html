@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROI Calculator | MyBnBDesign - Short-Term Rental Design Investment Returns</title>
-    <meta name="description" content="Calculate the return on investment for professional short-term rental interior design. See how design upgrades can boost your ADR, occupancy, and monthly revenue.">
+    <title>Design Investment Scenario Calculator | MyBnBDesign</title>
+    <meta name="description" content="Test your own assumed Airbnb nightly-rate change and gross-revenue payback after a design project. Occupancy stays constant; expenses are not included.">
     <meta name="keywords" content="STR ROI calculator, short-term rental design ROI, Airbnb design investment, vacation rental design returns, ADR increase calculator">
     <link rel="canonical" href="https://www.mybnbdesign.com/tools/roi-calculator/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,8 +15,8 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "MyBnBDesign ROI Calculator",
-        "description": "Calculate the return on investment for professional short-term rental interior design. Estimate ADR increases, payback periods, and projected revenue growth.",
+        "name": "MyBnBDesign Design Scenario Calculator",
+        "description": "Test your own assumed Airbnb nightly-rate change and gross-revenue payback after a design project. Occupancy stays constant; expenses are not included.",
         "url": "https://www.mybnbdesign.com/tools/roi-calculator/",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "Any",
@@ -852,15 +852,15 @@
             }
         }
     </style>
-  <meta property="og:title" content="ROI Calculator | MyBnBDesign - Short-Term Rental Design Investment Returns">
-  <meta property="og:description" content="Calculate the return on investment for professional short-term rental interior design. See how design upgrades can boost your ADR, occupancy, and monthly revenue.">
+  <meta property="og:title" content="Design Investment Scenario Calculator | MyBnBDesign">
+  <meta property="og:description" content="Test your own assumed Airbnb nightly-rate change and gross-revenue payback after a design project. Occupancy stays constant; expenses are not included.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.mybnbdesign.com/tools/roi-calculator/">
   <meta property="og:image" content="https://www.mybnbdesign.com/images/mybnbdesign-og-default.jpg">
   <meta property="og:site_name" content="MyBnBDesign">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ROI Calculator | MyBnBDesign - Short-Term Rental Design Investment Returns">
-  <meta name="twitter:description" content="Calculate the return on investment for professional short-term rental interior design. See how design upgrades can boost your ADR, occupancy, and monthly revenue.">
+  <meta name="twitter:title" content="Design Investment Scenario Calculator | MyBnBDesign">
+  <meta name="twitter:description" content="Test your own assumed Airbnb nightly-rate change and gross-revenue payback after a design project. Occupancy stays constant; expenses are not included.">
   <meta name="twitter:image" content="https://www.mybnbdesign.com/images/mybnbdesign-og-default.jpg">
 
   <script type="application/ld+json">
@@ -891,8 +891,8 @@
 
     <!-- Hero -->
     <section class="hero">
-        <h1>Design Investment ROI Calculator</h1>
-        <p>See exactly how professional interior design can boost your short-term rental revenue. Enter your property details below to calculate your projected returns.</p>
+        <h1>Design Investment Scenario Calculator</h1>
+        <p>Test a hypothetical nightly-rate change after a design project. Enter your own assumption; this model does not predict bookings or profit.</p>
     </section>
 
     <!-- Calculator -->
@@ -902,7 +902,7 @@
             <!-- Input Card -->
             <div class="card">
                 <h2 class="card-title">Your Property Details</h2>
-                <p class="card-subtitle">Enter your current numbers to see your potential returns</p>
+                <p class="card-subtitle">Enter current numbers and an explicit scenario assumption</p>
 
                 <div class="form-group">
                     <label class="form-label" for="investment">
@@ -939,11 +939,11 @@
                     </label>
                     <div class="input-row">
                         <div class="form-input-suffix" style="flex:1">
-                            <input type="number" id="occupancy" class="form-input" min="0" max="100" value="65" step="1">
+                            <input type="number" id="occupancy" class="form-input" min="1" max="100" value="65" step="1">
                         </div>
                         <span class="range-value" id="occupancyDisplay">65%</span>
                     </div>
-                    <input type="range" id="occupancySlider" class="range-slider" min="0" max="100" value="65" step="1">
+                    <input type="range" id="occupancySlider" class="range-slider" min="1" max="100" value="65" step="1">
                 </div>
 
                 <div class="form-group">
@@ -960,7 +960,7 @@
                     <input type="range" id="bookingsSlider" class="range-slider" min="1" max="31" value="12" step="1">
                 </div>
 
-                <button class="calculate-btn" id="calculateBtn" onclick="calculateROI()">Calculate My ROI</button>
+                <div class="form-group"><label class="form-label" for="assumedUplift">Assumed ADR increase (%)</label><input type="number" id="assumedUplift" class="form-input" min="0" max="100" value="0" step="1"><p>Hypothetical, not a forecast. Occupancy stays constant. Try 0% first.</p></div><button class="calculate-btn" id="calculateBtn" onclick="calculateROI()">Calculate Scenario</button>
             </div>
 
             <!-- Results Card -->
@@ -971,13 +971,13 @@
                         <rect x="26" y="16" width="12" height="40" rx="2" fill="#E67E22"/>
                         <rect x="44" y="8" width="12" height="48" rx="2" fill="#27AE60"/>
                     </svg>
-                    <p>Enter your property details and click<br><strong>Calculate My ROI</strong> to see your projected returns.</p>
+                    <p>Enter your property details and click<br><strong>Calculate Scenario</strong> to compare hypothetical gross revenue.</p>
                 </div>
 
                 <div id="results" style="display:none">
                     <div class="results-header animate-in">
-                        <h3>Your Projected Returns</h3>
-                        <p>Based on professional design investment</p>
+                        <h3>Your Hypothetical Scenario</h3>
+                        <p>Based on your entered ADR assumption; before expenses</p>
                     </div>
 
                     <!-- Key Metrics -->
@@ -991,7 +991,7 @@
                         <div class="metric-card highlight animate-in animate-delay-2">
                             <div>
                                 <div class="metric-value green" id="metricROI">0%</div>
-                                <div class="metric-label">12-Month ROI</div>
+                                <div class="metric-label">12-Month Gross Scenario</div>
                             </div>
                         </div>
                         <div class="metric-card primary-bg animate-in animate-delay-3">
@@ -1004,7 +1004,7 @@
 
                     <!-- Before / After Comparison -->
                     <div class="comparison animate-in animate-delay-2">
-                        <div class="comparison-title">Before vs. After Design</div>
+                        <div class="comparison-title">Current vs. Hypothetical Scenario</div>
 
                         <div class="comparison-row">
                             <span class="comparison-label">ADR</span>
@@ -1039,7 +1039,7 @@
 
                     <!-- ROI Progress Bar -->
                     <div class="roi-timeline animate-in animate-delay-3">
-                        <div class="roi-timeline-title">ROI Progress Over 24 Months</div>
+                        <div class="roi-timeline-title">Gross Scenario Over 24 Months</div>
                         <div class="roi-bar-wrap">
                             <div class="roi-bar" id="roiBar" style="width:0%">
                                 <span class="roi-bar-label" id="roiBarLabel">0%</span>
@@ -1054,7 +1054,7 @@
 
                     <!-- Projection Table -->
                     <div class="animate-in animate-delay-4">
-                        <div class="projection-label">Monthly Revenue Projection</div>
+                        <div class="projection-label">Monthly Gross Revenue Scenario</div>
                         <div class="table-scroll">
                             <table class="projection-table">
                                 <thead>
@@ -1086,8 +1086,8 @@
 
     <!-- CTA -->
     <section class="cta-section">
-        <h2>Ready to Maximize Your Returns?</h2>
-        <p>See what professional design can do for your rental. Get started with MyBnBDesign today.</p>
+        <h2>Bring your assumptions to a design consultation</h2>
+        <p>Review the measured scope, budget and responsibilities for your property with MyBnBDesign.</p>
         <a href="../../" class="cta-btn">Get Started with MyBnBDesign</a>
     </section>
 
@@ -1100,7 +1100,7 @@
     <li><a href="../../blog/airbnb-living-room-design-guide.html">Living Room Design</a></li><li><a href="../../blog/airbnb-bathroom-design-guide.html">Bathroom Design Guide</a></li><li><a href="../../case-studies/nashville-urban-loft.html">Nashville Case Study</a></li><li><a href="../../portfolio.html">Our Portfolio</a></li>
   </ul>
 </section>
-<footer class="footer">
+<!-- TOOL_PLANNING_CONTEXT:start --><section class="container" style="padding:32px 24px;max-width:900px;margin:auto"><h2>Use this result in your design brief</h2><p>Treat the assumed rate change as a hypothesis. Gross revenue uplift does not equal profit. Management fees, turnover costs, replacements and any nights lost during the project can reduce the amount available to recover the investment.</p><p><a href="/resources/guides/furniture-cost-per-use/">Open the supporting worksheet</a> · <a href="/tools/">Compare all design planning tools</a> · <a href="/book/">Discuss your measured brief</a></p></section><!-- TOOL_PLANNING_CONTEXT:end --><footer class="footer">
         <div class="footer-inner">
             <div class="footer-logo">MyBnB<span>Design</span></div>
             <p>Professional interior design for short-term rentals. We help hosts boost their revenue through design that guests love.</p>
@@ -1174,40 +1174,25 @@
             var occupancy = parseFloat(document.getElementById('occupancy').value) || 0;
             var bookings = parseFloat(document.getElementById('bookings').value) || 0;
 
-            if (investment < 1000 || currentADR < 50 || occupancy <= 0 || bookings < 1) {
+            if (!Number.isFinite(investment + currentADR + occupancy + bookings) || investment < 1000 || currentADR < 50 || occupancy <= 0 || occupancy > 100 || bookings < 1) {
                 return;
             }
 
             // Calculate nights booked per month (based on occupancy)
-            var nightsPerMonth = Math.round(30 * (occupancy / 100));
+            var nightsPerMonth = 30 * (occupancy / 100);
 
             // Current monthly revenue
             var currentMonthlyRev = currentADR * nightsPerMonth;
 
-            // Determine ADR increase percentage based on investment relative to annual revenue
-            var annualRevenue = currentMonthlyRev * 12;
-            var investmentRatio = investment / (annualRevenue || 1);
+            var upliftInput = document.getElementById('assumedUplift');
+            if (!upliftInput.reportValidity() || !Number.isFinite(Number(upliftInput.value)) || upliftInput.value === '') return;
+            var adrIncreasePercent = Number(upliftInput.value);
 
-            var adrIncreasePercent;
-            if (investmentRatio < 0.05) {
-                adrIncreasePercent = 15;
-            } else if (investmentRatio < 0.10) {
-                adrIncreasePercent = 20;
-            } else if (investmentRatio < 0.20) {
-                adrIncreasePercent = 25;
-            } else if (investmentRatio < 0.35) {
-                adrIncreasePercent = 30;
-            } else if (investmentRatio < 0.50) {
-                adrIncreasePercent = 35;
-            } else {
-                adrIncreasePercent = 40;
-            }
-
-            var newADR = Math.round(currentADR * (1 + adrIncreasePercent / 100));
+            var newADR = currentADR * (1 + adrIncreasePercent / 100);
             var newMonthlyRev = newADR * nightsPerMonth;
             var monthlyGain = newMonthlyRev - currentMonthlyRev;
             var paybackMonths = monthlyGain > 0 ? Math.ceil(investment / monthlyGain) : 999;
-            var roi12 = monthlyGain > 0 ? Math.round(((monthlyGain * 12 - investment) / investment) * 100) : 0;
+            var roi12 = Math.round(((monthlyGain * 12 - investment) / investment) * 100);
             var additional24 = monthlyGain * 24;
 
             // Show results
@@ -1217,7 +1202,8 @@
             // Animate key metrics
             animateCount(document.getElementById('metricNewADR'), newADR, '$', '', 900);
             animateCount(document.getElementById('metricROI'), roi12, '', '%', 900);
-            animateCount(document.getElementById('metricPayback'), Math.min(paybackMonths, 99), '', '', 600);
+            if (monthlyGain > 0) animateCount(document.getElementById('metricPayback'), paybackMonths, '', '', 600);
+            else document.getElementById('metricPayback').textContent = 'None';
 
             // Before / After bars
             var maxADR = Math.max(currentADR, newADR);
@@ -1246,16 +1232,16 @@
             document.getElementById('revIncrease').textContent = '+' + revIncPct + '%';
 
             // ROI progress bar (show 24 month ROI as percentage, capped at 100% visual width)
-            var roi24 = monthlyGain > 0 ? Math.round(((monthlyGain * 24 - investment) / investment) * 100) : 0;
+            var roi24 = Math.round(((monthlyGain * 24 - investment) / investment) * 100);
             var barWidth = Math.min(roi24 / (roi24 > 500 ? roi24 : 500) * 100, 95);
             if (barWidth < 10) barWidth = 10;
             setTimeout(function() {
                 var roiBar = document.getElementById('roiBar');
                 roiBar.style.width = barWidth + '%';
-                document.getElementById('roiBarLabel').textContent = roi24 + '% ROI';
+                document.getElementById('roiBarLabel').textContent = roi24 + '% before expenses';
             }, 600);
 
-            document.getElementById('paybackMarker').textContent = 'Payback: Month ' + Math.min(paybackMonths, 24);
+            document.getElementById('paybackMarker').textContent = (monthlyGain > 0 ? 'Gross-revenue payback: Month ' + paybackMonths : 'No gross-revenue payback at 0% uplift');
 
             // Projection table
             var tbody = document.getElementById('projectionBody');
