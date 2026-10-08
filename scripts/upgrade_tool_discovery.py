@@ -26,7 +26,7 @@ def build(root=ROOT):
  lib.DATE=DATE
  title='Airbnb Design Tools & Furnishing Calculators'
  desc='Plan your Airbnb furnishing budget, room inventory, amenities, colors and design investment scenarios with free tools and practical checklists.'
- body=lib.header(title,desc,[('/','Home'),('/tools/','Design tools')])
+ body=lib.header(title,desc,[('/','Home'),('/tools/','Design tools')]).replace('October 6, 2026','October 7, 2026')
  body+='<div class="guide-content"><p>Work from the property you actually have: measurements, retained items, intended guest capacity, delivery access and operating responsibilities. These free tools organize a design brief; their outputs are planning assumptions rather than a vendor quote or a booking forecast.</p><h2>Choose the tool for your next decision</h2><p>Begin with the furnishing budget and room inventory. Once the essentials fit, choose amenities and test colors. Use the investment scenario only when you have a documented reason for the nightly-rate assumption.</p></div><div class="library-grid">'
  for slug,name,intro,guide,detail in TOOLS:
   body+='<article class="library-card"><h2>'+lib.link('/tools/'+slug+'/',name)+'</h2><p>'+intro+'</p><p>'+detail+'</p><p>'+lib.link('/resources/guides/'+guide+'/','Use the supporting planning worksheet')+'</p></article>'
