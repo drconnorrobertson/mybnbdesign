@@ -15,11 +15,14 @@ TOOLS=[
 def panel(path, marker, body):
  s=path.read_text();block='<!-- '+marker+':start -->'+body+'<!-- '+marker+':end -->'
  pat=r'<!-- '+re.escape(marker)+r':start -->.*?<!-- '+re.escape(marker)+r':end -->'
- if re.search(pat,s,re.S):s=re.sub(pat,lambda _:block,s,flags=re.S)
- else:s=s.replace('</main>',block+'</main>',1) if '</main>' in s else s.replace('</body>',block+'</body>',1)
+ s=re.sub(pat,'',s,flags=re.S)
+ if '</main>' in s:s=s.replace('</main>',block+'</main>',1)
+ elif '<footer' in s:s=s.replace('<footer',block+'<footer',1)
+ else:s=s.replace('</body>',block+'</body>',1)
  path.write_text(s)
 
 def build(root=ROOT):
+ previous_date=lib.DATE
  lib.DATE=DATE
  title='Airbnb Design Tools & Furnishing Calculators'
  desc='Plan your Airbnb furnishing budget, room inventory, amenities, colors and design investment scenarios with free tools and practical checklists.'
@@ -43,5 +46,6 @@ def build(root=ROOT):
   if lm is None:lm=E.SubElement(row,ns+'lastmod')
   lm.text=DATE
  E.indent(tree);tree.write(root/'sitemap.xml',encoding='utf-8',xml_declaration=True)
+ lib.DATE=previous_date
  print('Tools hub, five context sections, three discovery links and sitemap updated.')
 if __name__=='__main__':build(Path(sys.argv[1]).resolve() if len(sys.argv)>1 else ROOT)
