@@ -1,0 +1,28 @@
+Build a useful spare-parts inventory for rental furniture
+https://www.mybnbdesign.com/resources/vacation-rental-spare-parts-inventory/
+
+Complete using verified details for your property.
+
+Property, room and furniture model:
+[Enter property information]
+
+Component and compatible revision:
+[Enter property information]
+
+Supplier and ordering reference:
+[Enter property information]
+
+Quantity on hand and minimum:
+[Enter property information]
+
+Storage location:
+[Enter property information]
+
+Authorized installer or specialist:
+[Enter property information]
+
+Last use and reason:
+[Enter property information]
+
+Reorder status and obsolete-stock review:
+[Enter property information]

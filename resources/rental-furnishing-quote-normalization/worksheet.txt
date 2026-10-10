@@ -1,0 +1,28 @@
+Compare rental furnishing quotes using the same scope
+https://www.mybnbdesign.com/resources/rental-furnishing-quote-normalization/
+
+Complete using verified details for your property.
+
+Room and inventory scope:
+[Enter property information]
+
+Goods allowance and assumptions:
+[Enter property information]
+
+Design and procurement fees:
+[Enter property information]
+
+Receiving, storage and freight:
+[Enter property information]
+
+Assembly, install and removal:
+[Enter property information]
+
+Owner responsibilities:
+[Enter property information]
+
+Changes, delays and exclusions:
+[Enter property information]
+
+Confirmed total and unresolved items:
+[Enter property information]

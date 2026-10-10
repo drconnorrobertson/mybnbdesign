@@ -1,0 +1,28 @@
+The measurement handoff for a remote rental designer
+https://www.mybnbdesign.com/resources/rental-design-measurement-handoff/
+
+Complete using verified details for your property.
+
+Property and room identifier:
+[Enter property information]
+
+Measured by, date and units:
+[Enter property information]
+
+Wall lengths and ceiling features:
+[Enter property information]
+
+Opening locations and swing:
+[Enter property information]
+
+Fixed elements and obstructions:
+[Enter property information]
+
+Photograph filenames:
+[Enter property information]
+
+Delivery route constraints:
+[Enter property information]
+
+Unverified dimensions and follow-up owner:
+[Enter property information]
