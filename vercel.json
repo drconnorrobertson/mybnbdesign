@@ -152,5 +152,5 @@
     }
   ],
   "outputDirectory": "dist",
-  "buildCommand": "node scripts/prepare-static.mjs && node scripts/brand-check.mjs dist"
+  "buildCommand": "node scripts/prepare-static.mjs && node scripts/instrument-conversions.mjs dist && node scripts/brand-check.mjs dist"
 }
