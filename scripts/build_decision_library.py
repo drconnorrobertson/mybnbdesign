@@ -48,6 +48,7 @@ title='Rental design decisions: comparisons and project playbooks'
 write('/resources/design-decisions/',title,'Compare furnishing choices and turn decisions into a clear project plan with practical tradeoffs, worked scenarios and 20 downloadable worksheets.', '<h2>Choose furniture and design approaches</h2><div class="cards">'+cards(COMPARISONS,'compare')+'</div><h2>Plan receiving, installation and handover</h2><div class="cards">'+cards(PLAYBOOKS,'resources')+'</div><p>'+link('/compare/','Explore all provider and approach comparisons')+' · '+link('/resources/','Browse the full host planning library')+'</p>',False)
 def insert(file,key,section):
     f=ROOT/file;s=f.read_text();start='<!-- '+key+':start -->';end='<!-- '+key+':end -->'
+    section=section.replace('class="container"','class="container decision-expansion"')
     marked=start+section+end
     if start in s:s=s[:s.index(start)]+marked+s[s.index(end)+len(end):]
     else:
@@ -55,7 +56,10 @@ def insert(file,key,section):
         else:
             assert '<footer' in s,file
             s=s.replace('<footer',marked+'<footer',1)
-    if '/assets/comparison-guides.css' not in s:s=s.replace('</head>','<link rel="stylesheet" href="/assets/comparison-guides.css"></head>')
+    if file in ('index.html','resources/index.html'):
+        s=s.replace('<link rel="stylesheet" href="/assets/comparison-guides.css">','')
+    if 'id="decision-expansion-style"' not in s:
+        s=s.replace('</head>','<style id="decision-expansion-style">.decision-expansion{padding:48px 24px}.decision-expansion .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px}.decision-expansion .cards article{padding:24px;border:1px solid #ddd;background:#fff}.decision-expansion h3{margin:0 0 16px;font-size:20px}.decision-expansion p{margin:16px 0}.decision-expansion a{text-decoration:underline;text-underline-offset:4px}</style></head>')
     f.write_text(s)
 insert('compare/index.html','october-decision-guides','<section class="container"><h2>More furniture and project comparisons</h2><p>Published October 9, 2026. Compare practical tradeoffs and download a worksheet for each decision.</p><div class="cards">'+cards(COMPARISONS,'compare')+'</div><p>'+link('/resources/design-decisions/','Explore all 20 new decision guides')+'</p></section>')
 insert('resources/index.html','october-project-playbooks','<section class="container"><h2>Project execution playbooks</h2><p>Use these worksheets to organize receiving, approvals, installation and handover.</p><div class="cards">'+cards(PLAYBOOKS,'resources')+'</div><p>'+link('/resources/design-decisions/','Compare furnishing decisions and project workflows')+'</p></section>')
