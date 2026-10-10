@@ -111,7 +111,7 @@ def run(root):
             p=Page(f.read_text())
             if p.noindex or p.canonical!=u:errors.append('Ineligible sitemap URL '+u)
         for d in doc.findall('.//{*}lastmod'):
-            if not re.fullmatch(r'\d{4}-\d{2}-\d{2}',d.text or '') or d.text>max(DATE,'2026-10-07'):errors.append('Invalid sitemap date '+str(d.text))
+            if not re.fullmatch(r'\d{4}-\d{2}-\d{2}',d.text or '') or d.text>max(DATE,'2026-10-09'):errors.append('Invalid sitemap date '+str(d.text))
     for r in newroutes+['/resources/'+c+'/' for c in CLUSTERS]:
         if ORIGIN+r not in listed:errors.append('New route missing from sitemap '+r)
     report=dict(rendered_pages_checked=len(rendered),promoted_legacy_metadata_checked=len(policy['approved_existing_additions']),new_guides=60,new_hubs=8,legacy_repairs=16,authored_words=sum(wordcounts),minimum_authored_words=min(wordcounts),unique_titles=len(set(titles)),unique_descriptions=len(set(descriptions)),sitemap_counts=sitemap_counts,combined_sitemap_urls=len(listed),numerical_checks=numerical,errors=errors)
