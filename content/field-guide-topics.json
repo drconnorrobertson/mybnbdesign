@@ -1,0 +1,56 @@
+[
+  [
+    "room-measurement-revision-control",
+    "Control revisions to rental room measurements",
+    "Room measurements can change after flooring, trim work or furniture removal. A measurement register identifies the version used for each purchase and marks assumptions that still need an on-site check. Preserve the previous version so a rejected item can be traced to the information available when it was approved.",
+    "Dated room plan;Photographs with room labels;Door and stair measurements;Current product dimensions",
+    "Give each room plan a version;Record finished surfaces and delivery constraints;Attach the version to the order approval;Recheck affected dimensions after scope changes",
+    "A room width alone does not establish that a sofa fits through a stair turn or leaves a usable circulation route. Record the whole path.",
+    "An illustrative room plan is revised after built-in storage is installed. The designer marks the old seating layout as superseded and rechecks the selected sofa before the order is released."
+  ],
+  [
+    "furniture-replacement-component-map",
+    "Map furniture components for future replacements",
+    "A replacement plan should identify the model, finish, dimensions and parts needed to maintain the installed room. Product links can disappear. Keep order records, assembly instructions and component references with the inventory so management can request a compatible replacement without starting a new design search.",
+    "Final furniture inventory;Product model and finish;Assembly instructions;Spare component locations",
+    "Record product identifiers and installed room;Save care and assembly instructions;Identify replaceable components and contacts;Document any approved equivalent product",
+    "A visually similar item may have a different finish, size or mounting pattern. Verify compatibility before approving a replacement.",
+    "A hypothetical dining chair loses a foot glide. The inventory includes the chair model and spare location, allowing the manager to replace the component instead of buying an unmatched new chair."
+  ],
+  [
+    "installation-access-window-plan",
+    "Plan installation access windows and receiving coverage",
+    "Installation time depends on access, unloading and the availability of the people doing the work. Build the schedule around confirmed delivery windows and the actual building constraints. A delivery booking is different from an installation appointment, and neither should be assumed complete because a carrier marked an order shipped.",
+    "Carrier delivery confirmation;Building access rules;Installer scope;On-site receiving contact",
+    "Confirm unloading and storage locations;Separate receiving from assembly appointments;Assign a contact for failed access;Record completion evidence for each room",
+    "Do not leave expensive deliveries dependent on an unconfirmed door code or an absent contact. Clarify who can authorize a changed delivery time.",
+    "In an illustrative condo project, freight delivery is available Tuesday but elevator booking is required. The coordinator reserves access, confirms the receiving person and schedules assembly after the items are checked."
+  ],
+  [
+    "textile-laundering-care-handoff",
+    "Hand off textile care information to the cleaning team",
+    "Textile choices affect the daily cleaning workflow. Preserve care labels and product identifiers, then ask the operator to confirm that the intended laundering process is compatible. Record approved replacement colors and sizes so replenishment does not gradually alter the room or introduce mismatched sets.",
+    "Textile inventory by room;Manufacturer care labels;Cleaning equipment constraints;Replacement stock locations",
+    "Save the original care instructions;Confirm the operator can follow them;Identify spare sets and storage;Record substitutions separately from the standard specification",
+    "Do not invent a universal laundering temperature or treatment for every fabric. The product instructions and operator capability should drive the handoff.",
+    "A hypothetical bedroom uses duvet covers that require a different drying approach from the towels. The handoff records both specifications and identifies spare sets while the operator confirms the turnaround workflow."
+  ],
+  [
+    "room-photography-change-freeze",
+    "Set a room photography change freeze",
+    "A photography freeze defines which room version is being represented in the listing images. Record the approved setup, outstanding substitutions and any temporary items. The freeze helps design and management coordinate the shoot; it does not justify showing features that will not be available to guests.",
+    "Approved room inventory;Current installation photographs;Open substitution log;Photographer shot list",
+    "Agree the room version for the shoot;Remove or disclose temporary staging internally;Record changes after photography;Review whether listing images need updating",
+    "A photograph can remain attractive while becoming inaccurate. Review changes to sleeping arrangements, amenities and major furniture after the shoot.",
+    "In an illustrative project, an accent chair is borrowed for staging but is not part of the guest inventory. The team replaces it with the actual item before photography rather than making the listing depend on a temporary setup."
+  ],
+  [
+    "outdoor-furniture-storage-handoff",
+    "Create an outdoor furniture storage handoff",
+    "Outdoor furniture needs a practical storage and handling plan as well as a visual layout. Record manufacturer guidance, storage locations and responsibility for moving items when necessary. The plan should fit the actual available space and the operator\u2019s staffing; avoid assuming that every piece can simply be carried indoors.",
+    "Outdoor inventory;Manufacturer care guidance;Storage measurements;Operator staffing plan",
+    "Identify which items need special handling;Confirm storage capacity and access;Label components that belong together;Assign inspection and replacement reporting",
+    "Storage plans fail when the nominated room is already occupied by linens or supplies. Measure the space and test the movement route.",
+    "A hypothetical patio has stackable chairs and a large dining table. The handoff distinguishes chair storage from the table\u2019s care plan and gives management the product instructions and contact for replacement feet."
+  ]
+]
