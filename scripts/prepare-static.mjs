@@ -17,3 +17,6 @@ function copy(dir,dest) {
 copy(repo,out);
 if(!fs.existsSync(path.join(out,'index.html'))) throw new Error('Static publish directory is missing index.html');
 console.log('Prepared static publish directory without build sources or brand policy files.');
+
+const {execFileSync}=await import('node:child_process');
+execFileSync(process.execPath,[path.join(repo,'scripts/search-intent.mjs'),'--write','--dist'],{cwd:repo,stdio:'inherit'});
