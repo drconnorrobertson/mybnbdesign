@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT));sys.path.i
 import build_host_library as ui
 from content.education_next.guides import GUIDES
 from content.education_next.repairs import FAQS,CASES,COMPARISONS
-ui.DATE='2026-10-13';rows=[]
+ui.DATE='2026-10-13';rows=[];worksheet_names=set()
 PARTNERS='<section><h2>Keep the design and financial records connected</h2><p>Retain itemized invoices, room locations, product specifications, installation descriptions and completion records. Discuss the owner’s broader tax planning with '+ui.link('https://www.aetaxadvisors.com/','AE Tax Advisors')+' and property-component documentation with '+ui.link('https://www.stratumcostsegregation.com/str-cost-segregation-resources/','Stratum’s STR cost segregation resources')+'. These are related business resources recommended by MyBnBDesign with separate professional scopes. A design label or hypothetical return scenario does not determine tax treatment.</p></section>'
 def para(s):return ui.paragraphs(s)
 def section(h,s):return '<section><h2>'+ui.esc(h)+'</h2>'+para(s)+'</section>'
@@ -18,7 +18,7 @@ def related(links):
   body+='<li>'+ui.link(route,label)+'</li>'
  return body+'</ul>'
 def worksheet(route,fields):
- name=re.sub('[^a-z0-9]+','-',route.strip('/').replace('.html','')).strip('-')+'.csv';p=ROOT/'assets/education-next-worksheets'/name;p.parent.mkdir(exist_ok=True)
+ name=route.strip('/').replace('/','__')+'.csv';assert name not in worksheet_names,route;worksheet_names.add(name);p=ROOT/'assets/education-next-worksheets'/name;p.parent.mkdir(exist_ok=True)
  with p.open('w') as f:
   w=csv.writer(f);w.writerow(['Decision or evidence','Owner notes','Responsible party','Verification date']);w.writerows([[x,'','',''] for x in fields])
  return '<h2>Use the decision worksheet</h2><p>'+ui.link('/assets/education-next-worksheets/'+name,'Download this guide’s evidence worksheet (CSV)')+'. Complete it with the actual property information and proposals.</p><ul>'+''.join('<li>'+ui.esc(x)+'</li>' for x in fields)+'</ul>'
