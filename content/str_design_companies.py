@@ -28,4 +28,13 @@ MYBNB=dict(slug='mybnbdesign',name='MyBnBDesign',kind='STR interior design servi
 add('j-squared-home-designs','J Squared Home Designs','Interior design and staging studio with vacation-rental service','Its official vacation-rental page offers design for short-term-rental clients.','The linked service document describes design and white-glove turnkey installation. Confirm current scope.','Its official page lists Missouri City, Texas and nearby areas. Confirm rental project coverage.','Request a current vacation-rental proposal and itemized execution costs.','Is the installation service document current for your property and market?','https://j2homedesigns.com/vacation-rental-design/')
 add('furnishr','Furnishr','Turnkey home furnishing service with STR packages','Its FAQ offers furnishing packages for Airbnb and short-term rentals.','Describes design, sourcing, shipping coordination and on-site assembly; says painting, flooring and wallpaper installation are excluded.','Confirm furnishing and installation coverage for your address.','Its process describes a package fee covering furniture, design, delivery and assembly. Request an itemized total.','Is the property ready for furniture, or does it need excluded renovation work first?','https://furnishr.com/faq/')
 add('acm-interiors','ACM Interiors','Interior design studio with turnkey vacation-rental service','Its turnkey page describes furnishing and styling vacation-rental properties.','Presents a managed end-to-end furnishing service. Confirm receiving, installation and handoff tasks.','The site is presented as a Florida Keys interior design studio. Confirm the property location directly.','Request a project-specific turnkey design and furnishing quote.','Which site visits and execution tasks are included for the property location?','https://www.acminteriors.com/turnkey-design')
-assert len(COMPANIES)==23
+# The expansion keeps source dates explicit instead of treating every legacy fact as reverified.
+from content.expansion_providers import PROVIDERS
+import re
+for name,source,design,execution,coverage,question in PROVIDERS:
+ slug=re.sub(r'[^a-z0-9]+','-',__import__('unicodedata').normalize('NFKD',name).encode('ascii','ignore').decode().lower()).strip('-')
+ kind='AI design and shopping marketplace' if name=='Fülhaus' else 'Vacation-rental design and furnishing provider'
+ add(slug,name,kind,design,execution,coverage,'Request a current itemized proposal. Published service labels do not establish the complete property cost.',question,source)
+ COMPANIES[-1]['checked']='2026-10-13'
+assert len(COMPANIES)==57
+assert len({c['slug'] for c in COMPANIES})==57
