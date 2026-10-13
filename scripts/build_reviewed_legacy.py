@@ -115,6 +115,16 @@ ns=ui.NS;xml=E.Element('{'+ns+'}urlset')
 for r in sorted(manifest,key=lambda x:x['route']):
  row=E.SubElement(xml,'{'+ns+'}url');E.SubElement(row,'{'+ns+'}loc').text=ORIGIN+r['route'];E.SubElement(row,'{'+ns+'}lastmod').text=ui.DATE
 E.indent(xml);(ROOT/'sitemap-reviewed-design.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n'+E.tostring(xml,encoding='unicode')+'\n')
+# Keep reviewed owners discoverable through the established main sitemap too.
+primary_path=ROOT/'sitemap.xml';primary=E.parse(primary_path);existing={r.find('{*}loc').text:r for r in primary.getroot()}
+for item in manifest:
+ u=ORIGIN+item['route'];row=existing.get(u)
+ if row is None:
+  row=E.SubElement(primary.getroot(),'{'+ns+'}url');E.SubElement(row,'{'+ns+'}loc').text=u
+ lm=row.find('{*}lastmod')
+ if lm is None:lm=E.SubElement(row,'{'+ns+'}lastmod')
+ lm.text=ui.DATE
+E.indent(primary);primary.write(primary_path,encoding='utf-8',xml_declaration=True)
 robots=ROOT/'robots.txt';text=robots.read_text();line='Sitemap: '+ORIGIN+'/sitemap-reviewed-design.xml'
 if line not in text:robots.write_text(text.rstrip()+'\n'+line+'\n')
 # Replace the old testimonial hub: its aggregate score and quotes lacked verified records.
