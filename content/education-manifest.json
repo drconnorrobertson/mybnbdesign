@@ -1,0 +1,133 @@
+[
+  {
+    "route": "/learn/large-group-activity-zoning/",
+    "title": "Design a large-group rental around simultaneous activities",
+    "authored_words": 1090,
+    "financial_links": false,
+    "status": "published",
+    "sources": [
+      "https://www.airbnb.com/help/article/2343"
+    ]
+  },
+  {
+    "route": "/learn/studio-rental-zoning-without-extra-furniture/",
+    "title": "Zone a studio rental without filling every corner",
+    "authored_words": 1020,
+    "financial_links": false,
+    "status": "published",
+    "sources": [
+      "https://www.airbnb.com/help/article/2343",
+      "https://www.access-board.gov/ada/guides/chapter-4-accessible-routes/"
+    ]
+  },
+  {
+    "route": "/learn/multigenerational-stay-design-brief/",
+    "title": "Write a design brief for multigenerational stays",
+    "authored_words": 975,
+    "financial_links": false,
+    "status": "published",
+    "sources": [
+      "https://www.airbnb.com/resources/hosting-homes/a/tips-for-hosting-guests-with-accessibility-needs-343",
+      "https://www.access-board.gov/ada/guides/chapter-4-accessible-routes/"
+    ]
+  },
+  {
+    "route": "/learn/pet-friendly-furnishing-system/",
+    "title": "Specify a pet-friendly rental as a care system",
+    "authored_words": 965,
+    "financial_links": true,
+    "status": "published",
+    "sources": [
+      "https://consumer.ftc.gov/articles/warranties",
+      "https://www.cpsc.gov/Recalls"
+    ]
+  },
+  {
+    "route": "/learn/kitchen-inventory-group-meal-test/",
+    "title": "Test a rental kitchen with a complete group meal",
+    "authored_words": 959,
+    "financial_links": false,
+    "status": "published",
+    "sources": [
+      "https://www.airbnb.com/help/article/2343",
+      "https://consumer.ftc.gov/articles/warranties"
+    ]
+  },
+  {
+    "route": "/learn/rental-bedroom-nighttime-commissioning/",
+    "title": "Commission a bedroom after dark",
+    "authored_words": 956,
+    "financial_links": false,
+    "status": "published",
+    "sources": [
+      "https://consumer.ftc.gov/articles/shopping-light-bulbs",
+      "https://www.airbnb.com/help/article/2343",
+      "https://www.cpsc.gov/Recalls"
+    ]
+  },
+  {
+    "route": "/learn/rental-accessibility-feature-evidence/",
+    "title": "Document accessibility features with useful property evidence",
+    "authored_words": 936,
+    "financial_links": false,
+    "status": "published",
+    "sources": [
+      "https://www.airbnb.com/resources/hosting-homes/a/tips-for-hosting-guests-with-accessibility-needs-343",
+      "https://www.access-board.gov/ada/guides/chapter-4-accessible-routes/"
+    ]
+  },
+  {
+    "route": "/learn/turnover-time-design-study/",
+    "title": "Use a turnover observation to improve the design",
+    "authored_words": 966,
+    "financial_links": true,
+    "status": "published",
+    "sources": [
+      "https://consumer.ftc.gov/articles/warranties",
+      "https://www.airbnb.com/help/article/2343"
+    ]
+  },
+  {
+    "route": "/learn/bathroom-refresh-design-brief/",
+    "title": "Prepare a bathroom refresh brief before selecting finishes",
+    "authored_words": 954,
+    "financial_links": true,
+    "status": "published",
+    "sources": [
+      "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home",
+      "https://consumer.ftc.gov/articles/warranties"
+    ]
+  },
+  {
+    "route": "/learn/wet-gear-entry-and-storage-plan/",
+    "title": "Design an entry for wet gear and everyday arrivals",
+    "authored_words": 945,
+    "financial_links": false,
+    "status": "published",
+    "sources": [
+      "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home",
+      "https://consumer.ftc.gov/articles/warranties"
+    ]
+  },
+  {
+    "route": "/learn/portfolio-furnishing-standard-with-local-variation/",
+    "title": "Build a portfolio furnishing standard that allows useful variation",
+    "authored_words": 917,
+    "financial_links": true,
+    "status": "published",
+    "sources": [
+      "https://consumer.ftc.gov/articles/warranties",
+      "https://www.cpsc.gov/Recalls"
+    ]
+  },
+  {
+    "route": "/learn/furnishing-project-critical-path/",
+    "title": "Build a furnishing schedule from dependencies",
+    "authored_words": 932,
+    "financial_links": true,
+    "status": "published",
+    "sources": [
+      "https://consumer.ftc.gov/articles/warranties"
+    ]
+  }
+]

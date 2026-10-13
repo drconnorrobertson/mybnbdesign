@@ -32,7 +32,7 @@ class Page(HTMLParser):
 def inventory():
     files={}; pages={}; excluded=[]
     for f in sorted(ROOT.rglob('*.html')):
-        if any(x.startswith('.') for x in f.relative_to(ROOT).parts):continue
+        if any(x.startswith('.') or x in ('dist','node_modules') for x in f.relative_to(ROOT).parts):continue
         text=f.read_text(); p=Page(text); rel=f.relative_to(ROOT).as_posix()
         route='/' + rel
         if route.endswith('/index.html'):route=route[:-10]
