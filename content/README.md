@@ -38,3 +38,8 @@ Never use the older mass city/room generators to expand this collection. Edits
 should address a new, useful host decision with original actionable content.
 
 The October 7 tools upgrade is reapplied by `build_host_library.py`. The ROI tool uses a user-entered hypothetical ADR change defaulting to zero; it no longer infers a 15–40% revenue increase from the amount spent. Its outputs are gross-revenue scenarios before expenses.
+
+
+## Authored education manual
+
+`education_manual.py` contains individually authored lessons, labs and FAQs. Run `python3 scripts/build_education_manual.py` after legacy host-library or design-roadmap regeneration, because it restores specific lesson discovery panels to those existing owners. The renderer does not create pages from permutations. Every lesson has at least 900 authored words excluding navigation, worksheet prompts, source lists and shared calls to action. Word count is an editorial floor, not evidence of search demand or sufficient quality. Future lessons require a distinct owner decision, overlap review, useful source support and a property exercise.

@@ -24,7 +24,7 @@ class Links(HTMLParser):
 def run(root):
     pages = {p.relative_to(root).as_posix(): Links(p.read_text())
              for p in root.rglob('*.html')
-             if not any(part.startswith('.') for part in p.relative_to(root).parts)}
+             if not any(part.startswith('.') or part in ('dist','node_modules') for part in p.relative_to(root).parts)}
     local_anchors = 0
     errors = []
     for file, page in pages.items():
