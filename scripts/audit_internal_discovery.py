@@ -49,7 +49,7 @@ def inventory():
         q=urlsplit(urljoin(source,href))
         if q.netloc not in ['www.mybnbdesign.com','mybnbdesign.com'] or q.scheme not in ['https','http']:return None
         path=q.path.lstrip('/')
-        candidates=[path, path+'index.html' if path.endswith('/') else path+'/index.html']
+        candidates=[path, path+'index.html' if path.endswith('/') else path+'/index.html', path+'.html']
         for candidate in candidates:
             if candidate in files:return files[candidate]
         return None
