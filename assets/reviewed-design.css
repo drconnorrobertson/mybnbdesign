@@ -1,0 +1,14 @@
+.reviewed-design article { max-width: 76ch; margin-inline: auto; }
+.reviewed-design h1 { max-width: 24ch; font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.12; margin-block: .4em .65em; }
+.reviewed-design h2 { font-size: clamp(1.4rem, 2.4vw, 2rem); line-height: 1.25; margin-block: 1.6em .5em; }
+.reviewed-design h3 { font-size: 1.15rem; margin-block: 1.3em .4em; }
+.reviewed-design p, .reviewed-design li { line-height: 1.75; }
+.reviewed-design p { margin-block: .75em; }
+.reviewed-design table { width: 100%; border-collapse: collapse; margin-block: 1.5rem; table-layout: fixed; }
+.reviewed-design th, .reviewed-design td { text-align: left; vertical-align: top; padding: .8rem; border-bottom: 1px solid #ddd8ce; overflow-wrap: anywhere; }
+.reviewed-design th { font-weight: 600; }
+.reviewed-design thead { background: #f4f1ea; }
+.reviewed-design .guide-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.reviewed-design .guide-grid section { padding: 1.2rem; border: 1px solid #ddd8ce; border-radius: .5rem; }
+.reviewed-design a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+@media (max-width: 600px) { .reviewed-design { padding-inline: 1rem; } .reviewed-design th, .reviewed-design td { padding: .6rem; } }

@@ -1,0 +1,452 @@
+[
+  {
+    "route": "/reviews/awning-design-reviews/",
+    "title": "Awning Design review: services and owner checklist",
+    "kind": "provider review",
+    "source": "https://website.awning.com/vacation-rental-furnishing",
+    "words": 710,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/bee-setups-reviews/",
+    "title": "Bee Setups review: services and owner checklist",
+    "kind": "provider review",
+    "source": "https://www.beesetups.com/packages",
+    "words": 710,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/bnb-turnkey-reviews/",
+    "title": "BNB Turnkey review: services and owner checklist",
+    "kind": "provider review",
+    "source": "https://bnb-turnkey.com/services",
+    "words": 699,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/coveted-haus-reviews/",
+    "title": "Coveted Haus review: services and owner checklist",
+    "kind": "provider review",
+    "source": "https://covetedhaus.com/about-coveted-haus",
+    "words": 702,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/designaholic-reviews/",
+    "title": "Designaholic review: services and owner checklist",
+    "kind": "provider identity review",
+    "source": null,
+    "words": 724,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/fulhaus-reviews/",
+    "title": "Fülhaus review: services and owner checklist",
+    "kind": "provider review",
+    "source": "https://fulhaus.com/",
+    "words": 697,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/furnishr-reviews/",
+    "title": "Furnishr review: services and owner checklist",
+    "kind": "provider review",
+    "source": "https://furnishr.com/faq/",
+    "words": 709,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/laurie-mattson-interiors-reviews/",
+    "title": "Laurie Mattson Interiors review: services and owner checklist",
+    "kind": "provider review",
+    "source": "https://www.lauriemattsoninteriors.com/short-term-rental-design/full-service-interior-design",
+    "words": 714,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/parklin-interiors-reviews/",
+    "title": "Parklin Interiors review: services and owner checklist",
+    "kind": "provider review",
+    "source": "https://parklininteriors.com/about-us",
+    "words": 703,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/showplace-reviews/",
+    "title": "Showplace review: services and owner checklist",
+    "kind": "provider review",
+    "source": "https://www.showplacehq.com/",
+    "words": 697,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/somerled-designs-reviews/",
+    "title": "Somerled Designs review: services and owner checklist",
+    "kind": "provider review",
+    "source": "https://www.somerleddesigns.com/work-with-us",
+    "words": 705,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/str-design-lab-reviews/",
+    "title": "STR Design Lab review: services and owner checklist",
+    "kind": "provider review",
+    "source": "https://www.strdesignlab.com/airbnbdesign",
+    "words": 707,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/str-design-solutions-reviews/",
+    "title": "STR Design Solutions review: services and owner checklist",
+    "kind": "provider identity review",
+    "source": null,
+    "words": 719,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/strcribs-reviews/",
+    "title": "STR Cribs review: services and owner checklist",
+    "kind": "provider review",
+    "source": "https://www.strcribs.com/",
+    "words": 693,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/surge-reviews/",
+    "title": "Surge review: services and owner checklist",
+    "kind": "provider review",
+    "source": "https://www.gowithsurge.com/",
+    "words": 700,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/vacay-rental-design-reviews/",
+    "title": "Vacay Rental Design review: services and owner checklist",
+    "kind": "provider review",
+    "source": "https://vacayrentaldesign.com/packages",
+    "words": 703,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/reviews/winland-designs-reviews/",
+    "title": "Winland Designs review: services and owner checklist",
+    "kind": "provider review",
+    "source": "https://www.winlanddesigns.com/",
+    "words": 699,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/alternatives/awning-alternative/",
+    "title": "Awning Design alternatives: choose the right scope",
+    "kind": "alternative guide",
+    "source": "https://website.awning.com/vacation-rental-furnishing",
+    "words": 718,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/alternatives/parklin-interiors-alternative/",
+    "title": "Parklin Interiors alternatives: choose the right scope",
+    "kind": "alternative guide",
+    "source": "https://parklininteriors.com/about-us",
+    "words": 709,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/alternatives/str-design-lab-alternative/",
+    "title": "STR Design Lab alternatives: choose the right scope",
+    "kind": "alternative guide",
+    "source": "https://www.strdesignlab.com/airbnbdesign",
+    "words": 710,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/alternatives/surge-alternative/",
+    "title": "Surge alternatives: choose the right scope",
+    "kind": "alternative guide",
+    "source": "https://www.gowithsurge.com/",
+    "words": 704,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/ai-design-tools/",
+    "title": "AI design tools for STR owners: concept to usable plan",
+    "kind": "approach decision",
+    "source": null,
+    "words": 677,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/facebook-marketplace-furnishing/",
+    "title": "Facebook Marketplace furnishing for an Airbnb",
+    "kind": "approach decision",
+    "source": null,
+    "words": 665,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/general-contractor-furnishing/",
+    "title": "General contractor or STR designer: divide the scope",
+    "kind": "approach decision",
+    "source": null,
+    "words": 672,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/hotel-design-firm/",
+    "title": "Hotel design firm or STR studio: match the brief",
+    "kind": "approach decision",
+    "source": null,
+    "words": 661,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/pinterest-diy/",
+    "title": "Pinterest DIY Airbnb design: turn inspiration into a plan",
+    "kind": "approach decision",
+    "source": null,
+    "words": 667,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/professional-stager/",
+    "title": "Professional staging or STR design: guest use matters",
+    "kind": "approach decision",
+    "source": null,
+    "words": 657,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/real-estate-agent-staging/",
+    "title": "Real estate staging for a rental: adapt the objective",
+    "kind": "approach decision",
+    "source": null,
+    "words": 662,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/virtual-interior-designer/",
+    "title": "Virtual interior design for Airbnb: a complete handoff",
+    "kind": "approach decision",
+    "source": null,
+    "words": 654,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/mybnbdesign-vs-amazon-furnishing.html",
+    "title": "Amazon furnishing or a design service for your STR",
+    "kind": "approach decision",
+    "source": null,
+    "words": 660,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/mybnbdesign-vs-ikea-airbnb.html",
+    "title": "IKEA furnishing for Airbnb: plan assembly and replacement",
+    "kind": "approach decision",
+    "source": null,
+    "words": 650,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/mybnbdesign-vs-pottery-barn-str.html",
+    "title": "Pottery Barn furnishing for STRs: specify use and care",
+    "kind": "approach decision",
+    "source": null,
+    "words": 661,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/mybnbdesign-vs-target-budget-design.html",
+    "title": "Target budget furnishing for Airbnb: spend by priority",
+    "kind": "approach decision",
+    "source": null,
+    "words": 657,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/blueground-design/",
+    "title": "Blueground or independent STR design: different engagements",
+    "kind": "approach decision",
+    "source": "https://www.theblueground.com/rent-your-property/usa",
+    "words": 639,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/kasa-living-design/",
+    "title": "Kasa or STR design services: clarify the partnership",
+    "kind": "approach decision",
+    "source": "https://kasa.com/property-partners",
+    "words": 642,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/frontdesk-design/",
+    "title": "Frontdesk design references: verify the current offer",
+    "kind": "approach decision",
+    "source": null,
+    "words": 663,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/sonder-interior-design/",
+    "title": "Sonder interior-design references: verify availability",
+    "kind": "approach decision",
+    "source": null,
+    "words": 651,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/vacasa-design-services/",
+    "title": "Vacasa design services: confirm current owner eligibility",
+    "kind": "approach decision",
+    "source": "https://www.vacasa.com/news/vacasa-introduces-vacation-rental-interior-design-program",
+    "words": 632,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/airbnb-design-co/",
+    "title": "Airbnb design company proposal: verify the provider",
+    "kind": "approach decision",
+    "source": null,
+    "words": 654,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/beyond-stay-design/",
+    "title": "Beyond Stay Design: evaluate a rental design brief",
+    "kind": "approach decision",
+    "source": null,
+    "words": 645,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/chic-retreats-design/",
+    "title": "Chic Retreats Design: assess a proposed style direction",
+    "kind": "approach decision",
+    "source": null,
+    "words": 642,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/inhabit-designer/",
+    "title": "Inhabit Designer: check the room-planning deliverables",
+    "kind": "approach decision",
+    "source": null,
+    "words": 653,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/rental-design-lab/",
+    "title": "Rental Design Lab: review the implementation handoff",
+    "kind": "approach decision",
+    "source": null,
+    "words": 637,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/str-design-studio/",
+    "title": "STR design studio: choose a measurable service scope",
+    "kind": "approach decision",
+    "source": null,
+    "words": 644,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/compare/turnkey-vr-design/",
+    "title": "Turnkey vacation-rental design: define guest-ready",
+    "kind": "approach decision",
+    "source": null,
+    "words": 645,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/best-airbnb-design-companies/",
+    "title": "Best Airbnb design companies: build your shortlist",
+    "kind": "category buying guide",
+    "source": null,
+    "words": 835,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/best-vacation-rental-furnishing/",
+    "title": "Vacation-rental furnishing companies: compare execution",
+    "kind": "category buying guide",
+    "source": null,
+    "words": 833,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/top-str-design-services/",
+    "title": "STR design services: choose the support you need",
+    "kind": "category buying guide",
+    "source": null,
+    "words": 819,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/mybnbdesign-reviews/",
+    "title": "MyBnBDesign reviews: evaluate evidence and project fit",
+    "kind": "first-party evidence guide",
+    "source": null,
+    "words": 744,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  },
+  {
+    "route": "/alternatives/",
+    "title": "STR design alternatives: compare scopes and execution",
+    "kind": "alternatives directory",
+    "source": null,
+    "words": 467,
+    "reviewed": "2026-10-13",
+    "changes": "Replaced unsupported comparisons/ratings with evidence, owner decisions and crawlable related guides"
+  }
+]
