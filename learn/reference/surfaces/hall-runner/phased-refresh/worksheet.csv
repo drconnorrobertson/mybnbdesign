@@ -1,0 +1,8 @@
+Element,Decision,Field,Property evidence,Owner and next action
+Hall runner,Sequence a refresh,Property and room reference,,
+Hall runner,Sequence a refresh,Existing condition,,
+Hall runner,Sequence a refresh,Required phase result,,
+Hall runner,Sequence a refresh,Predecessor tasks,,
+Hall runner,Sequence a refresh,Access and temporary availability,,
+Hall runner,Sequence a refresh,Acceptance evidence,,
+Hall runner,Sequence a refresh,Actual work and cost chronology,,

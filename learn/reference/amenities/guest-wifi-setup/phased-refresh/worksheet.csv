@@ -1,0 +1,8 @@
+Element,Decision,Field,Property evidence,Owner and next action
+Guest WiFi setup,Sequence a refresh,Property and room reference,,
+Guest WiFi setup,Sequence a refresh,Existing condition,,
+Guest WiFi setup,Sequence a refresh,Required phase result,,
+Guest WiFi setup,Sequence a refresh,Predecessor tasks,,
+Guest WiFi setup,Sequence a refresh,Access and temporary availability,,
+Guest WiFi setup,Sequence a refresh,Acceptance evidence,,
+Guest WiFi setup,Sequence a refresh,Actual work and cost chronology,,

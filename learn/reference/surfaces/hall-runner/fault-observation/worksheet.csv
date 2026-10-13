@@ -1,0 +1,8 @@
+Element,Decision,Field,Property evidence,Owner and next action
+Hall runner,Triage a condition problem,Property and room reference,,
+Hall runner,Triage a condition problem,Observed condition and date,,
+Hall runner,Triage a condition problem,Installed identifier,,
+Hall runner,Triage a condition problem,Affected function,,
+Hall runner,Triage a condition problem,Review owner and technical question,,
+Hall runner,Triage a condition problem,Accepted remedy evidence,,
+Hall runner,Triage a condition problem,Reinspection and record updates,,

@@ -43,3 +43,11 @@ The October 7 tools upgrade is reapplied by `build_host_library.py`. The ROI too
 ## Authored education manual
 
 `education_manual.py` contains individually authored lessons, labs and FAQs. Run `python3 scripts/build_education_manual.py` after legacy host-library or design-roadmap regeneration, because it restores specific lesson discovery panels to those existing owners. The renderer does not create pages from permutations. Every lesson has at least 900 authored words excluding navigation, worksheet prompts, source lists and shared calls to action. Word count is an editorial floor, not evidence of search demand or sufficient quality. Future lessons require a distinct owner decision, overlap review, useful source support and a property exercise.
+
+## Component lifecycle reference
+
+`design_reference/topics.py` holds 128 component-specific evidence records in fourteen areas. `design_reference/stages.py` holds nineteen distinct lifecycle learning objectives, and `design_reference/cases.py` contains their hypothetical exercises. These are openly structured workbooks using shared instructional protocols, not 2,432 independently reported product studies. Do not describe the main word count as wholly unique authored prose.
+
+Run `python3 scripts/build_design_reference.py` after the education manual and roadmap renderers. It restores discovery panels, writes the 2,432 workbooks and fifteen navigation pages, exports blank CSV decision records and publishes a dedicated sitemap listed in robots.txt. Each element's course is linked from its category anchor rather than an additional near-duplicate overview URL. Financial links are contextual and restricted to relevant physical-property categories and lifecycle decisions.
+
+The audited combined site has 5,000 self-canonical pages, plus 49 pre-existing excluded utility or alternate HTML files. Keep source audits separate from the generated dist tree. Regeneration must be deterministic, new routes must be reachable and sitemap-listed, and a future content change must not convert planning assumptions into product ratings, compliance certifications, guaranteed returns or tax conclusions.

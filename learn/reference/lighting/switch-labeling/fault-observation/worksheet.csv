@@ -1,0 +1,8 @@
+Element,Decision,Field,Property evidence,Owner and next action
+Switch labeling,Triage a condition problem,Property and room reference,,
+Switch labeling,Triage a condition problem,Observed condition and date,,
+Switch labeling,Triage a condition problem,Installed identifier,,
+Switch labeling,Triage a condition problem,Affected function,,
+Switch labeling,Triage a condition problem,Review owner and technical question,,
+Switch labeling,Triage a condition problem,Accepted remedy evidence,,
+Switch labeling,Triage a condition problem,Reinspection and record updates,,

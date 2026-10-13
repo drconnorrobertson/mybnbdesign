@@ -1,0 +1,8 @@
+Element,Decision,Field,Property evidence,Owner and next action
+Task lamp,Sequence a refresh,Property and room reference,,
+Task lamp,Sequence a refresh,Existing condition,,
+Task lamp,Sequence a refresh,Required phase result,,
+Task lamp,Sequence a refresh,Predecessor tasks,,
+Task lamp,Sequence a refresh,Access and temporary availability,,
+Task lamp,Sequence a refresh,Acceptance evidence,,
+Task lamp,Sequence a refresh,Actual work and cost chronology,,

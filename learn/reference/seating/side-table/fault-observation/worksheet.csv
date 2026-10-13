@@ -1,0 +1,8 @@
+Element,Decision,Field,Property evidence,Owner and next action
+Side table,Triage a condition problem,Property and room reference,,
+Side table,Triage a condition problem,Observed condition and date,,
+Side table,Triage a condition problem,Installed identifier,,
+Side table,Triage a condition problem,Affected function,,
+Side table,Triage a condition problem,Review owner and technical question,,
+Side table,Triage a condition problem,Accepted remedy evidence,,
+Side table,Triage a condition problem,Reinspection and record updates,,

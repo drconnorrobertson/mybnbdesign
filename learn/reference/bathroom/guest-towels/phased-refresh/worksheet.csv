@@ -1,0 +1,8 @@
+Element,Decision,Field,Property evidence,Owner and next action
+Guest towels,Sequence a refresh,Property and room reference,,
+Guest towels,Sequence a refresh,Existing condition,,
+Guest towels,Sequence a refresh,Required phase result,,
+Guest towels,Sequence a refresh,Predecessor tasks,,
+Guest towels,Sequence a refresh,Access and temporary availability,,
+Guest towels,Sequence a refresh,Acceptance evidence,,
+Guest towels,Sequence a refresh,Actual work and cost chronology,,
