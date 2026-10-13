@@ -152,5 +152,5 @@
     }
   ],
   "outputDirectory": "dist",
-  "buildCommand": "node scripts/prepare-static.mjs && node scripts/instrument-conversions.mjs dist && node scripts/check-structured-data.mjs dist && node scripts/brand-check.mjs dist && node scripts/optimize-media.mjs dist"
+  "buildCommand": "node scripts/prepare-static.mjs && node scripts/instrument-conversions.mjs dist && node scripts/check-indexability.mjs dist && node scripts/check-structured-data.mjs dist && node scripts/brand-check.mjs dist && node scripts/optimize-media.mjs dist"
 }
