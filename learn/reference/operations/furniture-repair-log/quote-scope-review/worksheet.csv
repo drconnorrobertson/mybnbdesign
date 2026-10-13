@@ -1,0 +1,8 @@
+Element,Decision,Field,Property evidence,Owner and next action
+Furniture repair log,Normalize the quote scope,Property and room reference,,
+Furniture repair log,Normalize the quote scope,Provider and dated quote,,
+Furniture repair log,Normalize the quote scope,Common required task,,
+Furniture repair log,Normalize the quote scope,Included excluded or undecided,,
+Furniture repair log,Normalize the quote scope,Named responsibility,,
+Furniture repair log,Normalize the quote scope,Quoted cost or open amount,,
+Furniture repair log,Normalize the quote scope,Accepted clarification,,

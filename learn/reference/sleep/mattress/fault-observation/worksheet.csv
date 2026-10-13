@@ -1,0 +1,8 @@
+Element,Decision,Field,Property evidence,Owner and next action
+Mattress,Triage a condition problem,Property and room reference,,
+Mattress,Triage a condition problem,Observed condition and date,,
+Mattress,Triage a condition problem,Installed identifier,,
+Mattress,Triage a condition problem,Affected function,,
+Mattress,Triage a condition problem,Review owner and technical question,,
+Mattress,Triage a condition problem,Accepted remedy evidence,,
+Mattress,Triage a condition problem,Reinspection and record updates,,

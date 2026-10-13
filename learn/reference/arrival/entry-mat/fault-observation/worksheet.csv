@@ -1,0 +1,8 @@
+Element,Decision,Field,Property evidence,Owner and next action
+Entry mat,Triage a condition problem,Property and room reference,,
+Entry mat,Triage a condition problem,Observed condition and date,,
+Entry mat,Triage a condition problem,Installed identifier,,
+Entry mat,Triage a condition problem,Affected function,,
+Entry mat,Triage a condition problem,Review owner and technical question,,
+Entry mat,Triage a condition problem,Accepted remedy evidence,,
+Entry mat,Triage a condition problem,Reinspection and record updates,,

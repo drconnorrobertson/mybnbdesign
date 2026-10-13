@@ -1,0 +1,8 @@
+Element,Decision,Field,Property evidence,Owner and next action
+Charging station,Triage a condition problem,Property and room reference,,
+Charging station,Triage a condition problem,Observed condition and date,,
+Charging station,Triage a condition problem,Installed identifier,,
+Charging station,Triage a condition problem,Affected function,,
+Charging station,Triage a condition problem,Review owner and technical question,,
+Charging station,Triage a condition problem,Accepted remedy evidence,,
+Charging station,Triage a condition problem,Reinspection and record updates,,

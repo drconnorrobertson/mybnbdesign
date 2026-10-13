@@ -1,0 +1,8 @@
+Element,Decision,Field,Property evidence,Owner and next action
+Game table,Triage a condition problem,Property and room reference,,
+Game table,Triage a condition problem,Observed condition and date,,
+Game table,Triage a condition problem,Installed identifier,,
+Game table,Triage a condition problem,Affected function,,
+Game table,Triage a condition problem,Review owner and technical question,,
+Game table,Triage a condition problem,Accepted remedy evidence,,
+Game table,Triage a condition problem,Reinspection and record updates,,

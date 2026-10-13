@@ -3,6 +3,7 @@ Allow: /
 
 Sitemap: https://www.mybnbdesign.com/sitemap.xml
 Sitemap: https://www.mybnbdesign.com/sitemap-blog.xml
+Sitemap: https://www.mybnbdesign.com/sitemap-design-reference.xml
 
 User-agent: GPTBot
 Allow: /

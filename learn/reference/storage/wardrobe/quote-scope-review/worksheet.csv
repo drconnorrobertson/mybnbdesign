@@ -1,0 +1,8 @@
+Element,Decision,Field,Property evidence,Owner and next action
+Wardrobe,Normalize the quote scope,Property and room reference,,
+Wardrobe,Normalize the quote scope,Provider and dated quote,,
+Wardrobe,Normalize the quote scope,Common required task,,
+Wardrobe,Normalize the quote scope,Included excluded or undecided,,
+Wardrobe,Normalize the quote scope,Named responsibility,,
+Wardrobe,Normalize the quote scope,Quoted cost or open amount,,
+Wardrobe,Normalize the quote scope,Accepted clarification,,

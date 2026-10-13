@@ -1,0 +1,8 @@
+Element,Decision,Field,Property evidence,Owner and next action
+Entry console,Triage a condition problem,Property and room reference,,
+Entry console,Triage a condition problem,Observed condition and date,,
+Entry console,Triage a condition problem,Installed identifier,,
+Entry console,Triage a condition problem,Affected function,,
+Entry console,Triage a condition problem,Review owner and technical question,,
+Entry console,Triage a condition problem,Accepted remedy evidence,,
+Entry console,Triage a condition problem,Reinspection and record updates,,

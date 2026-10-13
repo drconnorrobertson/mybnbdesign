@@ -1,0 +1,8 @@
+Element,Decision,Field,Property evidence,Owner and next action
+Charging station,Sequence a refresh,Property and room reference,,
+Charging station,Sequence a refresh,Existing condition,,
+Charging station,Sequence a refresh,Required phase result,,
+Charging station,Sequence a refresh,Predecessor tasks,,
+Charging station,Sequence a refresh,Access and temporary availability,,
+Charging station,Sequence a refresh,Acceptance evidence,,
+Charging station,Sequence a refresh,Actual work and cost chronology,,
