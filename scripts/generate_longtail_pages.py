@@ -14,12 +14,10 @@ def make_page(title, desc, keywords, category, content_sections, faqs, slug_path
     """Generate a full HTML page matching the MyBnBDesign template."""
     kw_str = ", ".join(keywords)
     
-    # Build FAQ schema
-    faq_entities = []
-    for q, a in faqs:
-        faq_entities.append(f'{{"@type":"Question","name":"{q}","acceptedAnswer":{{"@type":"Answer","text":"{a}"}}}}')
-    faq_schema = ','.join(faq_entities)
-    
+    faq_entities = [{"@type": "Question", "name": q,
+                     "acceptedAnswer": {"@type": "Answer", "text": a}}
+                    for q, a in faqs]
+
     # Build content HTML
     content_html = ""
     for heading, paragraphs in content_sections:
@@ -53,6 +51,9 @@ def make_page(title, desc, keywords, category, content_sections, faqs, slug_path
     
     canonical = f"{BASE_URL}/{slug_path}"
     
+    page_schema = json.dumps([{'@context': 'https://schema.org', '@type': 'BlogPosting', 'headline': title, 'description': desc, 'datePublished': TODAY, 'dateModified': TODAY, 'author': {'@type': 'Organization', 'name': 'MyBnBDesign Team', 'url': BASE_URL}, 'publisher': {'@type': 'Organization', 'name': 'MyBnBDesign', 'url': BASE_URL, 'logo': {'@type': 'ImageObject', 'url': f'{BASE_URL}/images/mybnbdesign-logo.png'}}, 'mainEntityOfPage': {'@type': 'WebPage', '@id': canonical}, 'keywords': kw_str}, {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': faq_entities}], ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c')
+    breadcrumb_schema = json.dumps({'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [{'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.mybnbdesign.com/'}, {'@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': 'https://www.mybnbdesign.com/blog/'}, {'@type': 'ListItem', 'position': 3, 'name': bc_name, 'item': canonical}]}, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c')
+
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,10 +74,10 @@ def make_page(title, desc, keywords, category, content_sections, faqs, slug_path
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="https://www.mybnbdesign.com/images/mybnbdesign-og-default.jpg">
 <script type="application/ld+json">
-[{{"@context":"https://schema.org","@type":"BlogPosting","headline":"{title}","description":"{desc}","datePublished":"{TODAY}","dateModified":"{TODAY}","author":{{"@type":"Organization","name":"MyBnBDesign Team","url":"{BASE_URL}"}},"publisher":{{"@type":"Organization","name":"MyBnBDesign","url":"{BASE_URL}","logo":{{"@type":"ImageObject","url":"{BASE_URL}/images/mybnbdesign-logo.png"}}}},"mainEntityOfPage":{{"@type":"WebPage","@id":"{canonical}"}},"keywords":"{kw_str}"}},{{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{faq_schema}]}}]
+{page_schema}
 </script>
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Home","item":"https://www.mybnbdesign.com/"}},{{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.mybnbdesign.com/blog/"}},{{"@type":"ListItem","position":3,"name":"{bc_name}","item":"{canonical}"}}]}}
+{breadcrumb_schema}
 </script>
 <style>
 :root{{--bg:#faf9f7;--text:#1a1a1a;--accent:#2c5f2d;--accent-light:#e8f0e8;--border:#e0ddd7;--muted:#666;--white:#fff}}*,*::before,*::after{{box-sizing:border-box;margin:0;padding:0}}body{{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.8}}a{{color:var(--accent);text-decoration:none}}a:hover{{text-decoration:underline}}header{{background:var(--white);border-bottom:1px solid var(--border);padding:20px 0}}.header-inner{{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}}.logo{{font-size:24px;font-weight:800;color:var(--accent);letter-spacing:-0.5px}}nav a{{margin-left:28px;color:var(--text);font-size:14px;font-weight:500}}nav a:hover{{color:var(--accent);text-decoration:none}}.hero{{background:var(--accent);color:var(--white);padding:60px 24px;text-align:center}}.hero h1{{font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.15;max-width:800px;margin:0 auto 16px}}.hero p{{font-size:16px;opacity:0.9;max-width:600px;margin:0 auto}}.meta{{max-width:760px;margin:24px auto;padding:0 24px;display:flex;gap:20px;font-size:13px;color:var(--muted)}}article{{max-width:760px;margin:0 auto;padding:40px 24px 60px}}article h2{{font-size:24px;font-weight:700;margin:36px 0 16px;color:var(--text)}}article p{{margin-bottom:20px}}.faq-section{{background:var(--accent-light);border-radius:12px;padding:36px;margin:40px 0}}.faq-section h2{{margin-top:0;color:var(--accent)}}.faq-item{{margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border)}}.faq-item:last-child{{margin-bottom:0;padding-bottom:0;border-bottom:none}}.faq-item h3{{font-size:18px;font-weight:600;margin-bottom:8px}}.faq-item p{{margin-bottom:0;color:#444}}.cta-box{{background:var(--accent);color:var(--white);border-radius:12px;padding:40px;text-align:center;margin:40px 0}}.cta-box h3{{font-size:24px;font-weight:700;margin-bottom:12px}}.cta-box p{{opacity:0.9;margin-bottom:20px}}.cta-btn{{display:inline-block;background:var(--white);color:var(--accent);font-weight:700;padding:14px 32px;border-radius:8px;font-size:15px}}.cta-btn:hover{{text-decoration:none;opacity:0.95}}.tags{{display:flex;gap:8px;flex-wrap:wrap;margin-top:32px;padding-top:24px;border-top:1px solid var(--border)}}.tag{{font-size:12px;font-weight:600;padding:4px 12px;background:var(--accent-light);color:var(--accent);border-radius:20px}}footer{{background:#1a1a1a;color:#aaa;padding:48px 24px;text-align:center;font-size:14px}}footer .fb{{font-size:20px;font-weight:700;color:var(--white);margin-bottom:8px}}@media(max-width:600px){{.header-inner{{flex-direction:column;gap:12px}} nav a{{margin-left:16px}}}}

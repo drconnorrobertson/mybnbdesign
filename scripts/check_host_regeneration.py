@@ -7,6 +7,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from check_jsonld import check
 
 SOURCE = Path(__file__).resolve().parents[1]
 
@@ -30,11 +31,14 @@ def run(root):
                                stdout=subprocess.DEVNULL)
         build()
         first = snapshot(copy)
+        first_jsonld = check(copy)
         build()
         second = snapshot(copy)
+        second_jsonld = check(copy)
         result = {'uncommitted_generated_changes': compare(before, first),
                   'nondeterministic_changes': compare(first, second),
-                  'generated_files_checked': len(second)}
+                  'generated_files_checked': len(second),
+                  'jsonld_errors': first_jsonld['errors'] + second_jsonld['errors']}
         print(json.dumps(result, indent=2))
         return result
 
@@ -43,4 +47,4 @@ if __name__ == '__main__':
     parser.add_argument('--root', type=Path, default=SOURCE)
     args = parser.parse_args()
     result = run(args.root.resolve())
-    raise SystemExit(bool(result['uncommitted_generated_changes'] or result['nondeterministic_changes']))
+    raise SystemExit(bool(result['uncommitted_generated_changes'] or result['nondeterministic_changes'] or result['jsonld_errors']))
