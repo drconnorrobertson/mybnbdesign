@@ -1,0 +1,181 @@
+{
+  "origin": "https://www.mybnbdesign.com",
+  "brand": "MyBnBDesign",
+  "color": "#284b45",
+  "clean": false,
+  "parents": [
+    "index.html",
+    "services.html",
+    "compare/index.html"
+  ],
+  "cta": "/contact.html",
+  "ctaText": "Discuss your furnishing scope",
+  "related": [
+    [
+      "/design-roadmap/",
+      "Whole-project design roadmap"
+    ],
+    [
+      "/tools/",
+      "Furnishing planning tools"
+    ],
+    [
+      "/services.html",
+      "Design and installation services"
+    ]
+  ],
+  "pages": [
+    {
+      "slug": "airbnb-furnishing-quotes-comparison-checklist",
+      "title": "9 Checks for Comparing Airbnb Furnishing Quotes",
+      "description": "Compare Airbnb furnishing proposals by quantities, freight, receiving, installation, substitutions and handoff before choosing a design team.",
+      "intro": "Two Airbnb furnishing quotes can show the same bedroom count and describe very different projects. A shopping list, a delivered furniture package and an installed property are different deliverables. Compare the work remaining after each provider finishes before choosing by the total at the bottom of the proposal.",
+      "items": [
+        [
+          "Use one room inventory",
+          "Send each bidder the same measured room list, intended guest group and existing inventory. Ask each to identify the exact quantities included. If one quote assumes a sleeper sofa and another includes separate beds, record that difference before comparing furniture allowances."
+        ],
+        [
+          "Separate design fees from goods",
+          "Identify the planning fee, furniture allowance and purchasing arrangement. Ask whether prices are estimates or approved selections and who keeps any trade discounts. An attractive allowance does not establish the final amount you will pay for the approved inventory."
+        ],
+        [
+          "Trace freight to the actual address",
+          "Ask which delivery stages are included: freight terminal, warehouse, driveway or placement inside each room. Describe stairs, narrow entries and parking constraints. A line labeled shipping should say who resolves access restrictions and reschedules a failed delivery."
+        ],
+        [
+          "Name the receiving party",
+          "Confirm who checks cartons, counts pieces, photographs damage and submits claims within the supplier's required window. If receiving is yours to arrange, compare that cost and time separately. Delivery confirmation alone does not establish that the correct furniture arrived undamaged."
+        ],
+        [
+          "Define assembly and installation",
+          "List bed assembly, hardware, placement, packaging removal and any mounting work separately. Identify work that requires a qualified local provider. Ask what happens when an installer finds missing hardware or a wall condition that prevents the planned installation."
+        ],
+        [
+          "Write a substitution rule",
+          "Require approval when a replacement changes dimensions, material, care instructions, appearance or delivery timing. Record the price adjustment. A similar-looking sofa can change the room layout, so a general permission to substitute is not enough for a constrained space."
+        ],
+        [
+          "Separate staging from photography",
+          "Ask whether the service includes styling, a photographer, image editing, image rights and a return visit. Confirm which installed rooms will be photographed. Photos taken before outstanding items arrive should not be treated as evidence that the complete scope is finished."
+        ],
+        [
+          "Identify the launch dependencies",
+          "Request a sequence tied to possession, measurements, approvals, receiving and installation. Ask which dates are commitments and which are targets. Compare the cost of unresolved tasks and the person responsible for them rather than assuming every proposal promises the same opening date."
+        ],
+        [
+          "Require an operating handoff",
+          "Ask for an installed inventory, product identifiers, care instructions, warranty information and an open punch list. Confirm who trains or briefs the turnover team. A beautiful reveal is useful, but the operator also needs to know what to replace when a piece fails."
+        ]
+      ],
+      "example": "Illustrative comparison: Proposal A includes furniture and curbside delivery. Proposal B also includes receiving, assembly and removal of packaging. Do not simply add a guessed installation premium to A. Request written local quotes for the missing tasks, assign an owner and compare the combined scope. Neither proposal is automatically the better fit.",
+      "action": "Create a comparison sheet with columns for task, included quantity, price basis, responsible party, exclusion and unresolved question. Send the same questions to every shortlisted provider and retain their written answers beside the current proposal.",
+      "faq": [
+        [
+          "Should I choose the lowest furniture allowance?",
+          "Only after checking that the inventory, specifications and remaining work meet your project needs. A smaller allowance can reflect a smaller scope rather than a lower price for the same work."
+        ],
+        [
+          "Can a quote guarantee rental revenue?",
+          "Treat revenue projections separately from contracted design deliverables. Furnishing decisions are only one of several influences on bookings and operating results."
+        ]
+      ]
+    },
+    {
+      "slug": "airbnb-full-redesign-vs-targeted-refresh",
+      "title": "Airbnb Full Redesign vs Targeted Refresh",
+      "description": "Decide whether your rental needs a full redesign or a focused refresh using layout, condition, cleaning, photography and procurement evidence.",
+      "intro": "Choose the size of a rental design project by the problem you can document. A full redesign may be appropriate when the layout and inventory no longer fit the intended guest group. A targeted refresh can be more practical when the underlying setup works and a few specific components need attention.",
+      "items": [
+        [
+          "Map what is actually failing",
+          "Separate worn items, confusing room use, limited storage and dated photographs. Review your own maintenance log and guest feedback without assuming every complaint has a furnishing solution. If the problem is arrival instructions or cleaning consistency, a redesign may leave the underlying issue unresolved."
+        ],
+        [
+          "Test the current floor plan",
+          "Measure the installed furniture and walk the normal routes with chairs pulled out and luggage present. A targeted replacement works only if the remaining arrangement still works. If several rooms need coordinated changes, obtain a whole-project layout before approving individual purchases."
+        ],
+        [
+          "Check condition before appearance",
+          "Inspect the actual pieces and their care requirements. Keep suitable items when their dimensions, condition and replacement availability support the new plan. Do not classify furniture as reusable from a listing photograph alone; ask the local operator to document damage and repair needs."
+        ],
+        [
+          "Compare downtime explicitly",
+          "A small scope can still disrupt bookings if deliveries and installation are poorly coordinated. List the rooms unavailable during each stage and identify storage for old and new pieces. Obtain the team's schedule before treating a refresh as a one-day task."
+        ],
+        [
+          "Build a retained-items specification",
+          "Record what stays with dimensions, photographs and finish details. Ask the designer to work around those real constraints. A full redesign gives more freedom, while a refresh needs tighter coordination so new items do not create clearance, color or care mismatches."
+        ],
+        [
+          "Budget the entire change",
+          "Include disposal, delivery, assembly, touch-up work, replacement linens and any new photographs. Compare accepted scopes rather than dividing one whole-project quote by the number of rooms. Track optional upgrades separately so they do not obscure the work needed to solve the original problem."
+        ],
+        [
+          "Define completion evidence",
+          "For a refresh, photograph each corrected issue and update the room inventory. For a redesign, reconcile the whole property against the approved plan. In either case, test a turnover before updating listing photos and descriptions to match the actual available setup."
+        ]
+      ],
+      "example": "Illustrative scenario: a two-bedroom rental has serviceable beds and a workable layout, but damaged dining chairs and a crowded entry. A measured dining replacement and arrival-storage plan may resolve those issues without replacing every room. If the dining layout cannot seat the intended group, the project first needs a broader layout decision.",
+      "action": "Ask for two written scopes using the same problem list: a minimum correction and a coordinated redesign. Compare the unresolved issues, operating disruption and replacement plan each leaves behind. Keep any projected revenue change outside the guaranteed deliverables.",
+      "faq": [
+        [
+          "Should new photos come before new furniture?",
+          "First check whether the current photos accurately show an acceptable setup. Correct material room problems before commissioning photographs that will soon be outdated."
+        ],
+        [
+          "Can I refresh one room at a time?",
+          "Yes, when the sequence preserves a coherent usable property. Coordinate dimensions, deliveries, guest access and photo updates across the stages."
+        ]
+      ]
+    },
+    {
+      "slug": "airbnb-designer-vs-furniture-package-vs-local-installer",
+      "title": "Airbnb Designer vs Furniture Package vs Installer",
+      "description": "Compare three rental furnishing approaches by layout responsibility, purchasing, receiving, assembly, styling and ongoing replacement needs.",
+      "intro": "A designer, a furniture package and a local installation team can each solve part of a rental furnishing project. The right choice depends on who will make decisions and coordinate the remaining work. Use this comparison to assign responsibilities before buying overlapping services or leaving a task unowned.",
+      "items": [
+        [
+          "Choose a designer when the plan is unresolved",
+          "A design engagement can address room layouts, selections and visual coordination, but implementation varies by contract. Ask whether measurements, revisions and purchasing are included. If you need someone to manage delivery and installation, confirm those tasks explicitly rather than inferring them from the word design."
+        ],
+        [
+          "Choose a package when its inventory fits",
+          "A defined package can simplify selection when its dimensions, quantities and specifications fit the property. Request the actual item list and substitution terms. Check that dining, storage and living-room use support the intended guest group; bedroom count alone is an incomplete specification."
+        ],
+        [
+          "Choose an installer when decisions are already made",
+          "A local team can execute an approved inventory and layout when materials, access and assembly instructions are ready. Confirm whether it also handles receiving and claims. Do not assume the team is responsible for redesigning a room if purchased pieces do not fit."
+        ],
+        [
+          "Identify the project coordinator",
+          "Someone must reconcile the plan, purchase orders, deliveries and installed result. In a combined approach, write down who owns that coordination. If you retain it as the owner, plan for approvals and exceptions instead of treating separate vendors as a turnkey service."
+        ],
+        [
+          "Compare the exceptions process",
+          "Ask who responds to damage, backorders, incorrect quantities and measurements that change after possession. The value of a service often becomes clearer when something goes wrong. Require a path for approvals and credits that does not depend on verbal messages between several teams."
+        ],
+        [
+          "Connect installation to turnover",
+          "The final setup must be maintainable by the operating team. Request product identifiers, spare-parts information and care instructions regardless of purchasing method. Ask the cleaner to review storage and access before final approval, especially when a package introduces unfamiliar materials or mechanisms."
+        ],
+        [
+          "Price the complete combination",
+          "Build one responsibility table for every proposed approach and add the work you still need to arrange. Include your coordination obligations as a practical consideration without assigning an invented hourly value. Compare bids only after the missing delivery, receiving and installation scopes have been quoted."
+        ]
+      ],
+      "example": "Illustrative combination: an owner hires a designer for layouts and selections, purchases approved goods directly and contracts a local team for receiving and installation. This can be workable when one person controls revisions and resolves exceptions. Without that owner, each vendor may finish its narrow task while the property remains incomplete.",
+      "action": "Ask every provider to mark each task as included, optional or excluded. Name the coordinator and approval contact on the same sheet. Then use the design roadmap to check the sequence from measured brief through the installed inventory and operating handoff.",
+      "faq": [
+        [
+          "Is a furniture package always cheaper?",
+          "No universal comparison is reliable. Compare the actual goods, fees and remaining local work in written proposals for your property."
+        ],
+        [
+          "Can an owner coordinate the project remotely?",
+          "Yes, if local measurements, receiving, access and inspection responsibilities are assigned. Remote coordination still needs someone who can verify the installed result."
+        ]
+      ]
+    }
+  ]
+}
