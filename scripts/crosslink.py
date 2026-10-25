@@ -138,6 +138,19 @@ def get_relative_path(file_path, repo_root):
 
 
 def add_crosslinks(html, self_path, max_links=5):
+    # Script/style bodies are raw text, not visible copy. Preserve them byte for byte.
+    protected = []
+    def protect(match):
+        protected.append(match.group(0))
+        return f'<bnb-protected-{len(protected) - 1}></bnb-protected-{len(protected) - 1}>'
+    masked = re.sub(r'<(script|style)\b[^>]*>.*?</\1\s*>', protect, html, flags=re.I | re.S)
+    linked, count = _add_visible_crosslinks(masked, self_path, max_links)
+    for i, original in enumerate(protected):
+        linked = linked.replace(f'<bnb-protected-{i}></bnb-protected-{i}>', original)
+    return linked, count
+
+
+def _add_visible_crosslinks(html, self_path, max_links=5):
     links_added = 0
     used_targets = set()
     sorted_keywords = sorted(LINK_MAP.keys(), key=len, reverse=True)
