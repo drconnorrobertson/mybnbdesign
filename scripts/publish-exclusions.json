@@ -1,0 +1,18 @@
+{
+  "reason": "Non-content automation and network-capture test stubs. Retain source files, exclude from production output.",
+  "paths": [
+    "test-capture.html",
+    "blog/api-test-2.html",
+    "blog/intercept-test.html",
+    "blog/test-automation/index.html",
+    "blog/test-capture.html",
+    "blog/test-file.html",
+    "blog/test-network-capture.html",
+    "blog/test-push-6.html",
+    "compare/test-push/index.html",
+    "compare/test-push5/index.html",
+    "markets/test-create.html",
+    "markets/test2.html",
+    "markets/test3.html"
+  ]
+}
