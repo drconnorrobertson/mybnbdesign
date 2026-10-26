@@ -1,0 +1,7 @@
+case_id,page_purpose,authored_scene,proposed_treatment,draft_wording,unsupported_inference
+R1,Informative workspace view,Desk under a window; open shelving to its left,Short informative draft,Desk under a window with open shelving to the left,Ergonomics; internet speed
+R2,Dining arrangement view,Four chairs around a dining table beside a doorway,Short informative draft,Four chairs around a dining table next to a doorway,Approved capacity; passage width
+R3,Image is sole content of a room-detail link,Bedroom thumbnail links to bedroom arrangement page,Describe destination,View the bedroom arrangement,Instant booking; live availability
+R4,Background repeats nearby real heading meaning,Soft room pattern behind a real heading,Proposed decorative use,,Room unimportant
+R5,Nearby paragraph fully describes the moved chair,Two views; chair moved from window wall to bookcase wall,Evaluate redundancy in finished context,,All before-after images are decorative
+R6,Relevant label wording is absent from nearby text,Photographed label says Spare blankets,Preserve relevant label text,Spare blankets,Contents verified at a real property
