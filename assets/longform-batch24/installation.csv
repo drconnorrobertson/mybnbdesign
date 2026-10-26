@@ -1,0 +1,7 @@
+fictional_id,room,issue,owner,state,closure_evidence
+I1,Bedroom1,Missinglamp,Deliverycoordinator,Closed,Followupcomparedwithschedule
+I2,Living,Unexplainedrug,Projectapprover,Pending,Approvalreferencenotlocated
+I3,Bedroom2,Finishconcern,Supplier,Pending,Responseawaited
+I4,Dining,Packaging,Installationcoordinator,Closed,Agreedscoperechecked
+I5,Living,TechnicalTVquestion,Qualifiedinstaller,Pending,Technicalresponserequired
+I6,Living,Sofacarereference,Handoffcoordinator,Closed,Referenceinhandoff
