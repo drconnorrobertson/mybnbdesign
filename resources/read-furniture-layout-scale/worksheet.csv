@@ -1,0 +1,5 @@
+fictional_entry,drawing_width_mm,drawing_height_mm,represented_width_mm,represented_height_mm,scope
+full,80,60,4000,3000,declared1to50
+reduced,64,48,4000,3000,uniform80percentcopy_stale1to50label
+concept,,,,,not_to_scale
+furniture,40,18,2000,900,separate1to50footprint
