@@ -12,8 +12,15 @@ import content.repairs
 policy=json.loads((source/'content/blog_discovery_policy.json').read_text())
 allowed=set(policy['baseline_urls']+policy['approved_existing_additions'])
 allowed.update(base+g['route'] for g in GUIDES if g.get('repair') and g.get('route','').startswith('/blog/'))
+excluded=set(json.loads((source/'scripts/publish-exclusions.json').read_text())['paths'])
+dates={}
+for sitemap in p.glob('sitemap*.xml'):
+ for row in E.parse(sitemap).getroot():
+  loc=row.find('{*}loc');modified=row.find('{*}lastmod')
+  if loc is not None and modified is not None and modified.text:dates[loc.text]=max(dates.get(loc.text,''),modified.text)
 items={}
 for f in (p/'blog').rglob('*.html'):
+ if f.relative_to(p).as_posix() in excluded:continue
  if f==p/'blog/index.html':continue
  s=f.read_text();m=re.search(r'<link[^>]*rel=[\"\']canonical[\"\'][^>]*href=[\"\']([^\"\']+)',s,re.I)
  if not m or not m[1].startswith(base+'/blog/') or re.search(r'<meta[^>]*noindex',s,re.I):continue
@@ -30,8 +37,8 @@ script='<script>document.getElementById("blog-filter").addEventListener("input",
 template=(p/'scripts/blog-index-template.txt').read_text()
 (p/'blog/index.html').write_text(template.replace('{{BLOG_MAIN}}',main).replace('{{COUNT}}',str(len(items))).replace('</body>',script+'</body>'))
 root=E.Element('{'+ns+'}urlset')
-changed={base+g['route'] for g in GUIDES if g.get('repair') and g.get('route','').startswith('/blog/')}|set(policy['approved_existing_additions'])
 for u in sorted(items):
  row=E.SubElement(root,'{'+ns+'}url');E.SubElement(row,'{'+ns+'}loc').text=u
- if u in changed:E.SubElement(row,'{'+ns+'}lastmod').text='2026-10-06'
+ if u in dates:E.SubElement(row,'{'+ns+'}lastmod').text=dates[u]
+ elif u in {base+g['route'] for g in GUIDES if g.get('repair')}:E.SubElement(row,'{'+ns+'}lastmod').text='2026-10-06'
 E.indent(root);(p/'sitemap-blog.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n'+E.tostring(root,encoding='unicode')+'\n');print('Blog articles:',len(items))

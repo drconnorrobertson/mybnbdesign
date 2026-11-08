@@ -3,6 +3,7 @@ const {execFileSync} = require('node:child_process');
 const {resolve} = require('node:path');
 const root = resolve(__dirname,'..');
 const stages = [
+  ['python3',['scripts/refresh_smart_lock_handbook.py']],
   [process.execPath,['scripts/decision-guides.cjs']],
   [process.execPath,['scripts/prepare-static.mjs']],
   [process.execPath,['scripts/instrument-conversions.mjs','dist']],

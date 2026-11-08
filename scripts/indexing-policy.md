@@ -18,3 +18,10 @@ indexability, structured-data and brand gates run after this step.
 Judge indexing changes against eligible guide URLs, non-brand impressions and
 qualified design inquiries. Removal of utility URLs from search can reduce raw
 index counts without indicating that valuable service pages lost coverage.
+
+The static publish boundary also excludes the two historical smart-lock test
+placeholders named in `publish-exclusions.json`. Their URLs permanently redirect
+to the existing smart-lock handbook. Source fixtures stay available locally;
+canonical and blog sitemap builders skip excluded paths. The indexability gate
+rejects indexable owners with a missing description or the known placeholder
+markers, so a later generator cannot silently publish those stubs again.

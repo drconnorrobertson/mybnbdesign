@@ -1,0 +1,166 @@
+{
+  "date": "2026-11-08",
+  "reason": "Relative ./ canonicals on root HTML articles resolved to the homepage; FAQ duplicates retain their existing folder owners.",
+  "pages": [
+    {
+      "file": "faq-budget.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/faq/budget/"
+    },
+    {
+      "file": "best-time-photograph-str.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/best-time-photograph-str.html"
+    },
+    {
+      "file": "diy-vs-professional-photography.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/diy-vs-professional-photography.html"
+    },
+    {
+      "file": "faq-photography.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/faq/photography/"
+    },
+    {
+      "file": "video-tour-best-practices.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/video-tour-best-practices.html"
+    },
+    {
+      "file": "instagram-content-strategy-str.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/instagram-content-strategy-str.html"
+    },
+    {
+      "file": "faq-property-types.html",
+      "before": "/faq/property-types/",
+      "canonical": "https://www.mybnbdesign.com/faq/property-types/"
+    },
+    {
+      "file": "faq-working-remotely.html",
+      "before": "/faq/working-remotely/",
+      "canonical": "https://www.mybnbdesign.com/faq/working-remotely/"
+    },
+    {
+      "file": "faq-renovation.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/faq/renovation/"
+    },
+    {
+      "file": "photo-editing-listing-images.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/photo-editing-listing-images.html"
+    },
+    {
+      "file": "show-scale-airbnb-photos.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/show-scale-airbnb-photos.html"
+    },
+    {
+      "file": "how-many-listing-photos.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/how-many-listing-photos.html"
+    },
+    {
+      "file": "lighting-tips-interior-photography.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/lighting-tips-interior-photography.html"
+    },
+    {
+      "file": "before-after-photo-guide.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/before-after-photo-guide.html"
+    },
+    {
+      "file": "stage-rooms-listing-photos.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/stage-rooms-listing-photos.html"
+    },
+    {
+      "file": "seasonal-photo-updates.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/seasonal-photo-updates.html"
+    },
+    {
+      "file": "drone-photography-vacation-rentals.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/drone-photography-vacation-rentals.html"
+    },
+    {
+      "file": "virtual-tour-airbnb.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/virtual-tour-airbnb.html"
+    },
+    {
+      "file": "bedroom-photography-angles.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/bedroom-photography-angles.html"
+    },
+    {
+      "file": "kitchen-photography-staging.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/kitchen-photography-staging.html"
+    },
+    {
+      "file": "faq-maintenance.html",
+      "before": "/faq/maintenance/",
+      "canonical": "https://www.mybnbdesign.com/faq/maintenance/"
+    },
+    {
+      "file": "outdoor-space-photography.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/outdoor-space-photography.html"
+    },
+    {
+      "file": "bathroom-photo-styling.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/bathroom-photo-styling.html"
+    },
+    {
+      "file": "night-photography-exterior.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/night-photography-exterior.html"
+    },
+    {
+      "file": "photograph-small-spaces.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/photograph-small-spaces.html"
+    },
+    {
+      "file": "airbnb-photography-tips.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/airbnb-photography-tips.html"
+    },
+    {
+      "file": "faq/property-types/index.html",
+      "before": "/faq/property-types/",
+      "canonical": "https://www.mybnbdesign.com/faq/property-types/"
+    },
+    {
+      "file": "faq/photography/index.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/faq/photography/"
+    },
+    {
+      "file": "faq/renovation/index.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/faq/renovation/"
+    },
+    {
+      "file": "faq/working-remotely/index.html",
+      "before": "/faq/working-remotely/",
+      "canonical": "https://www.mybnbdesign.com/faq/working-remotely/"
+    },
+    {
+      "file": "faq/maintenance/index.html",
+      "before": "/faq/maintenance/",
+      "canonical": "https://www.mybnbdesign.com/faq/maintenance/"
+    },
+    {
+      "file": "faq/budget/index.html",
+      "before": "./",
+      "canonical": "https://www.mybnbdesign.com/faq/budget/"
+    }
+  ]
+}
