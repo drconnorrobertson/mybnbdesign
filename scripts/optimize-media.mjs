@@ -7,6 +7,10 @@ const manifest=JSON.parse(fs.readFileSync(path.join(repo,'scripts/media-manifest
 for(const item of Object.values(manifest.images))if(item.optimized){
  const dest=path.join(root,item.optimized),source=path.join(repo,item.optimized);
  if(dest!==source&&!fs.existsSync(dest)){fs.mkdirSync(path.dirname(dest),{recursive:true});fs.copyFileSync(source,dest);}
+ for(const variant of item.variants||[]){
+  const target=path.join(root,variant.src),original=path.join(repo,variant.src);
+  if(target!==original&&!fs.existsSync(target)){fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(original,target);}
+ }
 }
 const attr=(tag,key)=>tag.match(new RegExp(`\\s${key}\\s*=\\s*(["'])(.*?)\\1`,'i'))?.[2];
 const set=(tag,key,value)=>new RegExp(`\\s${key}\\s*=`,'i').test(tag)?tag.replace(new RegExp(`(\\s${key}\\s*=\\s*)(["'])(.*?)\\2`,'i'),`$1"${value}"`):tag.replace(/\s*\/?>$/,end=>` ${key}="${value}"${end}`);
@@ -28,6 +32,12 @@ function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){
   if(item.optimized&&key!==item.optimized){
    if(!fs.existsSync(path.join(root,item.optimized)))throw new Error(`Missing optimized image ${item.optimized}`);
    tag=set(tag,'src',item.optimized);optimized++;
+  }
+  // Only opt in where the page supplies a layout-specific sizes hint.
+  if(item.variants?.length&&attr(tag,'sizes')&&!attr(tag,'srcset')){
+   const candidates=[...item.variants,{src:item.optimized,width:item.width}];
+   for(const candidate of candidates)if(!fs.existsSync(path.join(root,candidate.src)))throw new Error(`Missing responsive image ${candidate.src}`);
+   tag=set(tag,'srcset',candidates.map(candidate=>`${candidate.src} ${candidate.width}w`).join(', '));
   }
   if(!attr(tag,'decoding'))tag=set(tag,'decoding','async');
   if((manifest.autoWidthClasses||[]).some(c=>(attr(tag,'class')||'').split(/\s+/).includes(c))&&!/\bwidth\s*:\s*auto\b/.test(attr(tag,'style')||''))tag=set(tag,'style',(attr(tag,'style')||'')+';width:auto');

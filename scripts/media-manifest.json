@@ -3,7 +3,24 @@
     "/assets/images/1600566753190-17f0baa2a6c3.jpg": {
       "width": 1600,
       "height": 1200,
-      "optimized": "/assets/images/1600566753190-17f0baa2a6c3.feaa590bbf59.webp"
+      "optimized": "/assets/images/1600566753190-17f0baa2a6c3.feaa590bbf59.webp",
+      "variants": [
+        {
+          "src": "/assets/images/1600566753190-17f0baa2a6c3-640.42d2ea505616.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/1600566753190-17f0baa2a6c3-960.97e65252ceee.webp",
+          "width": 960,
+          "height": 720
+        },
+        {
+          "src": "/assets/images/1600566753190-17f0baa2a6c3-1280.a1cf9d854599.webp",
+          "width": 1280,
+          "height": 960
+        }
+      ]
     },
     "/assets/images/1600607687939-ce8a6c25118c.jpg": {
       "width": 800,
@@ -18,7 +35,24 @@
     "/assets/images/1600210492486-724fe5c67fb0.jpg": {
       "width": 1920,
       "height": 1080,
-      "optimized": "/assets/images/1600210492486-724fe5c67fb0.520a24458729.webp"
+      "optimized": "/assets/images/1600210492486-724fe5c67fb0.520a24458729.webp",
+      "variants": [
+        {
+          "src": "/assets/images/1600210492486-724fe5c67fb0-640.7ce6aff7e8ef.webp",
+          "width": 640,
+          "height": 360
+        },
+        {
+          "src": "/assets/images/1600210492486-724fe5c67fb0-960.c38510448b90.webp",
+          "width": 960,
+          "height": 540
+        },
+        {
+          "src": "/assets/images/1600210492486-724fe5c67fb0-1280.9abeb8c9a989.webp",
+          "width": 1280,
+          "height": 720
+        }
+      ]
     },
     "/assets/images/1560448204-e02f11c3d0e2.jpg": {
       "width": 800,
