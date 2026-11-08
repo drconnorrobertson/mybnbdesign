@@ -1,6 +1,6 @@
 """Build the established sitemap from reviewed, indexable self-canonical HTML owners."""
 from pathlib import Path
-import sys,re,xml.etree.ElementTree as E
+import sys,re,json,xml.etree.ElementTree as E
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from audit_internal_discovery import Page,ORIGIN
 NS='http://www.sitemaps.org/schemas/sitemap/0.9';E.register_namespace('',NS)
@@ -9,8 +9,10 @@ for sm in ROOT.glob('sitemap*.xml'):
  for row in E.parse(sm).getroot():
   loc=row.find('{*}loc');lm=row.find('{*}lastmod')
   if loc is not None and lm is not None and lm.text and re.fullmatch(r'\d{4}-\d{2}-\d{2}',lm.text):dates[loc.text]=max(dates.get(loc.text,''),lm.text)
+excluded=set(json.loads((ROOT/'scripts/publish-exclusions.json').read_text())['paths'])
 urls=[]
 for f in ROOT.rglob('*.html'):
+ if f.relative_to(ROOT).as_posix() in excluded:continue
  if any(p.startswith('.') or p in ('dist','node_modules') for p in f.relative_to(ROOT).parts):continue
  r='/'+f.relative_to(ROOT).as_posix();r=r[:-10] if r.endswith('/index.html') else r
  p=Page(f.read_text());url=ORIGIN+r

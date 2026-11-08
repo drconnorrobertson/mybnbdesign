@@ -149,6 +149,16 @@
       "source": "/about/",
       "destination": "/about.html",
       "permanent": true
+    },
+    {
+      "source": "/blog/smart-lock-guide-airbnb-2026.html",
+      "destination": "/blog/smart-lock-guide-for-airbnb.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/smart-lock-guide-for-airbnb/blog/smart-lock-guide-for-airbnb/",
+      "destination": "/blog/smart-lock-guide-for-airbnb.html",
+      "permanent": true
     }
   ],
   "outputDirectory": "dist",

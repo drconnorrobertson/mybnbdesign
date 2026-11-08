@@ -1,9 +1,10 @@
 {
   "reason": "Non-content automation and network-capture test stubs. Retain source files, exclude from production output.",
   "paths": [
-    "test-capture.html",
     "blog/api-test-2.html",
     "blog/intercept-test.html",
+    "blog/smart-lock-guide-airbnb-2026.html",
+    "blog/smart-lock-guide-for-airbnb/blog/smart-lock-guide-for-airbnb/index.html",
     "blog/test-automation/index.html",
     "blog/test-capture.html",
     "blog/test-file.html",
@@ -13,6 +14,7 @@
     "compare/test-push5/index.html",
     "markets/test-create.html",
     "markets/test2.html",
-    "markets/test3.html"
+    "markets/test3.html",
+    "test-capture.html"
   ]
 }

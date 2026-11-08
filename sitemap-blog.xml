@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.mybnbdesign.com/blog/20-airbnb-design-mistakes-that-kill-bookings.html</loc>
@@ -715,6 +715,10 @@
     <loc>https://www.mybnbdesign.com/blog/common-diy-airbnb-design-mistakes-avoid/</loc>
   </url>
   <url>
+    <loc>https://www.mybnbdesign.com/blog/complete-guide-str-interior-design-2026/</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
     <loc>https://www.mybnbdesign.com/blog/container-home-airbnb-interior-design.html</loc>
   </url>
   <url>
@@ -924,10 +928,12 @@
   </url>
   <url>
     <loc>https://www.mybnbdesign.com/blog/how-to-convert-garage-into-an-airbnb/</loc>
-  <lastmod>2026-10-25</lastmod></url>
+    <lastmod>2026-10-25</lastmod>
+  </url>
   <url>
     <loc>https://www.mybnbdesign.com/blog/how-to-convert-triplex-into-an-airbnb/</loc>
-  <lastmod>2026-10-25</lastmod></url>
+    <lastmod>2026-10-25</lastmod>
+  </url>
   <url>
     <loc>https://www.mybnbdesign.com/blog/how-to-create-a-mood-board-for-your-str.html</loc>
     <lastmod>2026-10-06</lastmod>
@@ -1241,7 +1247,6 @@
   <url>
     <loc>https://www.mybnbdesign.com/blog/mid-century-design-for-short-term-rentals.html</loc>
   </url>
-
   <url>
     <loc>https://www.mybnbdesign.com/blog/mid-century-modern-airbnb-design/</loc>
   </url>
@@ -1377,10 +1382,8 @@
     <loc>https://www.mybnbdesign.com/blog/ski-chalet-design-guide.html</loc>
   </url>
   <url>
-    <loc>https://www.mybnbdesign.com/blog/smart-lock-guide-airbnb-2026.html</loc>
-  </url>
-  <url>
-    <loc>https://www.mybnbdesign.com/blog/smart-lock-guide-for-airbnb/blog/smart-lock-guide-for-airbnb/</loc>
+    <loc>https://www.mybnbdesign.com/blog/smart-lock-guide-for-airbnb.html</loc>
+    <lastmod>2026-10-06</lastmod>
   </url>
   <url>
     <loc>https://www.mybnbdesign.com/blog/smartphone-airbnb-photography.html</loc>
@@ -1632,5 +1635,4 @@
   <url>
     <loc>https://www.mybnbdesign.com/blog/year-round-wreath-ideas-for-str/</loc>
   </url>
-<url><loc>https://www.mybnbdesign.com/blog/complete-guide-str-interior-design-2026/</loc><lastmod>2026-10-25</lastmod></url>
 </urlset>
