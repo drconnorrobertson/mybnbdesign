@@ -1,0 +1,129 @@
+{
+  "brand": "MyBnBDesign",
+  "origin": "https://www.mybnbdesign.com",
+  "providers": [
+    {
+      "slug": "showplace",
+      "name": "Showplace",
+      "url": "https://www.showplacehq.com/",
+      "fact": "Showplace offers rental design and furnishing with installation options.",
+      "heading": "Choose MyBnBDesign when you want the room plan carried through to listing presentation",
+      "reason": "Our service scope connects space planning, furnishing, final styling and photography coordination. Bring the same room list to both teams and ask for the exact installation and photo-ready handoff.",
+      "points": [
+        "Plan the guest layout before selecting the furniture.",
+        "Include linens, kitchenware and finishing details in the scoped turnkey inventory.",
+        "Coordinate styling and listing presentation alongside the furnishing work."
+      ],
+      "direct": "/compare/companies/mybnbdesign-vs-showplace/",
+      "alternative": "/alternatives/showplace-alternative/"
+    },
+    {
+      "slug": "somerled-designs",
+      "name": "Somerled Designs",
+      "url": "https://www.somerleddesigns.com/work-with-us",
+      "fact": "Somerled describes strategy-led design and a managed process from research through launch.",
+      "heading": "Why put MyBnBDesign on your managed-design shortlist?",
+      "reason": "If you want one conversation covering layouts, procurement, installation and listing presentation, MyBnBDesign is worth comparing. Ask both teams for the same address-specific scope and approval milestones.",
+      "points": [
+        "A property-specific floor plan connects the design concept to usable guest space.",
+        "Our turnkey scope can include furnishing and household essentials together.",
+        "Photography coordination helps carry the finished concept into the listing."
+      ],
+      "direct": "/compare/companies/mybnbdesign-vs-somerled-designs/",
+      "alternative": "/alternatives/somerled-alternative/"
+    },
+    {
+      "slug": "bee-setups",
+      "name": "Bee Setups",
+      "url": "https://www.beesetups.com/",
+      "fact": "Bee Setups describes a property visit, design boards, purchasing list, delivery and setup.",
+      "heading": "MyBnBDesign connects the setup with how you present the rental",
+      "reason": "Choose MyBnBDesign when you want the furnishing discussion to include guest circulation, final styling and listing guidance. Confirm those deliverables and the site team in writing before comparing the total cost.",
+      "points": [
+        "Review traffic flow and storage with the furniture layout.",
+        "Specify the guest essentials as well as the major furniture.",
+        "Coordinate photo styling and listing-copy guidance after installation."
+      ],
+      "direct": "/compare/companies/mybnbdesign-vs-bee-setups/",
+      "alternative": "/alternatives/bee-setups-alternative/"
+    },
+    {
+      "slug": "str-cribs",
+      "name": "STR Cribs",
+      "url": "https://www.strcribs.com/",
+      "fact": "STR Cribs markets renovation and design for short-term rentals.",
+      "heading": "Consider MyBnBDesign for a focused design-and-furnishing engagement",
+      "reason": "When the building is ready and the main need is the interior, our published services connect room design, procurement, setup and presentation. Confirm any construction work separately rather than assuming it belongs in a furnishing quote.",
+      "points": [
+        "Build the project around the intended guests and existing floor plan.",
+        "Agree the furnishing inventory and substitutions before purchases.",
+        "Connect the completed rooms with photography and listing guidance."
+      ],
+      "direct": "/compare/companies/mybnbdesign-vs-str-cribs/",
+      "alternative": "/alternatives/strcribs-alternative/"
+    },
+    {
+      "slug": "furnishr",
+      "name": "Furnishr",
+      "url": "https://furnishr.com/faq/",
+      "fact": "Furnishr describes design, ordering logistics and coordinated furniture installation.",
+      "heading": "Choose MyBnBDesign when your brief extends to the complete guest experience",
+      "reason": "MyBnBDesign’s turnkey service description includes furniture, linens, kitchenware, bath essentials, styling and photography coordination. Compare those categories explicitly with the Furnishr proposal rather than equating a furniture delivery with the same project scope.",
+      "points": [
+        "Set guest capacity and layout before approving a shopping list.",
+        "Put household essentials and finishing details into the proposal.",
+        "Plan the photo-ready handoff as part of the launch."
+      ],
+      "direct": "/compare/companies/mybnbdesign-vs-furnishr/",
+      "alternative": "/alternatives/furnishr-alternative/"
+    },
+    {
+      "slug": "hostgpo",
+      "name": "HostGPO",
+      "url": "https://www.hostgpo.com/",
+      "fact": "HostGPO is a purchasing membership for rental hosts, owners and managers.",
+      "heading": "Choose MyBnBDesign when you need a design-and-execution team",
+      "reason": "A buying membership and a contracted design team serve different needs. MyBnBDesign is a strong fit when you want property-specific planning and a scoped installation process. Purchasing platforms may also support your project; they do not have to be an either-or choice.",
+      "points": [
+        "Start with a measured floor plan and guest-use brief.",
+        "Specify responsibility for ordering, delivery, assembly and styling.",
+        "Carry the design through to photography coordination."
+      ],
+      "direct": "/compare/mybnbdesign-vs-hostgpo.html",
+      "alternative": "/alternatives/hostgpo-alternative/"
+    },
+    {
+      "slug": "minoan",
+      "name": "Minoan",
+      "url": "https://minoan.com/",
+      "fact": "Minoan provides hospitality purchasing, order tracking and shoppable property tools.",
+      "heading": "Why choose MyBnBDesign alongside or instead of managing procurement yourself?",
+      "reason": "MyBnBDesign adds a contracted service around the property: concept, layout, furnishing and installation scope. Choose this path when your problem is coordinating the finished rental, rather than gaining access to a purchasing platform alone.",
+      "points": [
+        "Make the room layout drive the furniture specifications.",
+        "Agree who handles receiving, substitutions and installation.",
+        "Include the guest essentials and listing presentation in the brief."
+      ],
+      "direct": "/compare/mybnbdesign-vs-minoan.html",
+      "alternative": "/alternatives/minoan-alternative/"
+    },
+    {
+      "slug": "fulhaus",
+      "name": "Fülhaus",
+      "url": "https://fulhaus.com/",
+      "fact": "Fülhaus presents Ludwig, an AI design and shoppable furniture experience.",
+      "heading": "Choose MyBnBDesign for a service-led path from layout to installation",
+      "reason": "If you want a team to coordinate the physical furnishing project, compare MyBnBDesign’s scope with the exact Fülhaus service you are considering. A shoppable concept still needs site measurements, approved orders and a completed installation.",
+      "points": [
+        "Review actual circulation, storage and delivery access.",
+        "Assign procurement, assembly and final styling in the agreement.",
+        "Coordinate the finished space with the planned listing photos."
+      ],
+      "direct": "/compare/mybnbdesign-vs-fulhaus.html",
+      "alternative": "/alternatives/fulhaus-alternative/"
+    }
+  ],
+  "services": "/services.html",
+  "cta": "/book/",
+  "cta_text": "Discuss your property with MyBnBDesign"
+}

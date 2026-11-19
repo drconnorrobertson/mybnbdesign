@@ -6,6 +6,7 @@ const stages = [
   ['python3',['scripts/refresh_smart_lock_handbook.py']],
   [process.execPath,['scripts/decision-guides.cjs']],
   [process.execPath,['scripts/prepare-static.mjs']],
+  ['python3',['scripts/commercial-comparisons.py','dist']],
   [process.execPath,['scripts/instrument-conversions.mjs','dist']],
   ['python3',['scripts/curate-indexing.py','dist']],
   [process.execPath,['scripts/check-indexability.mjs','dist']],
