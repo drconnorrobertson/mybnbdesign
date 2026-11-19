@@ -11,14 +11,12 @@ def update(route,title,description,body):
  if route.endswith('/'):f=f/'index.html'
  if not f.exists():raise RuntimeError('Missing comparison owner: '+route)
  s=f.read_text();block='<!-- brand-choice:start --><section class="brand-choice" style="padding:24px;margin:24px auto;max-width:1080px;border:1px solid #cbd5e1;border-radius:10px">'+body+'</section><!-- brand-choice:end -->'
- if '<!-- brand-choice:start -->' in s:s=re.sub(r'<!-- brand-choice:start -->.*?<!-- brand-choice:end -->',lambda _:block,s,flags=re.S)
- else:
-  # Follow the hero rather than nesting a section in its heading.
-  start=s.index('<h1');end=s.find('</section>',start)
-  mainend=s.find('</main>',start)
-  if end<0 or end>mainend:end=s.index('</h1>',start)+len('</h1>')
-  else:end+=len('</section>')
-  s=s[:end]+block+s[end:]
+ s=re.sub(r'<!-- brand-choice:start -->.*?<!-- brand-choice:end -->','',s,flags=re.S)
+ # Put the recommendation after the opening paragraph, before the long tables.
+ start=s.index('</h1>');end=s.find('</p>',start)
+ if end<0:end=start+len('</h1>')
+ else:end+=len('</p>')
+ s=s[:end]+block+s[end:]
  s=re.sub(r'<title>.*?</title>',lambda _:'<title>'+e(title)+'</title>',s,count=1,flags=re.S)
  s=re.sub(r'(<h1\b[^>]*>).*?(</h1>)',lambda m:m[1]+e(title)+m[2],s,count=1,flags=re.S)
  for key,value in [('description',description),('og:title',title),('twitter:title',title),('og:description',description),('twitter:description',description)]:
