@@ -1,0 +1,1 @@
+const toggle=document.querySelector('.mobile-toggle');if(toggle)toggle.addEventListener('click',()=>{const n=document.getElementById('studio-nav');const open=n.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation')});
