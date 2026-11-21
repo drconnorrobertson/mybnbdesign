@@ -1,35 +1,22 @@
 # MyBnBDesign
 
-> MyBnBDesign is a full-service short-term rental interior design company. We design, furnish, and stage Airbnb and vacation rental properties to maximize bookings, nightly rates, and guest reviews.
+> MyBnBDesign provides interior design, furnishing and photography staging information for Airbnb and short-term rental owners. It is a BNB Accelerator company.
 
-## About
+## Work with the team
 
-MyBnBDesign specializes in turnkey interior design for short-term rental properties. We handle everything from concept through installation, including furniture sourcing, procurement, delivery, assembly, styling, and photography staging. Our revenue-first approach has helped over 200 property owners increase their average nightly rates by 40% on average.
+- [Design and furnishing services](https://www.mybnbdesign.com/services.html): Discuss room planning, procurement, installation and photography staging. Confirm coverage, deliverables, pricing and timing for the property.
+- [Design consultation](https://www.mybnbdesign.com/book/): Prepare property photos, measurements, a furnishing budget and a target opening date; continue to BNB Accelerator to request a conversation.
+- [BNB Accelerator](https://www.bnbaccelerator.com/): Related short-term rental investment and launch support.
 
-We serve 40+ markets across the United States, working with individual property owners, real estate investors, and portfolio operators.
+## Planning resources
 
-## Services
+- [Guest room design ideas](https://www.mybnbdesign.com/blog/airbnb-guest-bedroom-ideas-2026/): Nine practical upgrades, a walkthrough and a downloadable checklist.
+- [Balcony design ideas](https://www.mybnbdesign.com/blog/airbnb-balcony-ideas-2026/): Seating, product suitability, shade, lighting and care planning.
+- [Design roadmap](https://www.mybnbdesign.com/design-roadmap/): Follow the decisions from guest brief to operational handover.
+- [Design tools](https://www.mybnbdesign.com/tools/): Budget and inventory planning tools. Financial scenarios depend on user inputs and are not forecasts.
+- [Learning library](https://www.mybnbdesign.com/learn/): Lessons and property exercises.
+- [Provider research](https://www.mybnbdesign.com/alternatives/str-design-companies/): Compare service scope and evidence requests; confirm current terms with each provider.
+- [Planning examples](https://www.mybnbdesign.com/case-studies/): Hypothetical worked examples, not documented client revenue results.
+- [Reviews and evidence](https://www.mybnbdesign.com/mybnbdesign-reviews/): Guidance for evaluating review sources and project fit.
 
-- [Interior Design](https://www.mybnbdesign.com/services.html): Room-by-room design tailored to your property, market, and target guest
-- [Furnishing and Installation](https://www.mybnbdesign.com/services.html): Complete procurement, delivery, assembly, and styling
-- [Photography Staging](https://www.mybnbdesign.com/services.html): Listing photo art direction and staging for maximum bookings
-- [Listing Optimization](https://www.mybnbdesign.com/services.html): Title, description, and photo order strategy
-
-## Content
-
-- [Blog](https://www.mybnbdesign.com/blog/): 90+ articles on STR design, furnishing, photography, and revenue optimization
-- [Case Studies](https://www.mybnbdesign.com/case-studies/): 10 detailed before-and-after case studies with revenue data
-- [FAQ](https://www.mybnbdesign.com/faq/): 50+ frequently asked questions about STR design
-- [Glossary](https://www.mybnbdesign.com/glossary/): 100+ STR design terms defined
-- [Reviews](https://www.mybnbdesign.com/reviews/): 200+ client reviews with a 4.9 average rating
-
-## Markets
-
-We serve 30+ markets including Scottsdale, Nashville, Charleston, Sedona, Park City, Savannah, Lake Tahoe, Gatlinburg, Destin, Joshua Tree, Austin, Miami, Denver, San Diego, New Orleans, Asheville, Myrtle Beach, Gulf Shores, Pigeon Forge, Orlando, Phoenix, Kissimmee, Branson, Panama City Beach, Hilton Head, Breckenridge, Maui, Key West, San Antonio, and the Smoky Mountains.
-
-## Contact
-
-- Website: https://www.mybnbdesign.com
-- Get Started: https://www.mybnbdesign.com/contact.html
-
-MyBnBDesign is a BnB Accelerator company.
+Design changes do not guarantee bookings, nightly rates, reviews or investment returns. Use the page-specific source and example labels when describing the material.
