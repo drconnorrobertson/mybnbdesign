@@ -25,7 +25,7 @@ def worksheet(route,fields):
 def write(route,title,body,kind):
  p=ui.target(ROOT,route);assert p.exists(),route;old=p.read_text();pub=re.search(r'"datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})',old)
  description=title+'. Use a practical owner method, evidence checklist and related STR design resources.'
- doc=ui.shell(title,description,route,'<main id="main" class="host-library reviewed-design"><article><p class="label">STR owner education · Reviewed October 13, 2026</p><h1>'+ui.esc(title)+'</h1>'+body+'</article></main>',[('Home','/'),('Design resources','/resources/'),(title,route)],article=True,published=pub[1] if pub else ui.DATE)
+ doc=ui.shell(title,description,route,'<main id="main" class="host-library reviewed-design"><article><p class="label">STR owner education · Reviewed October 13, 2026</p><h1>'+ui.esc(title)+'</h1>'+body+'</article></main>',[('/','Home'),('/resources/','Design resources'),(route,title)],article=True,published=pub[1] if pub else ui.DATE)
  doc=doc.replace('</head>','<link rel="stylesheet" href="/assets/reviewed-design.css"></head>');p.write_text(doc)
  rows.append(dict(route=route,title=title,kind=kind,main_words=len(html.unescape(re.sub('<[^>]+>',' ',body)).split()),reviewed=ui.DATE))
 for g in GUIDES:
