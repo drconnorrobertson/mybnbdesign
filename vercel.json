@@ -1,6 +1,46 @@
 {
   "redirects": [
     {
+      "source": "/blog/noise-monitoring-devices-for-airbnb",
+      "destination": "/blog/noise-monitoring-devices-for-airbnb.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/noise-monitoring-devices-for-airbnb/",
+      "destination": "/blog/noise-monitoring-devices-for-airbnb.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/smart-lock-guide-for-airbnb",
+      "destination": "/blog/smart-lock-guide-for-airbnb.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/smart-lock-guide-for-airbnb/",
+      "destination": "/blog/smart-lock-guide-for-airbnb.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-paint-colors-for-airbnb-bedrooms",
+      "destination": "/blog/best-paint-colors-for-airbnb-bedrooms.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-paint-colors-for-airbnb-bedrooms/",
+      "destination": "/blog/best-paint-colors-for-airbnb-bedrooms.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-wifi-setup-for-str",
+      "destination": "/blog/best-wifi-setup-for-str.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-wifi-setup-for-str/",
+      "destination": "/blog/best-wifi-setup-for-str.html",
+      "permanent": true
+    },
+    {
       "source": "/markets/index.html",
       "destination": "/markets/",
       "permanent": true
