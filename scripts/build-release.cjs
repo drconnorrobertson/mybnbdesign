@@ -5,6 +5,7 @@ const root = resolve(__dirname,'..');
 const stages = [
   ['python3',['scripts/refresh_smart_lock_handbook.py']],
   ['python3',['scripts/refresh_reviewed_buying_guides.py']],
+  ['python3',['scripts/refresh-owner-use-guides.py']],
   [process.execPath,['scripts/decision-guides.cjs']],
   [process.execPath,['scripts/prepare-static.mjs']],
   ['python3',['scripts/commercial-comparisons.py','dist']],
