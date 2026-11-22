@@ -1,0 +1,5 @@
+fictional_load,wash_start_minute,wash_end_minute,dry_start_minute,dry_end_minute,wait_after_wash_minutes
+1,0,65,65,135,0
+2,65,130,135,205,5
+3,130,195,205,275,10
+4,195,260,275,345,15
