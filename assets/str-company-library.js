@@ -16,18 +16,43 @@ if (search) {
 const quoteInputs = [...document.querySelectorAll('[data-quote]')];
 if (quoteInputs.length) {
   function updateCosts() {
-    if (quoteInputs.some(input => !input.validity.valid)) {
-      document.getElementById('cost-result').textContent = 'Enter nonnegative costs with up to two decimal places.';
+    const result = document.getElementById('cost-result');
+    const sums = {a: 0, b: 0};
+    const missing = {a: 0, b: 0};
+    let invalid = false;
+    for (const input of quoteInputs) {
+      const key = input.dataset.quote;
+      if (input.value.trim() === '' && !input.validity.badInput) {
+        missing[key]++;
+        continue;
+      }
+      const cents = Math.round(Number(input.value) * 100);
+      if (!input.validity.valid || !Number.isSafeInteger(cents) || cents < 0
+          || !Number.isSafeInteger(sums[key] + cents)) {
+        invalid = true;
+        break;
+      }
+      sums[key] += cents;
+    }
+    if (invalid) {
+      for (const key of ['a', 'b']) document.getElementById(`total-${key}`).textContent = 'Unavailable';
+      result.textContent = 'Enter nonnegative costs with up to two decimal places and within the supported amount range. Totals are unavailable until all invalid entries are corrected.';
       return;
     }
-    const sums = {a: 0, b: 0};
-    quoteInputs.forEach(input => { sums[input.dataset.quote] += Math.round((Number(input.value) || 0) * 100); });
-    for (const key of ['a', 'b']) document.getElementById(`total-${key}`).textContent = (sums[key] / 100).toFixed(2);
+    for (const key of ['a', 'b']) {
+      document.getElementById(`total-${key}`).textContent = (sums[key] / 100).toFixed(2)
+        + (missing[key] ? ` (partial; ${missing[key]} cost ${missing[key] === 1 ? 'field' : 'fields'} blank)` : '');
+    }
+    if (missing.a || missing.b) {
+      result.textContent = 'Comparison incomplete: enter every cost field for both proposals. Use 0 only for a confirmed zero cost; leave unquoted costs blank. Partial totals do not establish which proposal costs less.';
+      return;
+    }
     const difference = Math.abs(sums.a - sums.b) / 100;
-    document.getElementById('cost-result').textContent = sums.a === sums.b
-      ? 'The entered totals are equal. Compare fit and responsibilities before choosing.'
-      : `Option ${sums.a < sums.b ? 'A' : 'B'} has an entered total ${difference.toFixed(2)} lower. Confirm exclusions and property fit before choosing.`;
+    result.textContent = sums.a === sums.b
+      ? 'The entered totals are equal. Confirm the same currency, scope and exclusions before choosing.'
+      : `Option ${sums.a < sums.b ? 'A' : 'B'} has an entered total ${difference.toFixed(2)} lower. Confirm the same currency, scope and exclusions before choosing.`;
   }
+  updateCosts();
   quoteInputs.forEach(input => input.addEventListener('input', updateCosts));
 }
 const printButton = document.getElementById('print-comparison');
