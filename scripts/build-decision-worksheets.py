@@ -95,7 +95,7 @@ sleeping-loft|a rental with a sleeping loft|stair access, furniture height and n
 outdoor-kitchen|a rental with an outdoor kitchen|service access, storage and sheltered dining|site plan, equipment clearances and the route for cleaning|the layout provides seating but blocks the service route used during turnover
 converted-garage|a converted-garage rental|entry comfort, visual zoning and utility access|actual entry dimensions, outlet map and mechanical clearances|a furniture divider partly blocks the only easy access to utility equipment
 """
-READY_WORKSHEETS = ('designer-scope-carriage-house',)
+READY_WORKSHEETS = ('designer-scope-basement-suite', 'designer-scope-carriage-house')
 
 
 @dataclass(frozen=True)
