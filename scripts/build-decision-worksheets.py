@@ -78,6 +78,26 @@ DECISION_NOTES = (
     ('Mark the affected item or area as keep, repair or replace. Compare the disruption, lead time and installation work for two approaches before blocking the booking calendar.', 'The refresh plan identifies what can stay in service and gives each replacement a delivery window and a backup.'),
 )
 
+ADDITIONAL_SCENARIOS = """
+carriage-house|a carriage-house rental|privacy, compact storage and a separate arrival route|entry photos, measured stair turns and existing storage dimensions|arrival luggage backs up at the stairs because the entry has no clear landing space
+basement-suite|a basement-suite rental|lighting, low ceiling clearances and moisture-aware finishes|ceiling measurements, daylight photos and the location of mechanical access|tall pieces block the service hatch and make a narrow room feel darker
+penthouse|a penthouse rental|freight access, view corridors and wind-exposed exterior space|elevator dimensions, loading hours and balcony photos|a sectional fits the room but requires a revised delivery plan to reach it
+bungalow|a bungalow rental|small living rooms, porch use and flexible guest seating|measured layout, doorway widths and a list of existing pieces|extra chairs for full occupancy block the main path to the kitchen
+courtyard-property|a courtyard rental|wayfinding, shared space and outdoor furniture storage|arrival photos, a marked site plan and actual outdoor dimensions|guests confuse the shared courtyard with the private entry after dark
+barn-conversion|a converted barn rental|large-volume lighting, acoustics and usable gathering zones|ceiling heights, night photographs and the measured dining zone|conversations carry into sleeping areas when the central room is occupied
+log-home|a log home rental|lighting against dark walls, uneven surfaces and compatible attachments|wall details, lighting locations and clearances around major furniture|the largest room appears underlit when the existing fixtures are tested after dark
+canal-home|a canal-front rental|water-facing seating, drying space and salt-exposed finishes|sightline photos, waterside access route and finish care instructions|furniture blocks the water view and wet equipment accumulates near the glass doors
+hillside-home|a hillside rental|delivery approach, stairs and luggage movement|driveway dimensions, stair turns and parking-to-entry measurements|an oversized shipment cannot make a driveway turn and needs a transfer crew
+golf-resort-condo|a golf-resort condo rental|club storage, compact dining and restricted receiving hours|delivery rules, storage dimensions and seating plan|the proposed club storage displaces bags and shoes needed near the entrance
+work-retreat|a rental set up for team retreats|work surfaces, task lighting and shared dining clearance|outlet map, chair-count inventory and measured tables|the meeting table can seat everyone but leaves no comfortable circulation during work sessions
+two-bedroom-refresh|a two-bedroom rental refresh|layout continuity, retained furniture and a short turnover window|current inventory, delivery dates and measurement photos|one delayed bed frame threatens to keep an otherwise finished room out of service
+sleeping-loft|a rental with a sleeping loft|stair access, furniture height and nighttime orientation|loft dimensions, stair photos and fixture locations|an assembled piece cannot turn at the loft entry and a standard-height headboard conflicts with the slope
+outdoor-kitchen|a rental with an outdoor kitchen|service access, storage and sheltered dining|site plan, equipment clearances and the route for cleaning|the layout provides seating but blocks the service route used during turnover
+converted-garage|a converted-garage rental|entry comfort, visual zoning and utility access|actual entry dimensions, outlet map and mechanical clearances|a furniture divider partly blocks the only easy access to utility equipment
+"""
+READY_WORKSHEETS = ('designer-scope-carriage-house',)
+
+
 @dataclass(frozen=True)
 class Scenario:
     slug: str
@@ -112,6 +132,8 @@ def link(url, label):
     return f'<a href="{html.escape(url, quote=True)}">{html.escape(label)}</a>'
 
 
+ORIGINAL_SCENARIO_SLUGS = {item.slug for item in records(SCENARIOS, Scenario)}
+
 def worksheet_download(decision, scenario, priorities):
     output = StringIO(newline="")
     writer = csv.writer(output)
@@ -131,7 +153,7 @@ def article(decision, scenario, next_decision, next_scenario, reference, notes):
     heading = title(decision, scenario)
     meta = f"Use this worksheet to compare {decision.title.lower()} for {scenario.description}. Review {scenario.priorities} and record what changes your decision."
     other = [
-        link(route(next_decision, scenario), title(next_decision, scenario)),
+        link(route(next_decision, scenario), title(next_decision, scenario)) if scenario.slug in ORIGINAL_SCENARIO_SLUGS else link(HUB + '#decision-worksheets', HUB_LABEL),
         link(route(decision, next_scenario), title(decision, next_scenario)),
         link(reference, decision.title + " guide"),
     ]
@@ -198,6 +220,7 @@ def add_hub(output, decisions, scenarios):
         links = "".join(
             f"<li>{link(route(decision, scenario), title(decision, scenario))}</li>"
             for scenario in scenarios
+            if scenario.slug in ORIGINAL_SCENARIO_SLUGS or route(decision, scenario).split('/')[-2] in READY_WORKSHEETS
         )
         groups.append(f"<details><summary>{html.escape(decision.title)}</summary><ul>{links}</ul></details>")
     block = (
@@ -277,25 +300,30 @@ def add_sitemap(output, urls):
 def main(output):
     scenarios = records(SCENARIOS, Scenario)
     decisions = records(DECISIONS, Decision)
+    additional = records(ADDITIONAL_SCENARIOS, Scenario)
+    all_scenarios = scenarios + additional
     urls = []
     for index, decision in enumerate(decisions):
-        for position, scenario in enumerate(scenarios):
+        for position, scenario in enumerate(all_scenarios):
             path = route(decision, scenario)
+            if position >= len(scenarios) and path.split('/')[-2] not in READY_WORKSHEETS:
+                continue
             target = output / path.lstrip("/") / "index.html"
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(article(
                 decision, scenario,
-                decisions[(index + 1) % len(decisions)],
+                decisions[(index + 1) % len(decisions)] if position < len(scenarios) else decision,
                 scenarios[(position + 1) % len(scenarios)],
                 REFERENCES[index],
                 DECISION_NOTES[index],
             ))
             urls.append(ORIGIN + path)
-    if len(urls) != 250 or len(set(urls)) != 250:
-        raise ValueError("Expected 250 distinct worksheet routes")
+    if len(urls) != 250 + len(READY_WORKSHEETS) or len(set(urls)) != len(urls):
+        raise ValueError("Unexpected worksheet count or duplicate route")
     for decision, reference in zip(decisions, REFERENCES):
-        add_reference_links(output, decision, scenarios, reference)
-    add_hub(output, decisions, scenarios)
+        related = scenarios + [item for item in additional if route(decision, item).split('/')[-2] in READY_WORKSHEETS]
+        add_reference_links(output, decision, related, reference)
+    add_hub(output, decisions, all_scenarios)
     add_sitemap(output, urls)
     print(f"Published {len(urls)} {BRAND} decision worksheets")
 
