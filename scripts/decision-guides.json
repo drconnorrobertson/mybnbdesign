@@ -72,6 +72,10 @@
       "action": "Create a comparison sheet with columns for task, included quantity, price basis, responsible party, exclusion and unresolved question. Send the same questions to every shortlisted provider and retain their written answers beside the current proposal.",
       "faq": [
         [
+          "What do I still need to arrange with each furnishing package?",
+          "With a design plan and shopping list, confirm who orders each item and handles substitutions and returns. With delivered furniture, confirm the delivery point and who receives, inspects and assembles the order. With turnkey installation, ask who handles packaging removal, a return visit for missing items, and the final room walkthrough. Put each open task beside the provider's price so the same work is included in every total."
+        ],
+        [
           "Should I choose the lowest furniture allowance?",
           "Only after checking that the inventory, specifications and remaining work meet your project needs. A smaller allowance can reflect a smaller scope rather than a lower price for the same work."
         ],
