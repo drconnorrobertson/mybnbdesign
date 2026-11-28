@@ -3,6 +3,7 @@ import csv
 from dataclasses import dataclass
 from io import StringIO
 import html
+import json
 from pathlib import Path
 import sys
 from urllib.parse import quote
@@ -161,6 +162,15 @@ def article(decision, scenario, next_decision, next_scenario, reference, notes):
     checks = "".join(f"<li>{html.escape(item.capitalize())}</li>" for item in priorities)
     response, review = notes
     e = html.escape
+    breadcrumb = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": BRAND, "item": ORIGIN + "/"},
+            {"@type": "ListItem", "position": 2, "name": HUB_LABEL, "item": ORIGIN + HUB},
+            {"@type": "ListItem", "position": 3, "name": heading},
+        ],
+    }).replace("<", "\\u003c")
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -169,6 +179,7 @@ def article(decision, scenario, next_decision, next_scenario, reference, notes):
   <title>{e(heading)} | {BRAND}</title>
   <meta name="description" content="{e(meta, quote=True)}">
   <link rel="canonical" href="{ORIGIN}{route(decision, scenario)}">
+  <script type="application/ld+json">{breadcrumb}</script>
   <link rel="stylesheet" href="{STYLESHEET}">
   <style>
     .worksheet {{max-width: 52rem; margin: auto; padding: clamp(1rem, 4vw, 3rem); color: #1e2e2a; background: #fff; line-height: 1.65}}
