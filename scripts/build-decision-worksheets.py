@@ -168,6 +168,12 @@ def article(decision, scenario, next_decision, next_scenario, reference, notes):
             "urban-condo": "Send both bidders the complete delivery route, including the freight elevator door and the turn into the unit. Ask for the sofa’s boxed dimensions and a split-piece fallback. If a quote assumes standard delivery, ask who books the elevator and pays for a missed slot, failed delivery or replacement order.",
             "barn-conversion": "Have both bidders identify which sleeping areas share a wall or open connection with the gathering room. Ask them to price the same furniture placement and any soft furnishings in both bids. If the proposed fix needs building work, carry the separately quoted trade cost and schedule in the comparison before approving the furnishings.",
         }.get(scenario.slug, response)
+    quote_rows = ""
+    if decision.slug == "furnishing-quote":
+        quote_rows = """
+        <tr><th scope="row">Included price</th><td>For each bidder, record the quoted total, the inventory it covers, and whether freight and tax are included.</td></tr>
+        <tr><th scope="row">Work you still need to buy</th><td>Record the written price and responsible party for each excluded task. If a task has no confirmed price, keep it open.</td></tr>
+        <tr><th scope="row">Comparable total</th><td>Add the priced exclusions to each bid. Before choosing, confirm both totals cover the same inventory and handoff.</td></tr>"""
     e = html.escape
     breadcrumb = json.dumps({
         "@context": "https://schema.org",
@@ -217,6 +223,7 @@ def article(decision, scenario, next_decision, next_scenario, reference, notes):
       <thead><tr><th scope="col">Record</th><th scope="col">What to capture</th></tr></thead>
       <tbody>
         <tr><th scope="row">Evidence</th><td>{e(scenario.evidence.capitalize())}. Add the date, source and the question each record answers.</td></tr>
+        {quote_rows}
         <tr><th scope="row">Open issue</th><td>Record the affected room, unit or operating period, the person checking it and the deadline.</td></tr>
         <tr><th scope="row">Decision</th><td>Complete {e(decision.deliverable)}. Add the reason for proceeding, revising or pausing.</td></tr>
       </tbody>
