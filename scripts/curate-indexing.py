@@ -76,6 +76,7 @@ reviewed_dates.update({ORIGIN + path: '2026-11-28' for path in (
     '/blog/how-to-design-lake-house-for-airbnb.html',
     '/best-airbnb-design-companies/',
     '/faq/pricing/',
+    '/faq-pricing.html',
     '/airbnb-furnishing-quotes-comparison-checklist.html',
     '/resources/guides/landed-furnishing-cost/',
     '/blog/airbnb-guest-bedroom-ideas-2026/',
