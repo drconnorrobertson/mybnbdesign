@@ -69,6 +69,11 @@ ET.register_namespace('', NS)
 reviewed_dates = {ORIGIN + '/learn/reference/' + key + '/': '2026-10-19' for key in EDITORIAL}
 reviewed_dates.update({ORIGIN + path: '2026-11-28' for path in (
     '/services.html',
+    '/blog/how-to-refresh-airbnb-without-full-redesign/',
+    '/contact.html',
+    '/faq/property-types/',
+    '/faq/working-remotely/',
+    '/best-airbnb-design-companies/',
     '/faq/pricing/',
     '/airbnb-furnishing-quotes-comparison-checklist.html',
     '/resources/guides/landed-furnishing-cost/',
