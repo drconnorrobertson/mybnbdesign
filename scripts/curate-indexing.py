@@ -66,16 +66,26 @@ for key, c in CATEGORIES.items():
 
 NS = 'http://www.sitemaps.org/schemas/sitemap/0.9'
 ET.register_namespace('', NS)
+reviewed_dates = {ORIGIN + '/learn/reference/' + key + '/': '2026-10-19' for key in EDITORIAL}
+reviewed_dates.update({ORIGIN + path: '2026-11-28' for path in (
+    '/services.html',
+    '/faq/pricing/',
+    '/airbnb-furnishing-quotes-comparison-checklist.html',
+    '/resources/guides/landed-furnishing-cost/',
+    '/blog/airbnb-guest-bedroom-ideas-2026/',
+    '/blog/airbnb-balcony-ideas-2026/',
+    '/alternatives/showplace-alternative/',
+)})
 for file in OUT.glob('sitemap*.xml'):
     tree = ET.parse(file)
     changed = False
     for row in list(tree.getroot()):
         loc = row.find('{*}loc')
-        if loc is not None and loc.text in {ORIGIN + '/learn/reference/' + key + '/' for key in EDITORIAL}:
+        if loc is not None and loc.text in reviewed_dates:
             lastmod = row.find('{*}lastmod')
             if lastmod is None:
                 lastmod = ET.SubElement(row, '{'+NS+'}lastmod')
-            lastmod.text = '2026-10-19'
+            lastmod.text = max(lastmod.text or '', reviewed_dates[loc.text])
             changed = True
         if loc is not None and loc.text in excluded:
             tree.getroot().remove(row)
