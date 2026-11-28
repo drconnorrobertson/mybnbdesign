@@ -315,16 +315,15 @@ def main(output):
     all_scenarios = scenarios + additional
     urls = []
     for index, decision in enumerate(decisions):
-        for position, scenario in enumerate(all_scenarios):
+        published = scenarios + [item for item in additional if route(decision, item).split('/')[-2] in READY_WORKSHEETS]
+        for position, scenario in enumerate(published):
             path = route(decision, scenario)
-            if position >= len(scenarios) and path.split('/')[-2] not in READY_WORKSHEETS:
-                continue
             target = output / path.lstrip("/") / "index.html"
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(article(
                 decision, scenario,
                 decisions[(index + 1) % len(decisions)] if position < len(scenarios) else decision,
-                scenarios[(position + 1) % len(scenarios)],
+                published[(position + 1) % len(published)],
                 REFERENCES[index],
                 DECISION_NOTES[index],
             ))
