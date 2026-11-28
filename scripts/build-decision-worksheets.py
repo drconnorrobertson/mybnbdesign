@@ -65,6 +65,19 @@ refresh-plan|Airbnb redesign and replacement planning|an inventory of retained p
 """
 
 
+DECISION_NOTES = (
+    ('Ask each designer to mark which drawing, specification or approval will address this issue. Compare who verifies the arrangement at the property and what counts as a revision.', 'The proposal identifies how the issue will be addressed, what you approve and which site checks are included.'),
+    ('Ask the furnishing provider to price this issue under the complete scope and name the person responsible for resolving it. Check whether that work can affect the handoff date.', 'The scope assigns responsibility for delivery through completion and identifies any work that the owner still has to arrange.'),
+    ('Send the same dated photos and measurements to each remote designer. Ask them to flag what they can resolve from the drawings and which checks require your local contact.', 'The handoff identifies the person who verifies site conditions, approves substitutions and answers installation questions.'),
+    ('Create two room-level budget lines for this issue: the current plan and a fallback. Compare product costs, delivery, handling and installation separately for each.', 'The quote makes the cost of the fallback visible and distinguishes a documented price from a provisional allowance.'),
+    ('Ask each bidder whether its quote covers addressing this issue. Put any additional owner costs in the same comparison column so exclusions do not disappear into the total.', 'The proposals are comparable on the delivered room scope, payment dates and handling of unresolved or changed items.'),
+    ('Identify the first package item this issue affects. Check its dimensions and access route, and document a replacement that fits the room and the same use.', 'The package identifies what ships, which alternatives are acceptable and which pieces can be replaced without reordering the whole room.'),
+    ('Flag the affected items in the receiving log and identify what the crew should photograph or measure before signing off. Note the deadline and responsible party for resolving a discrepancy.', 'Order, shipment, room and claim records can all be matched, and the next step is assigned if an item is late or damaged.'),
+    ('Put the issue on the crew’s punch list and work backward from photography. Record which tasks can continue and how someone on site can verify the fix.', 'The schedule identifies any blocked tasks and includes a room-level completion check before the property is photographed.'),
+    ('Mark the affected path or furniture footprint on a measured plan. Test it using the actual activities guests will perform and check that the furniture can reach its proposed location.', 'The layout preserves usable circulation and seat count and identifies any measurement still needed before an order.'),
+    ('Mark the affected item or area as keep, repair or replace. Compare the disruption, lead time and installation work for two approaches before blocking the booking calendar.', 'The refresh plan identifies what can stay in service and gives each replacement a delivery window and a backup.'),
+)
+
 @dataclass(frozen=True)
 class Scenario:
     slug: str
@@ -114,7 +127,7 @@ def worksheet_download(decision, scenario, priorities):
     return f'<a class="action" href="{data_url}" download="{filename}">Download this worksheet (CSV)</a>'
 
 
-def article(decision, scenario, next_decision, next_scenario, reference):
+def article(decision, scenario, next_decision, next_scenario, reference, notes):
     heading = title(decision, scenario)
     meta = f"Use this worksheet to compare {decision.title.lower()} for {scenario.description}. Review {scenario.priorities} and record what changes your decision."
     other = [
@@ -124,6 +137,7 @@ def article(decision, scenario, next_decision, next_scenario, reference):
     ]
     priorities = scenario.priorities.rsplit(" and ", 1)[0].split(", ", 1) + [scenario.priorities.rsplit(" and ", 1)[-1]]
     checks = "".join(f"<li>{html.escape(item.capitalize())}</li>" for item in priorities)
+    response, review = notes
     e = html.escape
     return f"""<!doctype html>
 <html lang="en">
@@ -156,7 +170,8 @@ def article(decision, scenario, next_decision, next_scenario, reference):
     <p>{e(decision.method)}</p>
     <h2>Work through this example before committing</h2>
     <p>Suppose {e(scenario.complication)}. Identify which part of {e(decision.title.lower())} changes first, who can verify the impact and when you need their answer. Compare three responses: proceed with documented conditions, revise the scope or schedule, or pause until you have the missing evidence.</p>
-    <p>Record the extra cost and time separately. If the issue depends on a third party, ask what they can confirm now and what must wait for an inspection, written approval or site visit. Preserve the original assumption alongside the revised one so another person can review your reasoning.</p>
+    <p>{e(response)}</p>
+    <p><strong>Before you proceed:</strong> {e(review)}</p>
     <h2>Record your decision</h2>
     <table>
       <thead><tr><th scope="col">Record</th><th scope="col">What to capture</th></tr></thead>
@@ -205,6 +220,32 @@ def add_hub(output, decisions, scenarios):
     target.write_text(updated)
 
 
+def add_reference_links(output, decision, scenarios, reference):
+    if reference == HUB:
+        return
+    target = output / reference.lstrip("/")
+    if target.is_dir():
+        target /= "index.html"
+    existing = target.read_text()
+    start = f"<!-- worksheet-links:{decision.slug}:start -->"
+    end = f"<!-- worksheet-links:{decision.slug}:end -->"
+    items = "".join(f"<li>{link(route(decision, scenario), title(decision, scenario))}</li>" for scenario in scenarios)
+    block = (
+        start + '<section class="section" style="max-width:52rem;margin:auto;padding:1.5rem">'
+        f"<h2>{html.escape(decision.title)} worksheets by property type</h2>"
+        f"<details><summary>Browse property-specific worksheets</summary><ul>{items}</ul></details></section>" + end
+    )
+    if start in existing:
+        before, rest = existing.split(start, 1)
+        _, after = rest.split(end, 1)
+        updated = before + block + after
+    else:
+        marker = "</main>" if "</main>" in existing else "</body>"
+        index = existing.rindex(marker)
+        updated = existing[:index] + block + existing[index:]
+    target.write_text(updated)
+
+
 def tag(name):
     return f"{{{NS}}}{name}"
 
@@ -247,10 +288,13 @@ def main(output):
                 decisions[(index + 1) % len(decisions)],
                 scenarios[(position + 1) % len(scenarios)],
                 REFERENCES[index],
+                DECISION_NOTES[index],
             ))
             urls.append(ORIGIN + path)
     if len(urls) != 250 or len(set(urls)) != 250:
         raise ValueError("Expected 250 distinct worksheet routes")
+    for decision, reference in zip(decisions, REFERENCES):
+        add_reference_links(output, decision, scenarios, reference)
     add_hub(output, decisions, scenarios)
     add_sitemap(output, urls)
     print(f"Published {len(urls)} {BRAND} decision worksheets")
