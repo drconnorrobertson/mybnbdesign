@@ -135,6 +135,13 @@ def link(url, label):
 
 ORIGINAL_SCENARIO_SLUGS = {item.slug for item in records(SCENARIOS, Scenario)}
 
+FURNISHING_QUOTE_FIELDS = (
+    ("Included price", "For each bidder, record the quoted total, the inventory it covers, and whether freight and tax are included."),
+    ("Work you still need to buy", "Record the written price and responsible party for each excluded task. If a task has no confirmed price, keep it open."),
+    ("Comparable total", "Add the priced exclusions to each bid. Before choosing, confirm both totals cover the same inventory and handoff."),
+)
+
+
 def worksheet_download(decision, scenario, priorities):
     output = StringIO(newline="")
     writer = csv.writer(output)
@@ -144,6 +151,9 @@ def worksheet_download(decision, scenario, priorities):
     for item in priorities:
         writer.writerow([item.capitalize(), "", "", "", "", ""])
     writer.writerow(["Scenario to test", scenario.complication, "", "", "", ""])
+    if decision.slug == "furnishing-quote":
+        for label, detail in FURNISHING_QUOTE_FIELDS:
+            writer.writerow([label, detail, "", "", "", ""])
     writer.writerow(["Before committing", decision.deliverable, "", "", "", ""])
     data_url = "data:text/csv;charset=utf-8," + quote(output.getvalue(), safe="")
     filename = f"{decision.slug}-{scenario.slug}.csv"
@@ -168,13 +178,13 @@ def article(decision, scenario, next_decision, next_scenario, reference, notes):
             "urban-condo": "Send both bidders the complete delivery route, including the freight elevator door and the turn into the unit. Ask for the sofa’s boxed dimensions and a split-piece fallback. If a quote assumes standard delivery, ask who books the elevator and pays for a missed slot, failed delivery or replacement order.",
             "barn-conversion": "Have both bidders identify which sleeping areas share a wall or open connection with the gathering room. Ask them to price the same furniture placement and any soft furnishings in both bids. If the proposed fix needs building work, carry the separately quoted trade cost and schedule in the comparison before approving the furnishings.",
         }.get(scenario.slug, response)
+    e = html.escape
     quote_rows = ""
     if decision.slug == "furnishing-quote":
-        quote_rows = """
-        <tr><th scope="row">Included price</th><td>For each bidder, record the quoted total, the inventory it covers, and whether freight and tax are included.</td></tr>
-        <tr><th scope="row">Work you still need to buy</th><td>Record the written price and responsible party for each excluded task. If a task has no confirmed price, keep it open.</td></tr>
-        <tr><th scope="row">Comparable total</th><td>Add the priced exclusions to each bid. Before choosing, confirm both totals cover the same inventory and handoff.</td></tr>"""
-    e = html.escape
+        quote_rows = "\n".join(
+            f'<tr><th scope="row">{e(label)}</th><td>{e(detail)}</td></tr>'
+            for label, detail in FURNISHING_QUOTE_FIELDS
+        )
     breadcrumb = json.dumps({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
