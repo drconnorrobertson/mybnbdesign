@@ -13,6 +13,7 @@ const stages = [
   ['python3',['scripts/curate-indexing.py','dist']],
   ['python3',['scripts/repair_breadcrumb_schema.py','dist']],
   [process.execPath,['scripts/studio-redesign.cjs']],
+  ['python3',['scripts/build-decision-worksheets.py','dist']],
   [process.execPath,['scripts/check-indexability.mjs','dist']],
   [process.execPath,['scripts/check-structured-data.mjs','dist']],
   [process.execPath,['scripts/brand-check.mjs','dist']],
