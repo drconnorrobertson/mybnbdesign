@@ -1,7 +1,10 @@
 RENTAL AIR PURIFIER ROOM AND UPKEEP RECORD
 Property / room:
 Review date:
-Room dimensions / ceiling height:
+Room dimensions / ceiling height / calculated volume:
+Comparison air changes per hour / equivalent CADR:
+Portable purifier, replacement cartridge, or central HVAC filter:
+HVAC filter dimensions and technician-confirmed system compatibility:
 Connected spaces / usual door position:
 Problem being investigated and responsible professional:
 Exact regional device model:
