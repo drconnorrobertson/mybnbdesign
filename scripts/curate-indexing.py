@@ -84,6 +84,9 @@ reviewed_dates.update({ORIGIN + path: '2026-11-28' for path in (
     '/alternatives/showplace-alternative/',
     '/compare/',
     '/compare/companies/mybnbdesign-vs-showplace/',
+    '/compare/companies/str-cribs-vs-moxie-and-co/',
+    '/compare/companies/str-cribs-vs-toile-oak-interiors/',
+    '/reviews/strcribs-reviews/',
 )})
 for file in OUT.glob('sitemap*.xml'):
     tree = ET.parse(file)
