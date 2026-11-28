@@ -74,6 +74,7 @@ reviewed_dates.update({ORIGIN + path: '2026-11-28' for path in (
     '/faq/property-types/',
     '/faq/working-remotely/',
     '/blog/how-to-design-lake-house-for-airbnb.html',
+    '/blog/lake-house-airbnb-interior-design.html',
     '/best-airbnb-design-companies/',
     '/faq/pricing/',
     '/tools/design-budget-calculator/',
