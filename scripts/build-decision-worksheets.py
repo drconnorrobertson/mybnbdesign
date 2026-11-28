@@ -168,7 +168,7 @@ def article(decision, scenario, next_decision, next_scenario, reference, notes):
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": BRAND, "item": ORIGIN + "/"},
             {"@type": "ListItem", "position": 2, "name": HUB_LABEL, "item": ORIGIN + HUB},
-            {"@type": "ListItem", "position": 3, "name": heading},
+            {"@type": "ListItem", "position": 3, "name": heading, "item": ORIGIN + route(decision, scenario)},
         ],
     }).replace("<", "\\u003c")
     return f"""<!doctype html>
