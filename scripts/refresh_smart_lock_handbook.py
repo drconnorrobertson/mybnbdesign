@@ -40,6 +40,19 @@ for sitemap in ROOT.glob('sitemap*.xml'):
                 modified = ET.SubElement(row, '{' + NS + '}lastmod')
             modified.text = data['updated']
             changed = True
+    if sitemap.name in {'sitemap.xml', 'sitemap-blog.xml'}:
+        locations = {loc.text for loc in tree.getroot().iter(f'{{{NS}}}loc')}
+        for route in data.get('relatedGuideRoutes', []):
+            if not re.fullmatch(r'/blog/[a-z0-9-]+/', route):
+                raise ValueError(f'Invalid smart-lock guide route: {route}')
+            if not (ROOT / route.strip('/') / 'index.html').is_file():
+                raise ValueError(f'Missing smart-lock guide: {route}')
+            url = 'https://www.mybnbdesign.com' + route
+            if url not in locations:
+                row = ET.SubElement(tree.getroot(), f'{{{NS}}}url')
+                ET.SubElement(row, f'{{{NS}}}loc').text = url
+                locations.add(url)
+                changed = True
     if changed:
         ET.indent(tree)
         tree.write(sitemap, encoding='utf-8', xml_declaration=True)
