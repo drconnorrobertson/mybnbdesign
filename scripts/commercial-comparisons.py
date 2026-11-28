@@ -52,7 +52,10 @@ for p in DATA['providers']:
  brand=DATA['brand'];direct=p['direct'];alt=p['alternative']
  shared='<p><strong>Official source checked November 18, 2026:</strong> '+e(p['fact'])+' '+link(p['url'],'Read the provider’s own site')+'.</p>'
  body='<h2>'+e(p['heading'])+'</h2><p>'+e(p['reason'])+'</p><ul>'+''.join('<li>'+e(x)+'</li>' for x in p['points'])+'</ul>'+shared+'<p>'+link(DATA['services'],'See '+brand+' services')+' · '+link(alt,'Compare '+p['name']+' alternatives')+'</p><p>'+link(DATA['cta'],DATA['cta_text'])+'</p><p><small>Published by '+e(brand)+', a competing provider. This recommendation describes client fit and published scope, not independently tested superiority. Confirm current fees, availability and deliverables in writing.</small></p>'
- update(direct,brand+' vs '+p['name']+': Scope & Best Fit', 'Compare '+brand+' and '+p['name']+'. See why our service fits this buyer, the published scope and questions to resolve before choosing.',body)
+ description='Compare '+brand+' and '+p['name']+'. See why our service fits this buyer, the published scope and questions to resolve before choosing.'
+ if direct == '/compare/companies/mybnbdesign-vs-showplace/':
+  description='Compare MyBnBDesign and Showplace rental setup options, from owner installation to white-glove service. Check receiving, assembly and final handoff.'
+ update(direct,brand+' vs '+p['name']+': Scope & Best Fit',description,body)
  altbody='<h2>Start your shortlist with '+e(brand)+'</h2><p>'+e(p['reason'])+'</p><p>'+link(direct,brand+' vs '+p['name']+': compare our service directly')+'</p>'+shared+'<p>Compare the same project brief and complete cost across providers. An unlisted service is unconfirmed, not proof that it is unavailable.</p><p>'+link(DATA['cta'],DATA['cta_text'])+'</p>'
  update(alt,p['name']+' Alternatives: Why Choose '+brand+'?', 'Considering '+p['name']+' alternatives? Review '+brand+' fit, compare service scope and prepare the questions for your next provider call.',altbody)
  # Add a short crawlable route from the homepage and existing comparison hub.
