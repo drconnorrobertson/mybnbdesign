@@ -164,6 +164,8 @@ def article(decision, scenario, next_decision, next_scenario, reference, notes):
     if decision.slug == "furnishing-quote":
         response = {
             "lake-house": "Ask both bidders to price the same entry setup, including a washable mat, a place to hang wet towels, and storage sized for the equipment guests bring inside. If a $14,000 proposal omits a separately quoted $600 entry setup, compare its $14,600 total with the other bid only after checking both cover delivery and installation. The numbers are illustrative.",
+            "ski-condo": "Give both bidders the same boot and jacket count, the building’s delivery rules, and the dates the unit is available. Ask each to price a boot-storage layout that keeps the entry route clear. Separate any building protection charge, off-site receiving fee or return-visit charge if furnishings must arrive in more than one delivery slot.",
+            "urban-condo": "Send both bidders the complete delivery route, including the freight elevator door and the turn into the unit. Ask for the sofa’s boxed dimensions and a split-piece fallback. If a quote assumes standard delivery, ask who books the elevator and pays for a missed slot, failed delivery or replacement order.",
             "barn-conversion": "Have both bidders identify which sleeping areas share a wall or open connection with the gathering room. Ask them to price the same furniture placement and any soft furnishings in both bids. If the proposed fix needs building work, carry the separately quoted trade cost and schedule in the comparison before approving the furnishings.",
         }.get(scenario.slug, response)
     e = html.escape
