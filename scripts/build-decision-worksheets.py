@@ -161,6 +161,11 @@ def article(decision, scenario, next_decision, next_scenario, reference, notes):
     priorities = scenario.priorities.rsplit(" and ", 1)[0].split(", ", 1) + [scenario.priorities.rsplit(" and ", 1)[-1]]
     checks = "".join(f"<li>{html.escape(item.capitalize())}</li>" for item in priorities)
     response, review = notes
+    if decision.slug == "furnishing-quote":
+        response = {
+            "lake-house": "Ask both bidders to price the same entry setup, including a washable mat, a place to hang wet towels, and storage sized for the equipment guests bring inside. If a $14,000 proposal omits a separately quoted $600 entry setup, compare its $14,600 total with the other bid only after checking both cover delivery and installation. The numbers are illustrative.",
+            "barn-conversion": "Have both bidders identify which sleeping areas share a wall or open connection with the gathering room. Ask them to price the same furniture placement and any soft furnishings in both bids. If the proposed fix needs building work, carry the separately quoted trade cost and schedule in the comparison before approving the furnishings.",
+        }.get(scenario.slug, response)
     e = html.escape
     breadcrumb = json.dumps({
         "@context": "https://schema.org",
