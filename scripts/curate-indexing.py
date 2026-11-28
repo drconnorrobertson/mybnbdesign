@@ -86,6 +86,7 @@ reviewed_dates.update({ORIGIN + path: '2026-11-28' for path in (
     '/blog/airbnb-balcony-ideas-2026/',
     '/alternatives/showplace-alternative/',
     '/compare/',
+    '/compare/full-service-vs-design-only/',
     '/compare/companies/mybnbdesign-vs-showplace/',
     '/compare/companies/str-cribs-vs-moxie-and-co/',
     '/compare/companies/str-cribs-vs-toile-oak-interiors/',
