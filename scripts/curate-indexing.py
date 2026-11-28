@@ -81,6 +81,8 @@ reviewed_dates.update({ORIGIN + path: '2026-11-28' for path in (
     '/blog/airbnb-guest-bedroom-ideas-2026/',
     '/blog/airbnb-balcony-ideas-2026/',
     '/alternatives/showplace-alternative/',
+    '/compare/',
+    '/compare/companies/mybnbdesign-vs-showplace/',
 )})
 for file in OUT.glob('sitemap*.xml'):
     tree = ET.parse(file)
